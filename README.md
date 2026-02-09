@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-Welcome to my portfolio
-=======
-Welcome to B the Designer’s portfolio
->>>>>>> origin/main
+# B the Designer — Portfolio
+
+Live site: https://bthedesigner.me  
+Built with HTML, CSS, and JavaScript.  
+Deployed via GitHub Pages.
