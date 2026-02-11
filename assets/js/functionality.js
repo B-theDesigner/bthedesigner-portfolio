@@ -129,3 +129,97 @@ document.addEventListener("DOMContentLoaded", () => {
   // If page loads with a hash, set it active
   if (window.location.hash) setActive(window.location.hash);
 });
+
+// ===============================
+// Load More Button
+// ===============================
+
+  (function () {
+    const batchSize = 6;
+    const entries = Array.from(document.querySelectorAll(".journal-entry"));
+    const btn = document.getElementById("load-more");
+
+    let visibleCount = 0;
+
+    function setVisible(count) {
+      entries.forEach((el, i) => el.classList.toggle("is-hidden", i >= count));
+      visibleCount = count;
+
+      if (visibleCount >= entries.length) {
+        btn.style.display = "none";
+      }
+    }
+
+    // Initial batch
+    setVisible(Math.min(batchSize, entries.length));
+
+    btn.addEventListener("click", () => {
+      // Show next batch
+      const next = Math.min(visibleCount + batchSize, entries.length);
+      setVisible(next);
+
+      // Scroll to top (smooth)
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Optional: also update the URL to a top anchor
+      // history.replaceState(null, "", "#top");
+    });
+  })(
+
+  );
+
+  // ===============================
+// Back to Top Button
+// ===============================
+
+(function () {
+    const btn = document.getElementById("scrollToTop");
+    const showAfter = 300; // px scrolled before showing
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > showAfter) {
+        btn.classList.add("is-visible");
+      } else {
+        btn.classList.remove("is-visible");
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })(
+
+  );
+
+  // ===============================
+// Load More Button
+// ===============================
+  (function () {
+    const batchSize = 4;
+    const btn = document.getElementById("load-more");
+    const entries = Array.from(document.querySelectorAll(".journal-entry"));
+
+    let visibleCount = 0;
+
+    function setVisible(count) {
+      entries.forEach((el, i) => {
+        el.classList.toggle("is-hidden", i >= count);
+      });
+      visibleCount = count;
+
+      if (visibleCount >= entries.length) btn.style.display = "none";
+
+      // If Isotope exists, re-layout after DOM changes
+      if (window.jQuery && jQuery.fn.isotope) {
+        const $grid = jQuery("#journal-grid");
+        $grid.isotope("layout");
+      }
+    }
+
+    setVisible(Math.min(batchSize, entries.length));
+
+    btn.addEventListener("click", () => {
+      setVisible(Math.min(visibleCount + batchSize, entries.length));
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  })();
