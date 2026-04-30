@@ -26,9 +26,9 @@ const JOURNAL_ENTRIES = [
     tag:         "Process",
     category:    "process",
     subcategory: "",
-    image:       "./assets/img/journals/bdesignsystem.png",
+    image:       "/assets/img/journals/bdesignsystem.png",
     imageAlt:    "Screenshot of the B the Designer brand system",
-    href:        "./journal/design-identity.html",
+    href:        "/journal/design-identity",
   },
   {
     title:       "Why Designers Must Learn To Articulate Their Decisions",
@@ -37,9 +37,9 @@ const JOURNAL_ENTRIES = [
     tag:         "Reflection",
     category:    "reflection",
     subcategory: "",
-    image:       "./assets/img/journals/articulate_design.jpg",
+    image:       "/assets/img/journals/articulate_design.jpg",
     imageAlt:    "Illustration representing design articulation",
-    href:        "./journal/articulatedesigns.html",
+    href:        "/journal/articulatedesigns",
   },
   {
     title:       "Understanding Stakeholders Perspectives",
@@ -48,9 +48,9 @@ const JOURNAL_ENTRIES = [
     tag:         "Reflection",
     category:    "reflection",
     subcategory: "",
-    image:       "./assets/img/journals/perspective.jpg",
+    image:       "/assets/img/journals/perspective.jpg",
     imageAlt:    "Screenshot of a perspective",
-    href:        "/journal/stakeholdersPOV.html",
+    href:        "/journal/stakeholdersPOV",
   },
    {
     title:       "Using AI As A Productivity Partner",
@@ -59,9 +59,9 @@ const JOURNAL_ENTRIES = [
     tag:         "Reflection",
     category:    "reflection",
     subcategory: "",
-    image:       "./assets/img/journals/ai_productivity.jpg",
+    image:       "/assets/img/journals/ai_productivity.jpg",
     imageAlt:    "Computer on AI site",
-    href:        "/journal/ai-productivity-partner.html",
+    href:        "/journal/ai-productivity-partner",
   },
 
  //  {
