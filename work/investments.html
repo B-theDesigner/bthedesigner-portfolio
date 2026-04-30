@@ -1,0 +1,1644 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financial Analytics Dashboard</title>
+  <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+  <link rel="shortcut icon" href="./../assets/img/FavIcon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./../assets/css/theme.css" />
+  <link rel="stylesheet" href="./../assets/css/base.css" />
+  <link rel="stylesheet" href="./../assets/css/layout.css" />
+  <link rel="stylesheet" href="./../assets/css/module.css" />
+  <link rel="stylesheet" href="./../assets/css/state.css" />
+</head>
+
+<body>
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
+      <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div> -->
+
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="./../index.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="./../about.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!-- Services Link 
+        <a href="./../services.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <span>Services</span>
+        </a>-->
+        <a href="./../work.html" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="./../journal.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+          </svg>
+          <span>Journal</span>
+        </a>
+      </nav>
+
+      <hr class="NavMenu-divider" />
+      <a href="./../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+
+    <div class="nav_logocontainer--mobile">
+      <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+    </div>
+
+    <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+
+    </div>
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- summaryslide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="./../index.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="./../about.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>About</span>
+      </a>
+      <!-- Services Mobile Link 
+      <a href="./../services.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+        </svg>
+        <span>Services</span>
+      </a>-->
+      <a href="./../work.html" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="./../journal.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile" />
+    <a href="./../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <!-- ─── Breadccrumb ────────────────────────────────── -->
+      <section class="breadcrumb-section">
+        <div class="breadcrumb-container">
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="./../work.html" class="breadcrumb-item Link js-back-btn">← Back</a>
+          </nav>
+          <div class="Subject-details">
+            <h1 class="Subject-title">Financial Analytics Dashboard</h1>
+          </div>
+          <div class="Subject-readtime">
+            <p>1 hr 30mins</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ProjectPageContent">
+        <!-- ─── Project Details ────────────────────────────────── -->
+        <div id="Project-grid">
+
+            <div id="Oneminutesummary">
+            <!--═══════════════════════════════════════════════════════
+                    1 MINUTE SUMMARY — Accordion modifier
+                    Place inside #Oneminutesummary in projectdetails.html.
+                    Requires: accordion--summary.css, accordion--summary.js
+                ════════════════════════════════════════════════════════ -->
+
+            <div class="SummaryAccordion-wrapper" id="summary-accordion-wrapper">
+              <details class="Accordion Accordion--summary" id="summary-accordion" open>
+                <summary class="Accordion-summary">
+                  <div class="Accordion--summary-header">
+                    <h2 class="Accordion--summary-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-stopwatch" viewBox="0 0 16 16">
+                        <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z" />
+                        <path
+                          d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3" />
+                      </svg> 1 Minute Summary
+                    </h2>
+                  </div>
+                  <span class="Accordion-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div class="Accordion-body">
+                  <!-- ─── Inner Sections ──────────────────────────────── -->
+                  <div class="SummaryAccordion-grid">
+
+
+                    <div class="SummaryAccordion-sectionL">
+
+                      <div class="summary-paragraph">
+                        <h2>the problem</h2>
+                        <p>The Investments experience was outdated and hard to navigate, <span class="highlight">failing to meet the needs of wealth-focused users.</span> To retain a $50M client, the product needed to feel like a financial tool with clearer data and a more intuitive structure.</p>
+                      </div>
+
+                      <div class="summary-paragraph">
+                        <h2>my approach</h2>
+                        <p>Before designing anything, I grounded myself in the product's history to avoid repeating
+                          decisions that had already been tried and discarded. From there, <span class="highlight">facilitated a cross-functional design workshop</span> that
+                          surfaced the central problem: <span class="highlight">information needed to be surfaced to the homepage and Fund Performance needed to be decoupled into it's own page.</span> From that point, I designed and tested new designs and features alongside client and other stakeholders</p>
+                      </div>
+
+                      <div class="summary-paragraph">
+                        <h2>The outcome</h2>
+                        <p>Across six rounds of moderated usability testing, the final experience delivered a cohesive, scalable solution that improved data cisibility, enhanced fund comparison, and aligned with performance and accessibility standards. <span
+                            class="highlight">The final
+                            deliverables included two new investments pages and new data card features that all products could utilize.</span>  Both design concepts were fully documented developer handoff with both design launching in parallel to meet deadline. There was a increase in homepage performance and Investments clarity.</p>
+                      </div>
+
+                    </div>
+
+                    <div class="SummaryAccordion-sectionR">
+
+                      <div class="SummaryAccordion-Labels">
+                        <div class="label-container">
+                          <div class="label--launched">Launched</div>
+                        </div>
+                        <div class="label-container">
+                          <div class="label--testing">6 rounds of Testing</div>
+                        </div>
+                      </div>
+
+                      <div class="slider-ctr">
+                        <figure class="summaryslide">
+                          <img src="../assets/img/projects/guidedhealthcare/Slide Final.png" alt="Final Designs" />
+                          <figcaption class="summarycap">
+                            <div class="title ">IMG</div>
+                            <div class="author">Final Designs</div>
+                          </figcaption>
+                        </figure>
+
+                        <figure class="summaryslide">
+                          <img src="../assets/img/projects/guidedhealthcare/Slide Wireframe.png"
+                            alt="Wireframe example" />
+                          <figcaption class="summarycap">
+                            <div class="title">IMG</div>
+                            <div class="author">Example of Wireframes</div>
+                          </figcaption>
+                        </figure>
+
+                        <figure class="summaryslide">
+                          <img src="../assets/img/projects/guidedhealthcare/Slide documentation.png"
+                            alt="Documentation example" />
+                          <figcaption class="summarycap">
+                            <div class="title">IMG</div>
+                            <div class="author">Example of Project Documentation</div>
+                          </figcaption>
+                        </figure>
+
+                        <figure class="summaryslide text-on">
+                          <img src="./../assets/img/projects/guidedhealthcare/Health Pro B4.png"
+                            alt="HealthNav Landing Page" />
+                          <figcaption class="summarycap">
+                            <div class="title">IMG</div>
+                            <div class="author">Pre-existing HealthNav Landing Page</div>
+                          </figcaption>
+                        </figure>
+
+                        <div class="slider-control">
+                          <button class="control prev disabled" aria-label="Previous summaryslide">
+                            <span class="icon ion-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                              </svg></span>
+                          </button>
+                          <button class="control next" aria-label="Next summaryslide">
+                            <span class="icon ion-chevron-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                              </svg></span>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ─── Callout Placeholder ─────────────────────────── -->
+                      <div class="SummaryAccordion-callout" role="note" aria-label="Key takeaway">
+                        <span class="SummaryAccordion-calloutIcon" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4M12 8h.01" />
+                          </svg>
+                        </span>
+                        <div class="SummaryAccordion-calloutContent">
+                          <p class="SummaryAccordion-calloutLabel">
+                            Want the full story?
+                          </p>
+                          <p class="SummaryAccordion-calloutText">
+                            The sections below dives deeper into research, design
+                            decisions, iterations, and learnings.
+                          </p>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div> 
+
+          <div id="ProjectDetails-container">
+
+            <section class="Section-ProjectDetails" id="Category1" data-label="Background">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Background</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+
+              <div class="MediaDisplay-ProjectDetails" data-fit="cover">
+                <div class="MediaDisplay-framelg">
+                  <img class="MediaDisplay-imagelg" src="./../assets/img/projects/guidedhealthcare/New Hero.png"
+                    alt="Project hero" />
+                  <div class="MediaDisplay-border">
+                    <div class="MediaDisplay-borderStrokelg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                  </div>
+                </div>
+                <!-- Badge + caption below the frame, left aligned, side by side -->
+                <div class="MediaDisplay-meta">
+                  <div class="MediaDisplay-badge">
+                    <p>IMG</p>
+                  </div>
+                  <div class="MediaDisplay-caption">
+                    <p>Healthcare Navigation Landing Page</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="OverviewCopy-container">
+
+                <div class="OverviewCopy-aside">
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>My Role</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>Product Design Lead</p>
+                      <p>Design Strategy, Visual Design, Rapid Prototyping</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>project type</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>Redesign</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>team</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>
+                        1 Designer
+                        <br />
+                        1 PM
+                        <br />
+                        1 Researcher
+                        <br />
+                        2 Engineers
+                        <br />
+                        3 other stakeholders 
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>duration & status</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>6 months, Launched Q2 2025</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>company</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>alight solutions</p>
+                    </div>
+                  </div>
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>demo</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <a href="https://www.figma.com/proto/XkNRUQ1qYdk2ZSKJvot9N4/Investment-Landing-Pages-Dev-Handoff?node-id=20916-32283&t=BndjAWdpn3jMMhMz-1&scaling=scale-down&content-scaling=fixed&page-id=20915%3A32281&starting-point-node-id=20916%3A32283"
+                        rel="noopener"  target="_blank">Figma Prototype &nbsp;
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd"
+                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                          <path fill-rule="evenodd"
+                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                        </svg>
+
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="OverviewCopy-main">
+
+
+                  <h2 class="Callout-text text-reveal">Modernizing the Investments experience was a critical initiative aimed at improving both <span class="HeroSection-fillWord">business retention and user trust</span>
+                    </h2>
+
+                  <div class="ProjectDetails-paragraph">
+                    <h2>About the <span class="HeroSection-fillWord">product</span> </h2>
+                    <p>The "Investments" page served Wealth DC clients <strong>(employers offering Wealth Management and Defined Contribution (DC) plans)</strong> by giving their participants visibility into their personal portfolios and fund performance. Within the <strong>Portfolio</strong> section, users could view their investment strategy through visual graphs and tables, along with an activity summary. The <strong>Fund Performance</strong> section allowed users to view a broader list of available funds, compare rate of returns, explore performance charts, and access detailed <strong>Fund Fact Sheets</strong>.</p>
+                  </div>
+
+                  <div class="ProjectDetails-paragraph">
+                    <h2>Why this work <span class="HeroSection-fillWord">mattered now</span> </h2>
+                    <p>The experience had accumulated problems over time such as <strong> overlapping features,
+                        inconsistent
+                        terminology,
+                        and a page structure that no longer reflected how users actually sought help.</strong> As the
+                      platform's user
+                      base grew and healthcare needs became more complex, <strong> the gap between what the product
+                        offered and
+                        what
+                        users could find became impossible to ignore.</strong> Engagement with self-service tools was
+                      low.Support
+                      volume was higher than it should have been. And the Health Pro model wasn't landing the way it was
+                      meant to.</p>
+                  </div>
+
+                  <div class="ProjectDetails-paragraph">
+                    <h2><span class="HeroSection-fillWord">drivers</span> for the redesign</h2>
+                    <p>The <strong>urgency</strong> behind this project was driven by both business and user needs. Most notably, the <strong>redesigner was essential to help retain a $50 million client contract,</strong> making it a high-stakes initiative. Internally, there was also press to evolve the interface from one that resembled a health benefits experience to something that felt more like a <strong>modern financial product,</strong> capable of conveying investment data with clarity, trust, and professionalism.
+                    </p>
+                  </div>
+
+                  <div class="MediaDisplay-ProjectDetails" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro B4.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>IMG</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>Pre-existing Activity Summary Page</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="MediaDisplay-ProjectDetails" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro Messaging.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>IMG</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>Pre-existing Fund Performance Table</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="MediaDisplay-ProjectDetails" data-fit="cover" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro Services.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>Image</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>Pre-existing Rate of Return Graph</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="MediaDisplay-ProjectDetails" data-fit="cover" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro Services.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>Image</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>Pre-existing Fund Fact Sheets</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="problem" data-label="Problem">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Problem</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal">While the Investments experience offered a range of valuable data, the <span
+                  class="HeroSection-fillWord">way it was structured and presented</span>
+                made it <span class="HeroSection-fillWord">difficult for users to engage with confidently</span>
+              </h2>
+
+              <div class="ProjectDetails-paragraph">
+                <h2><span class="HeroSection-fillWord">key</span> usability issues</h2>
+                <p>The experience suffered from a fragmented structure and outdated UI patterns. Key portfolio and fund data was buried deep within subpages, requiring multiple clicks to access. The toggle between <strong>Portfolio</strong> and <strong>Fund Performance</strong> lacked clarity, and once on the <strong>Fund Performance</strong> page, the layout didn't support side-by-side fund comparisons. Data visualizstions were minimal or unclear, and the <strong>limited use of interactive or accessible components made it hard for users to digest or act on the information presented.</strong>
+                </p>
+              </div>
+
+              <div class="ProjectDetails-paragraph">
+                <h2>What we saw in the <span class="HeroSection-fillWord">evidence</span></h2>
+                <p><strong> Internal product teams had received repeated user feedback</strong> that users could not easily locate or interpret their investment information. Stakeholders also noted that <strong>page analytics showed low engagement with deeper tools</strong> like <strong>Fund Fact Sheets</strong> and <strong>performance comparisons.</strong> The <strong>lack of clear entry point to this content from the homepage</strong> was further limiting visibilty into the product's value. 
+                </p>
+              </div>
+
+              <div class="ProjectDetails-paragraph">
+                <h2>what users were <span class="HeroSection-fillWord">struggling</span> with</h2>
+                <p><strong>Users lacked compelling visual tools to interpret fund data and were often met with dense, table-heavy layouts</strong> that made comparisons difficult. Fund details were presented in isolation, offering little guidance on how one fund's performance stacked up against others. The interface did not encourage exploration or comparison, ultimately preventing users from making informed financial decisions based on their rate of return or asset strategy.</p>
+              </div>
+
+              <!-- -----Media Display with lightbox --------------- -->
+               <div class="MediaDisplay-ProjectDetails" data-fit="cover" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro Services.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>IMG</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>"How Might We" Workshop Exercise (Top 5 Priorities)</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="Guardrails" data-label="Guardrails">
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Guardrails</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal">This project aimed to redesign and restructure the Investments experience to better support <span class="HeroSection-fillWord">user comprehensions, promote fund comparison, and modernize the overall interface</span>
+                to meet client expections.</span></h2>
+
+              <!-- ── Desktop Tabs ── -->
+              <ul class="tabs-nav" role="tablist" aria-label="Designer sections">
+                <li role="presentation">
+                  <button class="tab-btn" role="tab" id="tab-goals" aria-controls="panel-goals" aria-selected="true"
+                    tabindex="0">
+                    <span class="tab-btn__radio" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                      </svg>
+                    </span>
+                    <span class="tab-btn__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                      </svg>
+                    </span>
+                    Goals
+                    <span class="tab-btn__corners" aria-hidden="true">
+                      <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                      <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--br"></span>
+                    </span>
+                    <span class="tab-btn__cursor" aria-hidden="true">
+                      <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+
+                <li role="presentation">
+                  <button class="tab-btn" role="tab" id="tab-principals" aria-controls="panel-principals"
+                    aria-selected="false" tabindex="-1">
+                    <span class="tab-btn__radio" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                      </svg>
+                    </span>
+                    <span class="tab-btn__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                      </svg>
+                    </span>
+                    Design principals
+                    <span class="tab-btn__corners" aria-hidden="true">
+                      <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                      <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--br"></span>
+                    </span>
+                    <span class="tab-btn__cursor" aria-hidden="true">
+                      <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+
+                <li role="presentation">
+                  <button class="tab-btn" role="tab" id="tab-limitations" aria-controls="panel-limitations"
+                    aria-selected="false" tabindex="-1">
+                    <span class="tab-btn__radio" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </span>
+                    <span class="tab-btn__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </span>
+                    Limitations & Constraints
+                    <span class="tab-btn__corners" aria-hidden="true">
+                      <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                      <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--br"></span>
+                    </span>
+                    <span class="tab-btn__cursor" aria-hidden="true">
+                      <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+
+                <li role="presentation">
+                  <button class="tab-btn" role="tab" id="tab-oos" aria-controls="panel-oos" aria-selected="false"
+                    tabindex="-1">
+                    <span class="tab-btn__radio" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </span>
+                    <span class="tab-btn__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </span>
+                    Out-of-Scope
+                    <span class="tab-btn__corners" aria-hidden="true">
+                      <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                      <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                      <span class="tab-btn__corner tab-btn__corner--br"></span>
+                    </span>
+                    <span class="tab-btn__cursor" aria-hidden="true">
+                      <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                      </svg>
+                    </span>
+                  </button>
+                </li>
+              </ul>
+
+              <!-- ── Desktop Panels ── -->
+              <div class="tabs-panel-wrapper">
+                <div class="tab-panel" role="tabpanel" id="panel-goals" aria-labelledby="tab-goals" aria-hidden="false">
+                  <div class="tab-panel__header">
+                    <div class="tab-panel__header-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                      </svg>
+                    </div>
+                    <h3 class="tab-panel__title">Goals for this project</h3>
+                  </div>
+                  <div class="tab-panel__body">
+                    <ul>
+                      <li>
+                        <mark class="c-text-highlight">User:</mark> Users needed to quickly understand how their portfolio was performing, easily compare fund options, and navigate between high-level overviews and detailed data views. The experience also needed to surface key investment insights directly from the homepage to encourage engagement with the broader toolset, all while supporting confident decision-making through clear visuals and structured layouts.
+                      </li>
+                      <li>
+                        <mark class="c-text-highlight">Business:</mark> Retain a high-value client and preserve a $50M contract. Product stakeholders sought to reframe the interface to feel more like a professional financial tool rather than a healthcare platform, while also increasing visibility and usage of the Investments and Fund Performance features. Additionally, the design needed to align with a broader modernization effort across Wealth products for a more consistent user experience.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="panel-principals" aria-labelledby="tab-principals"
+                  aria-hidden="true">
+                  <div class="tab-panel__header">
+                    <div class="tab-panel__header-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                      </svg>
+                    </div>
+                    <h3 class="tab-panel__title">Design principals</h3>
+                  </div>
+                  <div class="tab-panel__body">
+                    <p>Decisions were grouned in usability best practices including:
+                    </p>
+                    <ul>
+                      <li>
+                        Clarity through hierarchy
+                      </li>
+                      <li>
+                        Progressive disclosure to reduce cognitive load
+                      </li>
+                      <li>
+                        Visual affordances to support comparison
+                      </li>
+                      <li>
+                        Scalable structures for reuse across product lines
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="panel-limitations" aria-labelledby="tab-limitations"
+                  aria-hidden="true">
+                  <div class="tab-panel__header">
+                    <div class="tab-panel__header-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </div>
+                    <h3 class="tab-panel__title">Limitations & Constraints</h3>
+                  </div>
+                  <div class="tab-panel__body">
+                    <ul>
+                      <li>
+                        <mark class="c-text-highlight">Technical Limitations:</mark> The design had to work with the constraints of the existing backend infrastructure and shared front-end architecture. Because the homepage hosted modules from multiple products, perforamnce was a critical concern —particularly with the introduction of dynamic UI components. The original concept for data cards, which included tabbed navigation and nested interactions, had to be scaled back to preserve load speed and avoid interfering with other modules on the page.
+                      </li>
+                      <li>
+                        <mark class="c-text-highlight">Timeline Constraints:</mark> To keep the project focused and achievable within the defined constraints, several areas were intentionally left out of scope. The redesign did not involve any changes to the backend data architexture, meaning the UI had to work with existing data structures and feeds. Plan-specific logic or eligibility rules were excluded, as those varied by client and were being addressed in a separate initiative. Personalized investment guidance or advisory tools were not also part of this effort, though the design did aim to better surface educational content. Lastly, while the experience was designed to be responsive for web, mobile app parity was not prioritized in this phase. These boundaries allowed the team to concentrate on performance, usbability, and design system integration while setting the foundation for future enhancements.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="panel-oos" aria-labelledby="tab-oos" aria-hidden="true">
+                  <div class="tab-panel__header">
+                    <div class="tab-panel__header-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </div>
+                    <h3 class="tab-panel__title">Out-of-Scope</h3>
+                  </div>
+                  <div class="tab-panel__body">
+                    <p>The core Health Pro assignment logic and backend messaging system were excluded due to
+                      system-wide dependencies. Working within those limitations meant every solution had to be
+                      structural and surface-level — which, as it turned out, was exactly where the real problems lived.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- ── Mobile Accordion ── -->
+              <div class="accordion" aria-label="Designer sections">
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-goals"
+                    id="acc-tab-goals">
+                    <span class="accordion-trigger__left">
+                      <span class="accordion-trigger__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                        </svg>
+                      </span>
+                      Goals for this project
+                    </span>
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  <div class="accordion-body" id="acc-panel-goals" aria-hidden="true" role="region"
+                    aria-labelledby="acc-tab-goals">
+                    <div class="accordion-body__inner">
+                      <div class="accordion-body__content">
+                        <ul>
+                          <li>
+                            <mark class="c-text-highlight">User:</mark> Users needed to clearly understand the
+                            difference between Health Pros and Medical Allies, know what to expect when they sent a
+                            message and when they'd hear back, and be able to find and use self-service tools without
+                            hunting for them.
+                          </li>
+                          <li>
+                            <mark class="c-text-highlight">Business:</mark>The business needed the Health Pro model to
+                            feel valuable and prominent without overshadowing the self-service features that clients
+                            expected to see performing. Reducing confusion-related support inquiries and increasing
+                            self-service engagement were both tied to demonstrable platform ROI.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-principals"
+                    id="acc-tab-principals">
+                    <span class="accordion-trigger__left">
+                      <span class="accordion-trigger__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                        </svg>
+                      </span>
+                      Design principals
+                    </span>
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  <div class="accordion-body" id="acc-panel-principals" aria-hidden="true" role="region"
+                    aria-labelledby="acc-tab-principals">
+                    <div class="accordion-body__inner">
+                      <div class="accordion-body__content">
+                        <p>Decisions were grouned in usability best practices including:
+                        </p>
+                        <ul>
+                          <li>
+                            Clarity through hierarchy
+                          </li>
+                          <li>
+                            Progressive disclosure to reduce cognitive load
+                          </li>
+                          <li>
+                            Consistency and recognition over recall
+                          </li>
+                          <li>
+                            Transparency in communication expectations
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-limitations"
+                    id="acc-tab-limitations">
+                    <span class="accordion-trigger__left">
+                      <span class="accordion-trigger__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                      </span>
+                      Limitations & Constraints
+                    </span>
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  <div class="accordion-body" id="acc-panel-limitations" aria-hidden="true" role="region"
+                    aria-labelledby="acc-tab-limitations">
+                    <div class="accordion-body__inner">
+                      <div class="accordion-body__content">
+                        <ul>
+                          <li>
+                            <mark class="c-text-highlight">Technical Limitations</mark> — The message center
+                            architecture couldn't be rebuilt. It was shared across multiple platform features and
+                            touching it would have cascaded into a scope far beyond this project. That constraint didn't
+                            limit the solution — it defined the design challenge. If we couldn't change the system, we
+                            had to redesign the communication around the system. The answer was to use visual patterns,
+                            microcopy, and information hierarchy to align user expectations with the actual experience
+                            before they ever sent a message.
+                          </li>
+                          <li>
+                            <mark class="c-text-highlight">Timeline Constraints</mark> - Less than one week separated
+                            strategic planning from testing-ready prototypes. That compression forced prioritization
+                            discipline — every design decision had to be defensible immediately, not refined over
+                            multiple rounds of internal review.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-oos"
+                    id="acc-tab-oos">
+                    <span class="accordion-trigger__left">
+                      <span class="accordion-trigger__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                        </svg>
+                      </span>
+                      Out-of-Scope
+                    </span>
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true">
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </button>
+                  <div class="accordion-body" id="acc-panel-oos" aria-hidden="true" role="region"
+                    aria-labelledby="acc-tab-oos">
+                    <div class="accordion-body__inner">
+                      <div class="accordion-body__content">
+                        <p>The core Health Pro assignment logic and backend messaging system were excluded due to
+                          system-wide dependencies. Working within those limitations meant every solution had to be
+                          structural and surface-level — which, as it turned out, was exactly where the real problems
+                          lived.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /accordion -->
+
+
+              <br><br><br>
+              <!-- -----Media Display with Toggles & Annotation --------------- -->
+               <div class="MediaDisplay-ProjectDetails" data-fit="cover" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro Services.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>IMG</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>Competitive Analysis Examples</p>
+                      </div>
+                    </div>
+                  </div>
+
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="approach" data-label="Approach">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Approach</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text">Project began with a <span class="HeroSection-fillWord">3 day design workshop</span> that brought together product owners from the Wealth portfolio to align on goals, pain points, and success criteria</h2>
+
+              <!-- ─── Stacking Approach Cards ──────────── -->
+              <div class="ApproachCards">
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight">Step 1</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Restructure the Investments Experience
+                    </h3>
+                    <p class="ApproachCard-body">We identified the need to restructure the investments experience into <strong>3 distinct components:</strong> a homepage entry point with data cards, a streamlined investments landing page, and a newly decoupled Fund Performance page. Each surface required its own structure while maintaining a cohesive visual and interaction model across the flow.</p>
+                  </div>
+                </div>
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight">Step 2</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Surface Buried Wealth Insights (Discovery Milestone)</h3>
+                    <p class="ApproachCard-body">For the homepage, I designed modular data cards that surfaced previously buried wealth insights. The first iteration featured a dynamic card formart using horizontal and nested left navigation to display multiple categories of data. However, <strong>performance testing recealed this design would negatively impact the shared homepage.</strong> We pivoted to a more scalable solution — individual cards built from a unified structure. This new concept allowed users to select up to six cards to personalize their view while keeping the experience performant and consistent with our design system.</p>
+                  </div>
+                </div>
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight">Step 3</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Finalize Content Hierarchy</h3>
+                    <p class="ApproachCard-body">For both the Investments and Fund Performance pages, I prioritized clarity through content hierarchy and introduced improved data visualization to support fund comparison. I began with low- to mid-fidelity wireframes to confirm layout and structure, then progressed into high-fidelity designs <strong>informed by stakeholder feedback and multiple rounds of testing.</strong> I also collaborated with our accessibility team to ensure all data visualizations had table equivalents and met accessibility standards.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight">Overall House Keeping</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Maintain Documentation</h3>
+                    <p class="ApproachCard-body">Throughout the project, I maintained a dedicated handoff file in Figma with updated flows, page states, and documentation. Separate prototypes were created for usability testing and client demos to ensure clarity confidentialy, and alignment across audiences. Despite the evolving scope, I managed changes through proactive communication and maintained momentum to deliver all assets on time.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+              <br/> <br/>
+
+               <div class="MediaDisplay-ProjectDetails" data-fit="cover" data-lightbox>
+                    <div class="MediaDisplay-framelg">
+                      <img class="MediaDisplay-imagelg"
+                        src="./../assets/img/projects/guidedhealthcare/Health Pro Services.png" alt="Project hero" />
+                      <div class="MediaDisplay-border">
+                        <div class="MediaDisplay-borderStrokelg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                        <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                      </div>
+                    </div>
+                    <!-- Badge + caption below the frame, left aligned, side by side -->
+                    <div class="MediaDisplay-meta">
+                      <div class="MediaDisplay-badge">
+                        <p>IMG</p>
+                      </div>
+                      <div class="MediaDisplay-caption">
+                        <p>Testing Conducted & Leveraged For Project</p>
+                      </div>
+                    </div>
+                  </div>
+
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="results" data-label="Results">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Results</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal">The final experience delivered a cohesivem scalable solutuion that <span class="HeroSection-fillWord">improved data visibility, enhanced fund comparison,</span> and aligned with performance and accessibility standards</h2>
+
+              <div class="FindingsSlideshow" data-findings-slideshow>
+
+                <!-- Header row: label + pagination controls -->
+                <div class="FindingsSlideshow-header">
+                  <span class="FindingsSlideshow-label">Top Findings</span>
+                  <nav class="FindingsSlideshow-nav" aria-label="Top findings navigation">
+                    <button class="FindingsSlideshow-arrow" data-findings-prev aria-label="Previous finding">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M15 18l-6-6 6-6" />
+                      </svg>
+                    </button>
+                    <div class="FindingsSlideshow-pips" role="tablist" aria-label="Finding slides">
+                      <button class="FindingsSlideshow-pip is-active" role="tab" aria-selected="true"
+                        aria-controls="finding-slide-1" data-findings-pip="0">1</button>
+                      <button class="FindingsSlideshow-pip" role="tab" aria-selected="false"
+                        aria-controls="finding-slide-2" data-findings-pip="1">2</button>
+                      <button class="FindingsSlideshow-pip" role="tab" aria-selected="false"
+                        aria-controls="finding-slide-3" data-findings-pip="2">3</button>
+                      <button class="FindingsSlideshow-pip" role="tab" aria-selected="false"
+                        aria-controls="finding-slide-4" data-findings-pip="3">4</button>
+                    </div>
+                    <button class="FindingsSlideshow-arrow" data-findings-next aria-label="Next finding">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M9 18l6-6-6-6" />
+                      </svg>
+                    </button>
+                  </nav>
+                </div>
+
+                <!-- Slide track -->
+                <div class="FindingsSlideshow-track" data-findings-track>
+
+                  <!-- Slide 1 -->
+                  <div class="FindingsSlide is-active" id="finding-slide-1" role="tabpanel" aria-hidden="false"
+                    data-findings-slide>
+                    <p class="FindingsSlide-stat">8 out of 10 participants navigated through all major sections of the
+                      redesigned page and identified multiple pathways to support without prompting.</p>
+                    <div class="FindingsSlide-bottom">
+                      <div class="PullQuote">
+                        <div class="PullQuote-line" aria-hidden="true"><span
+                            class="PullQuote-square PullQuote-square--top"></span><span
+                            class="PullQuote-stem"></span><span
+                            class="PullQuote-square PullQuote-square--bottom"></span></div>
+                        <p class="PullQuote-text">"So I guess I could make a request here to get help with finding a
+                          doctor, or I can just reach out to my Health Pro directly, or call the 800 number. And then at
+                          the bottom — get help with a specific need."</p>
+                      </div>
+                      <div class="FindingsSlide-indication">
+                        <p class="FindingsSlide-indicationLabel">Indication</p>
+                        <p class="FindingsSlide-indicationText">The restructured hierarchy gave users a map of the page
+                          before they had to make a decision. When users can articulate their options unprompted, the
+                          structure is doing its job.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="FindingsSlide" id="finding-slide-2" role="tabpanel" aria-hidden="true"
+                    data-findings-slide>
+                    <p class="FindingsSlide-stat">9 out of 10 participants understood the Health Pro connection page's
+                      purpose and what it offered — without additional explanation.</p>
+                    <div class="FindingsSlide-bottom">
+                      <div class="PullQuote">
+                        <div class="PullQuote-line" aria-hidden="true"><span
+                            class="PullQuote-square PullQuote-square--top"></span><span
+                            class="PullQuote-stem"></span><span
+                            class="PullQuote-square PullQuote-square--bottom"></span></div>
+                        <p class="PullQuote-text">"This is exactly the information I would need to get questions
+                          answered about my health and move forward with specific requests."</p>
+                      </div>
+                      <div class="FindingsSlide-indication">
+                        <p class="FindingsSlide-indicationLabel">Indication</p>
+                        <p class="FindingsSlide-indicationText">The Health Pro's role had been unclear in the original
+                          experience. Restructuring the entry point and the detail page resolved that without adding
+                          content — by making the existing content legible.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="FindingsSlide" id="finding-slide-3" role="tabpanel" aria-hidden="true"
+                    data-findings-slide>
+                    <p class="FindingsSlide-stat">7 out of 10 participants described the Healthcare Navigation page as a
+                      centralized resource for managing their healthcare — unprompted.</p>
+                    <div class="FindingsSlide-bottom">
+                      <div class="FindingsSlide-quotes">
+                        <div class="PullQuote">
+                          <div class="PullQuote-line" aria-hidden="true"><span
+                              class="PullQuote-square PullQuote-square--top"></span><span
+                              class="PullQuote-stem"></span><span
+                              class="PullQuote-square PullQuote-square--bottom"></span></div>
+                          <p class="PullQuote-text">"It's a central place to help get you started with your healthcare
+                            needs."</p>
+                        </div>
+                        <div class="PullQuote">
+                          <div class="PullQuote-line" aria-hidden="true"><span
+                              class="PullQuote-square PullQuote-square--top"></span><span
+                              class="PullQuote-stem"></span><span
+                              class="PullQuote-square PullQuote-square--bottom"></span></div>
+                          <p class="PullQuote-text">"It's kind of a one stop shop — it's like a dashboard, only it's a
+                            way to navigate to different things having to do with my healthcare."</p>
+                        </div>
+                      </div>
+                      <div class="FindingsSlide-indication">
+                        <p class="FindingsSlide-indicationLabel">Indication</p>
+                        <p class="FindingsSlide-indicationText">This was the most significant finding. Users arriving
+                          with no prior context were able to form an accurate mental model of the page's purpose within
+                          minutes. That's a direct result of restructuring the hierarchy, not rewriting the content.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4 -->
+                  <div class="FindingsSlide" id="finding-slide-4" role="tabpanel" aria-hidden="true"
+                    data-findings-slide>
+                    <p class="FindingsSlide-stat">8 out of 10 participants stated the page content was not overwhelming
+                      — and several wanted more.</p>
+                    <div class="FindingsSlide-bottom">
+                      <div class="FindingsSlide-quotes">
+                        <div class="PullQuote">
+                          <div class="PullQuote-line" aria-hidden="true"><span
+                              class="PullQuote-square PullQuote-square--top"></span><span
+                              class="PullQuote-stem"></span><span
+                              class="PullQuote-square PullQuote-square--bottom"></span></div>
+                          <p class="PullQuote-text">"I think this is good. In fact, I wish there was a little bit more
+                            about how each of these things can help me."</p>
+                        </div>
+                        <div class="PullQuote">
+                          <div class="PullQuote-line" aria-hidden="true"><span
+                              class="PullQuote-square PullQuote-square--top"></span><span
+                              class="PullQuote-stem"></span><span
+                              class="PullQuote-square PullQuote-square--bottom"></span></div>
+                          <p class="PullQuote-text">"This is the exact amount that I need. The images also help me
+                            navigate and make sure I'm at the right category — and it's not too wordy."</p>
+                        </div>
+                      </div>
+                      <div class="FindingsSlide-indication">
+                        <p class="FindingsSlide-indicationLabel">Indication</p>
+                        <p class="FindingsSlide-indicationText">Progressive disclosure worked. Users felt oriented
+                          rather than overloaded, which created space for them to explore rather than exit.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!-- /track -->
+              </div><!-- /FindingsSlideshow -->
+
+              <div class="ProjectDetails-paragraph">
+                <h2>Testing <span class="HeroSection-fillWord">revealed key refinements</span></h2>
+                <p>Through iterative testing, thoughful restructuring, and collaboration with product and engineering teams, we successfully met the goals of the redesign while supporting long-term product scalability.
+                  <br/> <br/>
+                  We conducted 6 rounds of usability testing to validate the full user journey —from homepage data cards to the investments and Fund performance pages. Insights from testing led to key refinements, including simplifying the card structure, enhancing content hierarchy, and improving comparison tools for rate of return data. These changes directly addressed user struggles with interpretation and navigation.
+                  <br/> <br/>
+                  The data card framework was transformed from a complex dynamic component into a set of modular, responsive cards that could be personalized by users and reused across other product lines. I contributed a template version to the design system, enabling future expansion while maintaining consistent sizing, content flexibility and visual alignement.
+                   <br/> <br/>
+                  Both landing pages feature accessible data visualizations paired with table formats, as well as toggle options on the Fund Performance page to give users control over how data was viewed. Despite mid project scope increases and performance pivots, I delivered all finalized designs, redlines, and prototypes on time —ensuring a smooth development handoff and supporting the successful renale of a high-stakes client contract.
+                </p>
+              </div>
+
+              <h2></h2>
+              <p></p>
+
+
+            </section>
+
+
+            <!-- ─── Key Patterns ───────────────────────────
+            <section class="Section-ProjectDetails" id="key-patterns" data-label="Key Patterns">
+
+             
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Key Patterns</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal">The goal of this redesign <span class="HeroSection-fillWord">wasn't
+                  just to fix the current experience</span>, it was to <span class="HeroSection-fillWord">introduce
+                  patterns that
+                  could travel across the platform</span> as it continued to evolve.</h2>
+
+
+              
+              <div class="PatternCard-list">
+
+                
+                <details class="PatternCard">
+                  <summary class="PatternCard-summary">
+                    <div class="PatternCard-thumbnail">
+                      <img src="./../assets/img/projects/guidedhealthcare/UX Pattern 1.png" alt="Key Pattern 1" />
+                    </div>
+                    <div class="PatternCard-intro">
+                      <h3 class="PatternCard-title">Overflow Menu for Contact Options</h3>
+                      <p class="PatternCard-description">Multiple ways to reach a Health Pro — message, request, call —
+                        were consolidated into a single, scannable overflow menu.</p>
+                      <span class="PatternCard-toggle">
+                        <span class="PatternCard-toggleLabel PatternCard-toggleLabel--show">Show more details</span>
+                        <span class="PatternCard-toggleLabel PatternCard-toggleLabel--hide">Hide more details</span>
+                      </span>
+                    </div>
+                  </summary>
+                  <div class="PatternCard-body">
+                    <div class="PatternCard-imageFull">
+                      <img src="./../assets/img/projects/guidedhealthcare/UX Pattern 1.png" alt="Pattern 1 detail" />
+                    </div>
+                    <div class="PatternCard-detail">
+                      <p class="PatternCard-detailText">By merging the different way to contact a Health Pro into a
+                        dropdown, this reduced visual clutter on the landing page, eliminated the need for users to
+                        evalirate which contact method to use before they were ready, and created a scalable pattern for
+                        any future contact scenario added to the platform.</p>
+                      <p class="PatternCard-tradeoff"><em>Tradeoff navigated:</em> Consolidation always risks hiding
+                        options. I had to ensure during testing, that we focus on validating whether or not users would
+                        discover the overflow menu and understand it as a full set of choices rather than a single
+                        action. This concept held up across all four rounds.</p>
+                    </div>
+
+                    
+                    <span class="PatternCard-toggle PatternCard-toggle--bottom">
+                      <span class="PatternCard-toggleLabel PatternCard-toggleLabel--hide">Hide more details</span>
+                    </span>
+                  </div>
+                </details>
+
+                
+                <details class="PatternCard">
+                  <summary class="PatternCard-summary">
+                    <div class="PatternCard-thumbnail">
+                      <img src="./../assets/img/projects/guidedhealthcare/UX Pattern 2.png" alt="Key Pattern 2" />
+                    </div>
+                    <div class="PatternCard-intro">
+                      <h3 class="PatternCard-title">E-mail Inspired Message Center</h3>
+                      <p class="PatternCard-description">Applying asynchronous design conventions (timestamps, message
+                        status indicators, thread-based organization) to the new message center gave users a familiar
+                        coginative frame for an unfamiliar system.</p>
+                      <span class="PatternCard-toggle">
+                        <span class="PatternCard-toggleLabel PatternCard-toggleLabel--show">Show more details</span>
+                        <span class="PatternCard-toggleLabel PatternCard-toggleLabel--hide">Hide more details</span>
+                      </span>
+                    </div>
+                  </summary>
+                  <div class="PatternCard-body">
+                    <div class="PatternCard-imageFull">
+                      <img src="./../assets/img/projects/guidedhealthcare/UX Pattern 2.png" alt="Pattern 2 detail" />
+                    </div>
+                    <div class="PatternCard-detail">
+                      <p class="PatternCard-detailText">Users stopped expecting live chat not because we told them it
+                        wasn't live, but because the interface no longer looked like it was.</p>
+                      <p class="PatternCard-tradeoff"><em>Tradeoff navigated:</em> The risk of implementing this design
+                        was making the message center feel formal or transactional in context where users want to feel
+                        supported. Microcopy and visual warmth offset that without sacrificing the structural clarity
+                        the pattern provided.</p>
+                    </div>
+
+                    
+                    <span class="PatternCard-toggle PatternCard-toggle--bottom">
+                      <span class="PatternCard-toggleLabel PatternCard-toggleLabel--hide">Hide more details</span>
+                    </span>
+                  </div>
+                </details>
+
+               
+                <details class="PatternCard">
+                  <summary class="PatternCard-summary">
+                    <div class="PatternCard-thumbnail">
+                      <img src="./../assets/img/projects/guidedhealthcare/UX Pattern 3.png" alt="Key Pattern 3" />
+                    </div>
+                    <div class="PatternCard-intro">
+                      <h3 class="PatternCard-title">Page-level Content Hierarchy</h3>
+                      <p class="PatternCard-description">Visually and structurally differentiating the Healthcare
+                        Navigation landing page from Health Pro detail page resolced the most persistent source of user
+                        confusion, not knowing where they were and the page's purpose.</p>
+                      <span class="PatternCard-toggle">
+                        <span class="PatternCard-toggleLabel PatternCard-toggleLabel--show">Show more details</span>
+                        <span class="PatternCard-toggleLabel PatternCard-toggleLabel--hide">Hide more details</span>
+                      </span>
+                    </div>
+                  </summary>
+                  <div class="PatternCard-body">
+                    <div class="PatternCard-imageFull">
+                      <img src="./../assets/img/projects/guidedhealthcare/UX Pattern 3.png" alt="Pattern 3 detail" />
+                    </div>
+                    <div class="PatternCard-detail">
+                      <p class="PatternCard-detailText">Clear hierarchy meant users could orient themselves immediately
+                        and make decisions about where to go next without reading everything on the page.</p>
+                      <p class="PatternCard-tradeoff"><em>Tradeoff navigated:</em> Stronger hierarchy means making
+                        choices about what gets deprioritized. The decision to move the Health Pro from dominant anchor
+                        to entry point was the most contested design call in the project. Also the one most consistenly
+                        validated by testing.</p>
+                    </div>
+
+                    Toggle repeated at bottom — visible only when expanded 
+                    <span class="PatternCard-toggle PatternCard-toggle--bottom">
+                      <span class="PatternCard-toggleLabel PatternCard-toggleLabel--hide">Hide more details</span>
+                    </span>
+                  </div>
+                </details>
+
+              </div>
+
+            </section> -->
+
+
+
+            <section class="Section-ProjectDetails" id="Demo" data-label="Demo">
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Demo</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <!-- ─── Case Study Outro ──────────────────────────────────── -->
+              <section class="CaseStudyOutro">
+
+                <!-- Card: heading + CTAs -->
+                <div class="CaseStudyOutro-card">
+                  <h2 class="CaseStudyOutro-heading">Thank you for reading!</h2>
+                  <div class="CaseStudyOutro-actions">
+                    <a href="#" class="Button Button--primary Button--lg" rel="noopener noreferrer" target="_blank">View
+                      Demo</a>
+                    <a href="#" class="Button Button--secondary Button--lg">Next Project</a>
+                  </div>
+                </div>
+
+                <!-- Mockup image — overlaps card via negative margin, animates in on scroll -->
+                <div class="CaseStudyOutro-preview">
+                  <img class="CaseStudyOutro-image"
+                    src="./../assets/img/projects/guidedhealthcare/GH_Thank you image.png" alt="Project demo preview"
+                    data-outro-image />
+                </div>
+
+              </section>
+
+
+
+
+
+
+            </section>
+
+            <!-- 
+    To add more sections, simply copy this template:
+    
+    <section id="unique-id" data-label="Your Section Name">
+      <h2>Your Section Name</h2>
+      <p>Your content here...</p>
+    </section>
+    
+    Important: 
+    - Each section MUST have a unique ID
+    - The data-label attribute determines what appears in the navigation
+    - To remove a section, just delete the entire <section> block
+    - The navigation will automatically update!
+  -->
+          </div>
+
+          <div class="AnchorList-section" id="AnchorList-section">
+            <!-- Anchor List - Fixed Position -->
+            <div class="anchor-list-container">
+              <div class="anchor-list">
+                <p class="anchor-list-title">Contents</p>
+
+                <!-- Navigation Links Container (auto-generated) -->
+                <div class="anchorlist-elements">
+                  <!-- SVG Line with Squares (auto-generated) -->
+                  <div class="anchor-line">
+                    <svg id="anchor-svg" width="5" height="179" viewBox="0 0 5 179" fill="none">
+                      <g id="Line">
+                        <path id="anchor-path" d="M2.5 2.5V176.5" stroke="#A27ECC" stroke-linecap="round" />
+                        <!-- Squares will be dynamically generated -->
+                      </g>
+                    </svg>
+                  </div>
+
+                  <div id="anchor-links-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── Contact Callout Section ────────────────────────────── -->
+        <section class="Sectionxl">
+          <div class="ContactBanner-container">
+            <div class="ContactBanner-copy">
+              <h1 class="ContactBanner-header">don't be a stranger!</h1>
+              <p class="ContactBanner-subheader">Let's <span class="highlight">collaborate</span> and <span
+                  class="highlight">create</span> something amazing!</p>
+            </div>
+            <!-- CTAs -->
+            <div class="ContactBanner-actions">
+              <a href="https://calendly.com/bthedesigner" class="Button Button--primary Button--lg"
+                rel="noopener noreferrer" target="_blank">Book a call</a>
+              <button role="button" class="Button Button--secondary Button--lg" onclick="copyEmail(event)">Copy
+                e-mail</button>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr />
+        <p class="FooterCopy">
+          <strong>Designed with care</strong>
+          B the Designer © 2026. All Rights Reserved. •
+          <a href="#">Terms of Use</a>
+        </p>
+      </footer>
+    </div>
+  </main>
+
+  <!-- ── Animation libraries — must load before script.js ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+  <script src="./../assets/js/script.js"></script>
+</body>
+
+</html>

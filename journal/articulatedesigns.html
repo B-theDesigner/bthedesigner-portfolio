@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+  <title>01: Articulate Designs</title>
+  <link rel="shortcut icon" href="./../assets/img/FavIcon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./../assets/css/theme.css">
+  <link rel="stylesheet" href="./../assets/css/base.css">
+  <link rel="stylesheet" href="./../assets/css/layout.css">
+  <link rel="stylesheet" href="./../assets/css/module.css">
+  <link rel="stylesheet" href="./../assets/css/state.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
+
+      <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div> -->
+
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="./../index.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="./../about.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!-- Services Link 
+        <a href="./../services.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <span>Services</span> -->
+        </a>
+        <a href="./../work.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="./../journal.html" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+          </svg>
+          <span>Journal</span>
+        </a>
+      </nav>
+
+      <hr class="NavMenu-divider">
+      <a href="#" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
+
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+
+    <div class="nav_logocontainer--mobile">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+
+      <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+
+    </div>
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- Slide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="./../index.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="./../about.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>About</span>
+      </a>
+      <!-- Services Mobile Link 
+      <a href="./../services.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+        </svg>
+        <span>Services</span>
+      </a>-->
+      <a href="./../work.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="./../journal.html" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile">
+    <a href="./../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <section class="breadcrumb-section">
+        <div class="breadcrumb-container">
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="./../journal.html" class="breadcrumb-item Link js-back-btn">← Back</a>
+          </nav>
+          <div class="Subject-details">
+            <h1 class="Subject-title">Why designers must learn to articulate their decisions</h1>
+          </div>
+          <div class="Subject-readtime">
+            <p>30mins</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="JournalEntryContent">
+
+        <!-- ─── Project Details ────────────────────────────────── -->
+
+
+
+        <section class="JournalEntry">
+
+          <div class="MediaDisplay-ProjectDetails" data-fit="cover">
+                <div class="MediaDisplay-framelg">
+                  <img class="MediaDisplay-imagelg" src="./../assets/img/journals/articulate_design.jpg"
+                    alt="Project hero" />
+                  <div class="MediaDisplay-border">
+                    <div class="MediaDisplay-borderStrokelg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                  </div>
+                </div>
+                <!-- Badge + caption below the frame, left aligned, side by side -->
+                <div class="MediaDisplay-meta">
+                  <div class="MediaDisplay-badge">
+                    <p>IMG</p>
+                  </div>
+                  <div class="MediaDisplay-caption">
+                    <p>Project Hero Image</p>
+                  </div>
+                </div>
+              </div>
+
+          <div class="JournalEntry-paragraph">
+            <p>
+              I’ve seen how quickly strong design work can lose momentum when deadlines are tight and explorations
+              aren’t clearly documented. In those moments, design thinking often lives only in my head—or scattered
+              across loosely connected Figma frames. When that happens, non-designers struggle to follow the
+              reasoning. Key talking points get buried, context fades, and conversations shift away from <mark
+                class="c-text-highlight"> why this solution works </mark> toward <mark class="c-text-highlight"> what
+                else could we try instead </mark>. Not because the work is wrong—but because the thinking behind it
+              isn’t visible.</p>
+            </br>
+            <h2>a fragile solution without clear reasoning</h2>
+            <p>One of my biggest takeaways from Articulating Design Decisions is that good design alone is not enough.
+              A solution without clearly articulated reasoning is fragile. When stakeholders can’t see how decisions
+              connect to user needs, business goals, or technical constraints, they naturally begin to explore
+              alternatives. This often looks like scope creep, but more often it’s uncertainty disguised as curiosity.
+              Without clarity, timelines stretch and iterations multiply—not due to poor design, but unclear intent.
+            </p>
+
+            </br>
+            <blockquote>
+              <div class="blockquote-background">
+                <p>When people aren’t convinced that you’re right, they’ll continue to think of alternatives to suggest.
+                  The project scope will increase over time as people propose adding more things: a simple control, one
+                  more button, a new menu.</p>
+                <author class="blockquote-author">— Tom Greever, Articulating Design Decisions</author>
+              </div>
+            </blockquote>
+            </br>
+            <h2>confidence gaps and the rise of opinions</h2>
+            <p>I’ve also seen how poor articulation weakens confidence. When stakeholders don’t understand why a design
+              exists in its current form, trust erodes. In that gap, opinions and personal preferences tend to take
+              over. The work becomes subjective, even when it was originally grounded in solid research and logic. What
+              starts as alignment quietly turns into debate—not because the solution lacks merit, but because the story
+              behind it was never fully told.
+            </p>
+            </br>
+            <h2>design conflict is often a communication problem</h2>
+            <p>The book reinforced something I’ve experienced repeatedly: most design conflict isn’t a design
+              problem—it’s a communication problem. Every stakeholder is optimizing for something different. Design
+              decisions only land when they’re framed in a way that speaks directly to those motivations. When that
+              framing is missing, even strong solutions can be questioned, diluted, or abandoned entirely.</p>
+            </br>
+            <h2>making thinking visible</h2>
+            <p>Articulating design decisions isn’t about defending work—it’s about making thinking visible. It’s how
+              designers protect scope, build alignment, and ensure their ideas survive the journey from concept to
+              production. For me, this realization reframed documentation and storytelling as core design skills, not
+              supporting tasks.</p>
+            </br>
+            <blockquote>
+              <div class="blockquote-background">
+                <p>...turn your thought process into something real, sharable, and visible; to uncover the words that
+                  will help you to explain yourself to other people in a way that makes sense.</p>
+                <author class="blockquote-author">— Tom Greever, Articulating Design Decisions</author>
+              </div>
+            </blockquote>
+            </br>
+            <h2>why this matters in practice</h2>
+            <p>For designers working in fast-paced, cross-functional environments, learning how to communicate design as
+              clearly as we create it is essential.Articulating Design Decisions gave language to experiences I’ve
+              already lived—and reinforced the idea that clarity is not extra work. It’s the work.</p>
+          </div>
+        </section>
+      </div>
+
+      <!-- ─── Contact Callout Section ────────────────────────────── -->
+        <section class="Sectionxl">
+          <div class="ContactBanner-container">
+            <div class="ContactBanner-copy">
+              <h1 class="ContactBanner-header">don't be a stranger!</h1>
+              <p class="ContactBanner-subheader">Let's <span class="highlight">collaborate</span> and <span
+                  class="highlight">create</span> something amazing!</p>
+            </div>
+            <!-- CTAs -->
+            <div class="ContactBanner-actions">
+              <a href="https://calendly.com/bthedesigner" class="Button Button--primary Button--lg"
+                rel="noopener noreferrer" target="_blank">Book a call</a>
+              <button role="button" class="Button Button--secondary Button--lg" onclick="copyEmail(event)">Copy
+                e-mail</button>
+            </div>
+
+          </div>
+        </section>
+
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr />
+        <p class="FooterCopy">
+          <strong>Designed with care</strong>
+          B the Designer © 2026. All Rights Reserved. •
+          <a href="#">Terms of Use</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="./../assets/js/script.js"></script>
+</body>
+
+</html>

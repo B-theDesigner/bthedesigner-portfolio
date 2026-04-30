@@ -1,481 +1,603 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
- <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
-Game UI Designer, Game UX Designer, Figma Expert,
-Accessibility Design, WCAG Compliance, UX Strategy,
-SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
-">
-  <meta name="author" content="Bryttany (B) Winkfield">
-  <title>B's Journal</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.svg">
-  <link rel="stylesheet" href="./assets/css/plugins.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/colors/purple.css">
-</head>
-
-<body>
-
-  <div class="alert alert-info alert-icon alert-dismissible fade show" role="alert">
-    <h1 class="h6">Portfolio Update: Journals + In Progress Visuals</h1>
-  <i class="uil uil-exclamation-circle"></i> I recently added a new <em>Journal</em> feature to showcase my thinking, reflections, and design philosophy. A few asset images are currently placeholders while final visuals are being refined. All written content and case study narratives are complete and reflect real project work.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-
-    <!--sticky nav start-->
-   <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none navbar-clone fixed narbar-unstick">
-        <div class="container">
-            <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                    <div class="navbar-brand w-100">
-                    <a href="./">
-                       <strong class="h3"> B the <span class="text-primary" >Designer</span> </strong>
-                    </a>
-                    </div>
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                          <a href="./">
-                       <strong class="h3"> B the <span class="text-primary" >Designer</span> </strong>
-                    </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./work">Work</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Journal</a></li>
-                    </ul>
-          <!-- responsive nav rail /.navbar-nav -->
-          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
-            <a href="mailto:hello@bthedesigner.me" class="link-inverse">hello@bthedesigner.me</a>
-            <br />
-            <br /> 
-              <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-            <br />
-            <nav class="nav social social-white mt-4">
-              <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
-            </nav>
-            <!-- /.social -->
-          </div>
-          <!-- /offcanvas-nav-other -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+    <title>B's Journal</title>
+    <link rel="shortcut icon" href="./assets/img/FavIcon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/theme.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/layout.css" />
+    <link rel="stylesheet" href="./assets/css/module.css" />
+    <link rel="stylesheet" href="./assets/css/state.css" />
+    <link rel="stylesheet" href="./assets/css/journal-gallery.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+    <aside id="sidebar" class="Sidebar">
+      <div class="Sidebar-content">
+        <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
         </div>
-        <!-- /.offcanvas-body -->
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item d-none d-md-block">
-            <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn" aria-label="Toggle navigation"><span></span></button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-    </div>
-    </nav>
-    <!--sticky nav end-->
+      </div> -->
 
-    <div class="content-wrapper">
-    <!--nav start-->
-    <header class="wrapper bg-soft-primary">
-        <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light">
-            <div class="container">
-                <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                    <div class="navbar-brand w-100">
-                    <a href="./">
-                       <strong class="h3"> B the <span class="typer text-primary" 
-                                data-loop="false" 
-                                data-delay="100" 
-                                data-words="Mentor, Gamer, K-drama Addict, Designer">
-                              </span><span class="cursor text-primary" data-owner="typer"></span> </strong>
-                    </a>
-                    </div>
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                        <a href="./">
-                       <strong class=" h3 text-white"> B the Designer </strong>
-                    </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./work">Work</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Journal</a></li>
-                    </ul>
-          <!-- responsive nav rail /.navbar-nav -->
-          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
-            <a href="mailto:hello@bthedesigner.me" class="link-inverse">hello@bthedesigner.me</a>
-            <br />
-            <br /> 
-              <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-            <br />
-            <nav class="nav social social-white mt-4">
-              <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
-            </nav>
-            <!-- /.social -->
-          </div>
-          <!-- /offcanvas-nav-other -->
-        </div>
-        <!-- /.offcanvas-body -->
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item d-none d-md-block">
-            <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn" aria-label="Toggle navigation"><span></span></button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-    </div>
-    <!-- /.navbar-collapse-wrapper -->
-  </div>
-  <!-- /.container -->
+        <!-- Desktop Navigation -->
+        <nav class="NavMenu">
+          <a href="index.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span>Home</span>
+          </a>
+          <a href="about.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>About</span>
+          </a>
+          <!-- Services Link 
+          <a href="services.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+              />
+            </svg>
+            <span>Services</span>
+          </a>-->
+          <a href="work.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+            <span>Work</span>
+          </a>
+          <a href="journal.html" class="NavMenu-item is-active">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+              />
+            </svg>
+            <span>Journal</span>
+          </a>
         </nav>
-    </header>
-    <!--nav end-->
-    </header>
-    <!-- /header -->
-    <section class="wrapper bg-soft-primary">
-      <div class="container pt-8 pt-md-8 mb-8">
-        <div class="row">
-          <div class="">
-            <h1 class="display-5 mb-3"><span class="underline-3 style-2 violet">Journal</span></h1>
-            <p class="lead fs mb-8">This virtual journal is a space for reflection, learning, and documenting how I think through design and creative work. Entries here aren’t optimized for likes, comments, or sharing — they’re simply notes I find useful to capture and share over time.</p>
 
-            <div class="accordion accordion-wrapper" id="accordionExample">
-                  <div class="card accordion-item">
-                    <div class="card-header" id="headingOne">
-                      <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <span><i class="uil uil-info-circle"></i></span> How to Read This Space</button>
-                    </div>
-                    <!--/.card-header -->
-                    <div id="collapseOne" class="accordion-collapse collapse hide" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                      <div class="card-body">
-                        <ul class="unordered-list bullet-primary">
-                          <li><strong>Perspective</strong> — describes the <em>mental lens</em> I'm writing from—how I’m making sense of the work, the learning, or the experience.</li>
-                                        <ul style="padding-left: 50px;">
-                                            <li><strong>Reflection</strong>: Looking back to understand what happened, why it mattered, and how it shaped my thinking.</li>
-                                            <li><strong>Learning</strong>: Working through new ideas, frameworks, or skills in real time.</li>
-                                            <li><strong>Process</strong>: Capturing how problems evolve into outcomes through structure, iteration, and decision-making.</li>
-                                          </ul>
-                          <li><strong>Status</strong> — Signals <em>how complete or settled</em> the idea feels at the time of writing.</li>
-                                        <ul style="padding-left: 50px;">
-                                            <li><strong>Ongoing</strong>: Actively evolving thinking—ideas that are still being shaped, questioned, or tested.</li>
-                                            <li><strong>Snapshot</strong>: A point-in-time perspective, captured as my thinking stood in that moment.</li>
-                                            <li><strong>Retrospective</strong>: Reflection after completion or distance, when patterns and outcomes are clearer./li>
-                                          </ul>
-                          <li><strong>Context</strong> — Shows <em>where the thinking originates</em> and what domain it’s grounded in.</li>
-                                        <ul style="padding-left: 50px;">
-                                            <li><strong>Product Design</strong>: Practice, systems, and decisions-making within product work</li>
-                                            <li><strong>Game UI</strong>: Interface design and interaction thinking for games</li>
-                                            <li><strong>Career</strong>: Growth, leadership, and professional development</li>
-                                          </ul>
-                        </ul>
-
-                        <p>Together, these labels provide context for how I’m thinking, where the ideas originate, and how complete they are at the time of writing.</p>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!--/.accordion-collapse -->
-                </div>
-                <!--/.accordion -->
-                </div>
-          </div>
-          <!-- /column -->
-        </div>
-        <!-- /.row -->
+        <hr class="NavMenu-divider" />
+        <a href="./assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
       </div>
-      <div class="overflow-hidden">
-    <div class="divider text-light mx-n2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 92.26"><path fill="currentColor" d="M1206,21.2c-60-5-119-36.92-291-5C772,51.11,768,48.42,708,43.13c-60-5.68-108-29.92-168-30.22-60,.3-147,27.93-207,28.23-60-.3-122-25.94-182-36.91S30,5.93,0,16.2V92.26H1440v-87l-30,5.29C1348.94,22.29,1266,26.19,1206,21.2Z"/></svg>
-    </div>
-  </div>
+    </aside>
 
-</div>
-
-      <!-- /.container -->
-    </section>
-    <!-- /section -->
-
-    <!--Blog without Sidebar Start-->
-    <section class="wrapper bg-light">
-
-      <div class="container pb-14 pb-md-16">
-        <div class="row">
-          <div class="col-lg-10 mx-8">
-            <div class="blog classic-view">
-
-              <!--Featured Post Start -->
-              <article class="post">
-                <div class="card">
-                  <figure class="card-img-top overlay overlay-1 hover-scale"><a class="link-dark" href="./journalentries/design-identity"><img src="./assets/img/journalimg/designingbtd.png" alt="Design identity"><span class="bg"></span></a>
-                    <figcaption>
-                      <h5 class="from-top mb-0">Read More</h5>
-                    </figcaption>
-                  </figure>
-                  <div class="card-body">
-                    <div class="post-header">
-                      <div class="post-category text-line">
-                        <a href="#" class="hover" rel="category">Process</a>
-                      </div>
-                      <h2 class="post-title mt-1 mb-0"><a class="link-dark" href="./journalentries/design-identity">Designing B the Designer: How I'm Building My Personal Brand System with Atomic THinking</a></h2>
-                    </div>
-                    <div class="post-content">
-                      <p>How reading one chapter of Atomic Design sent me back to first principles — and why building a brand identity before a design system isn't optional, it's the foundation.</p>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <ul class="post-meta d-flex mb-0">
-                        <li class="post-meta"><i class="uil uil-notebooks"></i><span>Career</span></li>
-                        <li><span class="badge bg-pale-purple text-purple rounded-pill">Ongoing</span></li>
-                    </ul>
-                  </div>
-                </div>
-              </article>
-              <!-- Featured Post End-->
-
-            </div>
-            <!-- /.blog -->
-            <div class="blog grid grid-view">
-              <div class="row isotope gx-md-8 gy-8 mb-8" style="position: relative; height: 1313.34px;">
-                <article class="item post col-md-6" style="position: absolute; left: 0%; top: 0px;">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="./journalentries/articulatedesigns"> <img src="./assets/img/photos/b4.jpg" alt="Journal Thumbnail"><span class="bg"></span></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" rel="category">Reflection</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./journalentries/articulatedesigns">Why Designers Must Learn to Articulate Their Decisions</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>A reflection on why strong design fails without clear articulation—and how communication protects scope, confidence, and intent.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-meta"><i class="uil uil-palette"></i><span>Product Design</span></li>
-                        <li><span class="badge bg-pale-purple text-purple rounded-pill">Ongoing</span></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                <article class="item post col-md-6" style="position: absolute; left: 50%; top: 0px;">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="./journalentries/understandingstakeholders"> <img src="./assets/img/photos/b5.jpg" alt="Journal Thumbnail"><span class="bg"></span></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" rel="category">Reflection</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./journalentries/understandingstakeholders">Understanding Stakeholders Perspectives</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>A reflective exploration of how understanding stakeholder perspectives enables clearer design communication, stronger alignment, and more effective decision-making across cross-functional teams.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-meta"><i class="uil uil-palette"></i><span>Product Design</span></li>
-                        <li><span class="badge bg-pale-purple text-purple rounded-pill">Snapshot</span></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                <article class="item post col-md-6" style="position: absolute; left: 0%; top: 656.672px;">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="./journalentries/aiproductivitypartner"> <img src="./assets/img/photos/b6.jpg" alt="Journal Thumbnail"><span class="bg"></span></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" rel="category">Reflection</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./journalentries/aiproductivitypartner">Using AI as a Productivity Partner</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>A reflective snapshot on using AI as a productivity partner across the product design lifecycle—enhancing clarity, efficiency, and focus without replacing core UX thinking or judgment.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-meta"><i class="uil uil-palette"></i><span>Product Design</span></li>
-                        <li><span class="badge bg-pale-purple text-purple rounded-pill">Snapshot</span></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                <article class="item post col-md-6" style="position: absolute; left: 50%; top: 656.672px;">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="./journalentries/cPanelChaos"> <img src="./assets/img/journalimg/cPanelThumbnail.png" alt="Journal Thumbnail"><span class="bg"></span></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" rel="category">Reflection</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./journalentries/cPanelChaos">From cPanel Chaos to GitHub Pages Calm</a></h2>
-                      </div>
-                      <div class="post-content">
-                        <p>A reflection on moving my portfolio from manual cPanel uploads to GitHub Pages—and what finally pushed me to modernize my workflow.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-meta"><i class="uil uil-notebooks"></i><span>Career</span></li>
-                        <li><span class="badge bg-pale-purple text-purple rounded-pill">Snapshot</span></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-                <!-- /.post -->
-                 <article class="item post col-md-6" style="position: absolute; left: 0%; top: 656.672px;">
-                  <div class="card">
-                    <figure class="card-img-top overlay overlay-1 hover-scale"><a href="./journalentries/problemshapeprocess"> <img src="./assets/img/photos/b6.jpg" alt="Journal Thumbnail"><span class="bg"></span></a>
-                      <figcaption>
-                        <h5 class="from-top mb-0">Read More</h5>
-                      </figcaption>
-                    </figure>
-                    <div class="card-body">
-                      <div class="post-header">
-                        <div class="post-category text-line">
-                          <a href="#" rel="category">Reflection</a>
-                        </div>
-                        <!-- /.post-category -->
-                        <h2 class="post-title h3 mt-1 mb-3"><a class="link-dark" href="./journalentries/problemshapeprocess">Letting the Problem Shape the Process</a></h2>
-                      </div>
-                      <!-- /.post-header -->
-                      <div class="post-content">
-                        <p>A reflection on why effective design work adapts to the problem at hand, rather than forcing every project through the same process.</p>
-                      </div>
-                      <!-- /.post-content -->
-                    </div>
-                    <!--/.card-body -->
-                    <div class="card-footer">
-                      <ul class="post-meta d-flex mb-0">
-                        <li class="post-meta"><i class="uil uil-palette"></i><span>Product Design</span></li>
-                        <li><span class="badge bg-pale-purple text-purple rounded-pill">Snapshot</span></li>
-                      </ul>
-                      <!-- /.post-meta -->
-                    </div>
-                    <!-- /.card-footer -->
-                  </div>
-                  <!-- /.card -->
-                </article>
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.blog -->
-             
-          </div>
-          <!-- /column -->
-        </div>
-        <!-- /.row -->
+    <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+    <header id="mobile-header" class="MobileHeader">
+     <div class="nav_logocontainer--mobile">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
       </div>
-      <!-- /.container -->
-    </section>
-    <!--Blog without Sidebar End-->
 
-  </div>
+      <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+      <button
+        id="menu-toggle"
+        class="MenuToggle"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          id="menu-icon"
+          class="MenuToggle-icon"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+        <svg
+          id="close-icon"
+          class="MenuToggle-iconClose is-hidden"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </header>
 
- <!--Contact Me Callout Start-->
-<!-- /.overflow-hidden -->
-    </div>
-    <section class="wrapper bg-light border">
-  <div class="container py-14 py-md-10">
-    <div class="col-lg-10">
-        <h2 class="display-4 mb-3">Don't Be A <span class="underline primary">Stranger</span>!</h2>
-        <p class="lead fs-lg">Let's <span class="underline-3 style-2 violet">collaborate</span> and <span class="underline-3 style-2 violet">create</span> something amazing!</p>
-        <div class="align-self-center justify-content-center justify-content-lg-start">
-          <span><a href="#" role="button" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary rounded-pill me-5" onclick="copyEmail(event)" > <i class="uil uil-copy-alt"></i> Copy email address</a></span>
-              <span><a href="https://calendly.com/hello-bthedesigner/30min" target="_blank" rel="noopener noreferrer" class="hover" >Book a call <i class="uil uil-external-link-alt"></i></a></span>
-              
-            </div>
-        </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-</section>
-<!-- /section -->
-<!--Contact Me Callout End-->
+    <!-- Menu Overlay -->
+    <div id="menu-overlay" class="MenuOverlay"></div>
 
-    </div>
-
-    <!--scripts start-->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/theme.js"></script>
-    <script src="./assets/js/functionality.js"></script>
-    <!--scripts end-->
-
-</body>
-
-<footer>
-  <div class="container pt-7 pb-7">
-    <div class="d-md-flex align-items-center justify-content-between">
-      <p class="mb-2 mb-lg-0"><strong class="text-purple">Designed with care •</strong> B the Designer © 2025. All Rights Reserved. | <a href="./terms">Terms of Use</a> </p>
-      <nav class="nav social social-muted mb-0 text-md-end">
-        <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
+    <!-- Slide-out Mobile Navigation -->
+    <div id="mobile-menu" class="MobileMenu">
+      <nav class="NavMenu--mobile">
+        <a href="index.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="about.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!-- Services Mobile Link 
+        <a href="services.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+            />
+          </svg>
+          <span>Services</span>
+        </a>-->
+        <a href="work.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="journal.html" class="NavMenu-item is-active">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+            />
+          </svg>
+          <span>Journal</span>
+        </a>
       </nav>
+      <hr class="NavMenu-divider--mobile" />
+      <a href="./assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
     </div>
-  </div>
-  <!-- /.container -->
-</footer>
 
+    <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+    <div class="FrameBorder--top"></div>
+    <div class="FrameBorder--bottom"></div>
+    <div class="FrameBorder--right"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+    <main id="main-content" class="MainContent">
+      <div class="ContentWrapper">
+        <div class="PageContent">
+          <!-- ─── Page Header ────────────────────────────────── -->
+          <section class="SubpageHeader">
+            <h1 class="HeroSection-heading">
+              My
+              <span class="DisplayEmphasis-wrapper">
+                <span class="DisplayEmphasis">
+                  <span class="DisplayEmphasis-word">thoughts</span>
+                  <span class="DisplayEmphasis-border">
+                    <span class="DisplayEmphasis-stroke"></span>
+                    <span
+                      class="DisplayEmphasis-corner DisplayEmphasis-corner--tl"
+                    ></span>
+                    <span
+                      class="DisplayEmphasis-corner DisplayEmphasis-corner--tr"
+                    ></span>
+                    <span
+                      class="DisplayEmphasis-corner DisplayEmphasis-corner--bl"
+                    ></span>
+                    <span
+                      class="DisplayEmphasis-corner DisplayEmphasis-corner--br"
+                    ></span>
+                  </span>
+                </span>
+                <span class="DisplayEmphasis-cursor slide-right">
+                  <img
+                    src="./assets/img/Vector.svg"
+                    alt=""
+                    width="28"
+                    height="28"
+                  />
+                </span>
+              </span>
+            </h1>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════
+            Recent Entries
+          ════════════════════════════════════════════════════════ -->
+          <section class="RecentSection-container2columns">
+            <div class="CategoryDivider">
+              <span class="CategoryDivider-label">
+                <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                <p>Recent entries</p>
+              </span>
+              <span class="CategoryDivider-line" aria-hidden="true"></span>
+            </div>
+
+            <ul
+              class="journal-grid recent-entries-grid"
+              id="recent-entries-grid"
+              aria-label="Three most recent journal entries"
+            ></ul>
+          </section>
+
+          <!-- ═══════════════════════════════════════════════════════
+            All Entries
+          ════════════════════════════════════════════════════════ -->
+
+          <section class="Section">
+            <section class="gallery" aria-labelledby="gallery-heading">
+              <!-- Controls: filters + view toggle -->
+              <div class="gallery__controls">
+                <!-- Two-tier tab filter -->
+                <div class="gallery-tabs" id="gallery-tabs">
+                  <!-- Tier 1 — Category tabs -->
+                  <div
+                    class="gallery-tabs__tier1"
+                    id="gallery-tier1"
+                    role="tablist"
+                    aria-label="Filter by category"
+                  >
+                    <button
+                      class="gtab"
+                      role="tab"
+                      aria-selected="true"
+                      tabindex="0"
+                      data-category="all"
+                      id="gtab-all"
+                    >
+                      <span class="gtab__chip" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 14 14"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect x="1" y="1" width="5" height="5" rx="0.5" />
+                          <rect x="8" y="1" width="5" height="5" rx="0.5" />
+                          <rect x="1" y="8" width="5" height="5" rx="0.5" />
+                          <rect x="8" y="8" width="5" height="5" rx="0.5" />
+                        </svg>
+                      </span>
+                      All
+                    </button>
+
+                    <button
+                      class="gtab"
+                      role="tab"
+                      aria-selected="false"
+                      tabindex="-1"
+                      data-category="process"
+                      id="gtab-process"
+                    >
+                      <span class="gtab__chip" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 14 14"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M2 11 L7 2 L12 11 Z" />
+                        </svg>
+                      </span>
+                      Process
+                    </button>
+
+                    <button
+                      class="gtab"
+                      role="tab"
+                      aria-selected="false"
+                      tabindex="-1"
+                      data-category="reflection"
+                      id="gtab-reflection"
+                    >
+                      <span class="gtab__chip" aria-hidden="true">
+                        <svg
+                          viewBox="0 0 14 14"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="7" cy="7" r="4.5" />
+                        </svg>
+                      </span>
+                      Reflection
+                    </button>
+                  </div>
+
+                  <!-- Tier 2 — Subtab row (JS-populated, hidden until a category with subtabs is active) -->
+                  <div
+                    class="gallery-tabs__tier2"
+                    id="gallery-tier2"
+                    role="tablist"
+                    aria-label="Filter by subcategory"
+                  >
+                    <!-- Injected by JS -->
+                  </div>
+                </div>
+                <!-- /gallery-tabs -->
+
+                <!-- View toggle pill -->
+                <div
+                  class="view-toggle"
+                  role="group"
+                  aria-label="Change gallery view"
+                >
+                  <button
+                    class="view-toggle__btn"
+                    id="btn-grid"
+                    aria-pressed="true"
+                    aria-label="Grid view"
+                    data-view="grid"
+                  >
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <rect
+                        x="1"
+                        y="1"
+                        width="6"
+                        height="6"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                      <rect
+                        x="9"
+                        y="1"
+                        width="6"
+                        height="6"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                      <rect
+                        x="1"
+                        y="9"
+                        width="6"
+                        height="6"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                      <rect
+                        x="9"
+                        y="9"
+                        width="6"
+                        height="6"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    grid
+                  </button>
+                  <button
+                    class="view-toggle__btn"
+                    id="btn-list"
+                    aria-pressed="false"
+                    aria-label="List view"
+                    data-view="list"
+                  >
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      focusable="false"
+                    >
+                      <rect
+                        x="1"
+                        y="2"
+                        width="14"
+                        height="3"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                      <rect
+                        x="1"
+                        y="7"
+                        width="14"
+                        height="3"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                      <rect
+                        x="1"
+                        y="12"
+                        width="14"
+                        height="3"
+                        rx="1"
+                        fill="currentColor"
+                      />
+                    </svg>
+                    list
+                  </button>
+                </div>
+              </div>
+              <!-- /gallery__controls -->
+
+              <!-- Card list -->
+              <ul
+                class="journal-grid"
+                id="journal-grid"
+                data-view="grid"
+                aria-label="journal gallery"
+                aria-live="polite"
+                aria-atomic="false"
+              >
+                <!-- Cards injected by journal-gallery.js from journal-data.js -->
+              </ul>
+            </section>
+          </section>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer-content" class="FooterContent">
+          <hr />
+          <p class="FooterCopy">
+            <strong>Designed with care</strong>
+            B the Designer © 2026. All Rights Reserved. •
+            <a href="#">Terms of Use</a>
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/journal-data.js"></script>
+    <script src="./assets/js/journal-gallery.js"></script>
+
+    <!-- Loads anime.js and wires the FLIP layout engine.
+       Must be type="module" for the import to work.
+       Runs after journal-gallery.js so window._galleryLayout is ready when needed. -->
+    <script type="module">
+      import {
+        createLayout,
+        utils,
+        stagger,
+      } from "https://esm.sh/animejs@4.3.0";
+
+      const $grid = document.getElementById("journal-grid");
+      if ($grid) {
+        const cardsLayout = createLayout($grid, {
+          properties: ["font-size"],
+          enterFrom: {
+            opacity: (el) =>
+              el.classList.contains("journal-card") ? "1" : "0",
+            transform: (el) =>
+              el.classList.contains("journal-card")
+                ? "translateY(60%) scale(.85)"
+                : "none",
+          },
+          leaveTo: {
+            opacity: 0,
+            transform: (el) => {
+              if (!el.classList.contains("journal-card")) return "none";
+              const i = [...el.parentElement.children].indexOf(el);
+              const d = i % 2 ? -1 : 1;
+              return `translate(${30 * d}%, 30%) rotate(${10 * d}deg) scale(.85)`;
+            },
+          },
+        });
+
+        // Expose on window so journal-gallery.js can use it for animated view switching
+        window._galleryLayout = { cardsLayout, utils, stagger };
+      }
+    </script>
+  </body>
 </html>

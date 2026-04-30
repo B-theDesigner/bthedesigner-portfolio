@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Bryttany (B) Winkfield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/theme.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/module.css">
+  <link rel="stylesheet" href="./assets/css/state.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
+
+      <!-- User Profile -->
+      <div class="UserProfile">
+        <img src="./assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar">
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="index.html" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="about.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span>About</span>
+        </a>
+        <a href="services.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"/>
+          </svg>
+          <span>Services</span>
+        </a>
+        <a href="work.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="journal.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+          </svg>
+          <span>Journal</span>
+        </a>
+      </nav>
+
+      <hr class="NavMenu-divider">
+      <a href="#" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
+
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+    <div class="MobileHeader-user">
+      <img src="./assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar">
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div>
+    </div>
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12"/>
+        <line x1="4" x2="20" y1="6" y2="6"/>
+        <line x1="4" x2="20" y1="18" y2="18"/>
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18"/>
+        <path d="m6 6 12 12"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- Slide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="index.html" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>About</span>
+      </a>
+      <a href="services.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"/>
+        </svg>
+        <span>Services</span>
+      </a>
+      <a href="work.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="journal.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile">
+    <a href="#" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <div class="PageContent">
+
+
+        <!-- ─── Hero Section ──────────────────────────────── -->
+        <section class="HeroSection">
+
+          <!-- Profile Image with decorative frame -->
+          <div class="MediaDisplay">
+            <div class="MediaDisplay-frame">
+              <img
+                src="./assets/img/BtheDesigner.png"
+                alt="Bryttany Winkfield"
+                class="MediaDisplay-image"
+              />
+              <div class="MediaDisplay-border">
+                <div class="MediaDisplay-borderStroke"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tl"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bl"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--br"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tr"></div>
+                <div class="MediaDisplay-badges">
+                  <div class="MediaDisplay-badge">
+                    <p>IMG</p>
+                  </div>
+                  <div class="MediaDisplay-caption">
+                    <p>Bryttany Winkfield</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intro Copy -->
+          <div class="HeroSection-copy">
+
+            <!-- Available Badge -->
+            <span class="Status-badge">
+              <span class="Status-badge-dot"></span>
+              Open to contract &amp; full-time
+            </span>
+
+            <!-- Heading -->
+            <h1 class="HeroSection-heading">
+              Hey, I'm Bryttany — but you can call me <span class="HeroSection-fillWord">B</span>, the
+              <span class="DisplayEmphasis-wrapper">
+                <span class="DisplayEmphasis">
+                  <span class="DisplayEmphasis-word">designer!</span>
+                  <span class="DisplayEmphasis-border">
+                    <span class="DisplayEmphasis-stroke"></span>
+                    <span class="DisplayEmphasis-corner DisplayEmphasis-corner--tl"></span>
+                    <span class="DisplayEmphasis-corner DisplayEmphasis-corner--tr"></span>
+                    <span class="DisplayEmphasis-corner DisplayEmphasis-corner--bl"></span>
+                    <span class="DisplayEmphasis-corner DisplayEmphasis-corner--br"></span>
+                  </span>
+                </span>
+                <span class="DisplayEmphasis-cursor slide-right">
+                  <img src="./assets/img/Vector.svg" alt="" width="28" height="28">
+                </span>
+              </span>
+            </h1>
+
+            <!-- Description -->
+            <p class="HeroSection-description">
+              Chicago-based Product Design Lead specializing in enterprise SaaS, health and wealth products, and systems-first design thinking — available for contract and full-time opportunities.
+            </p>
+
+            <!-- CTAs -->
+            <div class="HeroSection-actions">
+              <a href="https://calendly.com/bthedesigner" class="Button Button--primary Button--lg" rel="noopener noreferrer" target="_blank">Book a call</a>
+              <button role="button" class="Button Button--secondary Button--lg" onclick="copyEmail(event)">Copy e-mail</button>
+            </div>
+
+          </div>
+        </section>
+
+
+        <!-- ─── Services Section ───────────────────────────── -->
+        <section class="Section">
+          <div class="Section-header">
+            <div class="Section-copy">
+              <h2 class="Section-title">My services</h2>
+              <p class="Section-subtitle">A curated collection of product design projects focused on clarity, impact, and thoughtful problem-solving.</p>
+            </div>
+            <a href="services.html" class="Link ">View all services →</a>
+          </div>
+          <div class="Section-body">
+            <div class="ServicesSection-grid">
+
+              
+              <div class="ServicesCard">
+                <div class="ServicesCard-icon">
+                  <img src="https://img.icons8.com/E2D7EF/glyph-neue/64/workflow.png" alt="UX/UI Design icon" />
+                </div>
+                <div class="ServicesCard-copy">
+                  <h3 class="ServicesCard-title">UX/UI Design</h3>
+                  <p class="ServicesCard-description">I help scaling companies turn complex workflows into clear, intuitive product experiences — without losing the nuance that makes enterprise software actually work.</p>
+                </div>
+              </div>
+
+              <div class="ServicesCard">
+                <div class="ServicesCard-icon">
+                  <img src="https://img.icons8.com/E2D7EF/glyph-neue/64/change-theme.png" alt="Design System icon" />
+                </div>
+                <div class="ServicesCard-copy">
+                  <h3 class="ServicesCard-title">Design System</h3>
+                  <p class="ServicesCard-description">I build design systems that give your team a shared language — contributors can stop reinventing the wheel and start shipping with confidence.</p>
+                </div>
+              </div>
+
+              <div class="ServicesCard">
+                <div class="ServicesCard-icon">
+                  <img src="https://img.icons8.com/E2D7EF/glyph-neue/64/collaboration-female-male.png" alt="Mentorship icon" />
+                </div>
+                <div class="ServicesCard-copy">
+                  <h3 class="ServicesCard-title">Mentorship</h3>
+                  <p class="ServicesCard-description">I help designers at every stage think more intentionally about their craft, their decisions, and the career they're actually building.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ─── Selected Work Section ──────────────────────── -->
+        <section class="Section">
+          <div class="Section-header">
+            <div class="Section-copy">
+              <h2 class="Section-title">Selected work</h2>
+              <p class="Section-subtitle">A curated collection of product design projects focused on clarity, impact, and thoughtful problem-solving.</p>
+            </div>
+            <a href="work.html" class="Link">View all work →</a>
+          </div>
+          <div class="Section-body">
+            <div class="WorkCards">
+
+              <div class="WorkCard">
+                <div data-card-hover>
+                <div class="WorkCard-inner">
+                  <div class="WorkCard-content">
+                    <div class="WorkCard-titleGroup">
+                      <div class="WorkCard-category">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                        <p>Redesign</p>
+                      </div>
+                      <h2 class="WorkCard-title">Guided Healthcare Experience</h2>
+                    </div>
+                    <div class="WorkCard-descriptionGroup">
+                      <p class="WorkCard-description">
+                        Improved a critical healthcare experience by reducing user confusion and promoting accessible, actionable support pathways.
+                      </p>
+                    </div>
+                    <div class="Section-label">
+                    <div class="label-container"> 
+                      <div class="label--increase">Engagement</div>
+                    </div>
+                    <div class="label-container"> 
+                      <div class="label--testing">Testing</div>
+                     </div>
+                   </div>
+                   <a href="#" class="Link">View details →</a>
+                  </div>
+                  <div class="WorkCard-imageContainer">
+                    <img
+                      class="WorkCard-image"
+                      src="/assets/img/placeholder_img.png"
+                      alt="Card Title project preview"
+                    />
+                  </div>
+                </div>
+              </div>
+              </div>
+
+             
+              <div class="WorkCard"> 
+                <div data-card-hover>
+                <div class="WorkCard-inner">
+                  <div class="WorkCard-content">
+                    <div class="WorkCard-titleGroup">
+                      <div class="WorkCard-category">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                        <p>Redesign</p>
+                      </div>
+                      <h2 class="WorkCard-title">Financial Analytics Dashboard</h2>
+                    </div>
+                    <div class="WorkCard-descriptionGroup">
+                      <p class="WorkCard-description">
+                        Redesigned a high-stakes Investments experience to improve data clarity, comparison, and performance—while contributing scalable UI patterns to the design system.
+                      </p>
+                    </div>
+                   <div class="Section-label">
+                    <div class="label-container"> 
+                      <div class="label--increase">Engagement</div>
+                    </div>
+                    <div class="label-container"> 
+                      <div class="label--testing">Testing</div>
+                     </div>
+                   </div>
+                   <a href="#" class="Link">View details →</a>
+                  </div>
+                  <div class="WorkCard-imageContainer">
+                    <img
+                      class="WorkCard-image"
+                      src="/assets/img/placeholder_img.png"
+                      alt="Card Title project preview"
+                    />
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="WorkCard">
+                <div data-card-hover>
+                <div class="WorkCard-inner">
+                  <div class="WorkCard-content">
+                    <div class="WorkCard-titleGroup">
+                      <div class="WorkCard-category">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                        <p>Net New</p>
+                      </div>
+                      <h2 class="WorkCard-title">Installment Payment Experience</h2>
+                    </div>
+                    <div class="WorkCard-descriptionGroup">
+                      <p class="WorkCard-description">
+                        A net-new installment payments experience designed to clarify progress, timing, and structure across complex non-qualified plans.
+                      </p>
+                    </div>
+                    <div class="Section-label">
+                    <div class="label-container"> 
+                      <div class="label--increase">Engagement</div>
+                    </div>
+                    <div class="label-container"> 
+                      <div class="label--testing">Testing</div>
+                     </div>
+                   </div>
+                   <a href="#" class="Link">View details   →</a>
+                  </div>
+                  <div class="WorkCard-imageContainer">
+                    <img
+                      class="WorkCard-image"
+                      src="/assets/img/placeholder_img.png"
+                      alt="Card Title project preview"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </section>
+
+
+        <!-- ─── Journal Section ────────────────────────────── -->
+        <section class="Section Section--row">
+          <div class="Section-header">
+            <div class="Section-copy">
+              <h2 class="Section-title">My thoughts</h2>
+              <p class="Section-subtitle">This virtual journal is a space for reflection, learning, and documenting how I think through design and creative work. Entries here aren't optimized for likes, comments, or sharing — they're simply notes I find useful to capture and share over time.</p>
+            </div>
+            <a href="journal.html" class="Link ">View all entries →</a>
+          </div>
+          <div class="Section-body">
+            <div class="ArticleList">
+              <h3 class="ArticleList-subtitle">Recent entries</h3>
+
+             <div class="ArticleCard-container">
+              <div data-card-hover>
+              <div class="ArticleCard">
+                <div class="ArticleCard-image">
+                  <img src="./assets/img/BtheDesigner.png" alt="Article thumbnail" />
+                </div>
+                <div class="ArticleCard-copy">
+                  <div class="ArticleCard-details">
+                  <div class="ArticleCard-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                    Growth
+                  </div>
+                  <div class="ArticleCard-date">April 09, 2022 | 30 min</div>
+                  </div>
+                  <div class="ArticleCard-title">How a visual artist redefines success in graphic design.</div>
+                  <div class="ArticleCard-link">
+                  <a href="#" class="Link">Read entry →</a>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+              <div class="ArticleCard-container">
+              <div data-card-hover>
+              <div class="ArticleCard">
+                <div class="ArticleCard-image">
+                  <img src="./assets/img/BtheDesigner.png" alt="Article thumbnail" />
+                </div>
+                <div class="ArticleCard-copy">
+                  <div class="ArticleCard-details">
+                  <div class="ArticleCard-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                    Process
+                  </div>
+                  <div class="ArticleCard-date">April 09, 2022 | 30 min</div>
+                  </div>
+                  <div class="ArticleCard-title">Designing B the Designer: How I'm Building My Personal Brand System with Atomic Thinking</div>
+                  <div class="ArticleCard-link">
+                  <a href="#" class="Link">Read entry →</a>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+              <div class="ArticleCard-container">
+              <div data-card-hover>
+              <div class="ArticleCard">
+                <div class="ArticleCard-image">
+                  <img src="./assets/img/BtheDesigner.png" alt="Article thumbnail" />
+                </div>
+                <div class="ArticleCard-copy">
+                  <div class="ArticleCard-details">
+                  <div class="ArticleCard-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                    Reflection
+                  </div>
+                  <div class="ArticleCard-date">April 09, 2022 | 30 min</div>
+                  </div>
+                  <div class="ArticleCard-title">Why Designers Must Learn to Articulate Their Decisions</div>
+                  <div class="ArticleCard-link">
+                  <a href="#" class="Link">Read entry →</a>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+             <div class="ArticleCard-container">
+              <div data-card-hover>
+              <div class="ArticleCard">
+                <div class="ArticleCard-image">
+                  <img src="./assets/img/BtheDesigner.png" alt="Article thumbnail" />
+                </div>
+                <div class="ArticleCard-copy">
+                  <div class="ArticleCard-details">
+                  <div class="ArticleCard-label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="2" viewBox="0 0 24 2" fill="none">
+                          <path d="M0 1H24" stroke="#A27ECC" stroke-width="2"/>
+                        </svg>
+                    Reflection
+                  </div>
+                  <div class="ArticleCard-date">April 09, 2022 | 30 min</div>
+                  </div>
+                  <div class="ArticleCard-title">Understanding Stakeholders Perspectives</div>
+                  <div class="ArticleCard-link">
+                  <a href="#" class="Link">Read entry →</a>
+                </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            </div>
+          </div>
+        </section>
+
+        
+
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr>
+        <p class="FooterCopy">
+          <strong>Designed with care</strong>
+          B the Designer © 2026. All Rights Reserved.
+          <a href="#">Terms of Use</a> |
+          <a target="_blank" href="https://icons8.com/icon/bQCJWquu4950/web" rel="noopener noreferrer" >Web</a> icon by
+          <a target="_blank" href="https://icons8.com"  rel="noopener noreferrer" >Icons8</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

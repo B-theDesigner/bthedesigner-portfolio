@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04: Stakeholders POV</title>
+  <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+  <link rel="shortcut icon" href="./../assets/img/FavIcon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./../assets/css/theme.css">
+  <link rel="stylesheet" href="./../assets/css/base.css">
+  <link rel="stylesheet" href="./../assets/css/layout.css">
+  <link rel="stylesheet" href="./../assets/css/module.css">
+  <link rel="stylesheet" href="./../assets/css/state.css">
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
+
+      <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div> -->
+
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="./../index.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="./../about.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!-- Services Link 
+        <a href="./../services.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <span>Services</span> -->
+        </a>
+        <a href="./../work.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="./../journal.html" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+          </svg>
+          <span>Journal</span>
+        </a>
+      </nav>
+
+      <hr class="NavMenu-divider">
+      <a href="./../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
+
+    </div>
+  </aside>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+
+    <div class="nav_logocontainer--mobile">
+      <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+    </div>
+
+    <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+
+    </div>
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- Slide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="./../index.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="./../about.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>About</span>
+      </a>
+      <!-- Services Mobile Link 
+      <a href="./../services.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+        </svg>
+        <span>Services</span>
+      </a>-->
+      <a href="./../work.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="./../journal.html" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile">
+    <a href="./../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <section class="breadcrumb-section">
+        <div class="breadcrumb-container">
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="./../journal.html" class="breadcrumb-item Link js-back-btn">← Back</a>
+          </nav>
+          <div class="Subject-details">
+            <h1 class="Subject-title">Understanding Stakeholders Perspectives</h1>
+          </div>
+          <div class="Subject-readtime">
+            <p>30mins</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="JournalEntryContent">
+
+        <!-- ─── Project Details ────────────────────────────────── -->
+
+
+
+        <section class="JournalEntry">
+
+          <div class="MediaDisplay-ProjectDetails" data-fit="cover">
+            <div class="MediaDisplay-framelg">
+              <img class="MediaDisplay-imagelg" src="./../assets/img/journals/perspective.jpg" alt="Project hero" />
+              <div class="MediaDisplay-border">
+                <div class="MediaDisplay-borderStrokelg"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+              </div>
+            </div>
+            <!-- Badge + caption below the frame, left aligned, side by side -->
+            <div class="MediaDisplay-meta">
+              <div class="MediaDisplay-badge">
+                <p>IMG</p>
+              </div>
+              <div class="MediaDisplay-caption">
+                <p>Stock image of a perspective</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="JournalEntry-paragraph">
+            <p>
+              Another key lesson I took away from <mark class="c-text-highlight"></mark>Articulating Design Decisions</mark> is that effective design communication starts with understanding who you’re talking to and what they care about. As designers, we don’t just present solutions—we translate them in ways that resonate with different stakeholder priorities.
+              <br /> <br />
+              I see this play out regularly in my own work. When I’m designing under real-world constraints, I often check in with developers early to ensure my ideas are technically feasible. These conversations help me understand where flexibility exists and where it doesn’t, allowing me to adjust designs before they become costly to change. Without that alignment, even well-intentioned designs can fall apart during implementation. Similarly, when presenting work to a platform product owner, I’ve learned that it’s not enough to explain how a design works. I need to clearly articulate how it drives engagement, supports scalability, or improves consistency across the platform. The same design can be perceived very differently depending on whether it’s framed as a usability improvement, a performance gain, or a long-term system investment.
+              The book helped me put language to something I’ve experienced firsthand:
+              <br/>
+              stakeholders aren’t pushing back on design because they don’t value UX —they’re evaluating it through the lens of their own responsibilities. Developers are optimizing for feasibility and efficiency. Product owners are balancing engagement, adoption, and roadmap priorities. Executives are thinking about outcomes and impact. Each perspective is valid, but incomplete on its own.
+            <br /> <br />
+            The book reinforced something I’ve experienced repeatedly: most design conflict isn’t a design problem—it’s a communication problem. Every stakeholder is optimizing for something different. Design decisions only land when they’re framed in a way that speaks directly to those motivations. When that framing is missing, even strong solutions can be questioned, diluted, or abandoned entirely.
+           <br /> <br />
+           What’s changed for me is being more intentional about framing design outcomes in ways that directly address these viewpoints. When designers anticipate stakeholder concerns and speak to them clearly, conversations become more focused, trust builds faster, and alignment happens earlier in the process.
+           <br /> <br />
+           To support this mindset—both for readers and for my future self—I took time to create the stakeholder breakdown below as a reference. It’s a reminder to pause, consider who I’m designing and presenting for, and intentionally align my communication with what matters most to them.
+            </p>
+            <br/>
+            <h2>Stakeholder and Their Perspectives + Priorities</h2>
+             <div class="UseCaseTable" data-total="8">
+                    <dl class="UseCaseTable-list">
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Users / Customers</dt>
+                        <dd class="UseCaseTable-value">The logo needed to signal creative authority without announcing itself too loudly. The hexagon carries the hive reference but it's structural, not cute. The drip mark is expressive, humanizing the geometry. The cursor arrow is pointed, intentional. Together, they say: this is someone who builds things on purpose.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Product Manager / Product Owners</dt>
+                        <dd class="UseCaseTable-value">Balance user needs, business objectives, timelines, and scope. Focus on prioritization, impact, and roadmap alignment.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Developers / Engineers</dt>
+                        <dd class="UseCaseTable-value">Optimize for technical feasibility, performance, maintainability, and delivery effort.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Marketing/dt>
+                        <dd class="UseCaseTable-value">Focus on messaging, brand consistency, and how the product is perceived across touchpoints.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Executives / Leadership</dt>
+                        <dd class="UseCaseTable-value">Evaluate design through outcomes such as revenue, growth, risk reduction, and strategic alignment.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Sales / Client-Facing Teams</dt>
+                        <dd class="UseCaseTable-value">Value designs that are easy to explain, demo, and position competitively.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Customer Support / Customer Success</dt>
+                        <dd class="UseCaseTable-value">Experience the downstream effects of design decisions through user confusion, support tickets, and adoption challenges.</dd>
+                      </div>
+
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Legal, Compliance, & Accessibility Teams</dt>
+                        <dd class="UseCaseTable-value">Focus on risk mitigation, regulatory requirements, and ensuring products meet accessibility standards.</dd>
+                      </div>
+
+
+                    </dl>
+
+                  </div>
+
+          </div>
+          </div>
+        </section>
+      
+      <!-- ─── Contact Callout Section ────────────────────────────── -->
+      <section class="Sectionxl">
+        <div class="ContactBanner-container">
+          <div class="ContactBanner-copy">
+            <h1 class="ContactBanner-header">don't be a stranger!</h1>
+            <p class="ContactBanner-subheader">Let's <span class="highlight">collaborate</span> and <span
+                class="highlight">create</span> something amazing!</p>
+          </div>
+          <!-- CTAs -->
+          <div class="ContactBanner-actions">
+            <a href="https://calendly.com/bthedesigner" class="Button Button--primary Button--lg"
+              rel="noopener noreferrer" target="_blank">Book a call</a>
+            <button role="button" class="Button Button--secondary Button--lg" onclick="copyEmail(event)">Copy
+              e-mail</button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr />
+        <p class="FooterCopy">
+          <strong>Designed with care</strong>
+          B the Designer © 2026. All Rights Reserved. •
+          <a href="#">Terms of Use</a>
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="./../assets/js/script.js"></script>
+</body>
+
+</html>

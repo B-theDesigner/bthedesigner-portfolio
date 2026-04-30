@@ -1,761 +1,1557 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
- <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
-Game UI Designer, Game UX Designer, Figma Expert,
-Accessibility Design, WCAG Compliance, UX Strategy,
-SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
-">
-  <meta name="author" content="Bryttany (B) Winkfield">
-  <title>B - The Designer</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.svg">
-  <link rel="stylesheet" href="./assets/css/plugins.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/colors/purple.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+  <title>About B</title>
+  <link rel="shortcut icon" href="./assets/img/FavIcon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/layout.css" />
+  <link rel="stylesheet" href="./assets/css/module.css" />
+  <link rel="stylesheet" href="./assets/css/state.css" />
 </head>
 
 <body>
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
 
-  <div class="alert alert-info alert-icon alert-dismissible fade show" role="alert">
-    <h1 class="h6">Portfolio Update: Journals + In Progress Visuals</h1>
-  <i class="uil uil-exclamation-circle"></i> I recently added a new <em>Journal</em> feature to showcase my thinking, reflections, and design philosophy. A few asset images are currently placeholders while final visuals are being refined. All written content and case study narratives are complete and reflect real project work.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-
-    <!--sticky nav start-->
-   <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none navbar-clone fixed narbar-unstick">
-        <div class="container">
-            <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                    <div class="navbar-brand w-100">
-                    <a href="./">
-                       <strong class="h3"> B the <span class="text-primary" >Designer</span> </strong>
-                    </a>
-                    </div>
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                          <a href="./">
-                       <strong class="h3"> B the <span class="text-primary" >Designer</span> </strong>
-                    </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./work">Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./journal">Journal</a></li>
-                    </ul>
-          <!-- responsive nav rail /.navbar-nav -->
-          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
-            <a href="mailto:hello@bthedesigner.me" class="link-inverse">hello@bthedesigner.me</a>
-            <br />
-            <br /> 
-                <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-            <br />
-            <nav class="nav social social-white mt-4">
-              <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
-            </nav>
-            <!-- /.social -->
-          </div>
-          <!-- /offcanvas-nav-other -->
+      <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
         </div>
-        <!-- /.offcanvas-body -->
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item d-none d-md-block">
-            <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn" aria-label="Open navigation menu"><span></span></button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-    </div>
-    </nav>
-    <!--sticky nav end-->
+      </div> -->
 
-    <div class="content-wrapper">
-    <!--nav start-->
-    <header class="wrapper bg-light">
-        <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light">
-            <div class="container">
-                <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                    <div class="navbar-brand w-100">
-                    <a href="./">
-                       <strong class="h3"> B the <span class="typer text-primary" 
-                                data-loop="false" 
-                                data-delay="100" 
-                                data-words="Mentor, Gamer, K-drama Addict, Designer">
-                              </span><span class="cursor text-primary" data-owner="typer"></span> </strong>
-                    </a>
-                    </div>
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                        <a href="./">
-                       <strong class=" h3 text-white"> B the Designer </strong>
-                    </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./work">Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./journal">Journal</a></li>
-                    </ul>
-          <!-- responsive nav rail /.navbar-nav -->
-          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
-            <a href="mailto:hello@bthedesigner.me" class="link-inverse">hello@bthedesigner.me</a>
-            <br />
-            <br /> 
-                <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-            <br />
-            <nav class="nav social social-white mt-4">
-              <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
-            </nav>
-            <!-- /.social -->
-          </div>
-          <!-- /offcanvas-nav-other -->
-        </div>
-        <!-- /.offcanvas-body -->
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item d-none d-md-block">
-            <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn" aria-label="Open navigation menu"><span></span></button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-    </div>
-    <!-- /.navbar-collapse-wrapper -->
-  </div>
-  <!-- /.container -->
-        </nav>
-    </header>
-    <!--nav end-->
-
-    <!--About Me Intro Start -->
-    <section class="wrapper bg-light">
-  <div class="container py-4 py-md-4">
-    <div class="row gx-md-8 gx-xl-12 gy-6 align-items-center">
-      <div class="col-md-8 col-lg-6 order-lg-2 mx-auto">
-        <div class="img-mask mask-3"><img src="./assets/img/me/grey.png" alt="" /></div>
-      </div>
-      <!--/column -->
-      <div class="col-lg-6">
-        <h2 class="display-5 mb-3">About me</h2>
-        <p class="lead fs-lg">Hi, I’m Bryttany — but you can call me <strong class="text-purple">B</strong> <em>(most people do)</em>.</p>
-        <p>I’m a Product Designer who enjoys untangling complex problems and turning them into experiences that actually make sense to the people using them. Over the past decade, I’ve worked on enterprise products and systems where clarity, collaboration, and adaptability matter more than flashy solutions.</p>
-        <p>I’m naturally curious, collaborative by default, and always learning — whether that’s refining my design craft, mentoring teammates, or exploring new spaces like game UI and interactive design.</p>
-      </div>
-      <!--/column -->
-    </div>
-
-    <section class="wrapper bg-light">
-  <div class="container py-14 py-md-16">
-    <div class="row">
-      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
-        <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">What shapes me as a <span class="underline-3 style-2 purple">designer</span></h3>
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-    <ul class="nav nav-tabs nav-tabs-bg d-flex justify-content-between nav-justified flex-lg-row flex-column">
-      <li class="nav-item"> <a class="nav-link d-flex flex-row active" data-bs-toggle="tab" href="#tab2-1">
-          <div><img src="./assets/img/icons/solid/navigation.svg" class="svg-inject icon-svg icon-svg-md solid-mono text-primary me-4" alt="" /></div>
-          <div>
-            <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Quick Snapshot</span></h3>
-            <p>My experience at a glance</p>
-          </div>
-        </a> </li>
-      <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-2">
-          <div><img src="./assets/img/icons/solid/puzzle.svg" class="svg-inject icon-svg icon-svg-md solid-mono text-primary me-4" alt="" /></div>
-          <div>
-            <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Adaptable</span></h3>
-            <p>My design approach</p>
-          </div>
-        </a> </li>
-      <li class="nav-item"> <a class="nav-link d-flex flex-row" data-bs-toggle="tab" href="#tab2-3">
-          <div><img src="./assets/img/icons/solid/target.svg" class="svg-inject icon-svg icon-svg-md solid-mono text-primary me-4" alt="" /></div>
-          <div>
-            <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Design Values</span></h3>
-            <p>What guides my work</p>
-          </div>
-        </a> </li>
-    </ul>
-    <!-- /.nav-tabs -->
-    <div class="tab-content mt-6 mt-lg-8">
-      <div class="tab-pane fade show active" id="tab2-1">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6">
-            <div class="row gx-md-5 gy-5 align-items-center">
-              <div class="col-12">
-                <img class="img-fluid" src="./assets/img/illustrations/ui4.png" srcset="./assets/img/illustrations/ui4@2x.png 2x" alt="" />
-              </div>
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Quick Snapshot</span></h3>
-        <h3 class="mb-4">My experience at a glance:</h3>
-        <ul class="icon-list bullet-bg bullet-soft-primary">
-          <li><i class="uil uil-check"></i>Product Design Lead with 10+ years of experience.</li>
-          <li><i class="uil uil-check"></i>Background in UX, UI, Accessibility, AI and interaction design.</li>
-          <li><i class="uil uil-check"></i>Experience designing enterprise SaaS, platforms, and complex workflows.</li>
-          <li><i class="uil uil-check"></i>Strong collaborator across product, engineering, and research.</li>
-          <li><i class="uil uil-check"></i>Comfortable owning problems from early discovery through delivery.</li>
-        </ul>
-        <p>I’ve spent much of my career designing within constraints — legacy systems, regulatory environments, tight timelines — and enjoy finding clarity and simplicity within complexity.</p>
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.tab-pane -->
-      <div class="tab-pane fade" id="tab2-2">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6 order-lg-2">
-            <div class="row gx-md-5 gy-5">
-              <div class="col-12">
-                <img class="img-fluid" src="./assets/img/illustrations/ui3.png" srcset="./assets/img/illustrations/ui3@2x.png 2x" alt="" />
-              </div>
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Adaptable</span></h3>
-        <h3 class="mb-4">My design approach:</h3>
-        <p>I approach design as a collaborative, iterative practice grounded in understanding people and constraints.</p>
-        <p>In practice, that usually looks like:</p>
-        <ul class="icon-list bullet-bg bullet-soft-primary">
-          <li><i class="uil uil-check"></i>Building a strong understanding of the problem space and context.</li>
-          <li><i class="uil uil-check"></i>Partnering early and often with stakeholders to align on goals.</li>
-          <li><i class="uil uil-check"></i>Exploring and testing ideas before committing to solutions.</li>
-          <li><i class="uil uil-check"></i>Iterating toward outcomes that are both usable and scalable.</li>
-        </ul>
-        <p>Rather than following a rigid process, I adapt my approach to the needs of the project, the team, and the users.</p>
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-      </div>
-      <!--/.tab-pane -->
-      <div class="tab-pane fade" id="tab2-3">
-        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-center">
-          <div class="col-lg-6">
-            <div class="row gx-md-5 gy-5">
-              <div class="col-12">
-                <img class="img-fluid" src="./assets/img/illustrations/ui5.png" srcset="./assets/img/illustrations/ui5@2x.png 2x" alt="" />
-              </div>
-              <!-- /column -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!--/column -->
-          <div class="col-lg-6">
-            <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Design Values</span></h3>
-            <h3 class="mb-4">What guides my work:</h3>
-        <!--accordion start-->
-        <div class="accordion accordion-wrapper" id="accordionExample">
-          <div class="card accordion-item">
-            <div class="card-header" id="headingOne">
-              <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Documentation as a Design Tool </button>
-            </div>
-            <!--/.card-header -->
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="card-body">
-                <p>Clear, efficient documentation is essential to building shared understanding and moving teams forward. I treat documentation as an extension of the design process — capturing decisions, tradeoffs, and rationale so teams can align, iterate, and scale without unnecessary friction.</p>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.accordion-collapse -->
-          </div>
-          <!--/.accordion-item -->
-          <div class="card accordion-item">
-            <div class="card-header" id="headingTwo">
-              <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Collaboration over isolation </button>
-            </div>
-            <!--/.card-header -->
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="card-body">
-                <p>Strong design outcomes come from working closely with product, engineering, and research — not designing in a vacuum. I prioritize collaboration early and often to surface constraints, challenge assumptions, and ensure solutions are both usable and feasible.</p>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.accordion-collapse -->
-          </div>
-          <!--/.accordion-item -->
-          <div class="card accordion-item">
-            <div class="card-header" id="headingThree">
-              <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Learning as a practice </button>
-            </div>
-            <!--/.card-header -->
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="card-body">
-                <p>I view learning as an ongoing part of my role, not a phase of my career. Whether it’s refining existing skills, exploring new tools, or entering adjacent spaces like game UI, I actively seek opportunities to grow and bring new perspectives back into my work.</p>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.accordion-collapse -->
-          </div>
-          <!--/.accordion-item -->
-          <div class="card accordion-item">
-            <div class="card-header" id="headingFour">
-              <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Design for scale </button>
-            </div>
-            <!--/.card-header -->
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-              <div class="card-body">
-                <p>I aim to create solutions that work not just for today’s use case, but for what comes next. This means thinking in systems, anticipating edge cases, and designing patterns that can flex and grow as products and teams evolve.</p>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.accordion-collapse -->
-          </div>
-          <div class="card accordion-item">
-            <div class="card-header" id="headingFive">
-              <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Structure before visuals </button>
-            </div>
-            <!--/.card-header -->
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-              <div class="card-body">
-                <p>A strong foundation leads to stronger outcomes. I prioritize structure, hierarchy, and flow before visual polish to ensure designs are clear, intentional, and resilient — especially in complex or content-heavy experiences.</p>
-              </div>
-              <!--/.card-body -->
-            </div>
-          </div>
-          <!--/column -->
-        </div>
-        <!--/.row -->
-            </div>
-            <!--/.tab-pane -->
-          </div>
-          <!-- /.tab-content -->
-        </div>
-        <!-- /.container -->
-      </section>
-<!-- /section -->
-</div>
-</section>
-</div>
-<!--About Me Intro End -->
-
-
-
-<!--Testimonals Start-->
-<section class="wrapper bg-light">
-  <div class="container py-8 py-md-14">
-    <div class="row gx-xl-12 gy-10">
-      <div class="col-xl-4">
-        <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purple" id="section-1">Testimonials</span></h3>
-        <h2 class="display-4 mb-8">What <span class="underline-3 style-2 violet">others</span> have to say</h2>
-        <a href="https://www.linkedin.com/in/bryttany-winkfield/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener noreferrer" class="btn btn-primary rounded-pill">All Testimonials</a>
-      </div>
-      <!-- /column -->
-      <div class="col-xl-8">
-        <div class="position-relative">
-          <div class="swiper-container dots-closer mb-6" data-margin="0" data-dots="true" data-items-md="2" data-items-xs="1">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <blockquote class="icon mb-0">
-                          <p>“Your active engagement with other designers has been instrumental in fostering a collaborative environment. I appreciate how functional and user-friendly your designs are. Your feedback to junior designers has been constructive, specific, and timely, which has greatly contributed to their growth and development.”</p>
-
-                           <div class="blockquote-details">
-                            <span class="avatar bg-pale-primary text-primary w-12 h-12">
-                              <span>BJ</span>
-                            </span>
-                            <div class="info">
-                              <h5 class="mb-1">Bob Johnson</h5>
-                              <p class="mb-0">Accessibility Designer</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <blockquote class="icon mb-0">
-                          <p>“B's leadership has been a driving force behind the remarkable achievements of the Wealth, Thrift, andHealthNav team. She is professional, but also a dynamic individual who brings confidence, collaboration, and constructive feedback to the table. ”</p>
-                          <div class="blockquote-details">
-                            <span class="avatar bg-pale-primary text-primary w-12 h-12">
-                              <span>MM</span>
-                            </span>
-                            <div class="info">
-                              <h5 class="mb-1">Meli Marquez</h5>
-                              <p class="mb-0">Design System Designer</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <blockquote class="icon mb-0">
-                          <p>“B is a hands-on design leader that every design and product team would benefit from. Through her collaboration with PMs and stakeholders, she consistently advocates for the users and UX best practices, while keeping the business needs in mind.”</p>
-                          <div class="blockquote-details">
-                            <span class="avatar bg-pale-primary text-primary w-12 h-12">
-                              <span>JY</span>
-                            </span>
-                            <div class="info">
-                              <h5 class="mb-1">Ji-Sook Yim</h5>
-                              <p class="mb-0">Product Design Lead</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <blockquote class="icon mb-0">
-                          <p>“I strongly recommend B for any design leadership role. During our time working together, she proved to be a powerful voice for design governance and a dedicated advocate for user experience. She possesses a deep technical skillset and remains hands-on, which allows her to lead by example. ”</p>
-                          <div class="blockquote-details">
-                            <span class="avatar bg-pale-primary text-primary w-12 h-12">
-                              <span>JF</span>
-                            </span>
-                            <div class="info">
-                              <h5 class="mb-1">Juan Francisco</h5>
-                              <p class="mb-0">Product Design Lead</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-                <div class="swiper-slide">
-                  <div class="item-inner">
-                    <div class="card">
-                      <div class="card-body">
-                        <blockquote class="icon mb-0">
-                          <p>“I got the opportunity to work with B for the first time when we were partnered up on the AWL 2.0 initiative. She came in not knowing too much about journeys ahead of time, but after a quick run through she totally hit the ground running. I was super impressed that by our second meeting...”</p>
-                          <div class="blockquote-details">
-                            <span class="avatar bg-pale-primary text-primary w-12 h-12">
-                              <span>MS</span>
-                            </span>
-                            <div class="info">
-                              <h5 class="mb-1">Maria Shrake</h5>
-                              <p class="mb-0">Product Owner</p>
-                            </div>
-                          </div>
-                        </blockquote>
-                      </div>
-                      <!--/.card-body -->
-                    </div>
-                    <!-- /.card -->
-                  </div>
-                  <!-- /.item-inner -->
-                </div>
-                <!--/.swiper-slide -->
-              </div>
-              <!--/.swiper-wrapper -->
-            </div>
-            <!-- /.swiper -->
-          </div>
-          <!-- /.swiper-container -->
-        </div>
-        <!-- /.position-relative -->
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-   <div class="overflow-hidden">
-        <div class="divider text-white mx-n2">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 92.26"><path fill="#f2f3fb" d="M1206,21.2c-60-5-119-36.92-291-5C772,51.11,768,48.42,708,43.13c-60-5.68-108-29.92-168-30.22-60,.3-147,27.93-207,28.23-60-.3-122-25.94-182-36.91S30,5.93,0,16.2V92.26H1440v-87l-30,5.29C1348.94,22.29,1266,26.19,1206,21.2Z"></path></svg>
-        </div>
-      </div>
-</section>
-<!-- /section -->
-<!-- Testomonals End-->
-
-<!-- Certification & Education Start-->
-<section class="wrapper bg-soft-primary">
-
-	<div class="container pb-12">
-		<div class="row text-center">
-			<div class="col-xl-10 mx-auto">
-        <h2 class="mt-8 mb-4 mt-n4 mt-md-n2"><span class="underline-3 style-2 violet">Education</span> & <span class="underline-3 style-2 violet">certifications</span></h2>
-        <p class="mb-8">I actively invest in continuous learning through platforms such as LinkedIn Learning, regularly expanding my skill set with new certifications. Each completed certification is documented on <a href="https://www.linkedin.com/in/bryttany-winkfield/details/certifications/" target="_blank" rel="noopener noreferrer" class="hover-3">LinkedIn</a>, where you can view my most recent credentials and ongoing professional development.</p>
-			</div>
-			<!-- /column -->
-		</div>
-		<!-- /.row -->
-		<div class="row gy-6">
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow-lg lift h-100">
-					<div class="card-body p-5 d-flex flex-row">
-						<div>
-							<span class="badge bg-pale-purple text-purple rounded py-1 mb-2">Degree</span>
-							<h4 class="mb-1">B.A - Graphic Design</h4>
-							<p class="mb-0 text-body">Elmhurst University</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/column -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow-lg lift h-100">
-					<div class="card-body p-5 d-flex flex-row">
-						<div>
-							<span class="badge bg-pale-purple text-purple rounded py-1 mb-2">Degree</span>
-							<h4 class="mb-1">M.Sc.Human Computer Interaction (HCI)</h4>
-							<p class="mb-0 text-body">DePaul University</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/column -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow-lg lift h-100">
-					<div class="card-body p-5 d-flex flex-row">
-						<div>
-							<span class="badge bg-pale-violet text-violet rounded py-1 mb-2">Certification</span>
-							<h4 class="mb-1">User Experience in Game Design</h4>
-							<p class="mb-0 text-body">Epic Games</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/column -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow-lg lift h-100">
-					<div class="card-body p-5 d-flex flex-row">
-						<div>
-							<span class="badge bg-pale-violet text-violet rounded py-1 mb-2">Certification</span>
-							<h4 class="mb-1">Conversation Design: Practical Tips for AI Design</h4>
-							<p class="mb-0 text-body">IxDF - Interaction Design Foundation</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/column -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow-lg lift h-100">
-					<div class="card-body p-5 d-flex flex-row">
-						<div>
-							<span class="badge bg-pale-violet text-violet rounded py-1 mb-2">Certification</span>
-							<h4 class="mb-1">Professional Scrum Master I (PSM I)</h4>
-							<p class="mb-0 text-body">Scrum.org</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/column -->
-			<div class="col-md-6 col-lg-4">
-				<div class="card shadow-lg lift h-100">
-					<div class="card-body p-5 d-flex flex-row">
-						<div>
-							<span class="badge bg-pale-violet text-violet rounded py-1 mb-2">Certification</span>
-							<h4 class="mb-1">HTML Essential Training</h4>
-							<p class="mb-0 text-body">LinkedIn</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/column -->
-		</div>
-	</div>
-  <!--/.row -->
-		
-	<!-- /.container -->
-   <div class="overflow-hidden">
-    <div class="divider text-light mx-n2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 92.26"><path fill="currentColor" d="M1206,21.2c-60-5-119-36.92-291-5C772,51.11,768,48.42,708,43.13c-60-5.68-108-29.92-168-30.22-60,.3-147,27.93-207,28.23-60-.3-122-25.94-182-36.91S30,5.93,0,16.2V92.26H1440v-87l-30,5.29C1348.94,22.29,1266,26.19,1206,21.2Z"/></svg>
-    </div>
-  </div>
-  <!-- /.overflow-hidden -->
-</section>
-<!-- /section -->
- <!-- Certification & Education End-->
-
-<section class="wrapper bg-light">
-  <div class="container py-14 py-md-16">
-    <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
-      <div class="col-lg-4 mt-lg-2">
-        <h3 class="fs-15 text-uppercase text-line text-navy"><span class="underline purplet" id="section-1">Hobbies</span></h3>
-        <h2 class="display-4 mb-3"><span class="underline-3 style-2 violet">Outside</span> of work</h2>
-        <p class="lead fs-lg mb-6 pe-xxl-5">When I’m not designing, I enjoy creative projects that let me explore storytelling, interaction, and community in different ways.</p>
-      </div>
-      <!-- /column -->
-      <div class="col-lg-8">
-        <div class="swiper-container Journal grid-view mb-6" data-margin="30" data-dots="true" data-items-md="2" data-items-xs="1">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <article>
-                  <figure class="lift rounded mb-5"><a href="#"aria-label="Twitch Callout"> <img src="./assets/img/me/twitch.png" alt="" /></a>
-                   </figure>
-                  <div class="post-header">
-                    <!-- /.post-category -->
-                    <h2 class="post-title h3 mt-1 mb-3">Streaming & Community Building</h2>
-                    <p>I host live streams and engage with creative communities, which has strengthened my communication and facilitation skills.</p>
-                  </div>
-                  <!-- /.post-header -->
-                  <!-- /.post-footer -->
-                </article>
-                <!-- /article -->
-              </div>
-              <!--/.swiper-slide -->
-              <div class="swiper-slide">
-                <article>
-                  <figure class="lift rounded mb-5"><a href="#" aria-label="K-Drama Podcast"> <img src="./assets/img/me/Podcast.png" alt="" /></a>
-                 </figure>
-                  <div class="post-header">
-                    <!-- /.post-category -->
-                    <h2 class="post-title h3 mt-1 mb-3">K-Drama Podcasting</h2>
-                    <p>I host a podcast focused on character arcs, narrative structure, and storytelling in Korean Dramas (K-dramas).</p>
-                  </div>
-                  <!-- /.post-header -->
-                </article>
-                <!-- /article -->
-              </div>
-              <!--/.swiper-slide -->
-              <div class="swiper-slide">
-                <article>
-                  <figure class="lift rounded mb-5"><a href="#" aria-label="Learning Game Design"> <img src="./assets/img/me/GameDesign.png" alt="" /></a>
-                  </figure>
-                  <div class="post-header">
-                    <!-- /.post-category -->
-                    <h2 class="post-title h3 mt-1 mb-3">Learning Game Design</h2>
-                    <p>I’m actively building skills in game UI and interactive systems, blending my product design background with more experiential design challenges.</p>
-                  </div>
-                  <!-- /.post-header -->
-                </article>
-                <!-- /article -->
-              </div>
-            </div>
-            <!--/.swiper-wrapper -->
-          </div>
-          <!-- /.swiper -->
-        </div>
-        <!-- /.swiper-container -->
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-     <!-- Wave 3 -->
-<div class="overflow-hidden">
-  <div class="divider text-white mx-n2">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 92.26"><path fill="#f2f3fb" d="M1206,21.2c-60-5-119-36.92-291-5C772,51.11,768,48.42,708,43.13c-60-5.68-108-29.92-168-30.22-60,.3-147,27.93-207,28.23-60-.3-122-25.94-182-36.91S30,5.93,0,16.2V92.26H1440v-87l-30,5.29C1348.94,22.29,1266,26.19,1206,21.2Z"/></svg>
-  </div>
-</div>
-<!-- /.overflow-hidden -->
-</section>
-<!-- /section -->
-
-<section class="wrapper bg-soft-primary">
-  <div class="container pt-5 pt-md-10 pb-14 pb-md-0">
-    <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-13">
-      <div class="col-lg-6">
-        <h1 class="display-1 fs-66 lh-xxs mb-0">It's not everyday I get to talk about myself <span class="underline-3 style-2 violet">this much</span>.</h1>
-      </div>
-      <!-- /column -->
-      <div class="col-lg-6">
-        <p class="lead fs-25 my-3">If you'd like to see how these values and approaches show up in real work you can explore my selected work.</p>
-        <a href="./work" class="more hover">View work</a>
-      </div>
-      <!-- /column -->
-    </div>
-  </div>
-  <!-- /.container -->
-</section>
-<!-- /section -->
-
-
-<!--Contact Me Callout Start-->
-<!-- /.overflow-hidden -->
-    </div>
-   <section class="wrapper bg-light border">
-  <div class="container py-14 py-md-10">
-    <div class="col-lg-10">
-        <h2 class="display-4 mb-3">Don't Be A <span class="underline primary">Stranger</span>!</h2>
-        <p class="lead fs-lg">Let's <span class="underline-3 style-2 violet">collaborate</span> and <span class="underline-3 style-2 violet">create</span> something amazing!</p>
-        <div class="align-self-center justify-content-center justify-content-lg-start">
-          <span><a href="#" role="button" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary rounded-pill me-5" onclick="copyEmail(event)" > <i class="uil uil-copy-alt"></i> Copy email address</a></span>
-              <span><a href="https://calendly.com/hello-bthedesigner/30min" target="_blank" rel="noopener noreferrer" class="hover" >Book a call <i class="uil uil-external-link-alt"></i></a></span>
-              
-            </div>
-        </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-</section>
-<!-- /section -->
-<!--Contact Me Callout End-->
-
-    </div>
-
-    <!--scripts start-->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/theme.js"></script>
-    <script src="./assets/js/functionality.js"></script>
-    <!--scripts end-->
-
-</body>
-
-<footer>
-  <div class="container pt-7 pb-7">
-    <div class="d-md-flex align-items-center justify-content-between">
-      <p class="mb-2 mb-lg-0"><strong class="text-purple">Designed with care •</strong> B the Designer © 2026. All Rights Reserved. | <a href="./terms">Terms of Use</a> </p>
-      <nav class="nav social social-muted mb-0 text-md-end">
-        <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="index.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="about.html" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!--Services Link 
+        <a href="services.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <span>Services</span> -->
+        </a>
+        <a href="work.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="journal.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+          </svg>
+          <span>Journal</span>
+        </a>
       </nav>
+
+      <hr class="NavMenu-divider" />
+      <a href="./assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
     </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+
+    <div class="nav_logocontainer--mobile">
+      <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+    </div>
+
+    <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- Slide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="index.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>About</span>
+      </a>
+      <!--Services Mobile Link 
+      <a href="services.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+        </svg>
+        <span>Services</span>
+      </a>-->
+      <a href="work.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="journal.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile" />
+    <a href="./assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
   </div>
-  <!-- /.container -->
-</footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <div class="PageContent">
+        <!-- ─── About Content Container ─────────────────────────────────── -->
+        <section class="AboutContent-container">
+          <div class="AboutContent-hero">
+            <div class="MediaDisplay">
+              <div class="MediaDisplay-frame">
+                <img src="./assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="MediaDisplay-image" />
+                <div class="MediaDisplay-border">
+                  <div class="MediaDisplay-borderStroke"></div>
+                  <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tl"></div>
+                  <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bl"></div>
+                  <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--br"></div>
+                  <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tr"></div>
+                  <div class="MediaDisplay-badges">
+                    <div class="MediaDisplay-badge">
+                      <p>IMG</p>
+                    </div>
+                    <div class="MediaDisplay-caption">
+                      <p>Bryttany Winkfield</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="AboutContent-copy">
+              <h2 class="HeroSection-heading">
+                Hey, I'm Bryttany — but you can call me <span class="HeroSection-fillWord">B</span>, the
+                <span class="DisplayEmphasis-wrapper">
+                  <span class="DisplayEmphasis">
+                    <span class="DisplayEmphasis-word">designer!</span>
+                    <span class="DisplayEmphasis-border">
+                      <span class="DisplayEmphasis-stroke"></span>
+                      <span class="DisplayEmphasis-corner DisplayEmphasis-corner--tl"></span>
+                      <span class="DisplayEmphasis-corner DisplayEmphasis-corner--tr"></span>
+                      <span class="DisplayEmphasis-corner DisplayEmphasis-corner--bl"></span>
+                      <span class="DisplayEmphasis-corner DisplayEmphasis-corner--br"></span>
+                    </span>
+                  </span>
+                  <span class="DisplayEmphasis-cursor slide-right">
+                    <img src="./assets/img/Vector.svg" alt="" width="28" height="28">
+                  </span>
+                </span>
+              </h2>
+              <p>
+                I’m naturally curious, collaborative by default, and always
+                learning — whether that’s refining my design craft, mentoring
+                teammates, or exploring new spaces like game UI and interactive
+                design.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+            Tabs
+          ════════════════════════════════════════════════════════ -->
+
+
+        <section class="AboutContent-container" aria-label="What shapes me as a designer">
+          <section class="" aria-label="What shapes me as a designer">
+            <div class="CategoryDivider">
+              <span class="CategoryDivider-label">
+                <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                <p>BACKGROUND</p>
+              </span>
+              <span class="CategoryDivider-line" aria-hidden="true"></span>
+            </div>
+
+            <h2 class="Testimonials-heading">What shapes me as a <span class="HeroSection-fillWord">designer</span>.
+            </h2>
+            <br><br>
+
+            <!-- ── Desktop Tabs ── -->
+            <ul class="tabs-nav" role="tablist" aria-label="Designer sections">
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-experience" aria-controls="panel-experience"
+                  aria-selected="true" tabindex="0">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                    </svg>
+                  </span>
+                  My experience
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                  <span class="tab-btn__cursor" aria-hidden="true">
+                    <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-approach" aria-controls="panel-approach"
+                  aria-selected="false" tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                    </svg>
+                  </span>
+                  My design approach
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                  <span class="tab-btn__cursor" aria-hidden="true">
+                    <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-values" aria-controls="panel-values" aria-selected="false"
+                  tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </span>
+                  My design values
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                  <span class="tab-btn__cursor" aria-hidden="true">
+                    <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-stack" aria-controls="panel-stack" aria-selected="false"
+                  tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </span>
+                  My stack
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                  <span class="tab-btn__cursor" aria-hidden="true">
+                    <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC" />
+                    </svg>
+                  </span>
+                </button>
+              </li>
+
+            </ul>
+
+            <!-- ── Desktop Panels ── -->
+            <div class="tabs-panel-wrapper">
+              <div class="tab-panel" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience"
+                aria-hidden="false">
+                <div class="tab-panel__header">
+                  <div class="tab-panel__header-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                    </svg>
+                  </div>
+                  <h3 class="tab-panel__title">My experience at a glance</h3>
+                </div>
+                <div class="tab-panel__body">
+                  <ul>
+                    <li>
+                      Product Designer with <strong> 10+ years of experience</strong> in the
+                      tech design industry.
+                    </li>
+                    <li>
+                      Background in <strong>UX, Accessibility, Design Systems, IxD, and QA
+                        design.</strong>
+                    </li>
+                    <li>
+                      Experience designing <strong>enterprise SaaS, platforms and
+                        complex workflows.</strong>
+                    </li>
+                    <li>
+                      <strong>Strong collaborator</strong> across product, engineering, content
+                      designers and researchers.
+                    </li>
+                    <li>
+                      Comfortable owning problems from <strong>early discovery through
+                        delivery.</strong>
+                    </li>
+                  </ul>
+                  <p>I’ve spent much of my career designing within constraints — legacy systems, regulatory environments, tight timelines — and enjoy finding clarity and simplicity within complexity.</p>
+                </div>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-approach" aria-labelledby="tab-approach"
+                aria-hidden="true">
+                <div class="tab-panel__header">
+                  <div class="tab-panel__header-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                    </svg>
+                  </div>
+                  <h3 class="tab-panel__title">My design approach</h3>
+                </div>
+                <div class="tab-panel__body">
+                  <p>I approach design as a collaborative, iterative practice grounded in
+                    understanding people and constraints. <strong>My process is flexible</strong>, but here are some of
+                    the core
+                    principles that guide how I work:
+                  </p>
+                  <ul>
+                    <li>
+                      Building a <strong>strong understanding of the problem space and context</strong>.
+                    </li>
+                    <li>
+                      <strong>Partnering early and often</strong> with cross-functional teammates — product managers,
+                      engineers,
+                      researchers, content designers — to ensure alignment and leverage diverse perspectives.
+                    </li>
+                    <li>
+                      <strong>Exploring and testing ideas</strong> before committing to a direction, whether that's
+                      through
+                      sketches, wireframes, prototypes, and/or design critiques.
+                    </li>
+                    <li>
+                      Iterating towards <strong>outcomes that are both usable and scalable</strong>.
+                    </li>
+                  </ul>
+                  <p>
+                    <strong>My process isn't rigid.</strong> I adapt it to the context, the
+                    team, and the constraints of the project. What stays
+                    consistent is a <strong>commitment to clarity and intentionality</strong>
+                    in every decision.
+                  </p>
+                </div>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-values" aria-labelledby="tab-values" aria-hidden="true">
+                <div class="tab-panel__header">
+                  <div class="tab-panel__header-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </div>
+                  <h3 class="tab-panel__title">My design values</h3>
+                </div>
+                <div class="tab-panel__body">
+                  <ul>
+                    <li>
+                      <strong>Documentation as a design tool</strong> — Clear, efficient documentation is essential to
+                      building shared understanding,
+                      enabling collaboration, and creating scalable design systems. I treat documentation as an
+                      extension of the design
+                      process — capturing devisions, tradeoffs, and rationale so teams can align, iterate, and scale
+                      without unnecessary friction.
+                    </li>
+                    <li>
+                      <strong>Collaboration over isolation</strong> - Strong design outcomes come from working closely
+                      with cross-functional teammates, not
+                      from working in a silo. I prioritize collaboration early and often to surface constrints,
+                      challenge assumptions, and ensure solutions are both usable and feasible.
+                    </li>
+                    <li>
+                      <strong>Learning as a practice</strong> - I view learning as an ongoing part of my role, not a
+                      phase of my career.
+                      Whether it's refining existing skills, exploring new tools, or entering adjacent spaces like
+                      front-end coding,
+                      I actively seek opportunities to grow and bring new prespectives back into my work.
+                    </li>
+                    <li>
+                      <strong>Design for scale</strong> - I aim to create solutions that work not just for today's user
+                      case, but for what comes next.
+                      This means thinking in systems, anticipating edge cases, and designing patterns that can flex and
+                      grow as products and teams evolve.
+                    </li>
+                    <li> <strong>Structure before visuals</strong> - A strong foundation leads to stronger
+                      outcomes. I prioritize structures, hierarchy, and
+                      flow before visual polish to ensure designs are clear, intentional, and resilient — especially in
+                      complex or content-heavy experiences.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-stack" aria-labelledby="tab-stack" aria-hidden="true">
+                <div class="tab-panel__header">
+                  <div class="tab-panel__header-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                    </svg>
+                  </div>
+                  <h3 class="tab-panel__title">My stack</h3>
+                </div>
+                <div class="tab-panel__body">
+                  <div class="mystack-ctr">
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/Figma Icon (Full-color).svg" alt="Figma Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Figma</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>UI design, prototyping & design systems</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/Figma Icon (Full-color).svg" alt="Figma Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Figma AI</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Generative idetaion, layer renaming & content drafting</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/vscode.png" alt="VS Code Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Visual Studio Code</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Front-end dev (HTML, CSS, JS)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/claudecode.png" alt="Claude Code Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Claude Code</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>AI-assisted coding, refactoring & debugging</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/claude-ai.svg" alt="Claude AI Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Claude</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Research, problem framing, writing & design rationale</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/Notion-logo.svg.png" alt="Notion Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Notion + Notion AI</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Project docs, case study writing & knowledge management</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/chrome-devtools.svg" alt="Chrome DevTools Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Chrome DevTools</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Inspect, debug & iterate in the browser</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ── Mobile Accordion ── -->
+            <div class="accordion" aria-label="Designer sections">
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-experience"
+                  id="acc-tab-experience">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                      </svg>
+                    </span>
+                    My experience
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-experience" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-experience">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                      <ul>
+                        <li>
+                          Product Designer with 10+ years of experience in the
+                          tech design industry.
+                        </li>
+                        <li>
+                          Background in UX, UI, Accessibility, AI, IxD, and QA
+                          design.
+                        </li>
+                        <li>
+                          Experience designing enterprise SaaS, platforms and
+                          complex workflows.
+                        </li>
+                        <li>
+                          Strong collaborator across product, engineering, content
+                          designers and researchers.
+                        </li>
+                        <li>
+                          Comfortable owning problems from early discovery through
+                          delivery.
+                        </li>
+                      </ul>
+                      <p>
+                        I've spent much of my career designing within constraints
+                        — legacy systems, regulatory environments, tight timelines
+                        — and enjoying finding clarity and simplicity within
+                        complexity.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-approach"
+                  id="acc-tab-approach">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z" />
+                      </svg>
+                    </span>
+                    My design approach
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-approach" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-approach">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                      <p>I approach design as a collaborative, iterative practice grounded in
+                        understanding people and constraints. My process is flexible, but here are some of the core
+                        principles that guide how I work:
+                      </p>
+                      <ul>
+                        <li>
+                          Building a strong understanding of the problem space and context.
+                        </li>
+                        <li>
+                          Partnering early and often with cross-functional teammates — product managers, engineers,
+                          researchers, content designers — to ensure alignment and leverage diverse perspectives.
+                        </li>
+                        <li>
+                          Exploring and testing ideas before committing to a direction, whether that's through
+                          sketches, wireframes, prototypes, and/or design critiques.
+                        </li>
+                        <li>
+                          Iterating towards outcomes that are both usable and scalable.
+                        </li>
+                      </ul>
+                      <p>
+                        My process isn't rigid — I adapt it to the context, the
+                        team, and the constraints of the project. What stays
+                        consistent is a commitment to clarity and intentionality
+                        in every decision.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-values"
+                  id="acc-tab-values">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </span>
+                    My design values
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-values" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-values">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                      <ul>
+                        <li>
+                          Clarity over cleverness — if it needs explaining, it
+                          needs rethinking.
+                        </li>
+                        <li>
+                          Accessibility is not a feature, it's a baseline
+                          expectation.
+                        </li>
+                        <li>
+                          Design is a team sport — the best outcomes come from
+                          open collaboration.
+                        </li>
+                        <li>
+                          Ownership matters — I care about the full
+                          experience, not just my slice of it.
+                        </li>
+                        <li>Constraints are creative fuel, not blockers.</li>
+                      </ul>
+                      <p>
+                        These values aren't just principles I list — they show
+                        up in how I run critiques, write documentation, and
+                        advocate for the people using the products I design.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-stack"
+                  id="acc-tab-stack">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                      </svg>
+                    </span>
+                    My stack
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-stack" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-stack">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                      <div class="mystack-ctr">
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/Figma Icon (Full-color).svg" alt="Figma Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Figma</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>UI design, prototyping & design systems</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/Figma Icon (Full-color).svg" alt="Figma Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Figma AI</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Generative idetaion, layer renaming & content drafting</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/vscode.png" alt="VS Code Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Visual Studio Code</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Front-end dev (HTML, CSS, JS)</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/claudecode.png" alt="Claude Code Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Claude Code</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>AI-assisted coding, refactoring & debugging</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/claude-ai.svg" alt="Claude AI Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Claude</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Research, problem framing, writing & design rationale</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/Notion-logo.svg.png" alt="Notion Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Notion + Notion AI</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Project docs, case study writing & knowledge management</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="stack-item">
+                      <div class="stack-icon">
+                        <img src="./assets/img/logos/chrome-devtools.svg" alt="Chrome DevTools Logo">
+                      </div>
+                      <div class="stack-content">
+                        <div class="stack-label">
+                          <h3>Chrome DevTools</h3>
+                        </div>
+                        <div class="stack-copy">
+                          <p>Inspect, debug & iterate in the browser</p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- /accordion -->
+          </section>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+            Testimonials
+          ════════════════════════════════════════════════════════ -->
+        <section class="AboutContent-container_2columns">
+          <div class="CategoryDivider">
+            <span class="CategoryDivider-label">
+              <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+              <p>TESTIMONIALS</p>
+            </span>
+            <span class="CategoryDivider-line" aria-hidden="true"></span>
+          </div>
+
+          <section class="Testimonials" aria-label="Testimonials">
+
+            <div class="Testimonials-header">
+              <span class="Status-badge">
+                <span class="Status-badge-dot"></span>
+                Open to contract &amp; full-time
+              </span>
+              <h2 class="Testimonials-heading">Reviews from <span class="HeroSection-fillWord">People I've Worked
+                  With</span></h2>
+              <p class="Testimonials-subheading">
+                A few words from people I've built alongside — teammates, leads, and clients. Number and character count has been reduced for quick review. To view indepth feedback and experiences visit my <a href="https://www.linkedin.com/in/bryttany-winkfield/details/recommendations/?detailScreenTabIndex=0" rel="noopener noreferrer" target="_blank" class="Link">LinkedIn Recommendations</a>.
+              </p>
+            </div>
+
+            <div class="Testimonials-window" role="region" aria-label="Scrolling testimonials">
+              <div class="Testimonials-track" id="js-testimonials-track">
+
+                <!-- ── Cards (original set) ─────────────────────────────── -->
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">Bryttany, or "B," joined Alight in 2021 during a period of organizational transformation. I was initially drawn to her strong UX process and academic background in Human-Computer Interaction, which gave me confidence in her ability to bring rigor, thoughtful problem solving, and a high bar for quality to the team. Those qualities were a key reason I hired her, particularly because I believed she would elevate the work and provide strong mentorship to designers supporting one of our Wealth clients.</p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/rafael.jpeg" alt="Testimonial 1"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Rafael F.</span>
+                      <span class="Testimonials-role">Director of Product Design</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">What sets her apart isn't just the craft, though her craft is excellent. It's the way she thinks. She frames problems before she touches pixels. She builds design systems that actually scale. She earns the trust of product and engineering by showing her work and knowing when to push back and when to move fast.
+<br/><br/>
+She also led through ambiguity without drama, which is rarer than it sounds.</p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/mike.jpeg" alt="Testimonial 2"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Mike A.</span>
+                      <span class="Testimonials-role">VP, Head of Product Design</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">I absolutely loved working with B. She is an intuitive and experienced product designer with strong, nuanced problem-solving skills. Her thoughtful, steady leadership style informs and guides those around her. She actively encourages and supports her teammates- fostering an environment rooted in collaboration, shared growth, and mutual respect. </p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/bob.jpeg" alt="Testimonial 3"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Bob J.</span>
+                      <span class="Testimonials-role">Product Design Lead | Acessibility</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">I had the privilege of working on B’s team during my time at Alight Solutions. She’s an exceptionally talented, hands‑on designer who brings a rare blend of strong visual instincts, systems thinking, and a deep understanding of what makes a user experience truly effective. B can do it all and she does it quickly and with remarkable skill. </p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/daphne.jpeg" alt="Testimonial 4"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Daphne Z.</span>
+                      <span class="Testimonials-role">Product Designer</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">I had the pleasure of working with B for four years, during which she was both my manager and a key mentor in my career growth. Early in my career, B was incredibly supportive and always available when I needed guidance. As I grew, she showed a deep trust in my abilities, knowing exactly when to step in with feedback and when to give me the independence to fully own my projects.</p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/maya.jpeg" alt="Testimonial 5"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Maya F.</span>
+                      <span class="Testimonials-role">Product Designer</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">B's leadership has been a driving force behind the remarkable achievements of the Wealth, Thrift, and HealthNav team. She is a professional and dynamic individual who brings confidence, collaboration, and constructive feedback to the table. In addition to being a confident leader, B is a stellar partner in our Alight Design System collaborative endeavors.</p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/meli.jpeg" alt="Testimonial 6"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Meli M.</span>
+                      <span class="Testimonials-role">Project Designer | Design Systems/span>
+                    </div>
+                  </footer>
+                </article>
+
+                <article class="Testimonials-card">
+                  <p class="Testimonials-quote">B is a hands-on design leader that every design and product team would benefit from. Through her collaboration with PMs and stakeholders, she consistently advocates for the users and UX best practices, while keeping the business needs in mind. With her thorough approach, she asks insightful questions and offers a strong point of view to ensure that the team does not compromise the user experience, and grounds her designs in clear rationale and impact.</p>
+                  <footer class="Testimonials-attribution">
+                    <div class="Testimonials-avatar" aria-hidden="true"><img src="./assets/img/testimonials/jisook.jpeg" alt="Testimonial 7"></div>
+                    <div class="Testimonials-meta">
+                      <span class="Testimonials-name">Ji-Sook Y.</span>
+                      <span class="Testimonials-role">Product Design Lead</span>
+                    </div>
+                  </footer>
+                </article>
+
+                <!-- ── Duplicate set — aria-hidden, enables seamless loop ─── -->
+                <!-- JS in testimonials.js clones the original set at runtime  -->
+                <!-- so you only maintain one set of cards above.              -->
+
+              </div><!-- /Testimonials-track -->
+            </div><!-- /Testimonials-window -->
+
+          </section>
+
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+            Education & Certifications
+          ════════════════════════════════════════════════════════ -->
+        <section class="AboutContent-container_2columns">
+
+          <div class="CategoryDivider">
+            <span class="CategoryDivider-label">
+              <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+              <p>Education &amp; Certifications</p>
+            </span>
+            <span class="CategoryDivider-line" aria-hidden="true"></span>
+          </div>
+
+          <div class="CertSection">
+
+            <p class="CertSection-description">I actively invest in continuous learning through platforms such as
+              LinkedIn Learning, regularly expanding my skill set with new certifications. Each completed certification
+              is documented on <a href="https://www.linkedin.com/in/bryttany-winkfield/details/certifications/" class="Link"
+                rel="noopener noreferrer" target="_blank">LinkedIn</a>, where you can view my most recent credentials
+              and ongoing professional development.</p>
+
+            <!-- ── Filter Tabs ── -->
+            <ul class="tabs-nav tabs-nav--cert" role="tablist" aria-label="Certification categories">
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-cert-all" aria-controls="panel-cert-all" aria-selected="true"
+                  tabindex="0">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                    </svg>
+                  </span>
+                  All
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-cert-design" aria-controls="panel-cert-design"
+                  aria-selected="false" tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                    </svg>
+                  </span>
+                  Product Design
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-cert-frontend" aria-controls="panel-cert-frontend"
+                  aria-selected="false" tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8 3a3 3 0 0 0-3 3v4a3 3 0 0 1-3 3 3 3 0 0 1 3 3v4a3 3 0 0 0 3 3h1v-2H8a1 1 0 0 1-1-1v-4a3 3 0 0 0-3-3.33A3 3 0 0 0 7 9.33V6a1 1 0 0 1 1-1h1V3zm7 0a3 3 0 0 1 3 3v4a3 3 0 0 0 3 3 3 3 0 0 0-3 3v4a3 3 0 0 1-3 3h-1v-2h1a1 1 0 0 0 1-1v-4a3 3 0 0 1 3-3.33A3 3 0 0 1 16 9.33V6a1 1 0 0 0-1-1h-1V3z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M8 3a3 3 0 0 0-3 3v4a3 3 0 0 1-3 3 3 3 0 0 1 3 3v4a3 3 0 0 0 3 3h1v-2H8a1 1 0 0 1-1-1v-4a3 3 0 0 0-3-3.33A3 3 0 0 0 7 9.33V6a1 1 0 0 1 1-1h1V3zm7 0a3 3 0 0 1 3 3v4a3 3 0 0 0 3 3 3 3 0 0 0-3 3v4a3 3 0 0 1-3 3h-1v-2h1a1 1 0 0 0 1-1v-4a3 3 0 0 1 3-3.33A3 3 0 0 1 16 9.33V6a1 1 0 0 0-1-1h-1V3z" />
+                    </svg>
+                  </span>
+                  Front-end Development
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-cert-pm" aria-controls="panel-cert-pm" aria-selected="false"
+                  tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.6c0-2 4-3.1 5-3.1s5 1.1 5 3.1V18z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.6c0-2 4-3.1 5-3.1s5 1.1 5 3.1V18z" />
+                    </svg>
+                  </span>
+                  Project Management
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                </button>
+              </li>
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-cert-ai" aria-controls="panel-cert-ai" aria-selected="false"
+                  tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.6c0-2 4-3.1 5-3.1s5 1.1 5 3.1V18z" />
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.6c0-2 4-3.1 5-3.1s5 1.1 5 3.1V18z" />
+                    </svg>
+                  </span>
+                  AI
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                </button>
+              </li>
+            </ul>
+
+            <!-- ── Scrollable Table Panel ── -->
+            <div class="tabs-panel-wrapper tabs-panel-wrapper--cert">
+
+              <!-- ALL -->
+              <div class="tab-panel CertTable" role="tabpanel" id="panel-cert-all" aria-labelledby="tab-cert-all"
+                aria-hidden="false">
+                <div class="CertTable-scroll">
+                  <table class="CertTable-table" aria-label="All education and certifications">
+                    <tbody id="cert-tbody-all">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- PRODUCT DESIGN -->
+              <div class="tab-panel CertTable" role="tabpanel" id="panel-cert-design" aria-labelledby="tab-cert-design"
+                aria-hidden="true" style="display:none">
+                <div class="CertTable-scroll">
+                  <table class="CertTable-table" aria-label="Product Design certifications">
+                    <tbody id="cert-tbody-design">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- FRONT-END DEVELOPMENT -->
+              <div class="tab-panel CertTable" role="tabpanel" id="panel-cert-frontend"
+                aria-labelledby="tab-cert-frontend" aria-hidden="true" style="display:none">
+                <div class="CertTable-scroll">
+                  <table class="CertTable-table" aria-label="Front-end Development certifications">
+                    <tbody id="cert-tbody-frontend">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- PROJECT MANAGEMENT -->
+              <div class="tab-panel CertTable" role="tabpanel" id="panel-cert-pm" aria-labelledby="tab-cert-pm"
+                aria-hidden="true" style="display:none">
+                <div class="CertTable-scroll">
+                  <table class="CertTable-table" aria-label="Project Management certifications">
+                    <tbody id="cert-tbody-pm">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- AI -->
+              <div class="tab-panel CertTable" role="tabpanel" id="panel-cert-ai" aria-labelledby="tab-cert-ai"
+                aria-hidden="true" style="display:none">
+                <div class="CertTable-scroll">
+                  <table class="CertTable-table" aria-label="Ai certifications">
+                    <tbody id="cert-tbody-ai">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div><!-- /tabs-panel-wrapper--cert -->
+
+            <!-- ── Mobile Accordion (≤1022px) ── -->
+            <div class="accordion accordion--cert" aria-label="Certification categories">
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-cert-all"
+                  id="acc-tab-cert-all">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+                      </svg>
+                    </span>
+                    All
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-cert-all" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-cert-all">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content accordion-body__content--table">
+                      <table class="CertTable-table" aria-label="All education and certifications">
+                        <tbody id="cert-acc-tbody-all">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-cert-design"
+                  id="acc-tab-cert-design">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z" />
+                      </svg>
+                    </span>
+                    Product Design
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-cert-design" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-cert-design">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content accordion-body__content--table">
+                      <table class="CertTable-table" aria-label="Product Design certifications">
+                        <tbody id="cert-acc-tbody-design">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-cert-frontend"
+                  id="acc-tab-cert-frontend">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M8 3a3 3 0 0 0-3 3v4a3 3 0 0 1-3 3 3 3 0 0 1 3 3v4a3 3 0 0 0 3 3h1v-2H8a1 1 0 0 1-1-1v-4a3 3 0 0 0-3-3.33A3 3 0 0 0 7 9.33V6a1 1 0 0 1 1-1h1V3zm7 0a3 3 0 0 1 3 3v4a3 3 0 0 0 3 3 3 3 0 0 0-3 3v4a3 3 0 0 1-3 3h-1v-2h1a1 1 0 0 0 1-1v-4a3 3 0 0 1 3-3.33A3 3 0 0 1 16 9.33V6a1 1 0 0 0-1-1h-1V3z" />
+                      </svg>
+                    </span>
+                    Front-end Development
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-cert-frontend" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-cert-frontend">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content accordion-body__content--table">
+                      <table class="CertTable-table" aria-label="Front-end Development certifications">
+                        <tbody id="cert-acc-tbody-frontend">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-cert-pm"
+                  id="acc-tab-cert-pm">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.6c0-2 4-3.1 5-3.1s5 1.1 5 3.1V18z" />
+                      </svg>
+                    </span>
+                    Project Management
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-cert-pm" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-cert-pm">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content accordion-body__content--table">
+                      <table class="CertTable-table" aria-label="Project Management certifications">
+                        <tbody id="cert-acc-tbody-pm">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-cert-ai"
+                  id="acc-tab-cert-ai">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm5 12H7v-.6c0-2 4-3.1 5-3.1s5 1.1 5 3.1V18z" />
+                      </svg>
+                    </span>
+                    AI
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-cert-ai" aria-hidden="true" role="region"
+                  aria-labelledby="acc-tab-cert-ai">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content accordion-body__content--table">
+                      <table class="CertTable-table" aria-label="AI certifications">
+                        <tbody id="cert-acc-tbody-ai">
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /accordion--cert -->
+
+          </div><!-- /CertSection -->
+        </section>
+
+        <!-- ═══════════════════════════════════════════════════════
+            Outside of Work
+          ════════════════════════════════════════════════════════ -->
+        <section class="AboutContent-container_2columns">
+          <div class="CategoryDivider">
+            <span class="CategoryDivider-label">
+              <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+              <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+              <p>Outside of Work</p>
+            </span>
+            <span class="CategoryDivider-line" aria-hidden="true"></span>
+          </div>
+
+          <p class="OOW-description">When I’m not designing, I enjoy creative projects that let me explore storytelling,
+            interaction, and community in different ways.</p>
+
+          <div class="AboutContent-irlcontainer">
+
+            <!-- ── Left: stacked card carousel ── -->
+            <div class="carousel-section">
+              <div class="carousel-container">
+                <div class="carousel-track">
+                  <div class="irlcard" data-index="0">
+                    <img src="./assets/img/aboutme/twitch.png" alt="Streaming and Community Building">
+                  </div>
+                  <div class="irlcard" data-index="1">
+                    <img src="./assets/img/aboutme/Podcast.png" alt="Podcast">
+                  </div>
+                  <div class="irlcard" data-index="2">
+                    <img src="./assets/img/aboutme/GameDesign.png" alt="Game Design">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Right: info + nav + dots ── -->
+            <div class="irlcontrols-section">
+
+              <div class="dots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+              </div>
+              <div class="irl-info">
+                <h2 class="irl-name">Subject</h2>
+                <p class="irl-description">Description</p>
+              </div>
+
+              <div class="irlnav-controls">
+                <button class="irlnav-arrow up" aria-label="Previous">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button class="irlnav-arrow down" aria-label="Next">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+
+
+
+            </div><!-- /irlcontrols-section -->
+
+          </div><!-- /AboutContent-irlcontainer -->
+        </section>
+
+        <!-- ─── About Outro ──────────────────────────────────── -->
+        <section class="AboutOutro">
+
+          <!-- Card: heading + CTAs -->
+          <div class="AboutOutro-card">
+            <div class="AboutOutro-left">
+              <h2 class="AboutOutro-heading">It's not everyday I get to talk about myself this much. </h2>
+            </div>
+            <div class="AboutOutro-right">
+              <p class="AboutOutro-copy">If you'd like to see how these values and approaches show up in real work you
+                can explore my selected work.</p>
+              <div class="AboutOutro-actions">
+                <a href="./../work.html" class="CategoryDivider-link">
+                  View work
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ─── Contact Callout Section ────────────────────────────── -->
+        <section class="Section">
+          <div class="ContactBanner-container">
+            <div class="ContactBanner-copy">
+              <h1 class="ContactBanner-header">don't be a stranger!</h1>
+              <p class="ContactBanner-subheader">Let's <span class="highlight">collaborate</span> and <span
+                  class="highlight">create</span> something amazing!</p>
+            </div>
+            <!-- CTAs -->
+            <div class="ContactBanner-actions">
+              <a href="https://calendly.com/bthedesigner" class="Button Button--primary Button--lg"
+                rel="noopener noreferrer" target="_blank">Book a call</a>
+              <button role="button" class="Button Button--secondary Button--lg" onclick="copyEmail(event)">Copy
+                e-mail</button>
+            </div>
+
+          </div>
+        </section>
+
+
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr />
+        <div class="FooterCopy">
+          <p><strong>Designed with care</strong></p>
+          <p>B the Designer © 2026.</p>
+          <p> &bull; &nbsp; All Rights Reserved &nbsp; &bull; </p>
+          <a href="#">Terms of Use</a>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="./assets/js/cert-data.js"></script>
+  <script src="./assets/js/cert-renderer.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/testimonial-tabs.js"></script>
+</body>
 
 </html>

@@ -1,0 +1,161 @@
+/* =============================================================================
+   THEME.CSS — Design Tokens (Colors, Typography, Spacing)
+   Token naming convention:
+     Foundation  → raw scale values  (--scale-100, --color-purple-800)
+     Semantic    → named aliases      (--color-primary, --font-size-base)
+     Spacing     → semantic labels    (--spacing-xs → --spacing-section-xl)
+   Unit convention: rem for font sizes, px for spacing & layout.
+   Base: 1rem = 16px
+   ============================================================================= */
+
+:root {
+
+  /* ── Foundation Scale (px reference, used by spacing below) ─────────────── */
+  --scale-100:  4px;
+  --scale-200:  8px;
+  --scale-300:  12px;
+  --scale-350:  14px;
+  --scale-400:  16px;
+  --scale-500:  18px;
+  --scale-550:  20px;
+  --scale-600:  24px;
+  --scale-700:  28px;
+  --scale-800:  32px;
+  --scale-900:  36px;
+  --scale-1000: 40px;
+  --scale-1100: 48px;
+  --scale-1200: 56px;
+  --scale-1300: 64px;
+  --scale-1400: 72px;
+  --scale-1500: 96px;
+  --scale-1600: 128px;
+
+
+  /* ── Colors — Primary (Shaded Lavender) ─────────────────────────────────── */
+  --color-primary-50:      #F6F2FA;
+  --color-primary-100:     #E2D7EF;
+  --color-primary-200:     #D4C4E8;
+  --color-primary-300:     #C1A9DD;
+  --color-primary-400:     #B598D6;
+  --color-primary-default: #C0A8DC;
+  --color-primary-600:     #9373BA;
+  --color-primary-700:     #735991;
+  --color-primary-800:     #594570;
+  --color-primary-900:     #443556;
+
+  /* ── Colors — Purple (Dark Backgrounds & Surfaces) ──────────────────────── */
+  --color-purple-400:      #5B5273;
+  --color-purple-default:  #322750;
+  --color-purple-600:      #2E2349;
+  --color-purple-700:      #241C39;
+  --color-purple-800:      #1C152C;
+  --color-purple-900:      #151022;
+
+  /* Purple crystal palette ──────────────────────── */
+--f-color-crystal-100: hsl(243, 88%, 95%);
+--f-color-crystal-300: hsl(243, 70%, 75%);
+--f-color-crystal-500: hsl(243, 60%, 55%);
+--f-color-crystal-700: hsl(243, 50%, 35%);
+
+  /* ── Colors — Semantic Aliases ───────────────────────────────────────────── */
+  --color-bg:              #1A1A20;
+  --color-surface:         #2F2F39;
+  --color-surface-alt:     #262631;
+  --color-surface-card:    #403B4F;
+  --color-border:          #4e495d;
+
+  --color-primary:         var(--color-primary-default);
+  --color-primary-dim:     rgba(162, 126, 204, 0.157);
+  --color-primary-border:  rgba(162, 126, 204, 0.102);
+  --color-primary-glow:    rgba(162, 126, 204, 0.388);
+  --color-primary-subtle:  rgba(48, 38, 78, 0.592);
+
+  --color-text:            #FFFFFF;
+  --color-text-muted:      #B2B2B2;
+  --color-text-heading:    var(--color-primary-100);
+
+  --color-available:       #72E591;
+  --color-white-5:         rgba(255, 255, 255, 0.05);
+  --color-white-10:        rgba(255, 255, 255, 0.1);
+  --color-white-20:        rgba(255, 255, 255, 0.2);
+  --color-overlay:         rgba(0, 0, 0, 0.5);
+
+  --a-color-highlight-fill:       var(--f-color-crystal-300);
+  --a-color-highlight-fill-half:  var(--f-color-crystal-500);
+  --a-color-highlight-text:       #fefcff;
+  --a-duration-highlight:         var(--f-duration-slow);
+  --a-ease-highlight:             var(--f-ease-out-expo);
+
+
+  /* ── Typography — Font Families ──────────────────────────────────────────── */
+  --font-primary:          'Plus Jakarta Sans', sans-serif;
+  --font-secondary:        'Roboto', sans-serif;
+
+  /* ── Typography — Font Sizes (rem) ───────────────────────────────────────── */
+  /* Figma Alias → Foundation Scale → rem value                               */
+  /* xs   → Scale/300  → 12px */ --font-size-xs:   0.75rem;
+  /* sm   → Scale/350  → 14px */ --font-size-sm:   0.875rem;
+  /* base → Scale/400  → 16px */ --font-size-base: 1rem;
+  /* md   → Scale/500  → 18px */ --font-size-md:   1.125rem;
+  /* lg   → Scale/550  → 20px */ --font-size-lg:   1.25rem;
+  /* xl   → Scale/600  → 24px */ --font-size-xl:   1.5rem;
+  /* 2xl  → Scale/800  → 32px */ --font-size-2xl:  2rem;
+  /* 3xl  → Scale/900  → 36px */ --font-size-3xl:  2.25rem;
+  /* 4xl  → Scale/1000 → 40px */ --font-size-4xl:  2.5rem;
+
+  /* ── Typography — Font Weights ───────────────────────────────────────────── */
+  --font-weight-light:     300;
+  --font-weight-regular:   400;
+  --font-weight-medium:    500;
+  --font-weight-semibold:  600;
+  --font-weight-bold:      700;
+  --font-weight-extrabold: 800;
+
+  /* ── Typography — Line Heights ───────────────────────────────────────────── */
+  --line-height-tight:     1.2;
+  --line-height-body:      28px;   /* Scale/700 — kept in px, it's a fixed measure */
+
+
+  /* ── Spacing — Semantic (px, references Foundation Scale) ───────────────── */
+  --spacing-xs:         var(--scale-100);   /*  4px */
+  --spacing-sm:         var(--scale-200);   /*  8px */
+  --spacing-md:         var(--scale-300);   /* 12px */
+  --spacing-base:       var(--scale-400);   /* 16px */
+  --spacing-lg:         var(--scale-600);   /* 24px */
+  --spacing-xl:         var(--scale-800);   /* 32px */
+  --spacing-1xl:        var(--scale-900);   /* 36px */
+  --spacing-2xl:        var(--scale-1000);  /* 40px */
+  --spacing-3xl:        var(--scale-1100);  /* 48px */
+  --spacing-4xl:        var(--scale-1200);  /* 56px */
+  --spacing-section:    var(--scale-1300);  /* 64px  — Desktop: xl-mid / 2xl-md */
+  --spacing-section-lg: var(--scale-1500);  /* 96px  — Desktop: xl-sm          */
+  --spacing-section-xl: var(--scale-1600);  /* 128px — Desktop: 2xl-md         */
+
+
+  /* ── Border Radius ───────────────────────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-full: 9999px;
+
+
+  /* ── Shadows ─────────────────────────────────────────────────────────────── */
+  --shadow-sm:  2px 2px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md:  0 4px 15px rgba(0, 0, 0, 0.1), 0 0 5px rgba(99, 102, 214, 0);
+  --shadow-lg:  0 20px 30px rgba(0, 0, 0, 0.15), 0 0 5px var(--color-primary-glow);
+  --shadow-xlg:  0 20px 30px rgba(0, 0, 0, 0.15), 0 0 15px var(--color-primary-glow);
+
+
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  --sidebar-width:      260px;
+  --border-size:        28px;
+  --border-size-mobile: 16px;
+  --content-max-width:  1080px;
+  --page-max-width:     1400px;
+
+  /* Timing ──────────────────────────────────────────────────────────────── */
+--f-duration-fast:   250ms;
+--f-duration-base:   800ms;
+--f-duration-slow:   1000ms;
+--f-ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+}

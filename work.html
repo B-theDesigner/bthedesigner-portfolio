@@ -1,304 +1,566 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
- <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
-Game UI Designer, Game UX Designer, Figma Expert,
-Accessibility Design, WCAG Compliance, UX Strategy,
-SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
-">
-  <meta name="author" content="Bryttany (B) Winkfield">
-  <title>B's Selected Work</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.svg">
-  <link rel="stylesheet" href="./assets/css/plugins.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="./assets/css/colors/purple.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+  <title>B's Work</title>
+  <link rel="shortcut icon" href="./assets/img/FavIcon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/layout.css" />
+  <link rel="stylesheet" href="./assets/css/module.css" />
+  <link rel="stylesheet" href="./assets/css/state.css" />
+  <link rel="stylesheet" href="./assets/css/project-gallery.css" />
 </head>
 
 <body>
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
 
-  <div class="alert alert-info alert-icon alert-dismissible fade show" role="alert">
-    <h1 class="h6">Portfolio Update: Journals + In Progress Visuals</h1>
-  <i class="uil uil-exclamation-circle"></i> I recently added a new <em>Journal</em> feature to showcase my thinking, reflections, and design philosophy. A few asset images are currently placeholders while final visuals are being refined. All written content and case study narratives are complete and reflect real project work.
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-
-    <!--sticky nav start-->
-   <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light caret-none navbar-clone fixed narbar-unstick">
-        <div class="container">
-            <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                    <div class="navbar-brand w-100">
-                    <a href="./">
-                       <strong class="h3"> B the <span class="text-primary" >Designer</span> </strong>
-                    </a>
-                    </div>
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                          <a href="./">
-                       <strong class="h3"> B the <span class="text-primary" >Designer</span> </strong>
-                    </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about">About</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./journal">Journal</a></li>
-                    </ul>
-          <!-- responsive nav rail /.navbar-nav -->
-          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
-            <a href="mailto:hello@bthedesigner.me" class="link-inverse">hello@bthedesigner.me</a>
-            <br />
-            <br /> 
-                <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-            <br />
-            <nav class="nav social social-white mt-4">
-              <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
-            </nav>
-            <!-- /.social -->
-          </div>
-          <!-- /offcanvas-nav-other -->
+      <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
         </div>
-        <!-- /.offcanvas-body -->
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item d-none d-md-block">
-            <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn" aria-label="Open navigation menu"><span></span></button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-    </div>
-    </nav>
-    <!--sticky nav end-->
+      </div> -->
 
-    <div class="content-wrapper">
-    <!--nav start-->
-    <header class="wrapper bg-soft-primary">
-        <nav class="navbar navbar-expand-lg fancy navbar-light navbar-bg-light">
-            <div class="container">
-                <div class="navbar-collapse-wrapper bg-white d-flex flex-row flex-nowrap w-100 justify-content-between align-items-center">
-                    <div class="navbar-brand w-100">
-                    <a href="./">
-                       <strong class="h3"> B the <span class="typer text-primary" 
-                                data-loop="false" 
-                                data-delay="100" 
-                                data-words="Mentor, Gamer, K-drama Addict, Designer">
-                              </span><span class="cursor text-primary" data-owner="typer"></span> </strong>
-                    </a>
-                    </div>
-                <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
-                    <div class="offcanvas-header d-lg-none">
-                        <a href="./">
-                       <strong class=" h3 text-white"> B the Designer </strong>
-                    </a>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="./">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./about">About</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#">Work</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./journal">Journal</a></li>
-                    </ul>
-          <!-- responsive nav rail /.navbar-nav -->
-          <div class="d-lg-none mt-auto pt-6 pb-6 order-4">
-            <a href="mailto:hello@bthedesigner.me" class="link-inverse">hello@bthedesigner.me</a>
-            <br />
-            <br /> 
-                <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-            <br />
-            <nav class="nav social social-white mt-4">
-              <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
-            </nav>
-            <!-- /.social -->
-          </div>
-          <!-- /offcanvas-nav-other -->
-        </div>
-        <!-- /.offcanvas-body -->
-      </div>
-      <!-- /.navbar-collapse -->
-      <div class="navbar-other ms-lg-4">
-        <ul class="navbar-nav flex-row align-items-center ms-auto">
-          <li class="nav-item d-none d-md-block">
-            <a href="./assets/resume/Winkfield_B_Product_Designer_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-icon btn-icon-end btn-sm rounded-pill"> View Résumé <i class="uil uil-external-link-alt"></i> </a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn" aria-label="Open navigation menu"><span></span></button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-    </div>
-    <!-- /.navbar-collapse-wrapper -->
-  </div>
-  <!-- /.container -->
-        </nav>
-    </header>
-    <!--nav end-->
-<!-- Portfolio Gallery Start -->
-<section class="wrapper bg-soft-primary">
-      <div class="container pt-8 pt-md-8">
-        <div class="row">
-          <div class="col-lg-10 ">
-            <h1 class="display-5 mb-3"><span class="underline-3 style-2 violet">Selected</span> work</h1>
-            <p class="lead fs mb-14">A curated collection of product design projects focused on clarity, impact, and thoughtful problem-solving.</p>
-          </div>
-          <!-- /column -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <div class="overflow-hidden">
-    <div class="divider text-light mx-n2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 92.26"><path fill="currentColor" d="M1206,21.2c-60-5-119-36.92-291-5C772,51.11,768,48.42,708,43.13c-60-5.68-108-29.92-168-30.22-60,.3-147,27.93-207,28.23-60-.3-122-25.94-182-36.91S30,5.93,0,16.2V92.26H1440v-87l-30,5.29C1348.94,22.29,1266,26.19,1206,21.2Z"/></svg>
-    </div>
-  </div>
-      <!-- /.container -->
-    </section>
-    <!-- /section -->
-    <section class="wrapper bg-light py-8">
-      <div class="container py-md-8">
-        <div class="grid grid-view projects-masonry">
-          <div class="isotope-filter filter mb-14 text-purple col-lg-10 mt-n14">
-            <p>Filter By Project Type:</p>
-            <ul>
-              <li><a class="filter-item active" data-filter="*">All</a></li>
-              <li><a class="filter-item" data-filter=".redesign">Redesign</a></li>
-              <li><a class="filter-item" data-filter=".netnew">Net-New Concept</a></li>
-            </ul>
-          </div>
-          <div class="row gx-md-8 gy-10 gy-md-13 isotope mx-auto ">
-
-            <!--project item1 start-->
-            <div class="project item rounded lift py-8 col-md-6 col-xl-4 redesign">
-              <figure class="rounded itooltip itooltip-purple mb-6" title='<h5 class="mb-0">Most Strategically Complex</h5>'><a href="./work/guidedhealthcare" aria-label="Healthcare Project"> <img src="./assets/img/workimages/guidedhealthcare/guidedhealthcare_main.png" alt="" /></a></figure>
-
-              <div class="project-details d-flex justify-content-center flex-column">
-                <div class="post-header">
-                  <div class="post-category text-line text-purple">redesign</div>
-                  <h2 class="post-title h3 mb-lg-2">Guided Healthcare Experience</h2>
-                  <p>Improved a critical healthcare experience by reducing user confusion and promoting accessible, actionable support pathways.</p>
-                  <a href="./work/guidedhealthcare" class="more hover link-purple">See Project</a>
-                </div>
-                <!-- /.post-header -->
-              </div>
-              <!-- /.project-details -->
-            </div>
-            <!-- /.project item1 end-->
-
-             <!--project item2 start-->
-             <div class="project item lift rounded py-8 col-md-6 col-xl-4 redesign">
-              <figure class="rounded itooltip itooltip-purple mb-6" title='<h5 class="mb-0">Most Scalable Design Contribution</h5>'><a href="./work/financialanalytics" aria-label="Financial Analytics Project"> <img src="./assets/img/workimages/financial/financial_main.png" alt="" /></a></figure>
-
-              <div class="project-details d-flex justify-content-center flex-column">
-                <div class="post-header">
-                  <div class="post-category text-line text-purple">redesign</div>
-                  <h2 class="post-title h3 mb-lg-2">Financial Analytics Dashboard</h2>
-                  <p>Redesigned a high-stakes Investments experience to improve data clarity, comparison, and performance—while contributing scalable UI patterns to the design system.</p>
-                  <a href="./work/financialanalytics" class="more hover link-purple">See Project</a>
-                </div>
-                <!-- /.post-header -->
-              </div>
-              <!-- /.project-details -->
-            </div>
-             <!--project item2 end-->
-
-             <!--project item3 start-->
-             <div class="project item lift rounded py-8 col-md-6 col-xl-4 netnew">
-              <figure class="rounded itooltip itooltip-purple mb-6" title='<h5 class="mb-0">Most Logic-Heavy</h5>'><a href="./work/installment" aria-label="Installment Payment Experience Project"> <img src="./assets/img/workimages/installment/installment.png" alt="" /></a></figure>
-
-              <div class="project-details d-flex justify-content-center flex-column">
-                <div class="post-header">
-                  <div class="post-category text-line text-purple">Net-New</div>
-                  <h2 class="post-title h3 mb-lg-2">Installment Payment Experience</h2>
-                  <p>A net-new installment payments experience designed to clarify progress, timing, and structure across complex non-qualified plans.</p>
-                  <a href="./work/installment" class="more hover link-purple">See Project</a>
-                </div>
-                <!-- /.post-header -->
-              </div>
-              <!-- /.project-details -->
-            </div>
-             <!--project item3 end-->
-             
-           <!--project item4 start
-             <div class="project item col-md-6 col-xl-4 redesign">
-              <figure class="lift rounded itooltip itooltip-purple mb-6" title='<h5 class="mb-0">Most Difficult Project</h5>'><a href="./single-project"> <img src="./assets/img/photos/f1.png" alt="" /></a></figure>
-
-              <div class="project-details d-flex justify-content-center flex-column">
-                <div class="post-header">
-                  <div class="post-category text-line text-purple">redesign</div>
-                  <h2 class="post-title h3 mb-lg-2">Cras Fermentum Sem</h2>
-                  <p>Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis. Scelerisque id ligula porta felis euismod semper. Fusce dapibus tellus cursus.</p>
-                  <a href="#" class="more hover link-purple">See Project</a>
-                </div>
-                 /.post-header -->
-
-              </div>
-              <!-- /.project-details -->
-            </div>
-             <!--project item4 end-->
-
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.grid -->
-      </div>
-      <!-- /.container -->
-    </section>
-<!-- Portfolio Editting End-->
-
-    <!--Contact Me Callout Start-->
-<!-- /.overflow-hidden -->
-    </div>
-    <section class="wrapper bg-light border">
-  <div class="container py-14 py-md-10">
-    <div class="col-lg-10">
-        <h2 class="display-4 mb-3">Don't Be A <span class="underline primary">Stranger</span>!</h2>
-        <p class="lead fs-lg">Let's <span class="underline-3 style-2 violet">collaborate</span> and <span class="underline-3 style-2 violet">create</span> something amazing!</p>
-        <div class="align-self-center justify-content-center justify-content-lg-start">
-          <span><a href="#" role="button" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary rounded-pill me-5" onclick="copyEmail(event)" > <i class="uil uil-copy-alt"></i> Copy email address</a></span>
-              <span><a href="https://calendly.com/hello-bthedesigner/30min" target="_blank" rel="noopener noreferrer" class="hover" >Book a call <i class="uil uil-external-link-alt"></i></a></span>
-              
-            </div>
-        </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-</section>
-<!-- /section -->
-<!--Contact Me Callout End-->
-
-    </div>
-
-    <!--scripts start-->
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/theme.js"></script>
-    <script src="./assets/js/functionality.js"></script>
-    <!--scripts end-->
-
-</body>
-
-<footer>
-  <div class="container pt-7 pb-7">
-    <div class="d-md-flex align-items-center justify-content-between">
-      <p class="mb-2 mb-lg-0"><strong class="text-purple">Designed with care •</strong> B the Designer © 2025. All Rights Reserved. | <a href="./terms">Terms of Use</a> </p>
-      <nav class="nav social social-muted mb-0 text-md-end">
-        <a href="https://www.linkedin.com/in/bryttany-winkfield" target="_blank" rel="noopener noreferrer" aria-label="B's LinkedIn Profile"><i class="uil uil-linkedin"></i></a>
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="index.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="about.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!-- Services Link 
+        <a href="services.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <span>Services</span>
+        </a>-->
+        <a href="work.html" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="journal.html" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+          </svg>
+          <span>Journal</span>
+        </a>
       </nav>
+
+      <hr class="NavMenu-divider" />
+      <a href="./assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
     </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+
+    <div class="nav_logocontainer--mobile">
+      <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+    </div>
+
+    <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+
+    </div>
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- Slide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="index.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>About</span>
+      </a>
+      <!--Services Mobile Link
+      <a href="services.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+        </svg>
+        <span>Services</span>
+      </a>-->
+      <a href="work.html" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="journal.html" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile" />
+    <a href="./assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
   </div>
-  <!-- /.container -->
-</footer>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <div class="PageContent">
+        <!-- ─── Page Header ────────────────────────────────── -->
+        <section class="SubpageHeader">
+          <h1 class="HeroSection-heading">
+            <span class="DisplayEmphasis-wrapper">
+              <span class="DisplayEmphasis">
+                <span class="DisplayEmphasis-word">Selected</span>
+                <span class="DisplayEmphasis-border">
+                  <span class="DisplayEmphasis-stroke"></span>
+                  <span class="DisplayEmphasis-corner DisplayEmphasis-corner--tl"></span>
+                  <span class="DisplayEmphasis-corner DisplayEmphasis-corner--tr"></span>
+                  <span class="DisplayEmphasis-corner DisplayEmphasis-corner--bl"></span>
+                  <span class="DisplayEmphasis-corner DisplayEmphasis-corner--br"></span>
+                </span>
+              </span>
+              <span class="DisplayEmphasis-cursor slide-right">
+                <img src="./assets/img/Vector.svg" alt="" width="28" height="28" />
+              </span>
+            </span>
+            work
+          </h1>
+        </section>
+
+        <!-- ─── Gallery Section ────────────────────────────── -->
+        <section class="Section">
+          <section class="gallery" aria-labelledby="gallery-heading">
+            <!-- Controls: filters + view toggle -->
+            <div class="gallery__controls">
+              <!-- Two-tier tab filter -->
+              <div class="gallery-tabs" id="gallery-tabs">
+                <!-- Tier 1 — Category tabs -->
+                <div class="gallery-tabs__tier1" id="gallery-tier1" role="tablist" aria-label="Filter by category">
+                  <button class="gtab" role="tab" aria-selected="true" tabindex="0" data-category="all" id="gtab-all">
+                    <span class="gtab__chip" aria-hidden="true">
+                      <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="5" height="5" rx="0.5" />
+                        <rect x="8" y="1" width="5" height="5" rx="0.5" />
+                        <rect x="1" y="8" width="5" height="5" rx="0.5" />
+                        <rect x="8" y="8" width="5" height="5" rx="0.5" />
+                      </svg>
+                    </span>
+                    All
+                  </button>
+
+                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="redesign"
+                    id="gtab-redesign">
+                    <span class="gtab__chip" aria-hidden="true">
+                      <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 11 L7 2 L12 11 Z" />
+                      </svg>
+                    </span>
+                    Redesign
+                  </button>
+
+                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="netnew"
+                    id="gtab-netnew">
+                    <span class="gtab__chip" aria-hidden="true">
+                      <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="4.5" />
+                      </svg>
+                    </span>
+                    Net New
+                  </button>
+
+                  <!-- Design System Button
+                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="designsystem"
+                    id="gtab-designsystem">
+                    <span class="gtab__chip" aria-hidden="true">
+                      <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1.5" width="12" height="2.5" rx="0.5" />
+                        <rect x="1" y="6" width="8" height="2.5" rx="0.5" />
+                        <rect x="1" y="10.5" width="10" height="2" rx="0.5" />
+                      </svg>
+                    </span>
+                    Design System
+                  </button>-->
+                </div>
+                
+
+                <!-- Tier 2 — Subtab row (JS-populated, hidden until a category with subtabs is active) -->
+                <div class="gallery-tabs__tier2" id="gallery-tier2" role="tablist" aria-label="Filter by subcategory">
+                  <!-- Injected by JS -->
+                </div>
+              </div>
+              <!-- /gallery-tabs -->
+
+              <!-- View toggle pill -->
+              <div class="view-toggle" role="group" aria-label="Change gallery view">
+                <button class="view-toggle__btn" id="btn-grid" aria-pressed="true" aria-label="Grid view"
+                  data-view="grid">
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" />
+                    <rect x="9" y="1" width="6" height="6" rx="1" fill="currentColor" />
+                    <rect x="1" y="9" width="6" height="6" rx="1" fill="currentColor" />
+                    <rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor" />
+                  </svg>
+                  grid
+                </button>
+                <button class="view-toggle__btn" id="btn-list" aria-pressed="false" aria-label="List view"
+                  data-view="list">
+                  <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <rect x="1" y="2" width="14" height="3" rx="1" fill="currentColor" />
+                    <rect x="1" y="7" width="14" height="3" rx="1" fill="currentColor" />
+                    <rect x="1" y="12" width="14" height="3" rx="1" fill="currentColor" />
+                  </svg>
+                  list
+                </button>
+              </div>
+            </div>
+            <!-- /gallery__controls -->
+
+            <!-- Card list -->
+            <ul class="project-grid" id="project-grid" data-view="grid" aria-label="Project gallery" aria-live="polite"
+              aria-atomic="false">
+              <!-- Card 1 — Redesign -->
+
+              <li class="project-card" data-category="redesign" data-subcategory="">
+                <div data-card-hover>
+                  <span class="project-card__container" aria-hidden="true">
+                    <div class="project-card__image">
+                      <img src="./assets/img/projects/guidedhealthcare/New Hero.png"
+                        alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
+                        height="500" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-card__body">
+                      <div class="project-card__tags" aria-label="Project type">
+                        <span class="project-card__tag">Redesign</span>
+                      </div>
+                      <h3 class="project-card__title">
+                        Guided Healthcare Experience
+                      </h3>
+                      <p class="project-card__summary">
+                        Improved a critical healthcare experience by reducing
+                        user confusion and promoting accessible, actionable
+                        support pathways.
+                      </p>
+                      <a href="./work/guidedhealthcare.html" class="project-card__cta"
+                        aria-label="Guided Healthcare Experience — Read details">
+                        Read details
+                        <svg viewBox="0 0 14 14" fill="none">
+                          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Card 2 — Redesign -->
+              <li class="project-card" data-category="netnew" data-subcategory="">
+                <div data-card-hover>
+                  <span class="project-card__container" aria-hidden="true">
+                    <div class="project-card__image">
+                      <img src="./assets/img/projects/NQ installments/Installment_Hero.png"
+                        alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
+                        height="500" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-card__body">
+                      <div class="project-card__tags" aria-label="Project type">
+                        <span class="project-card__tag">Net New</span>
+                      </div>
+                      <h3 class="project-card__title">
+                        Non-Qualified Installment Payment Experience
+                      </h3>
+                      <p class="project-card__summary">
+                        A net-new installment payments experienced designed to clarify progress, timing, and structure across complex non-qualifed plans.
+                      </p>
+                      <a href="./work/installments.html" class="project-card__cta"
+                        aria-label="Guided Healthcare Experience — Read details">
+                        Read details
+                        <svg viewBox="0 0 14 14" fill="none">
+                          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Card 3 —-->
+              <li class="project-card" data-category="redesign" data-subcategory="">
+                <div data-card-hover>
+                  <span class="project-card__container" aria-hidden="true">
+                    <div class="project-card__image">
+                      <img src="./assets/img/projects/investments/New Hero.png"
+                        alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
+                        height="500" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-card__body">
+                      <div class="project-card__tags" aria-label="Project type">
+                        <span class="project-card__tag">Redesign</span>
+                      </div>
+                      <h3 class="project-card__title">
+                        Financial Analytics Dashboard
+                      </h3>
+                      <p class="project-card__summary">
+                        Redesigned a high-stakes Investments experience to improve data clarity, comparison, and performance.
+                      </p>
+                      <a href="./work/installments.html" class="project-card__cta"
+                        aria-label="Guided Healthcare Experience — Read details">
+                        Read details
+                        <svg viewBox="0 0 14 14" fill="none">
+                          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Extra cards
+              <li class="project-card" data-category="netnew" data-subcategory="">
+                <a class="project-card__container" href="/projects/member-onboarding-flow"
+                  aria-label="Member Onboarding Flow — Read details">
+                  <div class="project-card__image">
+                    <img src="https://placehold.co/800x500/1A1825/6B4EFF?text=Project+Image"
+                      alt="Screenshot of the member onboarding flow prototype" width="800" height="500" loading="lazy"
+                      decoding="async" />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__tags" aria-label="Project type">
+                      <span class="project-card__tag">Net New</span>
+                      <span class="project-card__tag-divider" aria-hidden="true">/</span>
+                      <span class="project-card__tag">Concept</span>
+                    </div>
+                    <h3 class="project-card__title">
+                      Member Onboarding Flow
+                    </h3>
+                    <p class="project-card__summary">
+                      Designed a zero-to-enrolled onboarding experience that
+                      reduced time-to-activation and increased member
+                      confidence at key decision points.
+                    </p>
+                    <span class="project-card__cta" aria-hidden="true">
+                      Read details
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="project-card" data-category="designsystem" data-subcategory="component">
+                <a class="project-card__container" href="/projects/provider-search-experience"
+                  aria-label="Provider Search Experience — Read details">
+                  <div class="project-card__image">
+                    <img src="https://placehold.co/800x500/1A1825/6B4EFF?text=Project+Image"
+                      alt="Screenshot of the provider search and filtering experience" width="800" height="500"
+                      loading="lazy" decoding="async" />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__tags" aria-label="Project type">
+                      <span class="project-card__tag">Design System</span>
+                      <span class="project-card__tag-divider" aria-hidden="true">/</span>
+                      <span class="project-card__tag">Component</span>
+                    </div>
+                    <h3 class="project-card__title">
+                      Provider Search Experience
+                    </h3>
+                    <p class="project-card__summary">
+                      Built a filterable provider discovery surface that made
+                      finding in-network care faster and less cognitively
+                      taxing.
+                    </p>
+                    <span class="project-card__cta" aria-hidden="true">
+                      Read details
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </li>
+
+              
+              <li class="project-card" data-category="designsystem" data-subcategory="tokens">
+                <a class="project-card__container" href="/projects/wealth-guidance-dashboard"
+                  aria-label="Wealth Guidance Dashboard — Read details">
+                  <div class="project-card__image">
+                    <img src="https://placehold.co/800x500/1A1825/6B4EFF?text=Project+Image"
+                      alt="Screenshot of the Wealth Guidance dashboard redesign" width="800" height="500" loading="lazy"
+                      decoding="async" />
+                  </div>
+                  <div class="project-card__body">
+                    <div class="project-card__tags" aria-label="Project type">
+                      <span class="project-card__tag">Design System</span>
+                      <span class="project-card__tag-divider" aria-hidden="true">/</span>
+                      <span class="project-card__tag">Tokens</span>
+                    </div>
+                    <h3 class="project-card__title">
+                      Wealth Guidance Dashboard
+                    </h3>
+                    <p class="project-card__summary">
+                      Redesigned a financial wellness dashboard to surface
+                      actionable guidance without overwhelming members
+                      mid-decision.
+                    </p>
+                    <span class="project-card__cta" aria-hidden="true">
+                      Read details
+                      <svg viewBox="0 0 14 14" fill="none">
+                        <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </a>
+              </li>
+            -->
+
+            </ul>
+          </section>
+        </section>
+      </div>
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr />
+        <p class="FooterCopy">
+          <strong>Designed with care</strong>
+          B the Designer © 2026. All Rights Reserved. •
+          <a href="#">Terms of Use</a>
+        </p>
+      </footer>
+    </div>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/project-gallery.js"></script>
+
+  <!-- Loads anime.js and wires the FLIP layout engine.
+       Must be type="module" for the import to work.
+       Runs after project-gallery.js so window._galleryLayout is ready when needed. -->
+  <script type="module">
+    import {
+      createLayout,
+      utils,
+      stagger,
+    } from "https://esm.sh/animejs@4.3.0";
+
+    const $grid = document.getElementById("project-grid");
+    if ($grid) {
+      const cardsLayout = createLayout($grid, {
+        properties: ["font-size"],
+        enterFrom: {
+          opacity: (el) =>
+            el.classList.contains("project-card") ? "1" : "0",
+          transform: (el) =>
+            el.classList.contains("project-card")
+              ? "translateY(60%) scale(.85)"
+              : "none",
+        },
+        leaveTo: {
+          opacity: 0,
+          transform: (el) => {
+            if (!el.classList.contains("project-card")) return "none";
+            const i = [...el.parentElement.children].indexOf(el);
+            const d = i % 2 ? -1 : 1;
+            return `translate(${30 * d}%, 30%) rotate(${10 * d}deg) scale(.85)`;
+          },
+        },
+      });
+
+      // Expose on window so project-gallery.js can use it for animated view switching
+      window._galleryLayout = { cardsLayout, utils, stagger };
+    }
+  </script>
+</body>
 
 </html>

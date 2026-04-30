@@ -1,0 +1,106 @@
+/* =============================================================================
+   BASE.CSS — Reset & Element Defaults
+   No classes here — only HTML element selectors and resets.
+   Font sizes in rem. Spacing in px via tokens.
+   ============================================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  /* overflow: hidden is intentional — scroll is handled by .content-wrapper */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+a::after {
+    text-decoration: none;
+}
+
+h2 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xl);       /* 1.5rem → 24px */
+  line-height: var(--line-height-tight);
+  color: var(--color-text);
+  margin-bottom: var(--spacing-base);   /* 16px */
+}
+
+p {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-light);
+  font-size: var(--font-size-base);     /* 1rem → 16px */
+  line-height: var(--line-height-body); /* 28px */
+  color: var(--color-text);
+}
+
+ol {
+  margin-left: 24px;
+}
+
+ul {
+  list-style-type: none; /* Optional: remove standard margin if needed */
+  margin-left: 24px;
+}
+
+li:not(.journal-card, .project-card) {
+  margin: 16px 0;
+  position: relative;
+  padding-left: 20px;
+  color: var(--color-text-muted);
+  letter-spacing: .5px;
+}
+
+
+ul li::marker {
+  content: "⇢"; /* Replace with your desired arrow */
+  color: var(--color-primary); 
+  margin-right: 80px;
+}
+
+ol li::marker {
+  color: var(--color-primary); 
+  margin-right: 80px;
+}
+
+/* ── Scrollbar Color ─────────────────────────────────────────────────── */
+
+/* Scrollbar — WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-400);
+}
+
+/* Scrollbar — Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-surface);
+}

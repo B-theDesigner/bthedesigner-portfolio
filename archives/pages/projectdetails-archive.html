@@ -1,0 +1,741 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>B's Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../assets/css/theme.css" />
+    <link rel="stylesheet" href="./../assets/css/base.css" />
+    <link rel="stylesheet" href="./../assets/css/layout.css" />
+    <link rel="stylesheet" href="./../assets/css/module.css" />
+    <link rel="stylesheet" href="./../assets/css/state.css" />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+    <aside id="sidebar" class="Sidebar">
+      <div class="Sidebar-content">
+
+        <div class="nav_logocontainer">
+        <img src="./../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="./../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div> -->
+
+        <!-- Desktop Navigation -->
+        <nav class="NavMenu">
+          <a href="./../index.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span>Home</span>
+          </a>
+          <a href="./../about.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>About</span>
+          </a>
+          <a href="./../services.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+              />
+            </svg>
+            <span>Services</span>
+          </a>
+          <a href="./../work.html" class="NavMenu-item is-active">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+            <span>Work</span>
+          </a>
+          <a href="./../journal.html" class="NavMenu-item">
+            <svg
+              class="NavMenu-itemIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+              />
+            </svg>
+            <span>Journal</span>
+          </a>
+        </nav>
+
+        <hr class="NavMenu-divider" />
+        <a
+          href="#"
+          class="Button Button--primary"
+          rel="noopener noreferrer"
+          target="_blank"
+          >View CV</a
+        >
+      </div>
+    </aside>
+
+    <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+    <header id="mobile-header" class="MobileHeader">
+      <div class="MobileHeader-user">
+        <img
+          src="./assets/img/BtheDesigner.png"
+          alt="Bryttany Winkfield"
+          class="UserProfile-avatar"
+        />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div>
+      <button
+        id="menu-toggle"
+        class="MenuToggle"
+        aria-label="Toggle navigation menu"
+      >
+        <svg
+          id="menu-icon"
+          class="MenuToggle-icon"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+        <svg
+          id="close-icon"
+          class="MenuToggle-iconClose is-hidden"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M18 6 6 18" />
+          <path d="m6 6 12 12" />
+        </svg>
+      </button>
+    </header>
+
+    <!-- Menu Overlay -->
+    <div id="menu-overlay" class="MenuOverlay"></div>
+
+    <!-- Slide-out Mobile Navigation -->
+    <div id="mobile-menu" class="MobileMenu">
+      <nav class="NavMenu--mobile">
+        <a href="./../index.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="./../about.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <a href="./../services.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z"
+            />
+          </svg>
+          <span>Services</span>
+        </a>
+        <a href="./../work.html" class="NavMenu-item is-active">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="./../journal.html" class="NavMenu-item">
+          <svg
+            class="NavMenu-itemIcon"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+            />
+          </svg>
+          <span>Journal</span>
+        </a>
+      </nav>
+      <hr class="NavMenu-divider--mobile" />
+      <a
+        href="#"
+        class="Button Button--primary"
+        rel="noopener noreferrer"
+        target="_blank"
+        >View CV</a
+      >
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+    <div class="FrameBorder--top"></div>
+    <div class="FrameBorder--bottom"></div>
+    <div class="FrameBorder--right"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+    <main id="main-content" class="MainContent">
+      <div class="ContentWrapper">
+        <!-- ─── Breadccrumb ────────────────────────────────── -->
+        <section class="breadcrumb-section">
+          <div class="breadcrumb-container">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+              <a href="index.html" class="breadcrumb-item Link">← Back</a>
+            </nav>
+            <div class="Subject-details">
+              <h1 class="Subject-title">Project Title</h1>
+            </div>
+            <div class="Subject-readtime">
+              <p>30 min</p>
+            </div>
+          </div>
+          <hr />
+        </section>
+
+        <div class="ProjectPageContent">
+          <!-- ─── Project Details ────────────────────────────────── -->
+          <div id="Project-grid">
+            <div id="Oneminutesummary">
+              <!-- ═══════════════════════════════════════════════════════
+                    1 MINUTE SUMMARY — Accordion modifier
+                    Place inside #Oneminutesummary in projectdetails.html.
+                    Requires: accordion--summary.css, accordion--summary.js
+                ════════════════════════════════════════════════════════ -->
+
+              <div
+                class="SummaryAccordion-wrapper"
+                id="summary-accordion-wrapper"
+              >
+                <details
+                  class="Accordion Accordion--summary"
+                  id="summary-accordion"
+                  open
+                >
+                  <summary class="Accordion-summary">
+                    <div class="Accordion--summary-header">
+                      <h2 class="Accordion--summary-title">
+                        1 Minute Summary
+                      </h2>
+                    </div>
+                    <span class="Accordion-icon" aria-hidden="true">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="m6 9 6 6 6-6" />
+                      </svg>
+                    </span>
+                  </summary>
+
+                  <div class="Accordion-body">
+                    <!-- ─── Inner Sections ──────────────────────────────── -->
+                    <div class="SummaryAccordion-grid">
+                      <div class="SummaryAccordion-section">
+
+                        <div class="SummaryAccordion-Labels">
+                          <div class="label-container"> 
+                            <div class="label--launched">Launched</div>
+                          </div>
+                          <div class="label-container"> 
+                            <div class="label--testing">Testing</div>
+                          </div>
+                        </div>
+
+                        <h3 class="SummaryAccordion-sectionTitle">
+                          The Problem
+                        </h3>
+                        <p class="SummaryAccordion-sectionText">
+                          Describe the core problem that prompted this project.
+                          Keep it tight — one or two sentences that a
+                          stakeholder could read in seconds.
+                        </p>
+                      </div>
+
+                      <div
+                        class="SummaryAccordion-divider"
+                        aria-hidden="true"
+                      ></div>
+
+                      <div class="SummaryAccordion-section">
+                        <h3 class="SummaryAccordion-sectionTitle">
+                          The Challenge
+                        </h3>
+                        <p class="SummaryAccordion-sectionText">
+                          What made this problem hard to solve? Constraints,
+                          competing priorities, technical limitations, or
+                          organizational complexity.
+                        </p>
+                      </div>
+
+                      <div
+                        class="SummaryAccordion-divider"
+                        aria-hidden="true"
+                      ></div>
+
+                      <div class="SummaryAccordion-section">
+                        <h3 class="SummaryAccordion-sectionTitle">
+                          My Approach
+                        </h3>
+                        <p class="SummaryAccordion-sectionText">
+                          How did you tackle it? Summarize your methodology, key
+                          decisions, and what made your approach distinct.
+                        </p>
+                      </div>
+
+                      <div
+                        class="SummaryAccordion-divider"
+                        aria-hidden="true"
+                      ></div>
+
+                      <div class="SummaryAccordion-section">
+                        <h3 class="SummaryAccordion-sectionTitle">
+                          The Outcome
+                        </h3>
+                        <p class="SummaryAccordion-sectionText">
+                          What was the result? Lead with the most meaningful
+                          metric or qualitative shift — what actually changed
+                          because of this work.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- ─── Callout Placeholder ─────────────────────────── -->
+                    <div
+                      class="SummaryAccordion-callout"
+                      role="note"
+                      aria-label="Key takeaway"
+                    >
+                      <span
+                        class="SummaryAccordion-calloutIcon"
+                        aria-hidden="true"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M12 16v-4M12 8h.01" />
+                        </svg>
+                      </span>
+                      <div class="SummaryAccordion-calloutContent">
+                        <p class="SummaryAccordion-calloutLabel">
+                          Want the full story?
+                        </p>
+                        <p class="SummaryAccordion-calloutText">
+                          The sections below dive deeper into research, design
+                          decisions, iterations, and learnings.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+            <div id="ProjectDetails-container">
+              <section
+                class="Section-ProjectDetails"
+                id="Category1"
+                data-label="Category1"
+              >
+                <div class="MediaDisplay-ProjectDetails">
+                  <div class="MediaDisplay-framelg">
+                    <img
+                      class="MediaDisplay-imagelg"
+                      src="./../assets/img/placeholder_img.png"
+                      alt="Project hero"
+                    />
+                    <div class="MediaDisplay-border">
+                      <div class="MediaDisplay-borderStrokelg"></div>
+                      <div
+                        class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"
+                      ></div>
+                      <div
+                        class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"
+                      ></div>
+                      <div
+                        class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"
+                      ></div>
+                      <div
+                        class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- Badge + caption below the frame, left aligned, side by side -->
+                  <div class="MediaDisplay-meta">
+                    <div class="MediaDisplay-badge">
+                      <p>IMG</p>
+                    </div>
+                    <div class="MediaDisplay-caption">
+                      <p>Bryttany Winkfield</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ProjectDetails-category">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="2"
+                    viewBox="0 0 24 2"
+                    fill="none"
+                  >
+                    <path d="M0 1H24" stroke="#A27ECC" stroke-width="2" />
+                  </svg>
+                  <p>Category1</p>
+                </div>
+                <div class="ProjectDetails-paragraph">
+                  <h2>Subcategory1</h2>
+                  <p>Text</p>
+                </div>
+
+                <div class="ProjectDetails-paragraph">
+                  <h2>Subcategory2</h2>
+                  <p>Text</p>
+                </div>
+              </section>
+
+              <section
+                class="Section-ProjectDetails"
+                id="problem"
+                data-label="Problem"
+              >
+                <h2>Problem</h2>
+                <p>
+                  The core problem we identified centered around efficiency,
+                  scalability, and user experience. Existing solutions were
+                  either too complex, too limited, or failed to address the real
+                  needs of end users.
+                </p>
+                <p>Key challenges included:</p>
+                <ul>
+                  <li>Lack of intuitive user interfaces</li>
+                  <li>Poor integration with existing systems</li>
+                  <li>Limited customization options</li>
+                  <li>Inadequate performance at scale</li>
+                </ul>
+                <p>
+                  These issues created friction in workflows and prevented
+                  organizations from reaching their full potential in terms of
+                  productivity and innovation.
+                </p>
+              </section>
+
+              <section
+                class="Section-ProjectDetails"
+                id="scope"
+                data-label="Scope"
+              >
+                <h2>Scope</h2>
+                <p>
+                  The scope of this project was carefully defined to ensure we
+                  could deliver meaningful results within realistic timeframes
+                  while maintaining high quality standards.
+                </p>
+                <p>
+                  Our scope included developing a comprehensive solution that
+                  would address the identified problems while remaining flexible
+                  enough to adapt to future needs and requirements.
+                </p>
+                <p>
+                  We established clear boundaries for what would be included in
+                  the initial release and what would be considered for future
+                  iterations, ensuring focused execution and measurable
+                  outcomes.
+                </p>
+              </section>
+
+              <section
+                class="Section-ProjectDetails"
+                id="approach"
+                data-label="Approach"
+              >
+                <h2>Approach</h2>
+                <p>
+                  Our approach was methodical and user-centered, combining best
+                  practices from agile development with design thinking
+                  principles to create a solution that truly meets user needs.
+                </p>
+                <p>
+                  We began with extensive user research, conducting interviews
+                  and observing workflows to understand pain points and
+                  opportunities. This research informed our design decisions and
+                  technical architecture.
+                </p>
+                <p>
+                  Iterative prototyping and continuous feedback loops ensured
+                  that we stayed aligned with user expectations while pushing
+                  the boundaries of what was technically possible.
+                </p>
+              </section>
+
+              <section
+                class="Section-ProjectDetails"
+                id="results"
+                data-label="Results"
+              >
+                <h2>Results</h2>
+                <p>
+                  The results exceeded our initial expectations, with measurable
+                  improvements across all key performance indicators we had
+                  established at the project's outset.
+                </p>
+                <p>
+                  User adoption rates were significantly higher than projected,
+                  and feedback from early adopters was overwhelmingly positive.
+                  Many users reported dramatic improvements in their workflow
+                  efficiency
+                  <mark class="c-text-highlight"
+                    >in the interiors of collapsing stars the carbon in our
+                    apple pies paroxysm</mark
+                  >
+                  .
+                </p>
+                <p>
+                  Quantitative metrics showed a 40% reduction in task completion
+                  time and a 65% increase in user satisfaction scores compared
+                  to the previous solution.
+                </p>
+              </section>
+
+              <section
+                class="Section-ProjectDetails"
+                id="key-patterns"
+                data-label="Key Patterns"
+              >
+                <h2>Key Patterns</h2>
+                <p>
+                  Throughout the project, we identified several recurring
+                  patterns that proved essential to our success. These patterns
+                  can serve as valuable lessons for future projects.
+                </p>
+                <p>
+                  First, the importance of early and continuous user involvement
+                  cannot be overstated. By keeping users at the center of every
+                  decision, we avoided costly pivots and rework.
+                </p>
+                <p>
+                  Second, maintaining a balance between innovation and
+                  practicality ensured that our solution was both cutting-edge
+                  and immediately usable in real-world scenarios.
+                </p>
+              </section>
+
+              <section
+                class="Section-ProjectDetails"
+                id="reflection"
+                data-label="Reflection"
+              >
+                <h2>Reflection</h2>
+                <p>
+                  Looking back on this project, there are numerous lessons
+                  learned and insights gained that will inform our future work.
+                  The experience has been both challenging and rewarding.
+                </p>
+                <p>
+                  If we were to start over, we would invest even more time in
+                  the initial research phase and involve stakeholders earlier in
+                  the process. However, our iterative approach allowed us to
+                  course-correct quickly when needed.
+                </p>
+                <p>
+                  Ultimately, this project demonstrated the power of combining
+                  thoughtful design, robust engineering, and genuine user
+                  empathy to create solutions that make a real difference in
+                  people's work and lives.
+                </p>
+              </section>
+
+              <!-- 
+    To add more sections, simply copy this template:
+    
+    <section id="unique-id" data-label="Your Section Name">
+      <h2>Your Section Name</h2>
+      <p>Your content here...</p>
+    </section>
+    
+    Important: 
+    - Each section MUST have a unique ID
+    - The data-label attribute determines what appears in the navigation
+    - To remove a section, just delete the entire <section> block
+    - The navigation will automatically update!
+  -->
+            </div>
+
+            <div class="AnchorList-section" id="AnchorList-section">
+              <!-- Anchor List - Fixed Position -->
+              <div class="anchor-list-container">
+                <div class="anchor-list">
+                  <p class="anchor-list-title">Contents</p>
+
+                  <!-- Navigation Links Container (auto-generated) -->
+                  <div class="anchorlist-elements">
+                    <!-- SVG Line with Squares (auto-generated) -->
+                    <div class="anchor-line">
+                      <svg
+                        id="anchor-svg"
+                        width="5"
+                        height="179"
+                        viewBox="0 0 5 179"
+                        fill="none"
+                      >
+                        <g id="Line">
+                          <path
+                            id="anchor-path"
+                            d="M2.5 2.5V176.5"
+                            stroke="#A27ECC"
+                            stroke-linecap="round"
+                          />
+                          <!-- Squares will be dynamically generated -->
+                        </g>
+                      </svg>
+                    </div>
+
+                    <div id="anchor-links-container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer-content" class="FooterContent">
+          <hr />
+          <p class="FooterCopy">
+            <strong>Designed with care</strong>
+            B the Designer © 2026. All Rights Reserved. •
+            <a href="#">Terms of Use</a>
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <script src="./../assets/js/script.js"></script>
+  </body>
+</html>

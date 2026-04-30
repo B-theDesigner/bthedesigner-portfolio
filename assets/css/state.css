@@ -1,0 +1,384 @@
+/* =============================================================================
+   STATE.CSS — States, Interactions & Animations
+   Hover, active, hidden, focus states and @keyframes.
+   All colors reference tokens. No hardcoded hex values.
+   ============================================================================= */
+
+
+/* ── NavMenu States ──────────────────────────────────────────────────────── */
+
+.NavMenu-item:hover {
+  background-color: var(--color-primary-dim);
+}
+
+.NavMenu-item span:hover {
+  margin-left: 4px;
+}
+
+.NavMenu-item:hover .NavMenu-itemIcon {
+  color: var(--color-primary);
+}
+
+.NavMenu-item.is-active {
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-primary-dim);
+}
+
+.NavMenu-item.is-active .NavMenu-itemIcon {
+  color: var(--color-primary);
+}
+
+
+/* ── Mobile Menu States ──────────────────────────────────────────────────── */
+
+.MenuOverlay.is-active {
+  display: block;
+}
+
+.MobileMenu.is-active {
+  transform: translateX(0);
+}
+
+
+/* ── Button States ───────────────────────────────────────────────────────── */
+
+.Button:hover {
+  background: var(--color-white-10);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Button--primary:hover {
+  background-color: var(--color-primary-dim);
+}
+
+.Button--filter:hover {
+  background: var(--color-white-10);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.Button--filter.is-active {
+  background-color: var(--color-primary-dim);
+  border: 1px solid var(--color-primary-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Link States ──────────────────────────────────────────────── */
+.Link:hover {
+  color: var(--color-primary);
+}
+
+/* ── Anchor Link States ──────────────────────────────────────────────── */
+
+.anchor-link:hover {
+  opacity: 0.8;
+}
+
+.anchor-link.active {
+  color: var(--color-primary-400);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: .5px;
+}
+
+.anchor-square.active {
+  fill: var(--color-primary);
+}
+
+
+
+/* ── ServicesCard States ─────────────────────────────────────────────────── */
+
+.ServicesCard:hover {
+  background-color: var(--color-white-10);
+  border: 1.5px solid var(--color-white-20);
+  cursor: default;
+
+}
+
+.ServicesCard .ServicesCard-description:hover {
+  color: var(--color-text);
+}
+
+
+/* ── ArticleCard States ──────────────────────────────────────────────────── */
+
+.ArticleCard:hover {
+  background-color: var(--color-white-10);
+  border: 1px solid var(--color-white-20);
+}
+
+
+/* ── Gallery States ──────────────────────────────────────────────────────── */
+
+.ProjectCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ── SubcategoryButton States ────────────────────────────────────────────── */
+
+.SubcategoryButton:hover {
+  background: var(--color-primary-100);
+}
+
+.SubcategoryButton.is-active {
+  background: var(--color-purple-400);
+  color: var(--color-text);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ── SubcategoryList States ──────────────────────────────────────────────── */
+
+.SubcategoryGroup--hasActive {
+  min-height: 80px;
+}
+
+.SubcategoryList--visible {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* ── Utility ─────────────────────────────────────────────────────────────── */
+
+.is-hidden {
+  display: none;
+}
+
+
+/* ── Animations / Keyframes ──────────────────────────────────────────────── */
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes vibrate-slow {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  60% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Different type of Labels ──────────────────────────────────────────────── */
+
+.label--increase {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-size: var(--spacing-md);
+  font-weight: var(--font-weight-light);
+}
+
+.label--increase::before {
+  color: var(--color-text);
+  content: '↑';
+  transition: transform 0.3s ease;
+}
+
+.label--launched {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-size: var(--spacing-md);
+  font-weight: var(--font-weight-light);
+}
+
+.label--launched::before {
+  color: var(--color-text);
+  content: '⚡︎';
+  transition: transform 0.3s ease;
+}
+
+.label--testing {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-size: var(--spacing-md);
+  font-weight: var(--font-weight-light);
+}
+
+.label--testing::before {
+  color: var(--color-text);
+  content: '🗪';
+  transition: transform 0.3s ease;
+}
+
+.label--responsive {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-size: var(--spacing-md);
+  font-weight: var(--font-weight-light);
+}
+
+.label--responsive::before {
+  color: var(--color-text);
+  content: '모';
+  transition: transform 0.3s ease;
+}
+
+.label--redesign {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xs);
+  color: var(--color-text);
+  font-size: var(--spacing-md);
+  font-weight: var(--font-weight-light);
+}
+
+.label--redesign::before {
+  color: var(--color-text);
+  content: '모';
+  transition: transform 0.3s ease;
+}
+
+/* ── Highlight style ──────────────────────────────────────────────── */
+/* _text-highlight.scss
+   Module: component
+   Pattern: c-text-highlight*/
+
+.c-text-highlight {
+  all: unset;
+  background-repeat: no-repeat;
+  margin: 0 4px;
+  background-size: 0% 100%;
+  transition:
+    color calc(var(--a-duration-highlight) / 4) var(--a-ease-highlight),
+    background-size var(--a-duration-highlight) var(--a-ease-highlight);
+
+  /* Default style: full background sweep */
+  background-image: linear-gradient(var(--a-color-highlight-fill),
+      var(--a-color-highlight-fill));
+
+  /* State: triggered by scroll */
+  &.is-active {
+    color: var(--a-color-highlight-text);
+    font-weight: var(--font-weight-semibold);
+    text-shadow: 1px 01px 0 #000;
+    background-size: 100% 100%;
+  }
+
+  /* Accessibility: screen reader markers */
+  &::before,
+  &::after {
+    position: absolute;
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &::before {
+    content: " [highlight start] ";
+  }
+
+  &::after {
+    content: " [highlight end] ";
+  }
+}
+
+/* -- Text Reveal ------ */
+
+
+.lenis {
+  &.lenis-smooth {
+    scroll-behavior: auto;
+
+    [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+  }
+
+  &.lenis-stopped {
+    overflow: hidden;
+  }
+
+  &.lenis-scrolling iframe {
+    pointer-events: none;
+  }
+}
+
+
+.text-reveal {
+  font-kerning: none;
+
+  .line-wrapper {
+    overflow: hidden;
+  }
+
+  .line {
+    transform: translate3d(0, 100%, 0);
+  }
+}
