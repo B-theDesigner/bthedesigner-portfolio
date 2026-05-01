@@ -2522,7 +2522,7 @@
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 500px) {
 
 .WorkCard {
   position: sticky;
@@ -2546,8 +2546,8 @@
 }
 
 .WorkCard-imageContainer {
-  width: 300px;
-  max-width: 300px;
+  width: 500px;
+  max-width: 500px;
   max-height: 300px;
   display: flex;
   flex-direction: column;
@@ -2705,6 +2705,58 @@
   align-items: flex-end;
   align-self: stretch;
   border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+@media (max-width: 670px) {
+
+  .ArticleCard-container {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    flex-basis: 100%;
+  width: 500px;
+  height: 375px;
+}
+
+.ArticleCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-primary-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  width: 500px;
+  height: 375px;
+  /* 20px */
+  box-shadow: 6px 7px 5.5px 0 rgba(3, 7, 18, 0.15);
+  cursor: default;
+}
+
+.ArticleCard-image {
+  width: 100%;
+  height: 50%;
+  border-radius: var(--radius-md);
+}
+
+.ArticleCard-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
+}
+
+.ArticleCard-copy {
+  padding: 8px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+  margin-bottom: 8px;
+}
+
 }
 
 
@@ -3105,7 +3157,7 @@ h3 .topfindings-header {
 
 /* ─── Responsive style tablet ────────────────────────────────────────────── */
 
-@media (max-width: 1023px) {
+@media (max-width: 1400px) {
   .AboutContent-hero {
     flex-direction: column;
     align-items: flex-start;
