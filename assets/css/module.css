@@ -2270,20 +2270,16 @@
    ───────────────────────────────────────────────────────────────────────────── */
 
 .WorkCards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   width: 100%;
   margin: 0 auto;
-  display: grid;
   gap: var(--spacing-2xl) 0;
-  /* 40px */
 }
 
 .WorkCard {
   position: sticky;
   top: var(--spacing-base);
   width: 100%;
-  flex: 1;
 }
 
 .WorkCard-inner {
@@ -2297,8 +2293,6 @@
   border: 1px solid var(--color-primary-border);
   border-radius: var(--radius-md);
   box-shadow: 6px 7px 5.5px 0 rgba(3, 7, 18, 0.15);
-  cursor: pointer;
-  text-decoration: none;
   overflow: hidden;
   transform-origin: center top;
   cursor: default;
@@ -2312,22 +2306,17 @@
   align-items: flex-start;
   flex: 1 0 0;
   align-self: stretch;
+  overflow: hidden;
 }
 
 .WorkCard-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  width: 100%;
+  height: 100%;
   max-width: 504px;
   max-height: 436px;
-  border-radius: 0;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
-.WorkCard-image img {
-  align-self: stretch;
-  border-radius: var(--radius-md);
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .WorkCard-content {
@@ -2366,7 +2355,6 @@
   font-size: 13px;
   font-style: var(--font-weight-medium);
   line-height: 18px;
-  /* 138.462% */
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -2378,13 +2366,10 @@
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  /* 48px */
 }
 
 .WorkCard-descriptionGroup {
   display: flex;
-  height: 120px;
-  max-height: 120px;
   align-items: flex-start;
   gap: var(--spacing-sm);
   align-self: stretch;
@@ -2406,193 +2391,78 @@
   border-top: 1px solid rgba(255, 255, 255, 0.09);
 }
 
-@media (max-width: 996px) { 
-
-
+/* Medium screens: tighten spacing, reduce type, stay horizontal */
+@media (max-width: 996px) {
   .WorkCard-inner {
-  display: flex;
-  max-width: var(--content-max-width);
-  max-height: 436px;
-  align-items: flex-start;
-  gap: var(--spacing-sm);
-  will-change: transform;
-  background-color: var(--color-surface);
-  border: 1px solid var(--color-primary-border);
-  border-radius: var(--radius-md);
-  box-shadow: 6px 7px 5.5px 0 rgba(3, 7, 18, 0.15);
-  cursor: pointer;
-  text-decoration: none;
-  overflow: hidden;
-  transform-origin: center top;
-  cursor: default;
+    max-height: 360px;
+    gap: var(--spacing-sm);
+  }
+
+  .WorkCard-imageContainer {
+    max-height: 360px;
+  }
+
+  .WorkCard-image {
+    max-height: 360px;
+  }
+
+  .WorkCard-content {
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+  }
+
+  .WorkCard-title {
+    font-size: 24px;
+  }
 }
 
-.WorkCard-imageContainer {
-  max-width: 500px;
-  max-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
-  align-self: stretch;
+/* Tablet and below: switch to stacked vertical layout */
+@media (max-width: 768px) {
+  .WorkCard-inner {
+    flex-direction: column-reverse;
+    max-height: none;
+  }
+
+  .WorkCard-imageContainer {
+    width: 100%;
+    max-width: 100%;
+    max-height: 260px;
+    flex: none;
+  }
+
+  .WorkCard-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: 260px;
+  }
+
+  .WorkCard-content {
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+  }
+
+  .WorkCard-title {
+    font-size: 20px;
+  }
+
+  .WorkCard-linkcontainer {
+    margin-bottom: 8px;
+  }
 }
 
-.WorkCard-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 504px;
-  max-height: 300px;
-  border-radius: 0;
-  flex: 1 0 0;
-  align-self: stretch;
-}
+/* Mobile */
+@media (max-width: 480px) {
+  .WorkCard-title {
+    font-size: 16px;
+  }
 
-.WorkCard-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--spacing-xs);
-  flex: 1 0 0;
-  padding: var(--spacing-md);
-}
+  .WorkCard-descriptionGroup .WorkCard-description {
+    font-size: 14px;
+  }
 
-.WorkCard-title {
-  color: #fff;
-  font-family: var(--Font-Type-Primary, "Plus Jakarta Sans");
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  /* 48px */
-}
-
-}
-
-@media (max-width: 885px) {
-
-  .WorkCard {
-  position: sticky;
-  top: var(--spacing-base);
-  width: 100%;
-  
-}
-
-.WorkCard-inner {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.WorkCard-descriptionGroup {
-  display: flex;
-  height: 80px;
-  max-height: 90px;
-  align-items: flex-start;
-  gap: var(--spacing-sm);
-  align-self: stretch;
-}
-
-.WorkCard-imageContainer {
-  width: 800px;
-  max-width: 900px;
-  max-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
-.WorkCard-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 800px;
-  max-height: 300px;
-  border-radius: 0;
-  flex: 1 0 0;
-  object-fit: cover;
-  object-position: center;
-  
-}
-
-.WorkCard-linkcontainer {
-  margin-bottom: 8px;
-}
-
-}
-
-@media (max-width: 500px) {
-
-.WorkCard {
-  position: sticky;
-  top: var(--spacing-base);
-  width: 100%;
-  
-}
-
-.WorkCard-inner {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.WorkCard-descriptionGroup {
-  display: flex;
-  height: 80px;
-  max-height: 90px;
-  align-items: flex-start;
-  gap: var(--spacing-xs);
-  align-self: stretch;
-}
-
-.WorkCard-imageContainer {
-  width: 500px;
-  max-width: 500px;
-  max-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
-.WorkCard-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 800px;
-  max-height: 300px;
-  border-radius: 0;
-  flex: 1 0 0;
-  object-fit: cover;
-  object-position: center;
-  
-}
-
-.WorkCard-linkcontainer {
-  margin-bottom: 8px;
-}
-
-.WorkCard-title {
-  color: #fff;
-  font-family: var(--Font-Type-Primary, "Plus Jakarta Sans");
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  /* 48px */
-}
-
-.WorkCard-descriptionGroup .WorkCard-description {
-  margin-bottom: 8px;
-  height: 100%;
-  font-size: 14px;
-}
-
-.Section-label .label-container {
-  display: none;
-}
-
+  .Section-label .label-container {
+    display: none;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
