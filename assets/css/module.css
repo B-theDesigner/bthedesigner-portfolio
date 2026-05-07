@@ -812,8 +812,6 @@
   justify-content: center;
   padding: var(--spacing-lg);
   background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 
   /* Hidden by default */
   opacity: 0;
@@ -1333,12 +1331,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .DisplayEmphasis,
-  .DisplayEmphasis-border,
-  .DisplayEmphasis-corner,
-  .DisplayEmphasis-cursor,
-  .DisplayEmphasis-word {}
-
+  
   .DisplayEmphasis {
     opacity: 1;
     transform: scale(1);
@@ -1349,8 +1342,6 @@
     height: 100%;
   }
 
-  .DisplayEmphasis.is-active .DisplayEmphasis-cursor svg,
-  .DisplayEmphasis-cursor svg {}
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -2335,10 +2326,6 @@
   align-items: flex-start;
   gap: var(--spacing-sm);
   align-self: stretch;
-}
-
-.WorkCard-category {
-
 }
 
 .WordCard-categorycopy {
@@ -3585,9 +3572,6 @@ h3 .topfindings-header {
   letter-spacing: 1px;
 }
  
-.UseCaseTable-count {
-  /* Inherits weight and color from parent — no extra styling needed */
-}
  
 /* ── Description list ─────────────────────────────────────────────────────── */
  
@@ -4044,10 +4028,6 @@ h3 .topfindings-header {
   color: var(--color-text-muted);
 }
 
-.CertTable-cell--title {
-  /* Takes the remaining width after fixed columns */
-}
-
 .CertTable-cell--badge {
   width: 140px;
   white-space: nowrap;
@@ -4274,8 +4254,6 @@ h3 .topfindings-header {
    without touching the Background section's 640px swap. */
 
 /* Above 1022px: show tabs, hide cert accordion */
-.tabs-nav--cert,
-.tabs-panel-wrapper--cert {}
 
 .accordion--cert {
   display: none;
@@ -4507,9 +4485,6 @@ h3 .topfindings-header {
   flex-direction: column;
   padding: 24px 24px;
 }
-
-/* Anchor List Container */
-.anchor-list-container {}
 
 .anchor-list {
   display: flex;
@@ -4904,8 +4879,6 @@ html {
   flex-direction: column;
   gap: 4px;
 }
-
-.categoryctr-label {}
 
 .categoryctr-label h3 {
   color: var(--color-primary);
@@ -5511,7 +5484,6 @@ blockquote::after {
   }
 
   .summarycap {
-    @include position(absolute, 30px x x 30px);
     position: absolute;
     top: x;
     right: x;
