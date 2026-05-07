@@ -14,12 +14,22 @@ document.addEventListener('DOMContentLoaded', function () {
       { label: 'All',        subcategory: 'all'       },
       { label: 'Components', subcategory: 'component' },
       { label: 'Tokens',     subcategory: 'tokens'    },
+      { label: 'Patterns',     subcategory: 'patterns'    },
     ],
-    // redesign: [
-    //   { label: 'All',      subcategory: 'all'      },
-    //   { label: 'Launched', subcategory: 'launched' },
-    //   { label: 'Concept',  subcategory: 'concept'  },
-    // ],
+    redesign: [
+       { label: 'All',      subcategory: 'all'      },
+       { label: 'Concept',  subcategory: 'concept'  },
+       { label: 'Test Ready',  subcategory: 'test'  },
+       { label: 'Production Ready',  subcategory: 'production'  },
+       { label: 'Launched', subcategory: 'launched' },
+     ],
+     netnew: [
+       { label: 'All',      subcategory: 'all'      },
+       { label: 'Concept',  subcategory: 'concept'  },
+       { label: 'Test Ready',  subcategory: 'test'  },
+       { label: 'Production Ready',  subcategory: 'production'  },
+       { label: 'Launched', subcategory: 'launched' },
+     ],
   };
 
   // ── State ──────────────────────────────────────────────────────────────
