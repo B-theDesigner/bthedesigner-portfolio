@@ -2471,48 +2471,31 @@
 
 @media (max-width: 885px) {
 
-  .WorkCard {
-  position: sticky;
-  top: var(--spacing-base);
-  width: 100%;
-  
-}
 
 .WorkCard-inner {
   display: flex;
   flex-direction: column-reverse;
 }
 
-.WorkCard-descriptionGroup {
+.WorkCard-imageContainer {
+  width: 100%;
+  max-height: 300px;
   display: flex;
-  height: 80px;
-  max-height: 90px;
+  flex-direction: column;
   align-items: flex-start;
-  gap: var(--spacing-sm);
+  flex: 1 0 0;
   align-self: stretch;
 }
 
-.WorkCard-imageContainer {
+.WorkCard-image {
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
   width: 800px;
-  max-width: 900px;
-  max-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
-.WorkCard-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   max-width: 800px;
   max-height: 300px;
   border-radius: 0;
   flex: 1 0 0;
-  object-fit: cover;
-  object-position: center;
   
 }
 
@@ -2522,78 +2505,6 @@
 
 }
 
-@media (max-width: 500px) {
-
-.WorkCard {
-  position: sticky;
-  top: var(--spacing-base);
-  width: 100%;
-  
-}
-
-.WorkCard-inner {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.WorkCard-descriptionGroup {
-  display: flex;
-  height: 80px;
-  max-height: 90px;
-  align-items: flex-start;
-  gap: var(--spacing-xs);
-  align-self: stretch;
-}
-
-.WorkCard-imageContainer {
-  width: 500px;
-  max-width: 500px;
-  max-height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex: 1 0 0;
-  align-self: stretch;
-}
-
-.WorkCard-image {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 800px;
-  max-height: 300px;
-  border-radius: 0;
-  flex: 1 0 0;
-  object-fit: cover;
-  object-position: center;
-  
-}
-
-.WorkCard-linkcontainer {
-  margin-bottom: 8px;
-}
-
-.WorkCard-title {
-  color: #fff;
-  font-family: var(--Font-Type-Primary, "Plus Jakarta Sans");
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  /* 48px */
-}
-
-.WorkCard-descriptionGroup .WorkCard-description {
-  margin-bottom: 8px;
-  height: 100%;
-  font-size: 14px;
-}
-
-.Section-label .label-container {
-  display: none;
-}
-
-}
 
 /* ─────────────────────────────────────────────────────────────────────────────
    ArticleList + ArticleCard  — used inside Section-body on Journal section
