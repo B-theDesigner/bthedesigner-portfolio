@@ -3032,7 +3032,7 @@ h3 .topfindings-header {
   }
 
   .Section--row .Section-header {
-    position: re;
+    position: relative;
     width: 100%;
     flex-shrink: 0;
     align-self: flex-start;
