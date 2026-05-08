@@ -50,6 +50,10 @@ p {
   color: var(--color-text);
 }
 
+sup {
+  font-size: var(--font-size-xs);
+}
+
 ol {
   margin-left: 24px;
 }
