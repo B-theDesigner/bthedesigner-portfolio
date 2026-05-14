@@ -1,0 +1,1128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Research: Dog Adoption App</title>
+  <meta name="description"
+    content="Lead Product Designer with 10+ years of experience in UX/UI, enterprise SaaS, and design systems. Specializing in accessible, data-driven product design and game UI. Based in Chicago, open to remote roles.">
+  <meta name="keywords" content="UX/UI Designer, Design Systems Designer, Enterprise UX Designer,
+                                  Game UI Designer, Game UX Designer, Figma Expert,
+                                  Accessibility Design, WCAG Compliance, UX Strategy,
+                                  SaaS Product Design, B2B UX, Chicago Product Designer, Remote UX Designer
+                                  ">
+  <link rel="shortcut icon" href="../../assets/img/FavIcon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/theme.css" />
+  <link rel="stylesheet" href="../../assets/css/base.css" />
+  <link rel="stylesheet" href="../../assets/css/layout.css" />
+  <link rel="stylesheet" href="../../assets/css/module.css" />
+  <link rel="stylesheet" href="../../assets/css/state.css" />
+</head>
+
+<body>
+  <!-- ═══════════════════════════════════════════════════════
+       SIDEBAR — Desktop navigation
+  ════════════════════════════════════════════════════════ -->
+  <aside id="sidebar" class="Sidebar">
+    <div class="Sidebar-content">
+      <div class="nav_logocontainer">
+       <a href="/"> <img src="../../assets/img/Logo.svg" alt="logo" class="nav_logo" /></a>
+      </div>
+      <!-- User Profile 
+      <div class="UserProfile">
+        <img src="../../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+        <div class="UserProfile-info">
+          <p class="UserProfile-name">Bryttany Winkfield</p>
+          <p class="UserProfile-title">Product Designer</p>
+        </div>
+      </div> -->
+
+      <!-- Desktop Navigation -->
+      <nav class="NavMenu">
+        <a href="/" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <span>Home</span>
+        </a>
+        <a href="/about" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>About</span>
+        </a>
+        <!-- Services Link 
+        <a href="/services" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+          </svg>
+          <span>Services</span>
+        </a>-->
+        <a href="/work" class="NavMenu-item is-active">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <span>Work</span>
+        </a>
+        <a href="/journal" class="NavMenu-item">
+          <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+          </svg>
+          <span>Journal</span>
+        </a>
+      </nav>
+
+      <hr class="NavMenu-divider" />
+      <a href="../../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary" rel="noopener noreferrer" target="_blank">View CV</a>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER — visible on tablet & mobile
+  ════════════════════════════════════════════════════════ -->
+  <header id="mobile-header" class="MobileHeader">
+
+    <div class="nav_logocontainer--mobile">
+      <img src="../../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+    </div>
+
+    <!-- User Profile 
+    <div class="MobileHeader-user">
+      <img src="../../assets/img/BtheDesigner.png" alt="Bryttany Winkfield" class="UserProfile-avatar" />
+      <div class="UserProfile-info">
+        <p class="UserProfile-name">Bryttany Winkfield</p>
+        <p class="UserProfile-title">Product Designer</p>
+      </div> -->
+
+    </div>
+    <button id="menu-toggle" class="MenuToggle" aria-label="Toggle navigation menu">
+      <svg id="menu-icon" class="MenuToggle-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <line x1="4" x2="20" y1="12" y2="12" />
+        <line x1="4" x2="20" y1="6" y2="6" />
+        <line x1="4" x2="20" y1="18" y2="18" />
+      </svg>
+      <svg id="close-icon" class="MenuToggle-iconClose is-hidden" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Menu Overlay -->
+  <div id="menu-overlay" class="MenuOverlay"></div>
+
+  <!-- summaryslide-out Mobile Navigation -->
+  <div id="mobile-menu" class="MobileMenu">
+    <nav class="NavMenu--mobile">
+      <a href="/" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="/about" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <span>About</span>
+      </a>
+      <!-- Services Mobile Link 
+      <a href="/services" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 16H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1M9 12H4m8 8V9h8v11h-8Zm0 0H9m8-4a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z" />
+        </svg>
+        <span>Services</span>
+      </a>-->
+      <a href="/work" class="NavMenu-item is-active">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+        </svg>
+        <span>Work</span>
+      </a>
+      <a href="/journal" class="NavMenu-item">
+        <svg class="NavMenu-itemIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+        </svg>
+        <span>Journal</span>
+      </a>
+    </nav>
+    <hr class="NavMenu-divider--mobile" />
+    <a href="../../assets/resume/Winkfield_Bryttany_CV.pdf" class="Button Button--primary CV-mobile" rel="noopener noreferrer" target="_blank">View CV</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRAME BORDERS — Desktop chrome effect
+  ════════════════════════════════════════════════════════ -->
+  <div class="FrameBorder--top"></div>
+  <div class="FrameBorder--bottom"></div>
+  <div class="FrameBorder--right"></div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════ -->
+  <main id="main-content" class="MainContent">
+    <div class="ContentWrapper">
+      <!-- ─── Breadccrumb ────────────────────────────────── -->
+      <section class="breadcrumb-section">
+        <div class="breadcrumb-container">
+          <nav class="breadcrumb" aria-label="breadcrumb">
+            <a href="/work" class="breadcrumb-item Link js-back-btn">← Back</a>
+          </nav>
+          <div class="Subject-details">
+            <h1 class="Subject-title">Expectations & Motivations in Prospective Dog Adopters</h1>
+          </div>
+          <div class="Subject-readtime">
+            <p> 1 hr</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ProjectPageContent">
+        <!-- ─── Project Details ────────────────────────────────── -->
+        <div id="Project-grid">
+
+            <div id="Oneminutesummary">
+            <!--═══════════════════════════════════════════════════════
+                    1 MINUTE SUMMARY — Accordion modifier
+                    Place inside #Oneminutesummary in projectdetails.html.
+                    Requires: accordion--summary.css, accordion--summary.js
+                ════════════════════════════════════════════════════════ -->
+
+            <div class="SummaryAccordion-wrapper" id="summary-accordion-wrapper" >
+              <details class="Accordion Accordion--summary" id="summary-accordion" open>
+                <summary class="Accordion-summary">
+                  <div class="Accordion--summary-header">
+                    <h2 class="Accordion--summary-title">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-stopwatch" viewBox="0 0 16 16">
+                        <path d="M8.5 5.6a.5.5 0 1 0-1 0v2.9h-3a.5.5 0 0 0 0 1H8a.5.5 0 0 0 .5-.5z" />
+                        <path
+                          d="M6.5 1A.5.5 0 0 1 7 .5h2a.5.5 0 0 1 0 1v.57c1.36.196 2.594.78 3.584 1.64l.012-.013.354-.354-.354-.353a.5.5 0 0 1 .707-.708l1.414 1.415a.5.5 0 1 1-.707.707l-.353-.354-.354.354-.013.012A7 7 0 1 1 7 2.071V1.5a.5.5 0 0 1-.5-.5M8 3a6 6 0 1 0 .001 12A6 6 0 0 0 8 3" />
+                      </svg> 1 Minute Summary
+                    </h2>
+                  </div>
+                  <span class="Accordion-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </span>
+                </summary>
+
+                <div class="Accordion-body">
+                  <!-- ─── Inner Sections ──────────────────────────────── -->
+                  <div class="SummaryAccordion-grid">
+
+
+                    <div class="SummaryAccordion-sectionL">
+
+                      <div class="summary-paragraph">
+                        <p>This was a mixed-methods UX research study aimed at understanding why first-time dog owners often surrender their pets, and how a technology tool could help reduce that. The central research question: <span class="highlight">How can a digital tool help prospective dog owners find the right breed and understand what ownership actually entails?</span></p>
+                      </div>
+
+                      <div class="summary-paragraph">
+                        <h2>methods used:</h2>
+                        <p>Observations (7 participants), semi-structured interviews (5 participants), and a survey (30 respondents) — <span class="highlight">all targeting people who had never owned a dog but wanted one</span>.
+                          </p>
+                      </div>
+
+                      <div class="summary-paragraph">
+                        <h2>key findings</h2>
+                        <p>
+                            <ul>
+                                <li>People were motivated by companionship and social environments, but had significant knowledge gaps around costs, care, and breed behaviors</li>
+                                <li>Pain points included poor filtering on existing adoption sites and lack of personalized guidance</li>
+                                <li>Existing tools like Petango and Pedigree's breed quiz were limited — either buried the care info or were too basic</li>
+                            </ul>
+                        </p>
+                      </div>
+
+                      <div class="summary-paragraph">
+                        <h2>Design recommendations surfaced:</h2>
+                        <p>Refined search filters, dog biographies, expense estimator, breed comparison tool, map-based adoption finder, and community comment sections per breed.
+                          </p>
+                      </div>
+
+                    </div>
+
+                    <div class="SummaryAccordion-sectionR">
+
+                      <div class="slider-ctr">
+                        <figure class="summaryslide">
+                          <img src="../assets/img/projects/guidedhealthcare/Slide Final.png" alt="Final Designs" />
+                          <figcaption class="summarycap">
+                            <div class="title ">IMG</div>
+                            <div class="author">Final Designs</div>
+                          </figcaption>
+                        </figure>
+
+                        <figure class="summaryslide">
+                          <img src="../assets/img/projects/guidedhealthcare/Slide Wireframe.png"
+                            alt="Wireframe example" />
+                          <figcaption class="summarycap">
+                            <div class="title">IMG</div>
+                            <div class="author">Example of Wireframes</div>
+                          </figcaption>
+                        </figure>
+
+                        <figure class="summaryslide">
+                          <img src="../assets/img/projects/guidedhealthcare/Slide documentation.png"
+                            alt="Documentation example" />
+                          <figcaption class="summarycap">
+                            <div class="title">IMG</div>
+                            <div class="author">Example of Project Documentation</div>
+                          </figcaption>
+                        </figure>
+
+                        <figure class="summaryslide text-on">
+                          <img src="../../assets/img/projects/guidedhealthcare/Health Pro B4.png"
+                            alt="HealthNav Landing Page" />
+                          <figcaption class="summarycap">
+                            <div class="title">IMG</div>
+                            <div class="author">Pre-existing HealthNav Landing Page</div>
+                          </figcaption>
+                        </figure>
+
+                        <div class="slider-control">
+                          <button class="control prev disabled" aria-label="Previous summaryslide">
+                            <span class="icon ion-chevron-left"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                  d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                              </svg></span>
+                          </button>
+                          <button class="control next" aria-label="Next summaryslide">
+                            <span class="icon ion-chevron-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                  d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                              </svg></span>
+                          </button>
+                        </div>
+                      </div>
+                      <!-- ─── Callout Placeholder ─────────────────────────── -->
+                      <div class="SummaryAccordion-callout" role="note" aria-label="Key takeaway">
+                        <span class="SummaryAccordion-calloutIcon" aria-hidden="true">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4M12 8h.01" />
+                          </svg>
+                        </span>
+                        <div class="SummaryAccordion-calloutContent">
+                          <p class="SummaryAccordion-calloutLabel">
+                            Want the full story?
+                          </p>
+                          <p class="SummaryAccordion-calloutText">
+                            The sections below dives deeper into research, design
+                            decisions, iterations, and learnings.
+                          </p>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div> 
+
+          <div id="ProjectDetails-container">
+
+            <section class="Section-ProjectDetails" id="Category1" data-label="About">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>About</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+
+              <div class="MediaDisplay-ProjectDetails" data-fit="cover">
+                <div class="MediaDisplay-framelg">
+                  <img class="MediaDisplay-imagelg" src="../../assets/img/projects/dogadopt/New Hero.png"
+                    alt="Project hero" />
+                  <div class="MediaDisplay-border">
+                    <div class="MediaDisplay-borderStrokelg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--tllg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--bllg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--brlg"></div>
+                    <div class="MediaDisplay-borderCorner MediaDisplay-borderCorner--trlg"></div>
+                  </div>
+                </div>
+                <!-- Badge + caption below the frame, left aligned, side by side -->
+                <div class="MediaDisplay-meta">
+                  <div class="MediaDisplay-badge">
+                    <p>IMG</p>
+                  </div>
+                  <div class="MediaDisplay-caption">
+                    <p>Project Hero Image</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="OverviewCopy-container">
+
+                <div class="OverviewCopy-aside">
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>My Role</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>Researcher</p>
+                      <p>Research Design, Data Collection, Analysis, Feature Synthesis</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>project type</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>User Research</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>Methods</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>Observation, Interview, Survey</p><p> Mixed-Methods</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>Participants</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>18 across all studies</p><p> 7 obs • 5 interviews • 30 survey</p>
+                    </div>
+                  </div>
+
+                  <div class="OverviewCopy-categoryctr">
+                    <div class="categoryctr-label">
+                      <h3>duration & status</h3>
+                    </div>
+                    <div class="categoryctr-copy">
+                      <p>Q1 2019</p><p> Research Complete</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="OverviewCopy-main">
+
+
+                  <h2 class="Callout-text text-reveal">Exploring how to reduce dog relinquishment through <span class="HeroSection-fillWord">better-informed adoption decisions.</span></h2>
+
+                  <div class="ProjectDetails-paragraph">
+                    
+                    <p>Every year approximately 6.5 million animals enter United States animal shelters and 1.5 million shelter animals are euthanized. Research shows that a major contributing factor is <strong>misinformed expectations</strong> — new owners surrender dogs not because the animals are bad, but because they weren't prepared for the reality of that breed or their individual dog's needs.
+                    <br /> <br />   
+                    This research explored the expectations and motivations of people considering dog adoption for the first time. The central question: <strong>how can a technology-based tool help potential new dog owners assess whether a breed is a good fit, and educate them on what ownership actually requires?</strong>
+                    </p>
+
+                    <div class="PullQuote">
+                        <div class="PullQuote-line" aria-hidden="true"><span class="PullQuote-square PullQuote-square--top"></span><span class="PullQuote-stem"></span><span class="PullQuote-square PullQuote-square--bottom"></span></div>
+                        <p class="PullQuote-text">Behavioral problems are the most cited reason for dog relinquishment — but in many cases, those "problems" are the natural traits of the breed the owner chose without fully understanding. The issue is a mismatch between expectation and reality.</p>
+                      </div>
+                  </div>
+
+                </div>
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="problem" data-label="Competitive Analysis">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Competitive Landscape</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal">Existing tools <span
+                  class="HeroSection-fillWord">didn't go far enough.</span>
+              </h2>
+
+              <div class="UseCaseTable" data-total="2">
+                <p class="UseCaseTable-header">
+                      <span class="UseCaseTable-count"></span> Top Tools Used To Find Potential Dogs for Adoption
+                    </p>
+                    <dl class="UseCaseTable-list">
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Petango</dt>
+                        <dd class="UseCaseTable-value">Offers a filterable database with a "PetMatch" questionnaire, but care information is buried in tip blog posts on a separate page — not integrated into the decision journey.</dd>
+                      </div>
+                      <div class="UseCaseTable-row">
+                        <dt class="UseCaseTable-label">Pedigree Dog Breed Selector Quiz</dt>
+                        <dd class="UseCaseTable-value">Helps users explore breeds but relies on a limited set of basic parameters. Effectively a marketing tool for Pedigree dog food — not built around the full complexity of real adoption needs.</dd>
+                      </div>
+                    </dl>
+
+                  </div>
+
+              <div class="ProjectDetails-paragraph">
+                <p>Neither tool adequately bridges the gap between <strong>finding a dog and understanding what owning that dog actually involves</strong>. That gap was the focus of this research.
+                </p>
+              </div>
+
+
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="approach" data-label="Methods">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Methods</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text">A <span class="HeroSection-fillWord">three-phase approach</span>to understand needs across the full spectrum of prospective owners</h2>
+
+              <!-- ─── Stacking Approach Cards ──────────── -->
+              
+              <br/><br/>
+              <div class="UseCaseTable" data-total="3">
+                <dl class="UseCaseTable-list">
+
+                  <div class="UseCaseTable-row">
+                    <dt class="UseCaseTable-label">Observations</dt>
+                    <dd class="UseCaseTable-value">
+                     <p><strong>7</strong> Participants with no prior dog ownership were observed searching for a dog online. Sessions were screen-recorded and coded using AEIOU framework.</p>
+                  </div>
+
+                  <div class="UseCaseTable-row">
+                    <dt class="UseCaseTable-label">Interviews</dt>
+                    <dd class="UseCaseTable-value">
+                      <p><strong>5</strong> In-depth semi-structured interviews focused on mental models, criteria, expectations, and knowledge gaps. Transcribed and coded inductively via Atlas.ti.</p>
+                    </dd>
+                  </div>
+
+                  <div class="UseCaseTable-row">
+                    <dt class="UseCaseTable-label">Survey</dt>
+                    <dd class="UseCaseTable-value">
+                      <p><strong>30</strong> Mixed-experience respondents. Included experienced and prospective owners to test whether observation and interview themes held at scale.</p>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+
+                <div class="FindingsSlide-indication">
+                   <p class="FindingsSlide-indicationLabel">Participant Criteria</p>
+                   <p class="FindingsSlide-indicationText">Observation and interview participants were required to (1) never have previously owned a dog and (2) be actively considering adoption. Survey participants were 18+ and either owned a dog previously, currently own one, or are interested in getting one — allowing for cross-experience comparison.</p>
+                </div>
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="results" data-label="Findings">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Findings</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal"><span class="HeroSection-fillWord">Three themes</span> emerged consistently across all three methods</h2>
+
+              <br/>
+              <div class="UseCaseTable" data-total="3">
+                <dl class="UseCaseTable-list">
+
+                  <div class="UseCaseTable-row">
+                    <dt class="UseCaseTable-label">Finding 1:</dt>
+                    <dd class="UseCaseTable-value">
+                     <p><strong>7</strong>  Observation participants — all had pre-formed criteria before session began.</p>
+                  </div>
+
+                  <div class="UseCaseTable-row">
+                    <dt class="UseCaseTable-label">Finding 2:</dt>
+                    <dd class="UseCaseTable-value">
+                      <p><strong>4.7</strong>  Mean helpfulness rating for visual results (photo/video) — highest of all features tested.</p>
+                    </dd>
+                  </div>
+
+                  <div class="UseCaseTable-row">
+                    <dt class="UseCaseTable-label">Finding 3:</dt>
+                    <dd class="UseCaseTable-value">
+                      <p><strong>2.1</strong>  Mean self-rated knowledge score (of 5) for adoption options among inexperienced owners.</p>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              
+              <br/><br/>
+
+             
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="true" aria-controls="acc-panel-1" id="acc-trigger-1">
+                <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="false">
+                    <!-- swap SVG path to match your tab icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                    </span>
+                    Positive Influences: Motivations and Resources
+                </span>
+                <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-1" aria-hidden="false" role="region" aria-labelledby="acc-trigger-1">
+                <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                    <p>
+                        <ul>
+                            <li><strong>Motivating Preferences:</strong> All participants had pre-formed dog preferences — ranging from general descriptors ("big and strong") to highly specific criteria (breed, fur color, temperament, age). Four of five interview participants wanted puppies specifically.</li>
+                            <li><strong>Motivating Factors:</strong> Two primary drivers emerged — a desire for companionship and the environment presence of dogs (neighbors, coworkers, social media). These weren't just reasons to want a dog; they were active triggers for beginning the search.</li>
+                            <li><strong>Social Resources:</strong> Four of five interview participants actively sought advice from friends and family. Social validation played a significant role in both the decision to adopt and criteria used to evaluate a dog.</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <br /> 
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-2" id="acc-trigger-2">
+                <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                    <!-- swap SVG path to match your tab icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                    </span>
+                    Negative Influences: Concerns
+                </span>
+                <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-2" aria-hidden="true" role="region" aria-labelledby="acc-trigger-2">
+                <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                    <p>
+                        <ul>
+                            <li><strong>Distance for Pick-up:</strong>  Multiple participants expressed unwillingness to travel far — some setting hard limits on range. This was a practical friction point that existing tools didn't adequately address.</li>
+                            <li><strong>Negatively Perceived Traits:</strong> Participants voiced concerns about behavioral issues (anxiety, aggression, trainability) but often lacked the knowledge to evaluate these traits accurately. This gap between fear and informed assessment was a central design opportunity.</li>
+                            <li><strong>Knowledge Gap:</strong>  Inexperienced owners rated themselves significantly lower across all dog-related knowledge area — particularly adoption process (2.1/5) and dog care (2.3/5) — compared to experienced owners.</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <br /> 
+
+            <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-3" id="acc-trigger-3">
+                <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                    <!-- swap SVG path to match your tab icon -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+                    </span>
+                    Tools and Features: What Users Actually Need
+                </span>
+                <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-3" aria-hidden="true" role="region" aria-labelledby="acc-trigger-3">
+                <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                    <p>
+                        <ul>
+                            <li><strong>Photos and Video (rated 4.7/5):</strong> Unanimously the most valued feature. When one observation participant found a video of a dog on a shelter site, it visibly changed her engagement and confidence in the decision.</li>
+                            <li><strong>Robust Filters:</strong> Multiple participants resorted to typing breed names directly into search bars when they couldn't find filter options — often with degraded results. Filtering by breed, age, distance, and behavioral traits was strongly requested.</li>
+                            <li><strong>Dog Comparison Tool:</strong> Suggested unprompted by interview participants and rated 4.3/5 by inexperienced owners — significantly higher than experienced owners, suggesting this is especially valuable for first-time adopters.</li>
+                            <li><strong>Map-Based Search:</strong> Participants wanted to find dogs available near them. A visual, proximity-based interface was cited as a meaningful improvement over text-based location filtering.</li>
+                            <li><strong>Breed Information and Recommendations:</strong>  Users with no specific breed in mind needed entry-point guidance. Survey data showed most inexperienced owners don't arrive with a preferred breed.</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+              
+            </section>
+
+
+
+            <section class="Section-ProjectDetails" id="key-patterns" data-label="Personas">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Personas</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal"><span class="HeroSection-fillWord">Two users with very different starting points</span> and the same need for better tools
+                  </h2>
+
+                  <div class="Section-body">
+            <div class="ServicesSection-grid">
+
+
+              <div class="ServicesCard">
+                <div class="ServicesCard-copy">
+                  <h3 class="ServicesCard-title">Lisa: Inexperienced First-Timer</h3>
+                  <p class="ServicesCard-description">Wanted a dog for a while, no ownership experience. Prefers researching over consulting staff. Very limited knowledge of adoption processes, care requirements, and realistic expectations. Needs guidance.</p>
+                </div>
+              </div>
+
+              <div class="ServicesCard">
+                <div class="ServicesCard-copy">
+                  <h3 class="ServicesCard-title">Patrick: Experienced Owner</h3>
+                  <p class="ServicesCard-description">Has cared for dogs before but is learning about a new breed. Busy and doesn't have time for deep research. Knows what he wants but lacks breed-specific knowledge. Needs depth when he wants it, without friction.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+            </section>
+
+            <section class="Section-ProjectDetails" id="designimp" data-label="Design Implications">
+      <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Design Implications</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text text-reveal"><span class="HeroSection-fillWord">Research Findings translated into</span> 10 prioritized feature recommendations</h2>
+              <p>The goal of the proposed tool — working title "DogMatch" — is to help users find a more compatible dog while building the knowledge needed to care for it long-term. Each feature was grounded directly in research data, not assumption.</p>
+              <br /> <br />
+              <section class="" aria-label="What shapes me as a designer">
+            
+            <!-- ── Desktop Tabs ── -->
+            <ul class="tabs-nav" role="tablist" aria-label="Designer sections" style="position: relative;">
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-high" aria-controls="panel-high" aria-selected="true" tabindex="0">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z"></path>
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z"></path>
+                    </svg>
+                  </span>
+                  High Priority &emsp;
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                  <span class="tab-btn__cursor" aria-hidden="true">
+                    <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC"></path>
+                    </svg>
+                  </span>
+                </button>
+              </li>
+
+              <li role="presentation">
+                <button class="tab-btn" role="tab" id="tab-medium" aria-controls="panel-medium" aria-selected="false" tabindex="-1">
+                  <span class="tab-btn__radio" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"></path>
+                    </svg>
+                  </span>
+                  <span class="tab-btn__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"></path>
+                    </svg>
+                  </span>
+                  Medium Priority
+                  <span class="tab-btn__corners" aria-hidden="true">
+                    <span class="tab-btn__corner tab-btn__corner--tl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--tr"></span>
+                    <span class="tab-btn__corner tab-btn__corner--bl"></span>
+                    <span class="tab-btn__corner tab-btn__corner--br"></span>
+                  </span>
+                  <span class="tab-btn__cursor" aria-hidden="true">
+                    <svg viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0 0L15 39L21 24L36 18L0 0Z" fill="#A27ECC"></path>
+                    </svg>
+                  </span>
+                </button>
+              </li>
+
+            <div class="tab-selbox is-ready" aria-hidden="true" style="width: 194px; height: 57px; transform: translate(-5px, -5px);">
+      <span class="tab-selbox__corner tab-selbox__corner--tl"></span>
+      <span class="tab-selbox__corner tab-selbox__corner--tr"></span>
+      <span class="tab-selbox__corner tab-selbox__corner--bl"></span>
+      <span class="tab-selbox__corner tab-selbox__corner--br"></span>
+      <span class="tab-selbox__cursor"></span>
+    </div></ul>
+
+            <!-- ── Desktop Panels ── -->
+            <div class="tabs-panel-wrapper">
+              <div class="tab-panel" role="tabpanel" id="panel-high" aria-labelledby="tab-high" aria-hidden="false" style="display: block;">
+                <div class="tab-panel__body">
+                  <ul>
+                        <li><strong>Refined Search (Filters):</strong> Support filtering by breed, size, age, distance, temperament, and medical status. Participants who couldn't find filters resorted to keyword searches — with worse results.</li>
+                        <li><strong>Personal Dog Biography:</strong> Medical history, ownership background, behavioral quirks, and age. Participants wanted to know the full picture of a dog before moving forward, not just its photo and breed.</li>
+                        <li><strong>Photos and Videos:</strong> The highest-rated feature across both experienced and inexperienced users. Video in particular shifted participant affect from browsing to genuine connection.</li>
+                        <li><strong>Personalized Expense Report Generator:</strong> Inexperienced owners severely underestimated ownership costs. Using data from experienced owners, the tool would generate realistic cost projections.</li>
+                        <li><strong>Dog Breed Database:</strong> Most experienced owners only knew the breeds they'd personally owned. A comprehensive, searchable breed reference addresses knowledge gaps for all user types.</li>
+                        <li><strong>Adoption Finder on Map:</strong> Distance was a top concern. A proximity-based map view of available dogs directly addresses the discovery pain point of not knowing what's nearby.</li>
+                        <li><strong>Informative Articles:</strong> Knowledge gaps on care, adoption processes, and expenses were consistent across inexperienced users. Articles provide a scalable, low-friction education layer.</li>
+                    </ul>
+                </div>
+              </div>
+
+              <div class="tab-panel" role="tabpanel" id="panel-medium" aria-labelledby="tab-medium" aria-hidden="true" style="display: none;">
+                <div class="tab-panel__header">
+                </div>
+                <div class="tab-panel__body">
+                  <ul>
+                    <li><strong>Recommended Breeds for Beginners:</strong> Most inexperienced owners didn't arrive with a specific breed. A guided recommendation entry point prevents impulsive or media-influenced choices.</li>
+                    <li><strong>Dog Comparison Tool:</strong> Rated 4.3/5 by inexperienced owners. Allows side-by-side evaluation of breeds by age, size, temperament, and location — similar to device comparison on retail sites.</li>
+                    <li><strong>Comment Section Per Breed Page:</strong> Four survey participants specifically advised new owners to seek perspectives from people who've actually owned the breed. Community input would surface real-world context that official listings lack.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- ── Mobile Accordion ── -->
+            <div class="accordion" aria-label="Designer sections">
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-high" id="acc-tab-high">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 3H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h7v2H8v2h8v-2h-3v-2h7a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 12H5V5h14v10z"></path>
+                      </svg>
+                    </span>
+                    High Priority
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-high" aria-hidden="true" role="region" aria-labelledby="acc-tab-high">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                      <ul>
+                        <li><strong>Refined Search (Filters):</strong> Support filtering by breed, size, age, distance, temperament, and medical status. Participants who couldn't find filters resorted to keyword searches — with worse results.</li>
+                        <li><strong>Personal Dog Biography:</strong> Medical history, ownership background, behavioral quirks, and age. Participants wanted to know the full picture of a dog before moving forward, not just its photo and breed.</li>
+                        <li><strong>Photos and Videos:</strong> The highest-rated feature across both experienced and inexperienced users. Video in particular shifted participant affect from browsing to genuine connection.</li>
+                        <li><strong>Personalized Expense Report Generator:</strong> Inexperienced owners severely underestimated ownership costs. Using data from experienced owners, the tool would generate realistic cost projections.</li>
+                        <li><strong>Dog Breed Database:</strong> Most experienced owners only knew the breeds they'd personally owned. A comprehensive, searchable breed reference addresses knowledge gaps for all user types.</li>
+                        <li><strong>Adoption Finder on Map:</strong> Distance was a top concern. A proximity-based map view of available dogs directly addresses the discovery pain point of not knowing what's nearby.</li>
+                        <li><strong>Informative Articles:</strong> Knowledge gaps on care, adoption processes, and expenses were consistent across inexperienced users. Articles provide a scalable, low-friction education layer.</li>
+                    </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-trigger" aria-expanded="false" aria-controls="acc-panel-medium" id="acc-tab-medium">
+                  <span class="accordion-trigger__left">
+                    <span class="accordion-trigger__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2a7 7 0 0 0-4 12.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26A7 7 0 0 0 12 2zm2 14h-4v-1h4v1zm1.73-3.64-.73.55V14h-6v-1.09l-.73-.55A5 5 0 1 1 17 9a4.96 4.96 0 0 1-1.27 3.36zM9 19h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-1z"></path>
+                      </svg>
+                    </span>
+                    Medium Priority
+                  </span>
+                  <svg class="accordion-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-body" id="acc-panel-medium" aria-hidden="true" role="region" aria-labelledby="acc-tab-medium">
+                  <div class="accordion-body__inner">
+                    <div class="accordion-body__content">
+                      <ul>
+                    <li><strong>Recommended Breeds for Beginners:</strong> Most inexperienced owners didn't arrive with a specific breed. A guided recommendation entry point prevents impulsive or media-influenced choices.</li>
+                    <li><strong>Dog Comparison Tool:</strong> Rated 4.3/5 by inexperienced owners. Allows side-by-side evaluation of breeds by age, size, temperament, and location — similar to device comparison on retail sites.</li>
+                    <li><strong>Comment Section Per Breed Page:</strong> Four survey participants specifically advised new owners to seek perspectives from people who've actually owned the breed. Community input would surface real-world context that official listings lack.</li>
+                  </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- /accordion -->
+          </section>
+    </section>
+
+    <section class="Section-ProjectDetails" id="stats" data-label="Statistical Findings">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Statistical Findings</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text">Hypothesis testing surfaced <span class="HeroSection-fillWord">one significant finding that directly informed feature prioritization</span></h2>
+              <p>Three hypotheses were tested via Mann-Whitney U tests comparing experienced owners (n=19) and inexperienced prospective owners (n=10).</p>
+
+              <!-- ─── Stacking Approach Cards ──────────── -->
+              <div class="ApproachCards">
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight is-active">Significant</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Inexperienced owners rate breed as more important
+                    </h3>
+                    <p class="ApproachCard-body">A significant difference was found (p = .008). Inexperienced owners place higher weight on breed during their search — reinforcing the need for strong breed education and recommendation tools targeted at first-timers.</p>
+                  </div>
+                </div>
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight is-active">No Significant Difference</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Prior research doesn't predict ownership satisfaction</h3>
+                    <p class="ApproachCard-body">No significant link was found between pre-adoption research and positive ownership experience (p = .36) — suggesting that what information people access matters more than whether they researched at all.</p>
+                  </div>
+                </div>
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight is-active">No Significant Difference</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Both groups value temperament equally</h3>
+                    <p class="ApproachCard-body">No significant difference in temperament ratings (p = .36). Both experienced and inexperienced users care about temperament — making it a universal field to surface in both search and breed profiles.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="ApproachCard">
+                  <div class="ApproachCard-inner">
+                    <div class="ApproachCard-step">
+                      <mark class="c-text-highlight is-active">Key Insight</mark>
+                    </div>
+                    <h3 class="ApproachCard-title">Quality of information beats quantity</h3>
+                    <p class="ApproachCard-body">Taken together, the hypotheses point to a consistent design implication: the tool's value lies in surfacing the right information at the right moment, not just delivering more content to research-oriented users.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </section>
+
+            <section class="Section-ProjectDetails" id="forward" data-label="Next Steps">
+
+              <!-- ─── Divider ─────────────────────────── -->
+              <div class="CategoryDivider">
+                <span class="CategoryDivider-label">
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--tr"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--bl"></span>
+                  <span class="CategoryDivider-corner CategoryDivider-corner--br"></span>
+                  <p>Limitations & Future Work</p>
+                </span>
+                <span class="CategoryDivider-line" aria-hidden="true"></span>
+              </div>
+
+              <h2 class="Callout-text">What this study couldn't answer <span class="HeroSection-fillWord">and where the research should go next</span></h2>
+              <p>
+                <ul>
+                    <li><strong>Small, homogeneous samples.</strong> Observation (n=7) and interview (n=5) participants were predominantly Chicago-area, full-time students, ages 22–28. Findings should be validated across more diverse demographics before informing production decisions.</li>
+                    <li><strong>Single-session observation.</strong> Real-world dog searching spans multiple sessions and is influenced by offline factors (shelter visits, conversations with friends). The study captured a snapshot, not the full journey.</li>
+                    <li><strong>Missing the relinquishment perspective</strong> The survey captured why people want dogs and how they search — but didn't include owners who had previously surrendered a pet. That voice would have directly validated whether the proposed tool addresses the root cause.</li>
+                    <li><strong>Future opportunity: disability and special needs adoption.</strong> Whether participants would consider adopting a disabled dog was never explored — a topic that could meaningfully expand the tool's scope and impact.</li>
+                </ul>
+              </p>
+
+            </section>
+
+
+
+            <section class="Section-ProjectDetails">
+              
+
+              <!-- ─── Case Study Outro ──────────────────────────────────── -->
+              <section class="CaseStudyOutro">
+
+                <!-- Card: heading + CTAs -->
+                <div class="CaseStudyOutro-card">
+                  <h2 class="CaseStudyOutro-heading">Thank you for reading!</h2>
+                  <div class="CaseStudyOutro-actions">
+                    <a href="./../investments/index.html" class="Button Button--secondary Button--lg">Next Project</a>
+                  </div>
+                </div>
+
+
+
+
+                </section>
+
+            </section>
+
+            <!-- 
+    To add more sections, simply copy this template:
+    
+    <section class="Section-ProjectDetails" id="unique-id" data-label="Your Section Name">
+      <h2>Your Section Name</h2>
+      <p>Your content here...</p>
+    </section>
+    
+    Important: 
+    - Each section MUST have a unique ID
+    - The data-label attribute determines what appears in the navigation
+    - To remove a section, just delete the entire <section> block
+    - The navigation will automatically update!
+  -->
+          </div>
+
+          <div class="AnchorList-section" id="AnchorList-section">
+            <!-- Anchor List - Fixed Position -->
+            <div class="anchor-list-container">
+              <div class="anchor-list">
+                <p class="anchor-list-title">Contents</p>
+
+                <!-- Navigation Links Container (auto-generated) -->
+                <div class="anchorlist-elements">
+                  <!-- SVG Line with Squares (auto-generated) -->
+                  <div class="anchor-line">
+                    <svg id="anchor-svg" width="5" height="179" viewBox="0 0 5 179" fill="none">
+                      <g id="Line">
+                        <path id="anchor-path" d="M2.5 2.5V176.5" stroke="#A27ECC" stroke-linecap="round" />
+                        <!-- Squares will be dynamically generated -->
+                      </g>
+                    </svg>
+                  </div>
+
+                  <div id="anchor-links-container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ─── Contact Callout Section ────────────────────────────── -->
+        <section class="Sectionxl">
+          <div class="ContactBanner-container">
+            <div class="ContactBanner-copy">
+              <h1 class="ContactBanner-header">don't be a stranger!</h1>
+              <p class="ContactBanner-subheader">Let's <span class="highlight">collaborate</span> and <span
+                  class="highlight">create</span> something amazing!</p>
+            </div>
+            <!-- CTAs -->
+            <div class="ContactBanner-actions">
+              <a href="https://calendly.com/hello-bthedesigner/30min" class="Button Button--primary Button--lg"
+                rel="noopener noreferrer" target="_blank">Book a call</a>
+              <button role="button" class="Button Button--secondary Button--lg" onclick="copyEmail(event)">Copy
+                e-mail</button>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer-content" class="FooterContent">
+        <hr />
+        <p class="FooterCopy">
+          <strong>Designed with care</strong>
+          B the Designer © 2026. All Rights Reserved. •
+          <a href="#">Terms of Use</a>
+        </p>
+      </footer>
+    </div>
+  </main>
+
+  <!-- ── Animation libraries — must load before script.js ── -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+  </div>
+
+  <script src="../../assets/js/script.js"></script>
+</body>
+
+</html>

@@ -34,7 +34,7 @@
     <div class="Sidebar-content">
 
       <div class="nav_logocontainer">
-        <img src="../assets/img/Logo.svg" alt="logo" class="nav_logo" />
+        <a href="/"> <img src="../../assets/img/Logo.svg" alt="logo" class="nav_logo" /></a>
       </div>
       <!-- User Profile 
       <div class="UserProfile">
@@ -254,6 +254,16 @@
                     Net New
                   </button>
 
+                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="research"
+                    id="gtab-research">
+                    <span class="gtab__chip" aria-hidden="true">
+                      <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="4.5" />
+                      </svg>
+                    </span>
+                    Research
+                  </button>
+
                   <!-- Design System Button
                   <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="designsystem"
                     id="gtab-designsystem">
@@ -391,6 +401,38 @@
                         Redesigned a high-stakes Investments experience to improve data clarity, comparison, and performance.
                       </p>
                       <a href="investments/" class="project-card__cta"
+                        aria-label="Guided Healthcare Experience — Read details">
+                        Read details
+                        <svg viewBox="0 0 14 14" fill="none">
+                          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+              </li>
+
+              <!-- Card 3 —-->
+              <li class="project-card" data-category="research" data-subcategory="usertest">
+                <div data-card-hover>
+                  <span class="project-card__container" aria-hidden="true">
+                    <div class="project-card__image">
+                      <img src="../assets/img/projects/dogadopt/New Hero.png"
+                        alt="Screenshot of the Dog Adoption research" width="800"
+                        height="500" loading="lazy" decoding="async" />
+                    </div>
+                    <div class="project-card__body">
+                      <div class="project-card__tags" aria-label="Project type">
+                        <span class="project-card__tag">Research</span>
+                      </div>
+                      <h3 class="project-card__title">
+                        Dog Adoption Motivations Research
+                      </h3>
+                      <p class="project-card__summary">
+                        Conducted user research to understand the motivations and decision-making processes of potential dog adopters.
+                      </p>
+                      <a href="dogadoption/" class="project-card__cta"
                         aria-label="Guided Healthcare Experience — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">

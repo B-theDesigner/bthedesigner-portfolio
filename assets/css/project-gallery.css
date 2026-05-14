@@ -145,8 +145,33 @@
 
 /* ─── Responsive ─────────────────────────────────────────────────────────── */
 
-@media (max-width: 900px) {
+/* — Grid view: tighter text to match narrower card columns — */
+
+[data-view="grid"] .project-card__title {
+  font-size: var(--font-size-base); /* 1rem / 16px instead of 1.25rem */
+}
+
+[data-view="grid"] .project-card__summary {
+  font-size: var(--font-size-xs);  /* 0.75rem / 12px */
+  line-height: 1.5;                /* relative instead of fixed 24px */
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+[data-view="grid"] .project-card__body {
+  height: auto;       /* let content breathe instead of fixed 300px */
+  min-height: 200px;  /* keep cards from collapsing on short content */
+}
+
+@@media (max-width: 900px) {
   .project-grid[data-view="grid"] { grid-template-columns: repeat(2, 1fr); }
+
+  /* already handles 2-col — add this: */
+  [data-view="grid"] .project-card__title {
+    font-size: var(--font-size-sm); /* 0.875rem at 2-col is fine */
+  }
 }
 
 @media (max-width: 1023px) {

@@ -30,6 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
        { label: 'Production Ready',  subcategory: 'production'  },
        { label: 'Launched', subcategory: 'launched' },
      ],
+     research: [
+       { label: 'All',      subcategory: 'all'      },
+       { label: 'User Tested',  subcategory: 'usertest'  },
+       { label: 'Reviews',  subcategory: 'review'  },
+     ],
   };
 
   // ── State ──────────────────────────────────────────────────────────────
