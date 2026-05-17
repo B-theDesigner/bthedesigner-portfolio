@@ -35,6 +35,12 @@ document.addEventListener('DOMContentLoaded', function () {
        { label: 'Generative',  subcategory: 'generative'  }, // interviews, surveys, user understanding
        { label: 'Evaluative',  subcategory: 'eval'  }, // accessibility evaluations, website audits, heuristic reviews
      ],
+     designsystem: [
+       { label: 'All',      subcategory: 'all'      },
+       { label: 'Tokens',  subcategory: 'tokens'  }, // 
+       { label: 'Patterns',  subcategory: 'patterns'  }, // 
+       { label: 'Templates',  subcategory: 'templates'  }, // 
+     ],
   };
 
   // ── State ──────────────────────────────────────────────────────────────
