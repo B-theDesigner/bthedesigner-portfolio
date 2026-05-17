@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
      ],
      research: [
        { label: 'All',      subcategory: 'all'      },
-       { label: 'User Tested',  subcategory: 'usertest'  },
-       { label: 'Reviews',  subcategory: 'review'  },
+       { label: 'Generative',  subcategory: 'generative'  }, // interviews, surveys, user understanding
+       { label: 'Evaluative',  subcategory: 'eval'  }, // accessibility evaluations, website audits, heuristic reviews
      ],
   };
 
