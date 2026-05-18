@@ -230,112 +230,130 @@
                 </p>
               </div>
 
-
-              <div class="preview-block" id="previewBlock">
+                <!--
+  live-preview.html
+  Drop this markup wherever the Live Preview component lives on your page.
+  Requires: live-preview.css and live-preview.js
+  Your theme.css token variables must already be in scope.
+-->
  
-  <!-- ── FRAME BORDER — matches MediaDisplay-ProjectDetails ── -->
-  <div class="preview-frame-stroke"   aria-hidden="true"></div>
-  <div class="preview-frame-corner preview-frame-corner--tl" aria-hidden="true"></div>
-  <div class="preview-frame-corner preview-frame-corner--tr" aria-hidden="true"></div>
-  <div class="preview-frame-corner preview-frame-corner--bl" aria-hidden="true"></div>
-  <div class="preview-frame-corner preview-frame-corner--br" aria-hidden="true"></div>
+<div class="preview-frame">
  
-  <!-- ── TOOLBAR ── -->
-  <div class="preview-toolbar">
-    <div class="preview-toolbar-rows">
+  <!-- Border overlay — absolutely positioned sibling, no overflow context.
+       Matches your MediaDisplay-border structure exactly. -->
+  <div class="preview-border" aria-hidden="true"></div>
  
-      <!-- ROW 1: Variant only -->
-      <div class="toolbar-row toolbar-row--primary">
-        <div class="toolbar-group">
-          <span class="toolbar-group-label">Variant</span>
-          <button class="toolbar-btn is-active" data-variant="full"    onclick="setVariant('full',    this)">Full</button>
-          <button class="toolbar-btn"           data-variant="minimal" onclick="setVariant('minimal', this)">Minimal</button>
-          <button class="toolbar-btn"           data-variant="withcta" onclick="setVariant('withcta', this)">With CTA</button>
+  <div class="preview-block" id="previewBlock">
+ 
+    <!-- ── TOOLBAR ── -->
+    <div class="preview-toolbar">
+      <div class="preview-toolbar-rows">
+ 
+        <!-- Row 1: Variant -->
+        <div class="toolbar-row toolbar-row--primary">
+          <div class="toolbar-group">
+            <span class="toolbar-group-label">Variant</span>
+            <button class="toolbar-btn is-active" data-variant="full"    onclick="setVariant('full',    this)">Full</button>
+            <button class="toolbar-btn"           data-variant="minimal" onclick="setVariant('minimal', this)">Minimal</button>
+            <button class="toolbar-btn"           data-variant="withcta" onclick="setVariant('withcta', this)">With CTA</button>
+          </div>
         </div>
-      </div>
  
-      <!-- pipe — desktop only -->
-      <div class="toolbar-pipe"></div>
+        <div class="toolbar-pipe"></div>
  
-      <!-- ROW 2: Delta -->
-      <div class="toolbar-row toolbar-row--secondary">
-        <div class="toolbar-group">
-          <span class="toolbar-group-label">Delta</span>
-          <button class="toolbar-btn is-active" data-delta="up"      onclick="setDelta('up',      this)">↑ Up</button>
-          <button class="toolbar-btn"           data-delta="down"    onclick="setDelta('down',    this)">↓ Down</button>
-          <button class="toolbar-btn"           data-delta="neutral" onclick="setDelta('neutral', this)">— Neutral</button>
+        <!-- Row 2: Delta -->
+        <div class="toolbar-row toolbar-row--secondary">
+          <div class="toolbar-group">
+            <span class="toolbar-group-label">Delta</span>
+            <button class="toolbar-btn is-active" data-delta="up"      onclick="setDelta('up',      this)">↑ Up</button>
+            <button class="toolbar-btn"           data-delta="down"    onclick="setDelta('down',    this)">↓ Down</button>
+            <button class="toolbar-btn"           data-delta="neutral" onclick="setDelta('neutral', this)">— Neutral</button>
+          </div>
         </div>
-      </div>
  
-      <!-- pipe — desktop only -->
-      <div class="toolbar-pipe"></div>
+        <div class="toolbar-pipe"></div>
  
-      <!-- ROW 3: Viewport -->
-      <div class="toolbar-row toolbar-row--tertiary">
-        <div class="toolbar-group">
-          <span class="toolbar-group-label">Viewport</span>
-          <button class="toolbar-btn toolbar-btn--icon is-active" data-vp="desktop" onclick="setViewport('desktop', this)" title="Desktop">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="1" y="2" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M5 14h6M8 12v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-          </button>
-          <button class="toolbar-btn toolbar-btn--icon" data-vp="tablet" onclick="setViewport('tablet', this)" title="Tablet">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="2.5" y="1" width="11" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="12.5" r="0.75" fill="currentColor"/></svg>
-          </button>
-          <button class="toolbar-btn toolbar-btn--icon" data-vp="mobile" onclick="setViewport('mobile', this)" title="Mobile">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><rect x="4" y="1" width="8" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="12.5" r="0.75" fill="currentColor"/></svg>
-          </button>
+        <!-- Row 3: Viewport -->
+        <div class="toolbar-row toolbar-row--tertiary">
+          <div class="toolbar-group">
+            <span class="toolbar-group-label">Viewport</span>
+            <!-- Desktop -->
+            <button class="toolbar-btn toolbar-btn--icon is-active" data-vp="desktop" onclick="setViewport('desktop', this)" title="Desktop">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="1" y="2" width="14" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <path d="M5 14h6M8 12v2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <!-- Tablet -->
+            <button class="toolbar-btn toolbar-btn--icon" data-vp="tablet" onclick="setViewport('tablet', this)" title="Tablet">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="2.5" y="1" width="11" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="8" cy="12.5" r="0.75" fill="currentColor"/>
+              </svg>
+            </button>
+            <!-- Mobile -->
+            <button class="toolbar-btn toolbar-btn--icon" data-vp="mobile" onclick="setViewport('mobile', this)" title="Mobile">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="4" y="1" width="8" height="14" rx="1.5" stroke="currentColor" stroke-width="1.4"/>
+                <circle cx="8" cy="12.5" r="0.75" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
- 
-    </div>
-  </div>
- 
-  <!-- ── CANVAS ── -->
-  <div class="preview-canvas" id="previewCanvas">
-    <div class="preview-card-wrap">
-      <div class="p-DataCard" id="dataCard">
- 
-        <!-- slot: tag (full + withcta only) -->
-        <div class="p-DataCard__tag" id="slot-tag">Projects</div>
- 
-        <!-- slot: label (always) -->
-        <p class="p-DataCard__label">Total Case Studies</p>
- 
-        <!-- slot: value (always) -->
-        <p class="p-DataCard__value">12</p>
- 
-        <!-- slot: delta (full + withcta only) -->
-        <span class="p-DataCard__delta is-up" id="slot-delta">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" id="delta-icon">
-            <path d="M5 8V2M2 5l3-3 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <span id="delta-text">4 this quarter</span>
-        </span>
- 
-        <!-- slot: context (full only) -->
-        <p class="p-DataCard__context" id="slot-context">Updated May 2026</p>
- 
-        <!-- slot: cta (withcta only, hidden by default) -->
-        <hr class="p-DataCard__divider" id="slot-divider" style="display:none">
-        <button class="p-DataCard__cta" id="slot-cta" style="display:none">
-          View all work
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
  
       </div>
-    </div>
-  </div>
+    </div><!-- /.preview-toolbar -->
  
-  <!-- ── STATUS BAR ── -->
-  <div class="preview-statusbar">
-    <div class="statusbar-left">
-      <span class="statusbar-badge badge-pattern">Pattern</span>
-      <span class="statusbar-badge badge-stable">Stable</span>
-      <span class="statusbar-name">p-DataCard</span>
-    </div>
-    <span class="statusbar-right" id="statusViewport">Desktop</span>
-  </div>
+    <!-- ── CANVAS ── -->
+    <div class="preview-canvas" id="previewCanvas">
+      <div class="preview-card-wrap">
+        <div class="p-DataCard" id="dataCard">
  
-</div>
+          <!-- Slot: tag (full + withcta) -->
+          <div class="p-DataCard__tag" id="slot-tag">Projects</div>
+ 
+          <!-- Slot: label (always) -->
+          <p class="p-DataCard__label">Total Case Studies</p>
+ 
+          <!-- Slot: value (always) -->
+          <p class="p-DataCard__value">12</p>
+ 
+          <!-- Slot: delta (full + withcta) -->
+          <span class="p-DataCard__delta is-up" id="slot-delta">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" id="delta-icon" aria-hidden="true">
+              <path d="M5 8V2M2 5l3-3 3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span id="delta-text">4 this quarter</span>
+          </span>
+ 
+          <!-- Slot: context (full only) -->
+          <p class="p-DataCard__context" id="slot-context">Updated May 2026</p>
+ 
+          <!-- Slot: cta (withcta only) -->
+          <hr class="p-DataCard__divider" id="slot-divider" style="display:none">
+          <button class="p-DataCard__cta" id="slot-cta" style="display:none">
+            View all work
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+              <path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+ 
+        </div><!-- /.p-DataCard -->
+      </div><!-- /.preview-card-wrap -->
+    </div><!-- /.preview-canvas -->
+ 
+    <!-- ── STATUS BAR ── -->
+    <div class="preview-statusbar">
+      <div class="statusbar-left">
+        <span class="statusbar-badge badge-pattern">Pattern</span>
+        <span class="statusbar-badge badge-stable">Stable</span>
+        <span class="statusbar-name">p-DataCard</span>
+      </div>
+      <span class="statusbar-right" id="statusViewport">Desktop</span>
+    </div>
+ 
+  </div><!-- /.preview-block -->
+</div><!-- /.preview-frame -->            
 
               
               <!-- Badge + caption below the frame, left aligned, side by side -->
