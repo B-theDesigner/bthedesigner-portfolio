@@ -63,7 +63,7 @@ ul {
   margin-left: 24px;
 }
 
-li:not(.journal-card, .project-card) {
+li:not(.journal-card, .project-card, .NavMenu-dropdown) {
   margin: 16px 0;
   position: relative;
   padding-left: 20px;

@@ -74,6 +74,60 @@ class MobileMenu {
 // DOMContentLoaded — moved to end of file after all class definitions
 
 
+// ─── NavMenu Dropdown — Services (and future collapsible nav items) ──────────
+// Auto-detects active child by comparing link href against current pathname.
+// Mirrors the JOURNAL_ENTRIES/CERT_ENTRIES pattern: one detection rule,
+// works identically on desktop sidebar and mobile drawer.
+
+class NavMenuDropdown {
+  constructor(el) {
+    this.el      = el;
+    this.trigger = el.querySelector('.NavMenu-dropdownTrigger');
+    this.items   = el.querySelectorAll('.NavMenu-dropdownItem');
+
+    this.trigger.addEventListener('click', () => this.toggle());
+    this.setActiveFromUrl();
+  }
+
+  toggle() {
+    const isOpen = this.el.classList.toggle('is-open');
+    this.trigger.setAttribute('aria-expanded', String(isOpen));
+  }
+
+  open() {
+    this.el.classList.add('is-open');
+    this.trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  setActiveFromUrl() {
+    const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+    let hasActiveChild = false;
+
+    this.items.forEach((item) => {
+      const link = item.querySelector('.NavMenu-dropdownLink');
+      const linkPath = link.getAttribute('href').replace(/\/$/, '');
+
+      if (linkPath === currentPath) {
+        item.classList.add('is-active');
+        hasActiveChild = true;
+      } else {
+        item.classList.remove('is-active');
+      }
+    });
+
+    // has-active-child persists regardless of open/closed state — it answers
+    // "is the current page inside this section," not "is this panel expanded."
+    // toggle() never touches this class, so collapsing the dropdown won't
+    // erase the signal that the user is still on one of its subpages.
+    this.el.classList.toggle('has-active-child', hasActiveChild);
+
+    // Auto-open on initial page load only, as a helpful default —
+    // the user is still free to manually collapse it afterward.
+    if (hasActiveChild) this.open();
+  }
+}
+
+
 // ─── Copy Email to Clipboard ──────────────────────────────────────────────────
 
 function copyEmail(event) {
@@ -1416,12 +1470,21 @@ class MediaDisplayLightbox {
 // are defined before they are instantiated.
 // =============================================================================
 
+// nav-loader.js sets window.navLoaderReady (a Promise) before this file runs.
+// Wait for it so MobileMenu / NavMenuDropdown don't query for nav elements
+// that haven't been injected into the DOM yet. On pages without nav-loader.js,
+// navLoaderReady is undefined — fall back to resolving immediately.
 document.addEventListener('DOMContentLoaded', () => {
-  new MobileMenu();
-  new DisplayEmphasis();
-  new PatternCards();
-  new FindingsSlideshow();
-  new MediaDisplayLightbox();
+  Promise.resolve(window.navLoaderReady).then(() => {
+    new MobileMenu();
+    new DisplayEmphasis();
+    new PatternCards();
+    new FindingsSlideshow();
+    new MediaDisplayLightbox();
+
+    // Services dropdown (and any future collapsible nav items)
+    document.querySelectorAll('[data-nav-dropdown]').forEach(el => new NavMenuDropdown(el));
+  });
 });
 
 

@@ -28,6 +28,64 @@
   color: var(--color-primary);
 }
 
+/* ── NavMenu Dropdown States ──────────────────────────────────────────────────────── */
+
+.NavMenu-dropdown:hover {
+  background-color: var(--color-primary-dim);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.NavMenu-dropdownLink:hover {
+  color: var(--color-text);
+}
+
+/* ── Current page — filled marker + bold link ── */
+.NavMenu-dropdownItem.is-active .NavMenu-dropdownMarker {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.NavMenu-dropdownItem.is-active .NavMenu-dropdownLink {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.NavMenu-dropdownItem.is-active .NavMenu-dropdownIcon {
+  opacity: 1;
+  color: var(--color-primary);
+}
+
+.NavMenu-dropdown.is-open{
+  max-height: fit-content;
+}
+
+/* ── Has-active-child state — persists when collapsed ──────────────────────
+   Reuses the exact .NavMenu-item.is-active treatment from state.css
+   (background-color: var(--color-primary-dim) + semibold + colored icon),
+   so "Services contains the current page" reads identically to how every
+   other top-level nav item signals "you are here." Unlike .is-open, this
+   class is never touched by toggle() — it only changes on page load via
+   setActiveFromUrl(), so closing the panel doesn't erase the signal. ── */
+
+.NavMenu-dropdown.has-active-child {
+   background-color: var(--color-primary-dim);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+   border-radius: var(--radius-md);
+}
+
+.NavMenu-dropdown.has-active-child.is-open .NavMenu-dropdownTrigger {
+  background-color: var(--color-primary-dim);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  
+}
+
+.NavMenu-dropdown.has-active-child .NavMenu-dropdownTrigger .NavMenu-itemIcon {
+  color: var(--color-primary);
+}
 
 /* ── Mobile Menu States ──────────────────────────────────────────────────── */
 
