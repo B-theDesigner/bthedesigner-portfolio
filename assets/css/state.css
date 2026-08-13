@@ -4,7 +4,6 @@
    All colors reference tokens. No hardcoded hex values.
    ============================================================================= */
 
-
 /* ── NavMenu States ──────────────────────────────────────────────────────── */
 
 .NavMenu-item:hover {
@@ -56,7 +55,7 @@
   color: var(--color-primary);
 }
 
-.NavMenu-dropdown.is-open{
+.NavMenu-dropdown.is-open {
   max-height: fit-content;
 }
 
@@ -69,10 +68,10 @@
    setActiveFromUrl(), so closing the panel doesn't erase the signal. ── */
 
 .NavMenu-dropdown.has-active-child {
-   background-color: var(--color-primary-dim);
+  background-color: var(--color-primary-dim);
   color: var(--color-text);
   font-weight: var(--font-weight-semibold);
-   border-radius: var(--radius-md);
+  border-radius: var(--radius-md);
 }
 
 .NavMenu-dropdown.has-active-child.is-open .NavMenu-dropdownTrigger {
@@ -80,7 +79,6 @@
   color: var(--color-text);
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-md) var(--radius-md) 0 0;
-  
 }
 
 .NavMenu-dropdown.has-active-child .NavMenu-dropdownTrigger .NavMenu-itemIcon {
@@ -97,13 +95,12 @@
   transform: translateX(0);
 }
 
-
 /* ── Button States ───────────────────────────────────────────────────────── */
 
 .Button:hover {
   background: var(--color-white-10);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-hover-md);
 }
 
 .Button--primary:hover {
@@ -113,7 +110,7 @@
 .Button--filter:hover {
   background: var(--color-white-10);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-hover-md);
 }
 
 .Button--filter.is-active {
@@ -139,14 +136,12 @@
 .anchor-link.active {
   color: var(--color-primary-400);
   font-weight: var(--font-weight-semibold);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .anchor-square.active {
   fill: var(--color-primary);
 }
-
-
 
 /* ── ServicesCard States ─────────────────────────────────────────────────── */
 
@@ -154,13 +149,11 @@
   background-color: var(--color-white-10);
   border: 1.5px solid var(--color-white-20);
   cursor: default;
-
 }
 
 .ServicesCard .ServicesCard-description:hover {
   color: var(--color-text);
 }
-
 
 /* ── ArticleCard States ──────────────────────────────────────────────────── */
 
@@ -169,11 +162,10 @@
   border: 1px solid var(--color-white-20);
 }
 
-
 /* ── Gallery States ──────────────────────────────────────────────────────── */
 
 .ProjectCard:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-hover-lg);
 }
 
 /* ── SubcategoryButton States ────────────────────────────────────────────── */
@@ -185,9 +177,8 @@
 .SubcategoryButton.is-active {
   background: var(--color-purple-400);
   color: var(--color-text);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-hover-sm);
 }
-
 
 /* ── SubcategoryList States ──────────────────────────────────────────────── */
 
@@ -201,18 +192,15 @@
   visibility: visible;
 }
 
-
 /* ── Utility ─────────────────────────────────────────────────────────────── */
 
 .is-hidden {
   display: none;
 }
 
-
 /* ── Animations / Keyframes ──────────────────────────────────────────────── */
 
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -296,7 +284,7 @@
 
 .label--increase::before {
   color: var(--color-text);
-  content: '↑';
+  content: "↑";
   transition: transform 0.3s ease;
 }
 
@@ -311,7 +299,7 @@
 
 .label--launched::before {
   color: var(--color-text);
-  content: '⚡︎';
+  content: "⚡︎";
   transition: transform 0.3s ease;
 }
 
@@ -326,7 +314,7 @@
 
 .label--testing::before {
   color: var(--color-text);
-  content: '🗪';
+  content: "🗪";
   transition: transform 0.3s ease;
 }
 
@@ -341,7 +329,7 @@
 
 .label--responsive::before {
   color: var(--color-text);
-  content: '모';
+  content: "모";
   transition: transform 0.3s ease;
 }
 
@@ -356,7 +344,7 @@
 
 .label--redesign::before {
   color: var(--color-text);
-  content: '모';
+  content: "모";
   transition: transform 0.3s ease;
 }
 
@@ -375,14 +363,16 @@
     background-size var(--a-duration-highlight) var(--a-ease-highlight);
 
   /* Default style: full background sweep */
-  background-image: linear-gradient(var(--a-color-highlight-fill),
-      var(--a-color-highlight-fill));
+  background-image: linear-gradient(
+    var(--a-color-highlight-fill),
+    var(--a-color-highlight-fill)
+  );
 
   /* State: triggered by scroll */
   &.is-active {
     color: var(--a-color-highlight-text);
     font-weight: var(--font-weight-semibold);
-    text-shadow: 1px 01px 0 #000;
+    text-shadow: 1px 01px 0 var(--color-highlight-outline);
     background-size: 100% 100%;
   }
 
@@ -409,7 +399,6 @@
 
 /* -- Text Reveal ------ */
 
-
 .lenis {
   &.lenis-smooth {
     scroll-behavior: auto;
@@ -427,7 +416,6 @@
     pointer-events: none;
   }
 }
-
 
 .text-reveal {
   font-kerning: none;

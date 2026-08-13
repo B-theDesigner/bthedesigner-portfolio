@@ -30,22 +30,22 @@ strong {
 }
 
 a::after {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 h2 {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-xl);       /* 1.5rem → 24px */
+  font-size: var(--font-size-xl); /* 1.5rem → 24px */
   line-height: var(--line-height-tight);
   color: var(--color-text);
-  margin-bottom: var(--spacing-base);   /* 16px */
+  margin-bottom: var(--spacing-base); /* 16px */
 }
 
 p {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-light);
-  font-size: var(--font-size-base);     /* 1rem → 16px */
+  font-size: var(--font-size-base); /* 1rem → 16px */
   line-height: var(--line-height-body); /* 28px */
   color: var(--color-text);
 }
@@ -68,24 +68,23 @@ li:not(.journal-card, .project-card, .NavMenu-dropdown) {
   position: relative;
   padding-left: 20px;
   color: var(--color-text-muted);
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
-
 
 ul li::marker {
   content: "⇢"; /* Replace with your desired arrow */
-  color: var(--color-primary); 
+  color: var(--color-primary);
   margin-right: 80px;
 }
 
 ol li::marker {
-  color: var(--color-primary); 
+  color: var(--color-primary);
   margin-right: 80px;
 }
 
 code {
   font-size: var(--font-size-base);
-  background: rgba(255,255,255,0.06);
+  background: var(--color-code-bg);
   padding: 1px 5px;
   border-radius: 3px;
 }

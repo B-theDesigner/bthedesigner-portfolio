@@ -9,19 +9,24 @@
    ============================================================================= */
 
 :root {
+  /* ── Color Scheme — enables light-dark() resolution ──────────────────────
+     Defaults to following system preference. ThemeToggle overrides this
+     per-user choice by setting `color-scheme: light` or `color-scheme: dark`
+     directly (see JS notes) — "System" leaves this declaration untouched. ── */
+  color-scheme: light dark;
 
   /* ── Foundation Scale (px reference, used by spacing below) ─────────────── */
-  --scale-100:  4px;
-  --scale-200:  8px;
-  --scale-300:  12px;
-  --scale-350:  14px;
-  --scale-400:  16px;
-  --scale-500:  18px;
-  --scale-550:  20px;
-  --scale-600:  24px;
-  --scale-700:  28px;
-  --scale-800:  32px;
-  --scale-900:  36px;
+  --scale-100: 4px;
+  --scale-200: 8px;
+  --scale-300: 12px;
+  --scale-350: 14px;
+  --scale-400: 16px;
+  --scale-500: 18px;
+  --scale-550: 20px;
+  --scale-600: 24px;
+  --scale-700: 28px;
+  --scale-800: 32px;
+  --scale-900: 36px;
   --scale-1000: 40px;
   --scale-1100: 48px;
   --scale-1200: 56px;
@@ -30,132 +35,256 @@
   --scale-1500: 96px;
   --scale-1600: 128px;
 
-
   /* ── Colors — Primary (Shaded Lavender) ─────────────────────────────────── */
-  --color-primary-50:      #F6F2FA;
-  --color-primary-100:     #E2D7EF;
-  --color-primary-200:     #D4C4E8;
-  --color-primary-300:     #C1A9DD;
-  --color-primary-400:     #B598D6;
-  --color-primary-default: #C0A8DC;
-  --color-primary-600:     #9373BA;
-  --color-primary-700:     #735991;
-  --color-primary-800:     #594570;
-  --color-primary-900:     #443556;
+  --color-primary-50: #f6f2fa;
+  --color-primary-100: #e2d7ef;
+  --color-primary-200: #d4c4e8;
+  --color-primary-300: #c1a9dd;
+  --color-primary-400: #b598d6;
+  --color-primary-default: #c0a8dc;
+  --color-primary-600: #9373ba;
+  --color-primary-700: #735991;
+  --color-primary-800: #594570;
+  --color-primary-900: #443556;
 
   /* ── Colors — Purple (Dark Backgrounds & Surfaces) ──────────────────────── */
-  --color-purple-400:      #5B5273;
-  --color-purple-default:  #322750;
-  --color-purple-600:      #2E2349;
-  --color-purple-700:      #241C39;
-  --color-purple-800:      #1C152C;
-  --color-purple-900:      #151022;
+  --color-purple-400: #5b5273;
+  --color-purple-default: #322750;
+  --color-purple-600: #2e2349;
+  --color-purple-700: #241c39;
+  --color-purple-800: #1c152c;
+  --color-purple-900: #151022;
 
   /* Purple crystal palette ──────────────────────── */
---f-color-crystal-100: hsl(243, 88%, 95%);
---f-color-crystal-300: hsl(243, 70%, 75%);
---f-color-crystal-500: hsl(243, 60%, 55%);
---f-color-crystal-700: hsl(243, 50%, 35%);
+  --f-color-crystal-100: hsl(243, 88%, 95%);
+  --f-color-crystal-300: hsl(243, 70%, 75%);
+  --f-color-crystal-500: hsl(243, 60%, 55%);
+  --f-color-crystal-700: hsl(243, 50%, 35%);
 
-  /* ── Colors — Semantic Aliases ───────────────────────────────────────────── */
-  --color-bg:              #1A1A20;
-  --color-surface:         #2F2F39;
-  --color-surface-alt:     #262631;
-  --color-surface-card:    #403B4F;
-  --color-border:          #4e495d;
+  /* ── Colors — Semantic Aliases ─────────────────────────────────────────────
+     light-dark(LIGHT, DARK) — dark value = your existing v1 palette, unchanged.
+     Light value = new. Resolved by the `color-scheme` set on :root or an
+     ancestor (see ThemeToggle JS notes at bottom of file usage docs).      ── */
+  --color-bg: light-dark(#1a1a20, #1a1a20);
+  --color-surface: light-dark(#2f2f39, #2f2f39);
+  --color-surface-alt: light-dark(#262631, #262631);
+  --color-surface-card: light-dark(#403b4f, #403b4f);
+  --color-border: light-dark(#4e495d, #4e495d);
 
-  --color-primary:         var(--color-primary-default);
-  --color-primary-dim:     rgba(162, 126, 204, 0.157);
-  --color-primary-border:  rgba(162, 126, 204, 0.102);
-  --color-primary-glow:    rgba(162, 126, 204, 0.388);
-  --color-primary-subtle:  rgba(48, 38, 78, 0.592);
+  --color-primary: light-dark(
+    var(--color-primary-default),
+    var(--color-primary-default)
+  );
+  --color-primary-dim: light-dark(
+    rgba(162, 126, 204, 0.157),
+    rgba(162, 126, 204, 0.157)
+  );
+  --color-primary-border: light-dark(
+    rgba(162, 126, 204, 0.102),
+    rgba(162, 126, 204, 0.102)
+  );
+  --color-primary-glow: light-dark(
+    rgba(162, 126, 204, 0.388),
+    rgba(162, 126, 204, 0.388)
+  );
+  --color-primary-subtle: light-dark(
+    rgba(48, 38, 78, 0.592),
+    rgba(48, 38, 78, 0.592)
+  );
 
-  --color-text:            #FFFFFF;
-  --color-text-muted:      #B2B2B2;
-  --color-text-heading:    var(--color-primary-100);
+  --color-text: light-dark(#ffffff, #ffffff);
+  --color-text-muted: light-dark(#b2b2b2, #b2b2b2);
+  --color-text-heading: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-100)
+  );
 
-  --color-available:       #72E591;
-  --color-white-5:         rgba(255, 255, 255, 0.05);
-  --color-white-10:        rgba(255, 255, 255, 0.1);
-  --color-white-20:        rgba(255, 255, 255, 0.2);
-  --color-overlay:         rgba(0, 0, 0, 0.5);
+  --color-available: light-dark(#72e591, #72e591);
 
-  --a-color-highlight-fill:       var(--f-color-crystal-300);
-  --a-color-highlight-fill-half:  var(--f-color-crystal-500);
-  --a-color-highlight-text:       #fefcff;
-  --a-duration-highlight:         var(--f-duration-slow);
-  --a-ease-highlight:             var(--f-ease-out-expo);
+  /* NOTE: names kept as "white-*" to avoid touching every consumer file,
+     but in light mode these resolve to ink-tinted overlays, not white —
+     they're functionally "surface-overlay" tokens. Rename is optional
+     future cleanup, not required for this pass. */
+  --color-white-5: light-dark(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  --color-white-10: light-dark(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  --color-white-20: light-dark(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  );
 
+  --color-overlay: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* modal/menu backdrop — same weight works on both schemes */
+
+  --a-color-highlight-fill: light-dark(
+    var(--f-color-crystal-300),
+    var(--f-color-crystal-300)
+  );
+  --a-color-highlight-fill-half: light-dark(
+    var(--f-color-crystal-500),
+    var(--f-color-crystal-500)
+  );
+  --a-color-highlight-text: light-dark(fefcff, #fefcff);
+  --a-duration-highlight: var(--f-duration-slow);
+  --a-ease-highlight: var(--f-ease-out-expo);
+
+  /* ── Colors — Surface Extensions (gradient, dividers, misc) ───────────────
+     Added in Pass 1 as flat values (tokenizing stray hardcoded hex/rgba
+     found across component files); now wrapped in light-dark() for Pass 2. */
+  --gradient-content-bg: light-dark(
+    linear-gradient(
+      to right bottom,
+      #262631,
+      #252530,
+      #24242f,
+      #24242e,
+      #23232d
+    ),
+    linear-gradient(
+      to right bottom,
+      #262631,
+      #252530,
+      #24242f,
+      #24242e,
+      #23232d
+    )
+  );
+  --color-content-base: light-dark(
+    #1a1b1e,
+    #1a1b1e
+  ); /* fallback solid, sits under the gradient */
+
+  --color-divider: light-dark(
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.09)
+  );
+  --color-code-bg: light-dark(
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.06)
+  );
+
+  --color-tag-accent: light-dark(
+    var(--color-primary-700),
+    var(--color-primary-300)
+  ); /* was a stray #CAAAF9 — now maps to your existing scale */
+
+  /* ── Shadows — Hover (distinct from static shadow-sm/md/lg below) ───────── */
+  --shadow-hover-sm: light-dark(
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.15)
+  );
+  --shadow-hover-md: light-dark(
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 4px 12px rgba(0, 0, 0, 0.15)
+  );
+  --shadow-hover-lg: light-dark(
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    0 8px 24px rgba(0, 0, 0, 0.2)
+  );
+
+  --color-highlight-outline: light-dark(
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.9)
+  ); /* was #000 text-shadow */
 
   /* ── Typography — Font Families ──────────────────────────────────────────── */
-  --font-primary:          'Plus Jakarta Sans', sans-serif;
-  --font-secondary:        'Roboto', sans-serif;
+  --font-primary: "Plus Jakarta Sans", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
 
   /* ── Typography — Font Sizes (rem) ───────────────────────────────────────── */
   /* Figma Alias → Foundation Scale → rem value                               */
-  /* xs   → Scale/300  → 12px */ --font-size-xs:   0.75rem;
-  /* sm   → Scale/350  → 14px */ --font-size-sm:   0.875rem;
-  /* base → Scale/400  → 16px */ --font-size-base: 1rem;
-  /* md   → Scale/500  → 18px */ --font-size-md:   1.125rem;
-  /* lg   → Scale/550  → 20px */ --font-size-lg:   1.25rem;
-  /* xl   → Scale/600  → 24px */ --font-size-xl:   1.5rem;
-  /* 2xl  → Scale/800  → 32px */ --font-size-2xl:  2rem;
-  /* 3xl  → Scale/900  → 36px */ --font-size-3xl:  2.25rem;
-  /* 4xl  → Scale/1000 → 40px */ --font-size-4xl:  2.5rem;
+  /* xs   → Scale/300  → 12px */
+  --font-size-xs: 0.75rem;
+  /* sm   → Scale/350  → 14px */
+  --font-size-sm: 0.875rem;
+  /* base → Scale/400  → 16px */
+  --font-size-base: 1rem;
+  /* md   → Scale/500  → 18px */
+  --font-size-md: 1.125rem;
+  /* lg   → Scale/550  → 20px */
+  --font-size-lg: 1.25rem;
+  /* xl   → Scale/600  → 24px */
+  --font-size-xl: 1.5rem;
+  /* 2xl  → Scale/800  → 32px */
+  --font-size-2xl: 2rem;
+  /* 3xl  → Scale/900  → 36px */
+  --font-size-3xl: 2.25rem;
+  /* 4xl  → Scale/1000 → 40px */
+  --font-size-4xl: 2.5rem;
 
   /* ── Typography — Font Weights ───────────────────────────────────────────── */
-  --font-weight-light:     300;
-  --font-weight-regular:   400;
-  --font-weight-medium:    500;
-  --font-weight-semibold:  600;
-  --font-weight-bold:      700;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 
   /* ── Typography — Line Heights ───────────────────────────────────────────── */
-  --line-height-tight:     1.2;
-  --line-height-body:      28px;   /* Scale/700 — kept in px, it's a fixed measure */
-
+  --line-height-tight: 1.2;
+  --line-height-body: 28px; /* Scale/700 — kept in px, it's a fixed measure */
 
   /* ── Spacing — Semantic (px, references Foundation Scale) ───────────────── */
-  --spacing-xs:         var(--scale-100);   /*  4px */
-  --spacing-sm:         var(--scale-200);   /*  8px */
-  --spacing-md:         var(--scale-300);   /* 12px */
-  --spacing-base:       var(--scale-400);   /* 16px */
-  --spacing-lg:         var(--scale-600);   /* 24px */
-  --spacing-xl:         var(--scale-800);   /* 32px */
-  --spacing-1xl:        var(--scale-900);   /* 36px */
-  --spacing-2xl:        var(--scale-1000);  /* 40px */
-  --spacing-3xl:        var(--scale-1100);  /* 48px */
-  --spacing-4xl:        var(--scale-1200);  /* 56px */
-  --spacing-section:    var(--scale-1300);  /* 64px  — Desktop: xl-mid / 2xl-md */
-  --spacing-section-lg: var(--scale-1500);  /* 96px  — Desktop: xl-sm          */
-  --spacing-section-xl: var(--scale-1600);  /* 128px — Desktop: 2xl-md         */
-
+  --spacing-xs: var(--scale-100); /*  4px */
+  --spacing-sm: var(--scale-200); /*  8px */
+  --spacing-md: var(--scale-300); /* 12px */
+  --spacing-base: var(--scale-400); /* 16px */
+  --spacing-lg: var(--scale-600); /* 24px */
+  --spacing-xl: var(--scale-800); /* 32px */
+  --spacing-1xl: var(--scale-900); /* 36px */
+  --spacing-2xl: var(--scale-1000); /* 40px */
+  --spacing-3xl: var(--scale-1100); /* 48px */
+  --spacing-4xl: var(--scale-1200); /* 56px */
+  --spacing-section: var(--scale-1300); /* 64px  — Desktop: xl-mid / 2xl-md */
+  --spacing-section-lg: var(--scale-1500); /* 96px  — Desktop: xl-sm          */
+  --spacing-section-xl: var(--scale-1600); /* 128px — Desktop: 2xl-md         */
 
   /* ── Border Radius ───────────────────────────────────────────────────────── */
-  --radius-sm:   6px;
-  --radius-md:   8px;
-  --radius-lg:   12px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   --radius-full: 9999px;
 
-
   /* ── Shadows ─────────────────────────────────────────────────────────────── */
-  --shadow-sm:  2px 2px 2px rgba(0, 0, 0, 0.1);
-  --shadow-md:  0 4px 15px rgba(0, 0, 0, 0.1), 0 0 5px rgba(99, 102, 214, 0);
-  --shadow-lg:  0 20px 30px rgba(0, 0, 0, 0.15), 0 0 5px var(--color-primary-glow);
-  --shadow-xlg:  0 20px 30px rgba(0, 0, 0, 0.15), 0 0 15px var(--color-primary-glow);
-
+  --shadow-sm: light-dark(
+    2px 2px 2px rgba(0, 0, 0, 0.1),
+    2px 2px 2px rgba(0, 0, 0, 0.1)
+  );
+  --shadow-md:
+    light-dark(0 4px 15px rgba(36, 28, 57, 0.1), 0 4px 15px rgba(0, 0, 0, 0.1)),
+    0 0 5px rgba(99, 102, 214, 0);
+  --shadow-lg:
+    light-dark(
+      0 20px 30px rgba(36, 28, 57, 0.12),
+      0 20px 30px rgba(0, 0, 0, 0.15)
+    ),
+    0 0 5px var(--color-primary-glow);
+  --shadow-xlg:
+    light-dark(
+      0 20px 30px rgba(36, 28, 57, 0.12),
+      0 20px 30px rgba(0, 0, 0, 0.15)
+    ),
+    0 0 15px var(--color-primary-glow);
 
   /* ── Layout ──────────────────────────────────────────────────────────────── */
-  --sidebar-width:      260px;
-  --border-size:        28px;
+  --sidebar-width: 260px;
+  --border-size: 28px;
   --border-size-mobile: 16px;
-  --content-max-width:  1080px;
-  --page-max-width:     1400px;
+  --content-max-width: 1080px;
+  --page-max-width: 1400px;
 
   /* Timing ──────────────────────────────────────────────────────────────── */
---f-duration-fast:   250ms;
---f-duration-base:   800ms;
---f-duration-slow:   1000ms;
---f-ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);
+  --f-duration-fast: 250ms;
+  --f-duration-base: 800ms;
+  --f-duration-slow: 1000ms;
+  --f-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
