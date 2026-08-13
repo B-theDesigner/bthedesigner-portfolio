@@ -14,20 +14,22 @@
 // =============================================================================
 
 window.navLoaderReady = (async function loadNav() {
-  const mount = document.getElementById('nav-mount');
+  const mount = document.getElementById("nav-mount");
 
   if (!mount) {
-    console.warn('nav-loader: no #nav-mount found on this page. Skipping nav injection.');
+    console.warn(
+      "nav-loader: no #nav-mount found on this page. Skipping nav injection.",
+    );
     return;
   }
 
   let html;
   try {
-    const response = await fetch('/_nav.html');
+    const response = await fetch("/nav-partial.html");
     if (!response.ok) throw new Error(`Fetch failed: ${response.status}`);
     html = await response.text();
   } catch (err) {
-    console.error('nav-loader: failed to fetch /_nav.html', err);
+    console.error("nav-loader: failed to fetch /_nav.html", err);
     return;
   }
 
@@ -48,14 +50,15 @@ window.navLoaderReady = (async function loadNav() {
 // of every path on the site, so without this exclusion Home would show as
 // active on every single page, including Journal and Work entries.
 function markActiveLink() {
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+  const currentPath = window.location.pathname.replace(/\/$/, "") || "/";
 
-  document.querySelectorAll('[data-nav-link]').forEach((link) => {
-    const linkPath = link.getAttribute('href').replace(/\/$/, '') || '/';
+  document.querySelectorAll("[data-nav-link]").forEach((link) => {
+    const linkPath = link.getAttribute("href").replace(/\/$/, "") || "/";
 
     const isExactMatch = linkPath === currentPath;
-    const isParentMatch = linkPath !== '/' && currentPath.startsWith(linkPath + '/');
+    const isParentMatch =
+      linkPath !== "/" && currentPath.startsWith(linkPath + "/");
 
-    link.classList.toggle('is-active', isExactMatch || isParentMatch);
+    link.classList.toggle("is-active", isExactMatch || isParentMatch);
   });
 }
