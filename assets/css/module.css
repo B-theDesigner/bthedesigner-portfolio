@@ -1238,37 +1238,8 @@
 }
 
 .u-slideRight {
-  -webkit-animation: slide-right 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
-  animation: slide-right 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
-}
-
-/**
- * ----------------------------------------
- * animation slide-right
- * ----------------------------------------
- */
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%);
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-
-  100% {
-    -webkit-transform: translateX(100%);
-    transform: translateX(95%);
-  }
+  -webkit-animation: slideRight 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
+  animation: slideRight 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
 
 .DisplayEmphasis.is-active .DisplayEmphasis-cursor {
@@ -1580,18 +1551,6 @@
 /* Fade-in on slide change */
 .FindingsSlide.is-entering {
   animation: findingsFadeIn 250ms ease forwards;
-}
-
-@keyframes findingsFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ── Stat statement ───────────────────────────────────────────────────────── */
@@ -3278,18 +3237,6 @@ h3 .TopFindings-header {
   display: block;
 }
 
-@keyframes tabPanelIn {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .TabPanel-header {
   display: flex;
   align-items: center;
@@ -3768,22 +3715,12 @@ h3 .TopFindings-header {
   display: flex;
   flex-direction: column;
   gap: var(--testimonial-gap);
-  animation: Testimonials-scroll var(--testimonial-scroll-duration) linear infinite;
+  animation: testimonialsScroll var(--testimonial-scroll-duration) linear infinite;
   will-change: transform;
 }
 
 .Testimonials-track:hover {
   animation-play-state: paused;
-}
-
-@keyframes Testimonials-scroll {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-50%);
-  }
 }
 
 /* ── Individual card ─────────────────────────────────────────────────────── */
@@ -5395,19 +5332,6 @@ html {
 .DataCard-cta:hover { color: var(--color-accent); }
 .DataCard-cta:hover svg { transform: translateX(3px); }
 .DataCard-cta svg { transition: transform 0.2s var(--ease-expo); }
- 
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
-@keyframes cardIn {
-  from { opacity: 0; transform: translateY(6px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
- 
-@keyframes slotIn {
-  from { opacity: 0; transform: translateY(3px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
  
 .is-slotAnimating { animation: slotIn 0.22s var(--ease-expo) both; }
 
