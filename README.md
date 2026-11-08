@@ -77,19 +77,20 @@ Each page is a folder with an `index.html` inside, so URLs stay clean (`/work/ai
 
 ## CSS architecture
 
-Stylesheets load in this order. Each one has its own job:
+The CSS follows **SMACSS**: five files, loaded in this order on every page, each with a single job. Nothing else holds CSS — not page-specific stylesheets, and not JavaScript.
 
 | File | Purpose |
 | --- | --- |
-| `theme.css` | Design tokens: color scales, semantic colors, type, spacing. Uses `color-scheme` + `light-dark()` for light and dark mode. |
-| `base.css` | Element resets and base typography |
-| `layout.css` | Page-level layout (sidebar, grids, sections) |
-| `module.css` | Reusable components |
-| `state.css` | State classes (`is-active`, `is-open`, …) |
-| `project-gallery.css`, `playground-gallery.css`, `journal-gallery.css` | Gallery-specific styles, loaded only on those pages |
+| `theme.css` | Design tokens only (`:root` custom properties): color scales, semantic colors, type, spacing. Uses `color-scheme` + `light-dark()` for light and dark mode. |
+| `base.css` | Element defaults only (`body`, `h2`, `p`, `a`, `li`, …). No classes. |
+| `layout.css` | Page structure: sidebar, mobile header, frame borders, main content area, and their breakpoint overrides. |
+| `module.css` | Every component, including the galleries. Base styles and variants (`--modifier`) only. |
+| `state.css` | Every state — `:hover`, `:focus`, `:active`, `:disabled`, `.is-*`, `[aria-selected]`/`[aria-expanded]`/`[open]` — plus all `@keyframes` and `@starting-style`. |
 
 **Conventions**
-- Class names follow **SUIT CSS**: PascalCase components (`NavMenu`, `MobileMenu`), `ComponentName-descendant`, and `is-` state prefixes.
+- Class names follow **SUIT CSS**: `ComponentName`, `ComponentName-descendantName`, `ComponentName--modifierName`, and states as `.is-stateName`, scoped to their component (e.g. `.NavMenu-item.is-active`). The one global state is `.is-hidden { display: none }`, so don't reuse that name for a component state that should fade or animate out. Utilities use `u-` (`u-slideRight`).
+- A component's state rules go in `state.css`, never inside its `module.css` block. Keep them in the same order as the component's rules in `module.css` so the cascade stays predictable.
+- `@keyframes` names are camelCase (`slideRight`, `testimonialsScroll`).
 - Tokens go in two layers: **foundation** (raw values like `--scale-100`, `--color-purple-800`), then **semantic** aliases (`--color-primary`, `--spacing-md`). Use the semantic tokens in components.
 - Units: `rem` for font sizes, `px` for spacing and layout (1rem = 16px).
 
