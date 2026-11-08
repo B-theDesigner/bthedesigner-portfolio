@@ -4,6 +4,631 @@
    All colors reference tokens. No hardcoded hex values.
    ============================================================================= */
 
+/*  ── Element states (moved from base.css) ───────────────────────────────────  */
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-400);
+}
+
+/*  ── Layout states (moved from layout.css) ─────────────────────────────────  */
+
+.ViewToggle-btn:hover {
+  color: var(--color-text);
+}
+
+.ViewToggle-btn[aria-pressed="true"] {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.GalleryTab:hover {
+  color: var(--color-text);
+  background: var(--color-white-5);
+}
+
+.GalleryTab:hover .GalleryTab-chip {
+  background: var(--color-white-10);
+}
+
+.GalleryTab[aria-selected="true"] {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  background: var(--color-primary-dim);
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.GalleryTab[aria-selected="true"] .GalleryTab-chip {
+  background: var(--color-primary-dim);
+}
+
+.GalleryTab[aria-selected="true"] .GalleryTab-chip svg {
+  fill: var(--color-primary);
+}
+
+.GalleryTab:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.GallerySelbox.is-ready {
+  opacity: 1;
+}
+
+.GalleryTabs-tier2.is-visible {
+  max-height: 60px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.GallerySubtab:hover {
+  color: var(--color-text);
+}
+
+.GallerySubtab[aria-selected="true"] {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  border-bottom-color: var(--color-primary);
+}
+
+.GallerySubtab:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/*  ── Component states (moved from module.css) ──────────────────────────────  */
+
+.MenuToggle:hover {
+  background-color: var(--color-surface-alt);
+}
+
+.CategoryDivider-link:hover {
+  color: var(--color-primary);
+  gap: var(--spacing-base);
+}
+
+.CategoryDivider-link:hover svg {
+  transform: translateX(3px);
+}
+
+.CategoryDivider-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.ProjectMedia[data-lightbox] .MediaDisplay-framelg:hover .MediaDisplay-imagelg {
+  opacity: 0.88;
+}
+
+.Lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Lightbox.is-open .Lightbox-content {
+  transform: scale(1) translateY(0);
+}
+
+.Lightbox-close:hover {
+  background-color: var(--color-primary-dim);
+  border-color: var(--color-primary-border);
+  transform: scale(1.08);
+}
+
+.Lightbox-close:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.MediaDisplay-framelg.is-annotated .MediaDisplay-imagelg {
+  filter: brightness(0.45);
+  transition: filter 0.3s ease;
+}
+
+.MediaDisplay-annotationLabel.is-inactive {
+  opacity: 0.3;
+}
+
+.MediaDisplay-toggle.is-on {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary-border);
+}
+
+.MediaDisplay-toggle.is-on .MediaDisplay-toggleThumb {
+  left: calc(100% - 25px);
+  background: var(--color-primary);
+}
+
+.MediaDisplay-framelg.is-annotated .MediaDisplay-annotationOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.DisplayEmphasis.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.DisplayEmphasis.is-active .DisplayEmphasis-stroke {
+  clip-path: inset(0 0% 0 0);
+}
+
+.DisplayEmphasis.is-active .DisplayEmphasis-corner {
+  opacity: 1;
+}
+
+.DisplayEmphasis.is-active .DisplayEmphasis-cursor {
+  /* JS sets final left/top position for the cursor, then this transition animates it from 0,0 */
+  opacity: 1;
+  transition:
+    left 1s cubic-bezier(0.45, 0, 0.55, 1) 0ms,
+    top 1s cubic-bezier(0.45, 0, 0.55, 1) 0ms;
+}
+
+.DisplayEmphasis.is-active .DisplayEmphasis-cursor svg {
+  opacity: 1;
+  transition:
+    left 1s cubic-bezier(0.45, 0, 0.55, 1) 0ms,
+    top 1s cubic-bezier(0.45, 0, 0.55, 1) 0ms;
+}
+
+.DisplayEmphasis.is-active .DisplayEmphasis-word {
+  color: var(--color-primary);
+  transition: color 1.5s cubic-bezier(0.45, 0, 0.55, 1) 0ms;
+}
+
+.FindingsSlideshow-arrow:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-dim);
+}
+
+.FindingsSlideshow-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.FindingsSlideshow-arrow:disabled:hover {
+  color: var(--color-text-muted);
+  background-color: transparent;
+}
+
+.FindingsSlideshow-pip:hover {
+  color: var(--color-text);
+}
+
+.FindingsSlideshow-pip.is-active {
+  color: var(--color-primary);
+}
+
+/* Underline on active pip — matches Figma design */
+
+.FindingsSlideshow-pip.is-active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 4px;
+  right: 4px;
+  height: 1.5px;
+  background: var(--color-primary);
+  border-radius: 1px;
+}
+
+.FindingsSlide.is-active {
+  display: flex;
+}
+
+/* Fade-in on slide change */
+
+.FindingsSlide.is-entering {
+  animation: findingsFadeIn 250ms ease forwards;
+}
+
+/* Center card — full size, full color, highest z */
+
+.IrlCarousel-card.is-center {
+  z-index: 10;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.IrlCarousel-card.is-center img {
+  filter: none;
+}
+
+/* One above — smaller, greyscale, peeking up */
+
+.IrlCarousel-card.is-up1 {
+  z-index: 5;
+  transform: translate(-50%, calc(-50% - 185px)) scale(0.82);
+  opacity: 0.85;
+}
+
+.IrlCarousel-card.is-up1 img {
+  filter: grayscale(100%);
+}
+
+/* Two above — even smaller, mostly hidden */
+
+.IrlCarousel-card.is-up2 {
+  z-index: 1;
+  transform: translate(-50%, calc(-50% - 330px)) scale(0.68);
+  opacity: 0.5;
+}
+
+.IrlCarousel-card.is-up2 img {
+  filter: grayscale(100%);
+}
+
+/* One below */
+
+.IrlCarousel-card.is-down1 {
+  z-index: 5;
+  transform: translate(-50%, calc(-50% + 185px)) scale(0.82);
+  opacity: 0.85;
+}
+
+.IrlCarousel-card.is-down1 img {
+  filter: grayscale(100%);
+}
+
+/* Two below */
+
+.IrlCarousel-card.is-down2 {
+  z-index: 1;
+  transform: translate(-50%, calc(-50% + 330px)) scale(0.68);
+  opacity: 0.5;
+}
+
+.IrlCarousel-card.is-down2 img {
+  filter: grayscale(100%);
+}
+
+.IrlCarousel-card.is-offstage {
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.IrlCarousel-arrow:hover {
+  background: var(--color-primary-dim);
+  border-color: var(--color-primary-border);
+  color: var(--color-primary);
+  transform: scale(1.08);
+}
+
+.IrlCarousel-dot.is-active {
+  background: var(--color-primary);
+  width: 24px;
+  /* pill shape on active */
+}
+
+@media (max-width: 575.98px) {
+
+  .IrlCarousel-card.is-up1 {
+    transform: translate(-50%, calc(-50% - 145px)) scale(0.82);
+  }
+
+  .IrlCarousel-card.is-down1 {
+    transform: translate(-50%, calc(-50% + 145px)) scale(0.82);
+  }
+
+  .IrlCarousel-card.is-up2 {
+    transform: translate(-50%, calc(-50% - 260px)) scale(0.68);
+  }
+
+  .IrlCarousel-card.is-down2 {
+    transform: translate(-50%, calc(-50% + 260px)) scale(0.68);
+  }
+}
+
+.CaseStudyOutro-image.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.TabButton:hover {
+  color: var(--color-text);
+  background: var(--color-surface-alt);
+  font-size: var(--font-size-base);
+}
+
+.TabButton[aria-selected="true"] {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  background: var(--color-primary-dim);
+  border-color: transparent;
+  border-radius: 0;
+}
+
+.TabButton[aria-selected="true"] .TabButton-corners {
+  opacity: 1;
+}
+
+.TabButton[aria-selected="true"] .TabButton-cursor {
+  opacity: 1;
+}
+
+.TabButton[aria-selected="true"] .TabButton-radio {
+  display: none;
+}
+
+.TabButton[aria-selected="true"] .TabButton-icon {
+  display: flex;
+  background: var(--color-primary-dim);
+}
+
+.TabButton[aria-selected="true"] .TabButton-icon svg {
+  display: flex;
+  fill: var(--color-primary);
+}
+
+.AccordionGroup-trigger[aria-expanded="true"] {
+  color: var(--color-text);
+  background: var(--color-primary-dim);
+}
+
+.AccordionGroup-trigger[aria-expanded="true"] .AccordionGroup-triggerIcon {
+  background: rgba(124, 92, 252, 0.2);
+}
+
+.AccordionGroup-trigger[aria-expanded="true"] .AccordionGroup-triggerIcon svg {
+  fill: var(--color-primary);
+}
+
+.AccordionGroup-trigger[aria-expanded="true"] .AccordionGroup-chevron {
+  transform: rotate(180deg);
+  stroke: var(--color-primary);
+}
+
+.UseCaseTable-row:hover {
+  background-color: var(--color-white-5);
+}
+
+.Testimonials-track:hover {
+  animation-play-state: paused;
+}
+
+.Testimonials-card:hover {
+  border-color: rgba(162, 126, 204, 0.35);
+  box-shadow: var(--shadow-lg);
+}
+
+.CertTable-row:hover {
+  background-color: var(--color-white-5);
+}
+
+.CertTable-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.PatternCard:hover {
+  border-color: var(--color-primary-border);
+}
+
+.PatternCard.is-open {
+  border-color: var(--color-primary-border);
+  background-color: var(--color-surface-alt);
+}
+
+.PatternCard[open]::details-content {
+  height: auto;
+  overflow: visible;
+}
+
+.PatternCard-summary:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+/* Collapsed thumbnail when card is open */
+
+.PatternCard.is-open .PatternCard-thumbnail {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.PatternCard.is-open .PatternCard-toggleLabel--hide {
+  display: inline;
+}
+
+.PatternCard.is-open .PatternCard-toggleLabel--show {
+  display: none;
+}
+
+.PatternCard.is-open .PatternCard-imageFull {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.PatternCard.is-open .PatternCard-detail {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 575.98px) {
+
+  .PatternCard.is-open .PatternCard-thumbnail {
+    width: 100%;
+    height: 0;
+  }
+}
+
+/* On desktop: always use the summary toggle, never the bottom one */
+
+.PatternCard.is-open .PatternCard-toggle--bottom {
+  display: none;
+}
+
+@media (max-width: 575.98px) {
+
+  /* Hide the summary-level toggle when the card is open */
+  .PatternCard.is-open .PatternCard-summary .PatternCard-toggle {
+    display: none;
+  }
+
+  /* Show the bottom toggle when open */
+  .PatternCard.is-open .PatternCard-toggle--bottom {
+    display: inline-flex;
+  }
+}
+
+.Toolbar-btn:hover {
+  color: var(--color-text);
+  background: var(--color-surface-2);
+}
+
+.Toolbar-btn.is-active {
+  color: var(--color-text);
+  background: var(--color-surface-3);
+  border-color: var(--color-border);
+}
+
+/* Delta active tints */
+
+.Toolbar-btn[data-delta="up"].is-active {
+  color: var(--color-up);
+  border-color: rgba(126,184,164,0.25);
+  background: var(--color-up-bg);
+}
+
+.Toolbar-btn[data-delta="down"].is-active {
+  color: var(--color-down);
+  border-color: rgba(201,122,122,0.25);
+  background: var(--color-down-bg);
+}
+
+.Toolbar-btn[data-delta="neutral"].is-active {
+  color: var(--color-text-dim);
+}
+
+.DataCard-delta.is-up {
+  color: var(--color-up);
+  background: var(--color-up-bg);
+  border: 1px solid rgba(126,184,164,0.2);
+}
+
+.DataCard-delta.is-down {
+  color: var(--color-down);
+  background: var(--color-down-bg);
+  border: 1px solid rgba(201,122,122,0.2);
+}
+
+.DataCard-delta.is-neutral {
+  color: var(--color-text-dim);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.DataCard-cta:hover { color: var(--color-accent); }
+
+.DataCard-cta:hover svg { transform: translateX(3px); }
+
+.is-slotAnimating { animation: slotIn 0.22s var(--ease-expo) both; }
+
+.Accordion:hover {
+  background-color: var(--color-white-5);
+  border-color: var(--color-primary-border);
+}
+
+.Accordion[open] {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-primary-border);
+}
+
+.Accordion[open]::details-content {
+  height: auto;
+}
+
+.Accordion-summary:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.Accordion[open] .Accordion-title {
+  color: var(--color-text-heading);
+}
+
+.Accordion[open] .Accordion-icon {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+.Accordion--summary:hover {
+  border-color: var(--color-primary-600);
+}
+
+.Accordion--summary[open] {
+  border-color: var(--color-primary-600);
+  background-color: var(--color-surface-card);
+}
+
+/* Closing state — triggered by JS removing [open] */
+
+.Accordion--summary.is-closing {
+  border-color: var(--color-border);
+  background-color: var(--color-surface-alt);
+  box-shadow: none;
+}
+
+.Accordion--summary[open] .Accordion-summaryTitle {
+  color: var(--color-primary);
+}
+
+.SummarySlider-controls .SummarySlider-control.is-disabled {
+      pointer-events: none;
+      background: var(--color-text-muted);
+
+      .SummarySlider-icon {
+        opacity: 0.5;
+      }
+    }
+
+.SummarySlider-slide.is-slideOn {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+  }
+
+.SummarySlider-slide.is-textOn .SummarySlider-title {
+    transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+
+.SummarySlider-slide.is-textOn .SummarySlider-author {
+    transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.6s;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+
+.NavMenu-dropdown.is-open .NavMenu-dropdownTrigger {
+  background-color: var(--color-primary-dim);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  overflow: visible;
+}
+
+.NavMenu-dropdown.is-open .NavMenu-dropdownTrigger .NavMenu-itemIcon {
+  color: var(--color-primary);
+}
+
+.NavMenu-dropdown.is-open .NavMenu-dropdownChevron {
+  color: var(--color-primary);
+  transform: rotate(180deg);
+}
+
+.NavMenu-dropdown.is-open .NavMenu-dropdownList {
+  max-height: fit-content;
+  visibility: visible;
+  padding-top: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+}
+
 /* ── NavMenu States ──────────────────────────────────────────────────────── */
 
 .NavMenu-item:hover {
@@ -40,6 +665,7 @@
 }
 
 /* ── Current page — filled marker + bold link ── */
+
 .NavMenu-dropdownItem.is-active .NavMenu-dropdownMarker {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
@@ -123,6 +749,7 @@
 }
 
 /* ── Link States ──────────────────────────────────────────────── */
+
 .Link:hover {
   color: var(--color-primary);
 }
@@ -178,18 +805,6 @@
   background: var(--color-purple-400);
   color: var(--color-text);
   box-shadow: var(--shadow-hover-sm);
-}
-
-/* ── SubcategoryList States ──────────────────────────────────────────────── */
-
-.SubcategoryGroup--hasActive {
-  min-height: 80px;
-}
-
-.SubcategoryList--visible {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
 }
 
 /* ── Utility ─────────────────────────────────────────────────────────────── */
@@ -271,131 +886,14 @@
   }
 }
 
-/* ── Different type of Labels ──────────────────────────────────────────────── */
+/* State: triggered by scroll */
 
-.Label--increase {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-xs);
-  color: var(--color-text);
-  font-size: var(--spacing-md);
-  font-weight: var(--font-weight-light);
-}
-
-.Label--increase::before {
-  color: var(--color-text);
-  content: "↑";
-  transition: transform 0.3s ease;
-}
-
-.Label--launched {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-xs);
-  color: var(--color-text);
-  font-size: var(--spacing-md);
-  font-weight: var(--font-weight-light);
-}
-
-.Label--launched::before {
-  color: var(--color-text);
-  content: "⚡︎";
-  transition: transform 0.3s ease;
-}
-
-.Label--testing {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-xs);
-  color: var(--color-text);
-  font-size: var(--spacing-md);
-  font-weight: var(--font-weight-light);
-}
-
-.Label--testing::before {
-  color: var(--color-text);
-  content: "🗪";
-  transition: transform 0.3s ease;
-}
-
-.Label--responsive {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-xs);
-  color: var(--color-text);
-  font-size: var(--spacing-md);
-  font-weight: var(--font-weight-light);
-}
-
-.Label--responsive::before {
-  color: var(--color-text);
-  content: "모";
-  transition: transform 0.3s ease;
-}
-
-.Label--redesign {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-xs);
-  color: var(--color-text);
-  font-size: var(--spacing-md);
-  font-weight: var(--font-weight-light);
-}
-
-.Label--redesign::before {
-  color: var(--color-text);
-  content: "모";
-  transition: transform 0.3s ease;
-}
-
-/* ── Highlight style ──────────────────────────────────────────────── */
-/* _text-highlight.scss
-   Module: component
-   Pattern: c-text-highlight*/
-
-.TextHighlight {
-  all: unset;
-  background-repeat: no-repeat;
-  margin: 0 4px;
-  background-size: 0% 100%;
-  transition:
-    color calc(var(--a-duration-highlight) / 4) var(--a-ease-highlight),
-    background-size var(--a-duration-highlight) var(--a-ease-highlight);
-
-  /* Default style: full background sweep */
-  background-image: linear-gradient(
-    var(--a-color-highlight-fill),
-    var(--a-color-highlight-fill)
-  );
-
-  /* State: triggered by scroll */
-  &.is-active {
+.TextHighlight.is-active {
     color: var(--a-color-highlight-text);
     font-weight: var(--font-weight-semibold);
     text-shadow: 1px 01px 0 var(--color-highlight-outline);
     background-size: 100% 100%;
   }
-
-  /* Accessibility: screen reader markers */
-  &::before,
-  &::after {
-    position: absolute;
-    clip-path: inset(100%);
-    clip: rect(1px, 1px, 1px, 1px);
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  &::before {
-    content: " [highlight start] ";
-  }
-
-  &::after {
-    content: " [highlight end] ";
-  }
-}
 
 /* -- Text Reveal ------ */
 
@@ -417,20 +915,6 @@
   }
 }
 
-.TextReveal {
-  font-kerning: none;
-
-  .TextReveal-lineWrapper {
-    overflow: hidden;
-  }
-
-  .TextReveal-line {
-    transform: translate3d(0, 100%, 0);
-  }
-}
-
-/*  ── Component keyframes (moved from module.css) ───────────────────────────  */
-
 /**
  * ----------------------------------------
  * animation slideRight
@@ -448,6 +932,8 @@
     transform: translateX(100%);
   }
 }
+
+/*  ── Component keyframes (moved from module.css) ───────────────────────────  */
 
 @keyframes slideRight {
   0% {
@@ -507,4 +993,132 @@
 @keyframes slotIn {
   from { opacity: 0; transform: translateY(3px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/*  ── Gallery states (moved from project-gallery.css) ──────────────────────────────  */
+
+.ProjectCard.is-hidden {
+  display: none;
+}
+
+.ProjectCard-container:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+[data-view="grid"] .ProjectCard:hover .ProjectCard-image img {
+  transform: scale(1.04);
+}
+
+[data-view="list"] .ProjectCard:hover .ProjectCard-image img {
+  transform: scale(1.04);
+}
+
+.ProjectCard:hover .ProjectCard-cta {
+  gap: var(--spacing-base);
+  color: var(--color-primary);
+}
+
+.ProjectCard:hover .ProjectCard-cta svg {
+  transform: translateX(3px);
+}
+
+/*  ── Gallery states (moved from journal-gallery.css) ──────────────────────────────  */
+
+.JournalCard.is-hidden {
+  display: none;
+}
+
+.JournalCard-content:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+[data-view="grid"] .JournalCard:hover .JournalCard-image img {
+  transform: scale(1.04);
+}
+
+[data-view="list"] .JournalCard:hover .JournalCard-image img {
+  transform: scale(1.04);
+}
+
+.JournalCard:hover .JournalCard-cta {
+  gap: var(--spacing-base);
+  color: var(--color-primary);
+}
+
+.JournalCard:hover .JournalCard-cta svg {
+  transform: translateX(3px);
+}
+
+#recent-entries-grid:where(.JournalGrid) .JournalCard:first-child:hover .JournalCard-image img,
+#recent-entries-grid:where(.JournalGrid) .JournalCard:nth-child(2):hover .JournalCard-image img,
+#recent-entries-grid:where(.JournalGrid) .JournalCard:nth-child(3):hover .JournalCard-image img {
+  transform: scale(1.04);
+}
+
+/*  ── Gallery states (moved from playground-gallery.css) ──────────────────────────────  */
+
+.PlaygroundCard.is-hidden {
+  display: none;
+}
+
+.PlaygroundCard-content:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+[data-view="grid"] .PlaygroundCard:hover .PlaygroundCard-image img {
+  transform: scale(1.04);
+}
+
+[data-view="list"] .PlaygroundCard:hover .PlaygroundCard-image img {
+  transform: scale(1.04);
+}
+
+.PlaygroundCard:hover .PlaygroundCard-cta {
+  gap: var(--spacing-base);
+  color: var(--color-primary);
+}
+
+.PlaygroundCard:hover .PlaygroundCard-cta svg {
+  transform: translateX(3px);
+}
+
+#recent-entries-grid:where(.PlaygroundGrid)
+  .PlaygroundCard:first-child:hover
+  .PlaygroundCard-image
+  img,
+#recent-entries-grid:where(.PlaygroundGrid)
+  .PlaygroundCard:nth-child(2):hover
+  .PlaygroundCard-image
+  img,
+#recent-entries-grid:where(.PlaygroundGrid)
+  .PlaygroundCard:nth-child(3):hover
+  .PlaygroundCard-image
+  img {
+  transform: scale(1.04);
+}
+
+/*  ── Selection box states (moved from script.js) ───────────────────────────  */
+
+.FigmaSelect.is-visible {
+  opacity: 1;
+}
+
+.TabSelbox.is-ready {
+  opacity: 1;
+}
+
+/*  ── Accordion open animation — starting state (moved from module.css) ─────  */
+
+@starting-style {
+  .Accordion[open] .Accordion-body {
+    opacity: 0;
+    transform: translateY(-4px);
+    filter: blur(2px);
+  }
 }

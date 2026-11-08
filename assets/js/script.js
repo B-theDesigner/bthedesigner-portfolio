@@ -266,70 +266,19 @@ document.addEventListener("DOMContentLoaded", init);
 // ─── Gallery Hover — Figma Selection Box ─────────────────────────────────────
 
 (function () {
-  const PURPLE_HEX = "#A27ECC";
-  const FONT_MONO = '"DM Mono", "Courier New", monospace';
-
-  const style = document.createElement("style");
-  style.textContent = `
-    .fsel-box {
-      position: fixed;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      z-index: 999;
-      opacity: 0;
-      transition: opacity 0.15s ease;
-      will-change: transform, width, height;
-    }
-    .fsel-box.is-visible { opacity: 1; }
-    .fsel-border {
-      position: absolute;
-      inset: 0;
-      border: 1.5px solid ${PURPLE_HEX};
-      background: rgba(162, 126, 204, 0.05);
-      border-radius: 2px;
-    }
-    .fsel-handle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background-color: #C1A9DD;
-      border: 1px solid ${PURPLE_HEX};
-    }
-    .fsel-handle--tl { top: -3px;    left: -3px;  }
-    .fsel-handle--tr { top: -3px;    right: -3px; }
-    .fsel-handle--bl { bottom: -3px; left: -3px;  }
-    .fsel-handle--br { bottom: -3px; right: -3px; }
-    .fsel-label {
-      position: absolute;
-      bottom: calc(100% + 6px);
-      left: -2px;
-      background: ${PURPLE_HEX};
-      color: #1A1A20;
-      font-family: ${FONT_MONO};
-      font-size: 10px;
-      font-weight: 600;
-      line-height: 1;
-      padding: 3px 8px;
-      border-radius: 3px;
-      white-space: nowrap;
-      letter-spacing: 0.02em;
-    }
-  `;
-  document.head.appendChild(style);
-
+  // Styles live in module.css (.FigmaSelect) and state.css (.FigmaSelect.is-visible)
   const box = document.createElement("div");
-  box.className = "fsel-box";
+  box.className = "FigmaSelect";
   box.innerHTML = `
-    <div class="fsel-border"></div>
-    <div class="fsel-handle fsel-handle--tl"></div>
-    <div class="fsel-handle fsel-handle--tr"></div>
-    <div class="fsel-handle fsel-handle--bl"></div>
-    <div class="fsel-handle fsel-handle--br"></div>
-    <div class="fsel-label"></div>
+    <div class="FigmaSelect-border"></div>
+    <div class="FigmaSelect-handle FigmaSelect-handle--tl"></div>
+    <div class="FigmaSelect-handle FigmaSelect-handle--tr"></div>
+    <div class="FigmaSelect-handle FigmaSelect-handle--bl"></div>
+    <div class="FigmaSelect-handle FigmaSelect-handle--br"></div>
+    <div class="FigmaSelect-label"></div>
   `;
 
-  const label = box.querySelector(".fsel-label");
+  const label = box.querySelector(".FigmaSelect-label");
   let hideTimer = null;
 
   function getCardLabel(container) {
@@ -687,37 +636,7 @@ document.addEventListener("DOMContentLoaded", init);
 // ─── Tabs ─────────────────────────────────────────────────────────────────────
 
 (function () {
-  // Inject shared styles once
-  const style = document.createElement("style");
-  style.textContent = `
-    .tab-selbox {
-      position: absolute; top: 0; left: 0;
-      pointer-events: none; z-index: 2;
-      width: 0; height: 0;
-      box-sizing: border-box;
-      border: .5px solid var(--color-primary);
-      transition:
-        transform 380ms cubic-bezier(0.4, 0, 0.2, 1),
-        width     380ms cubic-bezier(0.4, 0, 0.2, 1),
-        height    380ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity   200ms ease;
-      opacity: 0;
-    }
-    .tab-selbox.is-ready { opacity: 1; }
-    .tab-selbox__corner {
-      position: absolute; width: 5px; height: 5px;
-      background: var(--color-primary);
-      border: .5px solid var(--color-primary);
-    }
-    .tab-selbox__corner--tl { top: -2.5px;    left: -2.5px;  }
-    .tab-selbox__corner--tr { top: -2.5px;    right: -2.5px; }
-    .tab-selbox__corner--bl { bottom: -2.5px; left: -2.5px;  }
-    .tab-selbox__corner--br { bottom: -2.5px; right: -2.5px; }
-    .tab-selbox__cursor { position: absolute; bottom: -14px; right: -10px; pointer-events: none; }
-    .TabButton-corners, .TabButton-cursor { display: none !important; }
-  `;
-  document.head.appendChild(style);
-
+  // Styles live in module.css (.TabSelbox) and state.css (.TabSelbox.is-ready)
   const INSET = 5;
 
   // ── Initialize a single tab group ─────────────────────────────────────────
@@ -731,14 +650,14 @@ document.addEventListener("DOMContentLoaded", init);
 
     // Build a selection box per group so each nav has its own indicator
     const selBox = document.createElement("div");
-    selBox.className = "tab-selbox";
+    selBox.className = "TabSelbox";
     selBox.setAttribute("aria-hidden", "true");
     selBox.innerHTML = `
-      <span class="tab-selbox__corner tab-selbox__corner--tl"></span>
-      <span class="tab-selbox__corner tab-selbox__corner--tr"></span>
-      <span class="tab-selbox__corner tab-selbox__corner--bl"></span>
-      <span class="tab-selbox__corner tab-selbox__corner--br"></span>
-      <span class="tab-selbox__cursor"></span>
+      <span class="TabSelbox-corner TabSelbox-corner--tl"></span>
+      <span class="TabSelbox-corner TabSelbox-corner--tr"></span>
+      <span class="TabSelbox-corner TabSelbox-corner--bl"></span>
+      <span class="TabSelbox-corner TabSelbox-corner--br"></span>
+      <span class="TabSelbox-cursor"></span>
     `;
     tabList.style.position = "relative";
     tabList.appendChild(selBox);
@@ -1475,7 +1394,7 @@ class FindingsSlideshow {
         "is-up2",
         "is-down1",
         "is-down2",
-        "is-hidden",
+        "is-offstage",
       );
 
       if (offset === 0) card.classList.add("is-center");
@@ -1483,7 +1402,7 @@ class FindingsSlideshow {
       else if (offset === 2) card.classList.add("is-down2");
       else if (offset === irlcards.length - 1) card.classList.add("is-up1");
       else if (offset === irlcards.length - 2) card.classList.add("is-up2");
-      else card.classList.add("is-hidden");
+      else card.classList.add("is-offstage");
     });
 
     dots.forEach((dot, i) =>

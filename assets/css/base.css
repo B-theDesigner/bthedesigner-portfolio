@@ -63,7 +63,7 @@ ul {
   margin-left: 24px;
 }
 
-li:not(.JournalCard, .ProjectCard, .PlaygroundCard, .NavMenu-dropdown) {
+li {
   margin: 16px 0;
   position: relative;
   padding-left: 20px;
@@ -103,10 +103,6 @@ code {
 ::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
   border-radius: var(--radius-full);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-primary-400);
 }
 
 /* Scrollbar — Firefox */
