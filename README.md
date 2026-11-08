@@ -24,7 +24,7 @@ VS Code's **Live Server** extension also works if it serves from the workspace r
 ### Optional: install dev tools
 
 ```bash
-yarn install   # installs Prettier (formatting)
+npm install    # installs Prettier and Storybook
 npx prettier --write "**/*.{html,css,js}"
 ```
 
@@ -54,9 +54,22 @@ npx prettier --write "**/*.{html,css,js}"
 │   ├── js/                 # Scripts + data files (see below)
 │   ├── img/                # Images, logos, project + playground media
 │   └── resume/             # Downloadable CV (PDF)
+├── storybook/              # Storybook config, stories, and story tests (not deployed)
+├── .github/workflows/      # GitHub Pages deploy workflow
 ├── CNAME                   # Custom domain for GitHub Pages
 └── .nojekyll               # Tells GitHub Pages to skip Jekyll processing
 ```
+
+## Storybook
+
+```bash
+npm install
+npm run storybook        # http://localhost:6006
+npm test                 # runs every story as a browser test, with accessibility checks
+npm run build-storybook  # static build in storybook-static/ (git-ignored)
+```
+
+Add stories in `storybook/stories/`. The files there now are Storybook's samples.
 
 Each page is a folder with an `index.html` inside, so URLs stay clean (`/work/airbnb`, not `/work/airbnb.html`).
 
@@ -152,7 +165,11 @@ Replace `assets/resume/Winkfield_Bryttany_CV.pdf`. Keep the filename, or update 
 
 ## Deployment
 
-Pushing to `main` deploys the site through **GitHub Pages**. The `CNAME` file points it at `bthedesigner.me`. There's nothing to build. Whatever is committed is what goes live.
+Pushing to `main` runs the **Deploy site to GitHub Pages** workflow ([.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml)). It copies the site files, leaves out development-only files (`storybook/`, `package.json`, `README.md`, etc.), and publishes the result to `bthedesigner.me`. There's no build step.
+
+New site folders are deployed automatically. If you add a new **development-only** file or folder, add it to the workflow's `--exclude` list so it stays off the live site.
+
+GitHub's Pages source must be set to **GitHub Actions** (repo Settings → Pages → Build and deployment).
 
 Before pushing:
 - [ ] Check pages locally through a server (nav loads, links work)
