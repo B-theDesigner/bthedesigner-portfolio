@@ -45,8 +45,8 @@
     activateBtn(btn, '[data-vp]');
  
     const canvas = document.getElementById('previewCanvas');
-    canvas.classList.remove('vp-desktop', 'vp-tablet', 'vp-mobile');
-    canvas.classList.add('vp-' + vp);
+    canvas.classList.remove('Preview-canvas--desktop', 'Preview-canvas--tablet', 'Preview-canvas--mobile');
+    canvas.classList.add('Preview-canvas--' + vp);
  
     const label = document.getElementById('statusViewport');
     if (label) label.textContent = vp.charAt(0).toUpperCase() + vp.slice(1);
@@ -84,7 +84,7 @@
     const text = document.getElementById('delta-text');
     if (!el || !icon || !text) return;
  
-    el.className = 'p-DataCard__delta ' + cfg.cls;
+    el.className = 'DataCard-delta ' + cfg.cls;
     icon.querySelector('path').setAttribute('d', cfg.icon);
     text.textContent = cfg.text;
     animateIn(el);
@@ -92,17 +92,17 @@
  
   /* ── Slide-in animation helper ──────────────────────────── */
   function animateIn (el) {
-    el.classList.add('slot-animate');
+    el.classList.add('is-slotAnimating');
     el.addEventListener('animationend', () => {
-      el.classList.remove('slot-animate');
+      el.classList.remove('is-slotAnimating');
     }, { once: true });
   }
  
   /* ── Active button state ────────────────────────────────── */
   function activateBtn (btn, selector) {
-    const group = btn.closest('.toolbar-group');
+    const group = btn.closest('.Toolbar-group');
     if (!group) return;
-    group.querySelectorAll('.toolbar-btn' + selector)
+    group.querySelectorAll('.Toolbar-btn' + selector)
          .forEach(b => b.classList.remove('is-active'));
     btn.classList.add('is-active');
   }

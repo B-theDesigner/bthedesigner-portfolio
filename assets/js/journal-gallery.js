@@ -18,28 +18,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     JOURNAL_ENTRIES.forEach(entry => {
       const li = document.createElement('li');
-      li.className = 'journal-card';
+      li.className = 'JournalCard';
       li.dataset.category    = entry.category;
       li.dataset.subcategory = entry.subcategory || '';
 
       li.innerHTML = `
         <div data-card-hover>
-          <span class="journal-card__content"
+          <span class="JournalCard-content"
                 href="${entry.href}"
                 aria-label="${entry.title} — View details">
-            <div class="journal-card__image">
+            <div class="JournalCard-image">
               <img src="${entry.image}"
                    alt="${entry.imageAlt}"
                    width="800" height="500"
                    loading="lazy" decoding="async">
             </div>
-            <div class="journal-card__body">
-              <div class="journal-card__tags" aria-label="journal type">
-                <span class="journal-card__tag">${entry.tag}</span>
-                <span class="journal-card__date">${entry.date} | ${entry.readTime}</span>
+            <div class="JournalCard-body">
+              <div class="JournalCard-tags" aria-label="journal type">
+                <span class="JournalCard-tag">${entry.tag}</span>
+                <span class="JournalCard-date">${entry.date} | ${entry.readTime}</span>
               </div>
-              <h3 class="journal-card__title">${entry.title}</h3>
-              <a class="journal-card__cta" href="${entry.href}">View details <svg viewBox="0 0 14 14" fill="none">
+              <h3 class="JournalCard-title">${entry.title}</h3>
+              <a class="JournalCard-cta" href="${entry.href}">View details <svg viewBox="0 0 14 14" fill="none">
                           <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" /></a>
               
@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!$grid || !tier1 || !tier2) return; // not on a gallery page
 
-  const tier1Tabs = [...tier1.querySelectorAll('.gtab')];
-  const viewBtns  = [...document.querySelectorAll('.view-toggle__btn')];
+  const tier1Tabs = [...tier1.querySelectorAll('.GalleryTab')];
+  const viewBtns  = [...document.querySelectorAll('.ViewToggle-btn')];
 
   // ── View toggle ────────────────────────────────────────────────────────
   // cardsLayout is set by the module script block in the HTML once
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const { cardsLayout, utils, stagger } = window._galleryLayout;
       cardsLayout.update(() => {
         $grid.setAttribute('data-view', view);
-        utils.set(utils.$('#journal-grid .journal-card'), { transform: 'none' });
+        utils.set(utils.$('#journal-grid .JournalCard'), { transform: 'none' });
         viewBtns.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.view === view ? 'true' : 'false'));
       }, { duration: 450, ease: 'inOut(3)', delay: stagger([0, 300]) });
     } else {
@@ -126,10 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const viewToggleGroup = document.querySelector('.view-toggle');
+  const viewToggleGroup = document.querySelector('.ViewToggle');
   if (viewToggleGroup) {
     viewToggleGroup.addEventListener('keydown', e => {
-      const btns = [...viewToggleGroup.querySelectorAll('.view-toggle__btn')];
+      const btns = [...viewToggleGroup.querySelectorAll('.ViewToggle-btn')];
       const idx  = btns.indexOf(document.activeElement);
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); btns[(idx + 1) % btns.length].focus(); }
       if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   { e.preventDefault(); btns[(idx - 1 + btns.length) % btns.length].focus(); }
@@ -138,14 +138,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Selbox ─────────────────────────────────────────────────────────────
   const selBox = document.createElement('div');
-  selBox.className = 'gallery-selbox';
+  selBox.className = 'GallerySelbox';
   selBox.setAttribute('aria-hidden', 'true');
   selBox.innerHTML = `
-    <span class="gallery-selbox__corner gallery-selbox__corner--tl"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--tr"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--bl"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--br"></span>
-    <span class="gallery-selbox__cursor">
+    <span class="GallerySelbox-corner GallerySelbox-corner--tl"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--tr"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--bl"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--br"></span>
+    <span class="GallerySelbox-cursor">
     <!-- ─── Cursor Image ──────────────────────────────────
       <img src="./assets/img/Vector.svg" alt="" width="28" height="28" aria-hidden="true"> -->
     </span>
@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', () => {
     cancelAnimationFrame(resizeRaf);
     resizeRaf = requestAnimationFrame(() => {
-      const active = tier1.querySelector('.gtab[aria-selected="true"]');
+      const active = tier1.querySelector('.GalleryTab[aria-selected="true"]');
       if (active) moveSelbox(active);
     });
   });
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function () {
     tier2.innerHTML = '';
     subtabs.forEach((item, i) => {
       const btn = document.createElement('button');
-      btn.className = 'gsubtab';
+      btn.className = 'GallerySubtab';
       btn.setAttribute('role', 'tab');
       btn.setAttribute('data-subcategory', item.subcategory);
       btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tier2.classList.add('is-visible');
 
-    const subtabBtns = [...tier2.querySelectorAll('.gsubtab')];
+    const subtabBtns = [...tier2.querySelectorAll('.GallerySubtab')];
     subtabBtns.forEach(btn => {
       btn.addEventListener('click', () => activateTier2(btn, subtabBtns));
       btn.addEventListener('keydown', e => {
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Filter gallery ──────────────────────────────────────────────────────
   function filterGallery() {
-    $grid.querySelectorAll('.journal-card').forEach(card => {
+    $grid.querySelectorAll('.JournalCard').forEach(card => {
       let show = false;
       if      (currentCategory === 'all')        show = true;
       else if (currentSubcategory === 'all')      show = card.dataset.category === currentCategory;
@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ── Init ────────────────────────────────────────────────────────────────
-  const initialTab = tier1.querySelector('.gtab[aria-selected="true"]') || tier1Tabs[0];
+  const initialTab = tier1.querySelector('.GalleryTab[aria-selected="true"]') || tier1Tabs[0];
   if (initialTab) activateTier1(initialTab, false);
 
   // ── Recent Entries: render top 3 from JOURNAL_ENTRIES ───────────────────
@@ -276,26 +276,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     JOURNAL_ENTRIES.slice(0, 3).forEach(entry => {
       const li = document.createElement('li');
-      li.className = 'journal-card';
+      li.className = 'JournalCard';
 
       li.innerHTML = `
         <div data-card-hover>
-          <span class="journal-card__content"
+          <span class="JournalCard-content"
                 href="${entry.href}"
                 aria-label="${entry.title} — View details">
-            <div class="journal-card__image">
+            <div class="JournalCard-image">
               <img src="${entry.image}"
                    alt="${entry.imageAlt}"
                    width="800" height="500"
                    loading="lazy" decoding="async">
             </div>
-            <div class="journal-card__body">
-              <div class="journal-card__tags" aria-label="journal type">
-                <span class="journal-card__tag">${entry.tag}</span>
-                <span class="journal-card__date">${entry.date} | ${entry.readTime}</span>
+            <div class="JournalCard-body">
+              <div class="JournalCard-tags" aria-label="journal type">
+                <span class="JournalCard-tag">${entry.tag}</span>
+                <span class="JournalCard-date">${entry.date} | ${entry.readTime}</span>
               </div>
-              <h3 class="journal-card__title">${entry.title}</h3>
-              <a class="journal-card__cta" href="${entry.href}"
+              <h3 class="JournalCard-title">${entry.title}</h3>
+              <a class="JournalCard-cta" href="${entry.href}"
                  aria-label="${entry.title} — View details">
                 View details
                 <svg viewBox="0 0 14 14" fill="none">

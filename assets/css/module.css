@@ -55,7 +55,7 @@
   gap: var(--spacing-md);
 }
 
-.nav_logocontainer {
+.NavLogo {
   height: 115px;
   font-weight: 100px;
   display: flex;
@@ -63,7 +63,7 @@
   margin: 0;
 }
 
-.nav_logocontainer--mobile {
+.NavLogo--mobile {
   height: 50px;
   font-weight: 100px;
   display: flex;
@@ -72,7 +72,7 @@
   margin: 0;
 }
 
-.nav_logo {
+.NavLogo-image {
   height: 100%;
 }
 
@@ -284,7 +284,7 @@
   /* 24px */
 }
 
-.header-decorativeLine {
+.DecorativeLine {
   display: flex;
   flex-direction: row;
   width: 840px;
@@ -548,7 +548,7 @@
   flex-shrink: 0;
 }
 
-.MediaDisplay-ProjectDetails {
+.ProjectMedia {
   position: relative;
   flex-shrink: 0;
   width: 100%;
@@ -771,33 +771,33 @@
 
 /* ── MediaDisplay image fit — opt-in per instance ──────────────────────── */
 
-.MediaDisplay-ProjectDetails[data-fit="cover"] .MediaDisplay-imagelg {
+.ProjectMedia[data-fit="cover"] .MediaDisplay-imagelg {
   object-fit: cover;
 }
 
-.MediaDisplay-ProjectDetails[data-fit="contain"] .MediaDisplay-imagelg {
+.ProjectMedia[data-fit="contain"] .MediaDisplay-imagelg {
   object-fit: contain;
 }
 
 /* =============================================================================
    MediaDisplay Lightbox — opt-in image modal
-   Usage: add data-lightbox to any .MediaDisplay-ProjectDetails to enable.
+   Usage: add data-lightbox to any .ProjectMedia to enable.
    One shared modal overlay — JS positions and populates it on click.
    ============================================================================= */
 
 /* ── Clickable cursor on opt-in instances ────────────────────────────────── */
 
-.MediaDisplay-ProjectDetails[data-lightbox] .MediaDisplay-imagelg,
-.MediaDisplay-ProjectDetails[data-lightbox] .MediaDisplay-framelg {
+.ProjectMedia[data-lightbox] .MediaDisplay-imagelg,
+.ProjectMedia[data-lightbox] .MediaDisplay-framelg {
   cursor: zoom-in;
 }
 
 /* Subtle hover signal on the frame */
-.MediaDisplay-ProjectDetails[data-lightbox] .MediaDisplay-framelg {
+.ProjectMedia[data-lightbox] .MediaDisplay-framelg {
   transition: opacity 200ms ease;
 }
 
-.MediaDisplay-ProjectDetails[data-lightbox] .MediaDisplay-framelg:hover .MediaDisplay-imagelg {
+.ProjectMedia[data-lightbox] .MediaDisplay-framelg:hover .MediaDisplay-imagelg {
   opacity: 0.88;
 }
 
@@ -969,13 +969,13 @@
 
 /* ─────────────────────────────────────────────────────────────────────────────
    MediaDisplay — Annotation Toggle Modifier
-   Modifier:   .MediaDisplay-ProjectDetails--annotatable
+   Modifier:   .ProjectMedia--annotatable
    Adds toggle + annotation overlay capability on top of the base component.
    Base component markup and styles are unchanged.
    ───────────────────────────────────────────────────────────────────────────── */
 
 /* Modifier: makes the outer wrapper aware it has a toggle */
-.MediaDisplay-ProjectDetails--annotatable {
+.ProjectMedia--annotatable {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -1237,7 +1237,7 @@
   opacity: 1;
 }
 
-.slide-right {
+.u-slideRight {
   -webkit-animation: slide-right 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
   animation: slide-right 1s cubic-bezier(0.45, 0, 0.55, 1) forwards;
 }
@@ -1691,7 +1691,7 @@
 
 /* ── Left: carousel section ───────────────────────────────────────────────── */
 
-.carousel-section {
+.IrlCarousel {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
@@ -1700,7 +1700,7 @@
 
 /* The container establishes the stacking context.
    Height = card height + room for up-1 / down-1 peeking above and below. */
-.carousel-container {
+.IrlCarousel-container {
   position: relative;
   width: 400px;
   height: 560px;
@@ -1708,19 +1708,19 @@
 }
 
 /* Hidden nav-arrow buttons in HTML are unused — hide them */
-.nav-arrow {
+.IrlCarousel-navArrow {
   display: none;
 }
 
 /* Track is the absolute stacking parent */
-.carousel-track {
+.IrlCarousel-track {
   position: absolute;
   inset: 0;
 }
 
 /* ── Cards ────────────────────────────────────────────────────────────────── */
 
-.irlcard {
+.IrlCarousel-card {
   position: absolute;
   left: 50%;
   top: 25%;
@@ -1741,7 +1741,7 @@
     filter 700ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.irlcard img {
+.IrlCarousel-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1749,61 +1749,61 @@
 }
 
 /* Center card — full size, full color, highest z */
-.irlcard.center {
+.IrlCarousel-card.is-center {
   z-index: 10;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 }
 
-.irlcard.center img {
+.IrlCarousel-card.is-center img {
   filter: none;
 }
 
 /* One above — smaller, greyscale, peeking up */
-.irlcard.up-1 {
+.IrlCarousel-card.is-up1 {
   z-index: 5;
   transform: translate(-50%, calc(-50% - 185px)) scale(0.82);
   opacity: 0.85;
 }
 
-.irlcard.up-1 img {
+.IrlCarousel-card.is-up1 img {
   filter: grayscale(100%);
 }
 
 /* Two above — even smaller, mostly hidden */
-.irlcard.up-2 {
+.IrlCarousel-card.is-up2 {
   z-index: 1;
   transform: translate(-50%, calc(-50% - 330px)) scale(0.68);
   opacity: 0.5;
 }
 
-.irlcard.up-2 img {
+.IrlCarousel-card.is-up2 img {
   filter: grayscale(100%);
 }
 
 /* One below */
-.irlcard.down-1 {
+.IrlCarousel-card.is-down1 {
   z-index: 5;
   transform: translate(-50%, calc(-50% + 185px)) scale(0.82);
   opacity: 0.85;
 }
 
-.irlcard.down-1 img {
+.IrlCarousel-card.is-down1 img {
   filter: grayscale(100%);
 }
 
 /* Two below */
-.irlcard.down-2 {
+.IrlCarousel-card.is-down2 {
   z-index: 1;
   transform: translate(-50%, calc(-50% + 330px)) scale(0.68);
   opacity: 0.5;
 }
 
-.irlcard.down-2 img {
+.IrlCarousel-card.is-down2 img {
   filter: grayscale(100%);
 }
 
-.irlcard.hidden {
+.IrlCarousel-card.is-hidden {
   opacity: 0;
   pointer-events: none;
   z-index: 0;
@@ -1811,7 +1811,7 @@
 
 /* ── Right: controls section ──────────────────────────────────────────────── */
 
-.irlcontrols-section {
+.IrlCarousel-controls {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1820,13 +1820,13 @@
 }
 
 /* Info: title + description */
-.irl-info {
+.IrlCarousel-info {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-base);
 }
 
-.irl-name {
+.IrlCarousel-name {
   font-family: var(--font-primary);
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-bold);
@@ -1838,7 +1838,7 @@
   padding-top: 0px;
 }
 
-.irl-description {
+.IrlCarousel-description {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
@@ -1850,14 +1850,14 @@
 }
 
 /* Nav arrows — stacked vertically, left-aligned */
-.irlnav-controls {
+.IrlCarousel-nav {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-sm);
   align-items: center;
 }
 
-.irlnav-arrow {
+.IrlCarousel-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1875,14 +1875,14 @@
     transform 150ms ease;
 }
 
-.irlnav-arrow:hover {
+.IrlCarousel-arrow:hover {
   background: var(--color-primary-dim);
   border-color: var(--color-primary-border);
   color: var(--color-primary);
   transform: scale(1.08);
 }
 
-.irlnav-arrow svg {
+.IrlCarousel-arrow svg {
   width: 16px;
   height: 16px;
   stroke: currentColor;
@@ -1894,13 +1894,13 @@
 }
 
 /* Dots */
-.dots {
+.IrlCarousel-dots {
   display: flex;
   gap: var(--spacing-sm);
   padding-top: 30px;
 }
 
-.dot {
+.IrlCarousel-dot {
   width: 8px;
   height: 8px;
   border-radius: var(--radius-full);
@@ -1912,7 +1912,7 @@
     transform 300ms ease;
 }
 
-.dot.active {
+.IrlCarousel-dot.is-active {
   background: var(--color-primary);
   width: 24px;
   /* pill shape on active */
@@ -1927,53 +1927,53 @@
     gap: var(--spacing-2xl);
   }
 
-  .irlcontrols-section {
+  .IrlCarousel-controls {
     align-items: center;
     text-align: center;
   }
 
-  .irl-description {
+  .IrlCarousel-description {
     max-width: 100%;
   }
 
-  .irlnav-controls {
+  .IrlCarousel-nav {
     justify-content: center;
   }
 
-  .dots {
+  .IrlCarousel-dots {
     justify-content: center;
   }
 }
 
 @media (max-width: 575.98px) {
-  .carousel-container {
+  .IrlCarousel-container {
     width: 300px;
     height: 440px;
   }
 
-  .irlcard {
+  .IrlCarousel-card {
     width: 300px;
     height: 169px;
     /* maintains 16:9 */
   }
 
-  .irlcard.up-1 {
+  .IrlCarousel-card.is-up1 {
     transform: translate(-50%, calc(-50% - 145px)) scale(0.82);
   }
 
-  .irlcard.down-1 {
+  .IrlCarousel-card.is-down1 {
     transform: translate(-50%, calc(-50% + 145px)) scale(0.82);
   }
 
-  .irlcard.up-2 {
+  .IrlCarousel-card.is-up2 {
     transform: translate(-50%, calc(-50% - 260px)) scale(0.68);
   }
 
-  .irlcard.down-2 {
+  .IrlCarousel-card.is-down2 {
     transform: translate(-50%, calc(-50% + 260px)) scale(0.68);
   }
 
-  .irl-name {
+  .IrlCarousel-name {
     font-size: var(--font-size-2xl);
   }
 }
@@ -2448,7 +2448,7 @@
     font-size: 14px;
   }
 
-  .Section-label .label-container {
+  .Section-label .LabelGroup {
     display: none;
   }
 }
@@ -2670,18 +2670,18 @@
 /* =============================================================================
    Top Findings Section 
    ============================================================================= */
-.topfindings-container {
+.TopFindings {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.topfindings-container hr {
+.TopFindings hr {
   border: none;
   border-top: 1px solid var(--color-border);
 }
 
-h3 .topfindings-header {
+h3 .TopFindings-header {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-heading);
@@ -2689,12 +2689,12 @@ h3 .topfindings-header {
   letter-spacing: 1px;
 }
 
-.findings-container {
+.Findings {
   display: flex;
   flex-direction: column;
 }
 
-.findings-container h4 {
+.Findings h4 {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary-600);
@@ -2702,7 +2702,7 @@ h3 .topfindings-header {
   letter-spacing: 1px;
 }
 
-.findings-container p {
+.Findings p {
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-regular);
   color: var(--color-text-muted);
@@ -2765,7 +2765,7 @@ h3 .topfindings-header {
 /* ─────────────────────────────────────────────────────────────────────────────
    Indication Container
    ───────────────────────────────────────────────────────────────────────────── */
-.indication-container {
+.Indication {
   display: flex;
   width: 100%;
   padding: 16px;
@@ -2776,12 +2776,12 @@ h3 .topfindings-header {
   margin-bottom: 40px;
 }
 
-.indication-container h4 {
+.Indication h4 {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
 }
 
-.indication-container p {
+.Indication p {
   color: var(--color-text-muted);
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-regular);
@@ -2885,7 +2885,7 @@ h3 .topfindings-header {
    Breadcrumbs  — used on inner pages (work.html, journal.html)
    ───────────────────────────────────────────────────────────────────────────── */
 
-.breadcrumb-section {
+.Breadcrumb {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -2895,7 +2895,7 @@ h3 .topfindings-header {
   border-bottom: 1px solid var(--color-border);
 }
 
-.breadcrumb-container {
+.Breadcrumb-container {
   display: flex;
   width: 100%;
   padding: 0px 24px;
@@ -2987,7 +2987,7 @@ h3 .topfindings-header {
   margin-bottom: 128px;
 }
 
-.AboutContent-container_2columns {
+.AboutContent-twoColumns {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3053,7 +3053,7 @@ h3 .topfindings-header {
    ============================================================================= */
 
 /* ─── Tab Nav ────────────────────────────────────────────── */
-.tabs-nav {
+.Tabs-nav {
   display: flex;
   justify-content: flex-start;
   gap: 8px;
@@ -3064,7 +3064,7 @@ h3 .topfindings-header {
   margin-left: 0px;
 }
 
-.tabs-nav ul {
+.Tabs-nav ul {
   display: flex;
   justify-content: flex-start;
   content: "";
@@ -3074,12 +3074,12 @@ h3 .topfindings-header {
   padding: 0;
 }
 
-.tabs-nav li {
+.Tabs-nav li {
   margin: 0;
   padding: 0;
 }
 
-.tabs-nav li::marker {
+.Tabs-nav li::marker {
   content: "";
   list-style: none;
   list-style-type: none; 
@@ -3088,7 +3088,7 @@ h3 .topfindings-header {
 }
 
 /* ─── Tab Button ─────────────────────────────────────────── */
-.tab-btn {
+.TabButton {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -3111,13 +3111,13 @@ h3 .topfindings-header {
   list-style: none;
 }
 
-.tabs-btn li::marker {
+.Tabs-btn li::marker {
   list-style: none;
   list-style-type: none; 
 }
 
 /* Radio indicator — visible when inactive */
-.tab-btn__radio {
+.TabButton-radio {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3129,7 +3129,7 @@ h3 .topfindings-header {
   transition: background var(--f-duration-fast) var(--f-ease-out-expo);
 }
 
-.tab-btn__radio svg {
+.TabButton-radio svg {
   width: 14px;
   height: 14px;
   fill: var(--color-text-muted);
@@ -3137,7 +3137,7 @@ h3 .topfindings-header {
 }
 
 /* Icon — hidden by default, shown when active */
-.tab-btn__icon {
+.TabButton-icon {
   display: none;
   align-items: center;
   justify-content: center;
@@ -3149,7 +3149,7 @@ h3 .topfindings-header {
   transition: background var(--f-duration-fast) var(--f-ease-out-expo);
 }
 
-.tab-btn__icon svg {
+.TabButton-icon svg {
   width: 14px;
   height: 14px;
   fill: var(--color-text-muted);
@@ -3158,7 +3158,7 @@ h3 .topfindings-header {
 
 /* ─── Selection-box corners ──────────────────────────────── */
 /* Hidden by default — only visible on aria-selected="true"  */
-.tab-btn__corners {
+.TabButton-corners {
   position: absolute;
   inset: -5px;
   pointer-events: none;
@@ -3167,7 +3167,7 @@ h3 .topfindings-header {
 }
 
 /* Thin connecting border — sharp rect, no radius */
-.tab-btn__corners::before {
+.TabButton-corners::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -3176,7 +3176,7 @@ h3 .topfindings-header {
 }
 
 /* Solid square handle at each corner */
-.tab-btn__corner {
+.TabButton-corner {
   position: absolute;
   width: 5px;
   height: 5px;
@@ -3184,28 +3184,28 @@ h3 .topfindings-header {
   border-radius: 0;
 }
 
-.tab-btn__corner--tl {
+.TabButton-corner--tl {
   top: -2.5px;
   left: -2.5px;
 }
 
-.tab-btn__corner--tr {
+.TabButton-corner--tr {
   top: -2.5px;
   right: -2.5px;
 }
 
-.tab-btn__corner--bl {
+.TabButton-corner--bl {
   bottom: -2.5px;
   left: -2.5px;
 }
 
-.tab-btn__corner--br {
+.TabButton-corner--br {
   bottom: -2.5px;
   right: -2.5px;
 }
 
 /* ─── Cursor image ───────────────────────────────────────── */
-.tab-btn__cursor {
+.TabButton-cursor {
   position: absolute;
   bottom: -14px;
   right: -10px;
@@ -3214,21 +3214,21 @@ h3 .topfindings-header {
   transition: opacity 220ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.tab-btn__cursor svg {
+.TabButton-cursor svg {
   width: 28px;
   height: 28px;
   display: block;
 }
 
 /* ─── Hover state ────────────────────────────────────────── */
-.tab-btn:hover {
+.TabButton:hover {
   color: var(--color-text);
   background: var(--color-surface-alt);
   font-size: var(--font-size-base);
 }
 
 /* ─── Active state ───────────────────────────────────────── */
-.tab-btn[aria-selected="true"] {
+.TabButton[aria-selected="true"] {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
   background: var(--color-primary-dim);
@@ -3236,34 +3236,34 @@ h3 .topfindings-header {
   border-radius: 0;
 }
 
-.tab-btn[aria-selected="true"] .tab-btn__corners {
+.TabButton[aria-selected="true"] .TabButton-corners {
   opacity: 1;
 }
 
-.tab-btn[aria-selected="true"] .tab-btn__cursor {
+.TabButton[aria-selected="true"] .TabButton-cursor {
   opacity: 1;
 }
 
-.tab-btn[aria-selected="true"] .tab-btn__radio {
+.TabButton[aria-selected="true"] .TabButton-radio {
   display: none;
 }
 
-.tab-btn[aria-selected="true"] .tab-btn__icon {
+.TabButton[aria-selected="true"] .TabButton-icon {
   display: flex;
   background: var(--color-primary-dim);
 }
 
-.tab-btn[aria-selected="true"] .tab-btn__icon svg {
+.TabButton[aria-selected="true"] .TabButton-icon svg {
   display: flex;
   fill: var(--color-primary);
 }
 
 /* ─── Tab Panel ──────────────────────────────────────────── */
-.tabs-panel-wrapper {
+.Tabs-panels {
   position: relative;
 }
 
-.tab-panel {
+.TabPanel {
   max-width: 1000px;
   display: none;
   background: var(--color-surface);
@@ -3274,7 +3274,7 @@ h3 .topfindings-header {
   animation: tabPanelIn 200ms ease both;
 }
 
-.tab-panel[aria-hidden="false"] {
+.TabPanel[aria-hidden="false"] {
   display: block;
 }
 
@@ -3290,7 +3290,7 @@ h3 .topfindings-header {
   }
 }
 
-.tab-panel__header {
+.TabPanel-header {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -3299,7 +3299,7 @@ h3 .topfindings-header {
   border-bottom: 1px solid var(--color-border);
 }
 
-.tab-panel__header-icon {
+.TabPanel-headerIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3311,44 +3311,44 @@ h3 .topfindings-header {
   flex-shrink: 0;
 }
 
-.tab-panel__header-icon svg {
+.TabPanel-headerIcon svg {
   width: 16px;
   height: 16px;
   fill: var(--color-text-muted);
 }
 
-.tab-panel__title {
+.TabPanel-title {
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-semibold);
   letter-spacing: -0.01em;
   color: var(--color-text-heading);
 }
 
-.tab-panel__body ul {
+.TabPanel-body ul {
   list-style: disc;
   padding-left: 18px;
   margin-bottom: 20px;
 }
 
-.tab-panel__body ul li {
+.TabPanel-body ul li {
   color: var(--color-text-muted);
   font-size: var(--font-size-base);
   margin-bottom: 6px;
   line-height: 1.55;
 }
 
-.tab-panel__body ul li::marker {
+.TabPanel-body ul li::marker {
   color: var(--color-primary);
 }
 
-.tab-panel__body p {
+.TabPanel-body p {
   color: var(--color-text-muted);
   font-size: var(--font-size-base);
   line-height: 1.7;
 }
 
 /* ─── Section heading / sub ──────────────────────────────── */
-.tabs-section__heading {
+.Tabs-heading {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-extrabold);
   font-size: var(--font-size-2xl);
@@ -3356,27 +3356,27 @@ h3 .topfindings-header {
   margin-bottom: 6px;
 }
 
-.tabs-section__sub {
+.Tabs-sub {
   color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   margin-bottom: 28px;
 }
 
 /* ─── Mobile Accordion ───────────────────────────────────── */
-.accordion {
+.AccordionGroup {
   display: none;
   flex-direction: column;
   gap: 8px;
 }
 
-.accordion-item {
+.AccordionGroup-item {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--color-surface);
 }
 
-.accordion-trigger {
+.AccordionGroup-trigger {
   width: 100%;
   display: flex;
   align-items: center;
@@ -3393,18 +3393,18 @@ h3 .topfindings-header {
   transition: color 220ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-trigger[aria-expanded="true"] {
+.AccordionGroup-trigger[aria-expanded="true"] {
   color: var(--color-text);
   background: var(--color-primary-dim);
 }
 
-.accordion-trigger__left {
+.AccordionGroup-triggerLeft {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.accordion-trigger__icon {
+.AccordionGroup-triggerIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3415,21 +3415,21 @@ h3 .topfindings-header {
   flex-shrink: 0;
 }
 
-.accordion-trigger__icon svg {
+.AccordionGroup-triggerIcon svg {
   width: 14px;
   height: 14px;
   fill: var(--color-text-muted);
 }
 
-.accordion-trigger[aria-expanded="true"] .accordion-trigger__icon {
+.AccordionGroup-trigger[aria-expanded="true"] .AccordionGroup-triggerIcon {
   background: rgba(124, 92, 252, 0.2);
 }
 
-.accordion-trigger[aria-expanded="true"] .accordion-trigger__icon svg {
+.AccordionGroup-trigger[aria-expanded="true"] .AccordionGroup-triggerIcon svg {
   fill: var(--color-primary);
 }
 
-.accordion-chevron {
+.AccordionGroup-chevron {
   width: 16px;
   height: 16px;
   fill: none;
@@ -3441,48 +3441,48 @@ h3 .topfindings-header {
   flex-shrink: 0;
 }
 
-.accordion-trigger[aria-expanded="true"] .accordion-chevron {
+.AccordionGroup-trigger[aria-expanded="true"] .AccordionGroup-chevron {
   transform: rotate(180deg);
   stroke: var(--color-primary);
 }
 
-.accordion-body {
+.AccordionGroup-body {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 260ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.accordion-body[aria-hidden="false"] {
+.AccordionGroup-body[aria-hidden="false"] {
   grid-template-rows: 1fr;
 }
 
-.accordion-body__inner {
+.AccordionGroup-bodyInner {
   overflow: hidden;
 }
 
-.accordion-body__content {
+.AccordionGroup-content {
   padding: 4px 18px 20px;
   border-top: 1px solid var(--color-border);
 }
 
-.accordion-body__content ul {
+.AccordionGroup-content ul {
   list-style: disc;
   padding-left: 18px;
   margin: 14px 0;
 }
 
-.accordion-body__content ul li {
+.AccordionGroup-content ul li {
   color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   margin-bottom: 6px;
   line-height: 1.55;
 }
 
-.accordion-body__content ul li::marker {
+.AccordionGroup-content ul li::marker {
   color: var(--color-primary);
 }
 
-.accordion-body__content p {
+.AccordionGroup-content p {
   color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   line-height: 1.7;
@@ -3491,12 +3491,12 @@ h3 .topfindings-header {
 /* ─── Responsive — tabs → accordion at mobile ────────────── */
 @media (max-width: 1022px) {
 
-  .tabs-nav,
-  .tabs-panel-wrapper {
+  .Tabs-nav,
+  .Tabs-panels {
     display: none;
   }
 
-  .accordion {
+  .AccordionGroup {
     display: flex;
   }
 }
@@ -3506,14 +3506,14 @@ h3 .topfindings-header {
    My Stack
    ───────────────────────────────────────────────────────────────────────────── */
 
-   .mystack-ctr{
+   .Stack{
     width: 1000px;
     gap: 16px;
     display: flex;
     flex-direction: column;
    }
 
-   .stack-item {
+   .Stack-item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -3521,7 +3521,7 @@ h3 .topfindings-header {
     padding: 10px;
    }
 
-   .stack-icon {
+   .Stack-icon {
     width: 50px;
     height: 50px;
     object-fit: cover;
@@ -3529,14 +3529,14 @@ h3 .topfindings-header {
     background-color: #463E5A;
    }
 
-    .stack-icon img {
+    .Stack-icon img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     padding: 10px;
    }
 
-   .stack-label h3 {
+   .Stack-label h3 {
     color: var(--color-text);
    }
 
@@ -3712,7 +3712,7 @@ h3 .topfindings-header {
   width: fit-content;
 }
 
-.Status-badge-dot {
+.Status-badgeDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -3919,7 +3919,7 @@ h3 .topfindings-header {
 
 /* =============================================================================
    CertSection + CertTable — Education & Certifications tabbed table
-   Tabs reuse the existing .tabs-nav / .tab-panel JS and CSS.
+   Tabs reuse the existing .Tabs-nav / .TabPanel JS and CSS.
    The panel contains a scrollable table of entries.
    ============================================================================= */
 
@@ -3950,13 +3950,13 @@ h3 .topfindings-header {
 
 /* ── Tab nav modifier — compact version for cert filters ─────────────────── */
 
-.tabs-nav--cert {
+.Tabs-nav--cert {
   flex-wrap: wrap;
 }
 
 /* ── Panel wrapper modifier — no overflow clip so scroll works ───────────── */
 
-.tabs-panel-wrapper--cert {
+.Tabs-panels--cert {
   overflow: visible;
 }
 
@@ -4250,13 +4250,13 @@ h3 .topfindings-header {
 }
 
 /* ── Cert accordion: show/hide swap at 1022px ─────────────────────────────── */
-/* The existing .accordion base styles (display:none) are in module.css.
+/* The existing .AccordionGroup base styles (display:none) are in module.css.
    These rules override just the cert accordion at the cert-specific breakpoint,
    without touching the Background section's 640px swap. */
 
 /* Above 1022px: show tabs, hide cert accordion */
 
-.accordion--cert {
+.AccordionGroup--cert {
   display: none;
   /* hidden by default */
 }
@@ -4264,12 +4264,12 @@ h3 .topfindings-header {
 /* At 1022px and below: hide tabs, show cert accordion */
 @media (max-width: 1022px) {
 
-  .tabs-nav--cert,
-  .tabs-panel-wrapper--cert {
+  .Tabs-nav--cert,
+  .Tabs-panels--cert {
     display: none;
   }
 
-  .accordion--cert {
+  .AccordionGroup--cert {
     display: flex;
   }
 }
@@ -4277,17 +4277,17 @@ h3 .topfindings-header {
 /* ── Table inside accordion body ─────────────────────────────────────────── */
 /* Remove the scroll container constraint — accordion body handles height */
 
-.accordion-body__content--table {
+.AccordionGroup-content--table {
   padding: 0;
   border-top: 1px solid var(--color-border);
 }
 
-.accordion-body__content--table .CertTable-table {
+.AccordionGroup-content--table .CertTable-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.accordion-body__content--table .CertTable-row:last-child {
+.AccordionGroup-content--table .CertTable-row:last-child {
   border-bottom: none;
 }
 
@@ -4396,7 +4396,7 @@ h3 .topfindings-header {
   align-self: stretch;
 }
 
-.label-container {
+.LabelGroup {
   display: flex;
   height: 25px;
   padding: 8px 16px;
@@ -4410,7 +4410,7 @@ h3 .topfindings-header {
   text-transform: capitalize;
 }
 
-.label {
+.Label {
   color: var(--color-text);
   font-size: var(--spacing-sm);
   font-weight: var(--font-weight-light);
@@ -4422,7 +4422,7 @@ h3 .topfindings-header {
    Project Details  — used on work.html
    ───────────────────────────────────────────────────────────────────────────── */
 
-.Section-ProjectDetails {
+.ProjectSection {
   padding: 24px;
   margin-bottom: 86px;
 }
@@ -4487,19 +4487,19 @@ h3 .topfindings-header {
   padding: 24px 24px;
 }
 
-.anchor-list {
+.AnchorList-list {
   display: flex;
   flex-direction: column;
 }
 
-.anchorlist-elements {
+.AnchorList-elements {
   display: flex;
   flex-direction: row;
   gap: 16px;
   align-items: flex-start;
 }
 
-.anchor-list-title {
+.AnchorList-title {
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-muted);
@@ -4516,7 +4516,7 @@ h3 .topfindings-header {
   height: fit-content;
 }
 
-.anchor-links-container {
+.AnchorList-links {
   display: flex;
   flex-direction: column;
   gap: 21.1px;
@@ -4524,7 +4524,7 @@ h3 .topfindings-header {
 }
 
 /* Anchor Links */
-.anchor-link {
+.AnchorList-link {
   font-size: 12px;
   line-height: 1;
   color: var(--color-text-muted);
@@ -4544,17 +4544,17 @@ h3 .topfindings-header {
 }
 
 /* SVG Line */
-.anchor-line {
+.AnchorList-line {
   width: 5px;
   position: relative;
 }
 
-.anchor-line svg {
+.AnchorList-line svg {
   width: 100%;
   height: 100%;
 }
 
-.anchor-square {
+.AnchorList-square {
   fill: #2f2f39;
   transition: fill 0.2s ease;
 }
@@ -4880,7 +4880,7 @@ html {
   gap: 4px;
 }
 
-.categoryctr-label h3 {
+.OverviewCopy-categoryLabel h3 {
   color: var(--color-primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-light);
@@ -4888,12 +4888,12 @@ html {
   letter-spacing: .5px;
 }
 
-.categoryctr-copy {
+.OverviewCopy-categoryCopy {
 
   text-transform: capitalize;
 }
 
-.categoryctr-copy p {
+.OverviewCopy-categoryCopy p {
   font-size: var(--font-size-base);
   line-height: 21px;
   margin-bottom: 4px;
@@ -4902,7 +4902,7 @@ html {
   color: var(--color-text);
 }
 
-.categoryctr-copy p:nth-child(2) {
+.OverviewCopy-categoryCopy p:nth-child(2) {
   color: var(--color-text-muted);
   font-weight: var(--font-weight-light);
   font-size: var(--font-size-xs);
@@ -4980,28 +4980,28 @@ html {
    FRAME, BLOCK & BORDER
    Matches your MediaDisplay-ProjectDetails structure:
  
-   .preview-frame   — outer bounding box, position:relative,
+   .Preview   — outer bounding box, position:relative,
                       no padding, no border of its own.
-   .preview-block   — content container, fills frame edge-to-edge.
-   .preview-border  — position:absolute sibling to .preview-block,
+   .Preview-block   — content container, fills frame edge-to-edge.
+   .Preview-border  — position:absolute sibling to .Preview-block,
                       inset:0, pointer-events:none, z-index above
                       content. Owns ::before (stroke) and ::after
                       (corner L-shapes). Has no overflow-creating
                       children so pseudo-elements never clip.
    ============================================================ */
-.preview-frame {
+.Preview {
   width: 100%;
   max-width: 780px;
   position: relative;
   overflow: visible;
 }
  
-.preview-block {
+.Preview-block {
   width: 100%;
   background: var(--color-surface);
 }
  
-.preview-border {
+.Preview-border {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -5010,7 +5010,7 @@ html {
 }
  
 /* Stroke — 1px line inset 3px from edge */
-.preview-border::before {
+.Preview-border::before {
   content: '';
   position: absolute;
   inset: 3px;
@@ -5019,7 +5019,7 @@ html {
 }
  
 /* Corner L-shapes + surface-fill squares */
-.preview-border::after {
+.Preview-border::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -5045,7 +5045,7 @@ html {
    Desktop: single row, all groups inline
    Mobile ≤520px: three stacked full-width rows
    ============================================================ */
-.preview-toolbar {
+.Preview-toolbar {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--color-border);
@@ -5056,27 +5056,27 @@ html {
   overflow-x: auto;
   scrollbar-width: none;
 }
-.preview-toolbar::-webkit-scrollbar { display: none; }
+.Preview-toolbar::-webkit-scrollbar { display: none; }
  
 /* display:contents collapses wrapper on desktop so rows sit
    as direct flex children of the toolbar */
-.preview-toolbar-rows { display: contents; }
+.Preview-toolbarRows { display: contents; }
  
-.toolbar-row {
+.Toolbar-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-shrink: 0;
 }
  
-.toolbar-group {
+.Toolbar-group {
   display: flex;
   align-items: center;
   gap: 2px;
   flex-shrink: 0;
 }
  
-.toolbar-pipe {
+.Toolbar-pipe {
   width: 1px;
   height: 18px;
   background: var(--color-border);
@@ -5084,7 +5084,7 @@ html {
   align-self: center;
 }
  
-.toolbar-group-label {
+.Toolbar-groupLabel {
   font-family: var(--font-mono);
   font-size: 9px;
   font-weight: 500;
@@ -5096,7 +5096,7 @@ html {
   user-select: none;
 }
  
-.toolbar-btn {
+.Toolbar-btn {
   font-family: var(--font-display);
   font-size: 11px;
   font-weight: 600;
@@ -5118,36 +5118,36 @@ html {
     background   0.15s var(--ease-expo),
     border-color 0.15s var(--ease-expo);
 }
-.toolbar-btn:hover {
+.Toolbar-btn:hover {
   color: var(--color-text);
   background: var(--color-surface-2);
 }
-.toolbar-btn.is-active {
+.Toolbar-btn.is-active {
   color: var(--color-text);
   background: var(--color-surface-3);
   border-color: var(--color-border);
 }
  
 /* Delta active tints */
-.toolbar-btn[data-delta="up"].is-active {
+.Toolbar-btn[data-delta="up"].is-active {
   color: var(--color-up);
   border-color: rgba(126,184,164,0.25);
   background: var(--color-up-bg);
 }
-.toolbar-btn[data-delta="down"].is-active {
+.Toolbar-btn[data-delta="down"].is-active {
   color: var(--color-down);
   border-color: rgba(201,122,122,0.25);
   background: var(--color-down-bg);
 }
-.toolbar-btn[data-delta="neutral"].is-active {
+.Toolbar-btn[data-delta="neutral"].is-active {
   color: var(--color-text-dim);
 }
  
-.toolbar-btn--icon { padding: 5px 7px; }
+.Toolbar-btn--icon { padding: 5px 7px; }
  
 /* ── Mobile: three rows ── */
 @media (max-width: 520px) {
-  .preview-toolbar {
+  .Preview-toolbar {
     height: auto;
     flex-direction: column;
     align-items: stretch;
@@ -5155,31 +5155,31 @@ html {
     gap: 0;
     overflow: visible;
   }
-  .preview-toolbar-rows {
+  .Preview-toolbarRows {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  .toolbar-row {
+  .Toolbar-row {
     padding: 0 0.875rem;
     height: 40px;
     gap: 0.25rem;
   }
-  .toolbar-row--primary,
-  .toolbar-row--secondary {
+  .Toolbar-row--primary,
+  .Toolbar-row--secondary {
     border-bottom: 1px solid var(--color-border-subtle);
   }
-  .toolbar-row--tertiary { height: 38px; }
-  .toolbar-pipe          { display: none; }
-  .toolbar-group-label   { font-size: 8px; margin-right: 3px; }
-  .toolbar-btn           { font-size: 10px; padding: 3px 8px; min-height: 28px; }
-  .toolbar-btn--icon     { padding: 4px 6px; }
+  .Toolbar-row--tertiary { height: 38px; }
+  .Toolbar-pipe          { display: none; }
+  .Toolbar-groupLabel   { font-size: 8px; margin-right: 3px; }
+  .Toolbar-btn           { font-size: 10px; padding: 3px 8px; min-height: 28px; }
+  .Toolbar-btn--icon     { padding: 4px 6px; }
 }
  
 /* ============================================================
    CANVAS
    ============================================================ */
-.preview-canvas {
+.Preview-canvas {
   position: relative;
   min-height: 280px;
   display: flex;
@@ -5195,7 +5195,7 @@ html {
 }
  
 /* Ambient glow */
-.preview-canvas::before {
+.Preview-canvas::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -5207,7 +5207,7 @@ html {
   pointer-events: none;
 }
  
-.preview-card-wrap {
+.Preview-cardWrap {
   width: 100%;
   display: flex;
   align-items: center;
@@ -5216,20 +5216,20 @@ html {
 }
  
 /* Viewport simulation */
-.preview-canvas.vp-tablet .preview-card-wrap { max-width: 480px; }
-.preview-canvas.vp-mobile .preview-card-wrap { max-width: 280px; }
+.Preview-canvas.Preview-canvas--tablet .Preview-cardWrap { max-width: 480px; }
+.Preview-canvas.Preview-canvas--mobile .Preview-cardWrap { max-width: 280px; }
  
 @media (max-width: 520px) {
-  .preview-canvas { min-height: 220px; padding: 2rem 1.25rem; }
+  .Preview-canvas { min-height: 220px; padding: 2rem 1.25rem; }
   /* Disable simulation on real mobile — device width already does the job */
-  .preview-canvas.vp-tablet .preview-card-wrap,
-  .preview-canvas.vp-mobile .preview-card-wrap { max-width: 100%; }
+  .Preview-canvas.Preview-canvas--tablet .Preview-cardWrap,
+  .Preview-canvas.Preview-canvas--mobile .Preview-cardWrap { max-width: 100%; }
 }
  
 /* ============================================================
    STATUS BAR
    ============================================================ */
-.preview-statusbar {
+.Preview-statusbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -5240,17 +5240,17 @@ html {
 }
  
 @media (max-width: 520px) {
-  .preview-statusbar { padding: 0 0.875rem; height: 30px; }
-  .statusbar-right   { display: none; }
+  .Preview-statusbar { padding: 0 0.875rem; height: 30px; }
+  .Preview-statusRight   { display: none; }
 }
  
-.statusbar-left {
+.Preview-statusLeft {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
  
-.statusbar-badge {
+.Preview-statusBadge {
   font-family: var(--font-mono);
   font-size: 9px;
   font-weight: 500;
@@ -5259,25 +5259,25 @@ html {
   padding: 2px 7px;
   border-radius: 3px;
 }
-.badge-pattern {
+.Preview-statusBadge--pattern {
   background: var(--color-tag-bg);
   color: var(--color-tag-text);
   border: 1px solid var(--color-tag-border);
 }
-.badge-stable {
+.Preview-statusBadge--stable {
   background: rgba(126,184,164,0.08);
   color: #7eb8a4;
   border: 1px solid rgba(126,184,164,0.2);
 }
  
-.statusbar-name {
+.Preview-statusName {
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--color-text-dim);
   letter-spacing: 0.04em;
 }
  
-.statusbar-right {
+.Preview-statusRight {
   font-family: var(--font-mono);
   font-size: 9px;
   color: var(--color-text-dim);
@@ -5288,7 +5288,7 @@ html {
 /* ============================================================
    DATA CARD — p-DataCard pattern
    ============================================================ */
-.p-DataCard {
+.DataCard {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -5303,7 +5303,7 @@ html {
   animation: cardIn 0.35s var(--ease-expo) both;
 }
  
-.p-DataCard__tag {
+.DataCard-tag {
   display: inline-block;
   align-self: flex-start;
   font-family: var(--font-display);
@@ -5319,7 +5319,7 @@ html {
   margin-bottom: 0.2rem;
 }
  
-.p-DataCard__label {
+.DataCard-label {
   font-family: var(--font-display);
   font-size: 10px;
   font-weight: 700;
@@ -5328,7 +5328,7 @@ html {
   color: var(--color-text-dim);
 }
  
-.p-DataCard__value {
+.DataCard-value {
   font-family: var(--font-display);
   font-size: 2.25rem;
   font-weight: 800;
@@ -5337,7 +5337,7 @@ html {
   line-height: 1;
 }
  
-.p-DataCard__delta {
+.DataCard-delta {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -5349,35 +5349,35 @@ html {
   align-self: flex-start;
   transition: color 0.25s, background 0.25s, border-color 0.25s;
 }
-.p-DataCard__delta.is-up {
+.DataCard-delta.is-up {
   color: var(--color-up);
   background: var(--color-up-bg);
   border: 1px solid rgba(126,184,164,0.2);
 }
-.p-DataCard__delta.is-down {
+.DataCard-delta.is-down {
   color: var(--color-down);
   background: var(--color-down-bg);
   border: 1px solid rgba(201,122,122,0.2);
 }
-.p-DataCard__delta.is-neutral {
+.DataCard-delta.is-neutral {
   color: var(--color-text-dim);
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--color-border-subtle);
 }
  
-.p-DataCard__context {
+.DataCard-context {
   font-size: 11.5px;
   color: var(--color-text-dim);
   font-family: var(--font-body);
 }
  
-.p-DataCard__divider {
+.DataCard-divider {
   border: none;
   border-top: 1px solid var(--color-border-subtle);
   margin: 0.25rem 0;
 }
  
-.p-DataCard__cta {
+.DataCard-cta {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -5392,9 +5392,9 @@ html {
   margin-top: 0.25rem;
   transition: color 0.15s;
 }
-.p-DataCard__cta:hover { color: var(--color-accent); }
-.p-DataCard__cta:hover svg { transform: translateX(3px); }
-.p-DataCard__cta svg { transition: transform 0.2s var(--ease-expo); }
+.DataCard-cta:hover { color: var(--color-accent); }
+.DataCard-cta:hover svg { transform: translateX(3px); }
+.DataCard-cta svg { transition: transform 0.2s var(--ease-expo); }
  
 /* ============================================================
    ANIMATIONS
@@ -5409,7 +5409,7 @@ html {
   to   { opacity: 1; transform: translateY(0); }
 }
  
-.slot-animate { animation: slotIn 0.22s var(--ease-expo) both; }
+.is-slotAnimating { animation: slotIn 0.22s var(--ease-expo) both; }
 
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -5434,7 +5434,7 @@ html {
   margin-bottom: 40px;
 }
 
-.MediaDisplay-JournalDetails {
+.JournalMedia {
   position: relative;
   flex-shrink: 0;
   width: 100%;
@@ -5474,7 +5474,7 @@ blockquote {
   margin: 24px;
 }
 
-.blockquote-background {
+.Blockquote-background {
   background: var(--color-surface-card);
   padding: 20px;
   border-radius: 8px;
@@ -5500,11 +5500,11 @@ blockquote::after {
   content: "";
 }
 
-.blockquote-background p {
+.Blockquote-background p {
   line-height: 2;
 }
 
-.blockquote-author {
+.Blockquote-author {
   text-transform: uppercase;
   padding-top: 16px;
   color: var(--color-text-muted);
@@ -5740,12 +5740,12 @@ blockquote::after {
 
 /* ── Header inside summary ───────────────────────────────────────────────────── */
 
-.Accordion--summary-header {
+.Accordion-summaryHeader {
   display: flex;
   flex-direction: column;
 }
 
-.Accordion--summary-title {
+.Accordion-summaryTitle {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -5760,7 +5760,7 @@ blockquote::after {
   text-transform: uppercase;
 }
 
-.Accordion--summary[open] .Accordion--summary-title {
+.Accordion--summary[open] .Accordion-summaryTitle {
   color: var(--color-primary);
 }
 
@@ -5803,7 +5803,7 @@ blockquote::after {
   text-transform: capitalize;
 }
 
-.SummaryAccordion-section .highlight {
+.SummaryAccordion-section .SummaryAccordion-highlight {
   color: #fefcff;
   font-weight: var(--font-weight-semibold);
   text-decoration: underline;
@@ -5827,7 +5827,7 @@ blockquote::after {
   text-transform: capitalize;
 }
 
-.SummaryAccordion-sectionL .highlight {
+.SummaryAccordion-sectionL .SummaryAccordion-highlight {
   color: #fefcff;
   font-weight: var(--font-weight-semibold);
   text-decoration: underline;
@@ -5836,7 +5836,7 @@ blockquote::after {
   margin: 0 4px;
 }
 
-.summary-paragraph {
+.SummaryAccordion-paragraph {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -5845,7 +5845,7 @@ blockquote::after {
   letter-spacing: 0.5px;
 }
 
-.summary-paragraph ul {
+.SummaryAccordion-paragraph ul {
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
   font-size: 14px;
@@ -5853,19 +5853,19 @@ blockquote::after {
   padding-left: 16px;
 }
 
-.summary-paragraph ul li {
+.SummaryAccordion-paragraph ul li {
   margin-bottom: 8px;
   line-height: 24px;
 }
 
-.summary-paragraph ul li ul {
+.SummaryAccordion-paragraph ul li ul {
   padding-top: 2px;
   padding-left: 16px;
   margin-bottom: 8px;
 }
 
 /* --Summary Slider ----------------------------------------------------------*/
-.slider-ctr {
+.SummarySlider {
   width: 523px;
   height: 384px;
   position: relative;
@@ -5875,7 +5875,7 @@ blockquote::after {
   margin-bottom: 24px;
 }
 
-.slider-control {
+.SummarySlider-controls {
   position: absolute;
   top: x;
   right: 30px;
@@ -5885,7 +5885,7 @@ blockquote::after {
   overflow: hidden;
   z-index: 99;
 
-  .control {
+  .SummarySlider-control {
     width: 50%;
     height: 40px;
     display: block;
@@ -5896,23 +5896,23 @@ blockquote::after {
     transition: 0.3s all ease;
     background: var(--color-primary);
 
-    .icon {
+    .SummarySlider-icon {
       pointer-events: none;
       transition: 0.3s all ease;
     }
 
-    &.disabled {
+    &.is-disabled {
       pointer-events: none;
       background: var(--color-text-muted);
 
-      .icon {
+      .SummarySlider-icon {
         opacity: 0.5;
       }
     }
   }
 }
 
-.summaryslide {
+.SummarySlider-slide {
   position: absolute;
   top: 0;
   right: 0;
@@ -5932,18 +5932,18 @@ blockquote::after {
     background: rgba(0, 0, 0, 0.125);
   }
 
-  &.slide-on {
+  &.is-slideOn {
     -webkit-clip-path: inset(0 100% 0 0);
     clip-path: inset(0 100% 0 0);
   }
 
-  &.text-on .title {
+  &.is-textOn .SummarySlider-title {
     transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
     -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);
   }
 
-  &.text-on .author {
+  &.is-textOn .SummarySlider-author {
     transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.6s;
     -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);
@@ -5955,7 +5955,7 @@ blockquote::after {
     height: 384px;
   }
 
-  .summarycap {
+  .SummarySlider-caption {
     position: absolute;
     top: x;
     right: x;
@@ -5969,7 +5969,7 @@ blockquote::after {
     border-radius: 8px;
   }
 
-  .title {
+  .SummarySlider-title {
     font-size: var(--font-size-xs);
     color: var(--color-text);
     letter-spacing: 1px;
@@ -5981,7 +5981,7 @@ blockquote::after {
     border-radius: 8px;
   }
 
-  .author {
+  .SummarySlider-author {
     font-size: var(--font-size-xs);
     color: var(--color-primary-900);
     text-transform: uppercase;
@@ -5992,7 +5992,7 @@ blockquote::after {
   }
 }
 
-.SummaryAccordion-Labels {
+.SummaryAccordion-labels {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -6108,7 +6108,7 @@ blockquote::after {
 }
 
 @media (max-width: 666px) {
-  .slider-ctr {
+  .SummarySlider {
     display: none;
   }
 
@@ -6158,7 +6158,7 @@ blockquote::after {
     padding: 0 var(--spacing-lg) var(--spacing-lg);
   }
 
-  .SummaryAccordion-Labels {
+  .SummaryAccordion-labels {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -6283,7 +6283,7 @@ blockquote::after {
   }
 
   /* Fluid lg corners shrink to match — position is still % based */
-  .MediaDisplay-ProjectDetails {
+  .ProjectMedia {
     --_corner: 10px;
   }
 

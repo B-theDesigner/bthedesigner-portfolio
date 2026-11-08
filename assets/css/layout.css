@@ -103,7 +103,7 @@
   ════════════════════════════════════════════════════════ */
 /* ─── Controls row ───────────────────────────────────────────────────────── */
 
-.gallery__controls {
+.Gallery-controls {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -113,7 +113,7 @@
 
 /* ─── View toggle ────────────────────────────────────────────────────────── */
 
-.view-toggle {
+.ViewToggle {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -125,7 +125,7 @@
   align-self: flex-start;
 }
 
-.view-toggle__btn {
+.ViewToggle-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,16 +144,16 @@
     color var(--f-duration-fast) var(--f-ease-out-expo);
 }
 
-.view-toggle__btn:hover {
+.ViewToggle-btn:hover {
   color: var(--color-text);
 }
 
-.view-toggle__btn[aria-pressed="true"] {
+.ViewToggle-btn[aria-pressed="true"] {
   background: var(--color-surface);
   color: var(--color-text);
 }
 
-.view-toggle__btn svg {
+.ViewToggle-btn svg {
   width: 14px;
   height: 14px;
   flex-shrink: 0;
@@ -161,14 +161,14 @@
 
 /* ─── Tier-1 tab wrapper ─────────────────────────────────────────────────── */
 
-.gallery-tabs {
+.GalleryTabs {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 0;
 }
 
-.gallery-tabs__tier1 {
+.GalleryTabs-tier1 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
@@ -180,7 +180,7 @@
 
 /* ─── Category tab button ────────────────────────────────────────────────── */
 
-.gtab {
+.GalleryTab {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -201,7 +201,7 @@
   white-space: nowrap;
 }
 
-.gtab__chip {
+.GalleryTab-chip {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,22 +213,22 @@
   transition: background var(--f-duration-fast) var(--f-ease-out-expo);
 }
 
-.gtab__chip svg {
+.GalleryTab-chip svg {
   width: 14px;
   height: 14px;
   fill: var(--color-text-muted);
   transition: fill var(--f-duration-fast) var(--f-ease-out-expo);
 }
 
-.gtab:hover {
+.GalleryTab:hover {
   color: var(--color-text);
   background: var(--color-white-5);
 }
-.gtab:hover .gtab__chip {
+.GalleryTab:hover .GalleryTab-chip {
   background: var(--color-white-10);
 }
 
-.gtab[aria-selected="true"] {
+.GalleryTab[aria-selected="true"] {
   color: var(--color-primary);
   font-weight: var(--font-weight-semibold);
   background: var(--color-primary-dim);
@@ -236,20 +236,20 @@
   border-radius: 0;
 }
 
-.gtab[aria-selected="true"] .gtab__chip {
+.GalleryTab[aria-selected="true"] .GalleryTab-chip {
   background: var(--color-primary-dim);
 }
-.gtab[aria-selected="true"] .gtab__chip svg {
+.GalleryTab[aria-selected="true"] .GalleryTab-chip svg {
   fill: var(--color-primary);
 }
-.gtab:focus-visible {
+.GalleryTab:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
 /* ─── Selbox overlay ─────────────────────────────────────────────────────── */
 
-.gallery-selbox {
+.GallerySelbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -267,41 +267,41 @@
   opacity: 0;
 }
 
-.gallery-selbox.is-ready {
+.GallerySelbox.is-ready {
   opacity: 1;
 }
 
-.gallery-selbox__corner {
+.GallerySelbox-corner {
   position: absolute;
   width: 5px;
   height: 5px;
   background: var(--color-primary);
 }
 
-.gallery-selbox__corner--tl {
+.GallerySelbox-corner--tl {
   top: -2.5px;
   left: -2.5px;
 }
-.gallery-selbox__corner--tr {
+.GallerySelbox-corner--tr {
   top: -2.5px;
   right: -2.5px;
 }
-.gallery-selbox__corner--bl {
+.GallerySelbox-corner--bl {
   bottom: -2.5px;
   left: -2.5px;
 }
-.gallery-selbox__corner--br {
+.GallerySelbox-corner--br {
   bottom: -2.5px;
   right: -2.5px;
 }
 
-.gallery-selbox__cursor {
+.GallerySelbox-cursor {
   position: absolute;
   bottom: -14px;
   right: -10px;
   pointer-events: none;
 }
-.gallery-selbox__cursor img {
+.GallerySelbox-cursor img {
   display: block;
   width: 28px;
   height: 28px;
@@ -309,7 +309,7 @@
 
 /* ─── Tier-2 subtab row ──────────────────────────────────────────────────── */
 
-.gallery-tabs__tier2 {
+.GalleryTabs-tier2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -324,13 +324,13 @@
     opacity 220ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-tabs__tier2.is-visible {
+.GalleryTabs-tier2.is-visible {
   max-height: 60px;
   opacity: 1;
   pointer-events: auto;
 }
 
-.gsubtab {
+.GallerySubtab {
   display: inline-flex;
   align-items: center;
   padding: 10px var(--spacing-base);
@@ -350,17 +350,17 @@
   margin-top: 2px;
 }
 
-.gsubtab:hover {
+.GallerySubtab:hover {
   color: var(--color-text);
 }
 
-.gsubtab[aria-selected="true"] {
+.GallerySubtab[aria-selected="true"] {
   color: var(--color-primary);
   font-weight: var(--font-weight-medium);
   border-bottom-color: var(--color-primary);
 }
 
-.gsubtab:focus-visible {
+.GallerySubtab:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
   border-radius: 2px;

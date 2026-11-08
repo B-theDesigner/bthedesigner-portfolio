@@ -73,7 +73,7 @@
                     ></span>
                   </span>
                 </span>
-                <span class="DisplayEmphasis-cursor slide-right">
+                <span class="DisplayEmphasis-cursor u-slideRight">
                   <img
                     src="../assets/img/Vector.svg"
                     alt=""
@@ -109,7 +109,7 @@
             </div>
 
             <ul
-              class="playground-grid recent-entries-grid"
+              class="PlaygroundGrid recent-entries-grid"
               id="recent-entries-grid"
               aria-label="Three most recent playground entries"
             ></ul>
@@ -122,25 +122,25 @@
           <section class="Section">
             <section class="gallery" aria-labelledby="gallery-heading">
               <!-- Controls: filters + view toggle -->
-              <div class="gallery__controls">
+              <div class="Gallery-controls">
                 <!-- Two-tier tab filter -->
-                <div class="gallery-tabs" id="gallery-tabs">
+                <div class="GalleryTabs" id="gallery-tabs">
                   <!-- Tier 1 — Category tabs -->
                   <div
-                    class="gallery-tabs__tier1"
+                    class="GalleryTabs-tier1"
                     id="gallery-tier1"
                     role="tablist"
                     aria-label="Filter by category"
                   >
                     <button
-                      class="gtab"
+                      class="GalleryTab"
                       role="tab"
                       aria-selected="true"
                       tabindex="0"
                       data-category="all"
                       id="gtab-all"
                     >
-                      <span class="gtab__chip" aria-hidden="true">
+                      <span class="GalleryTab-chip" aria-hidden="true">
                         <svg
                           viewBox="0 0 14 14"
                           xmlns="http://www.w3.org/2000/svg"
@@ -155,14 +155,14 @@
                     </button>
 
                     <button
-                      class="gtab"
+                      class="GalleryTab"
                       role="tab"
                       aria-selected="false"
                       tabindex="-1"
                       data-category="process"
                       id="gtab-process"
                     >
-                      <span class="gtab__chip" aria-hidden="true">
+                      <span class="GalleryTab-chip" aria-hidden="true">
                         <svg
                           viewBox="0 0 14 14"
                           xmlns="http://www.w3.org/2000/svg"
@@ -174,14 +174,14 @@
                     </button>
 
                     <button
-                      class="gtab"
+                      class="GalleryTab"
                       role="tab"
                       aria-selected="false"
                       tabindex="-1"
                       data-category="reflection"
                       id="gtab-reflection"
                     >
-                      <span class="gtab__chip" aria-hidden="true">
+                      <span class="GalleryTab-chip" aria-hidden="true">
                         <svg
                           viewBox="0 0 14 14"
                           xmlns="http://www.w3.org/2000/svg"
@@ -195,7 +195,7 @@
 
                   <!-- Tier 2 — Subtab row (JS-populated, hidden until a category with subtabs is active) -->
                   <div
-                    class="gallery-tabs__tier2"
+                    class="GalleryTabs-tier2"
                     id="gallery-tier2"
                     role="tablist"
                     aria-label="Filter by subcategory"
@@ -207,12 +207,12 @@
 
                 <!-- View toggle pill -->
                 <div
-                  class="view-toggle"
+                  class="ViewToggle"
                   role="group"
                   aria-label="Change gallery view"
                 >
                   <button
-                    class="view-toggle__btn"
+                    class="ViewToggle-btn"
                     id="btn-grid"
                     aria-pressed="true"
                     aria-label="Grid view"
@@ -260,7 +260,7 @@
                     grid
                   </button>
                   <button
-                    class="view-toggle__btn"
+                    class="ViewToggle-btn"
                     id="btn-list"
                     aria-pressed="false"
                     aria-label="List view"
@@ -305,7 +305,7 @@
 
               <!-- Card list -->
               <ul
-                class="playground-grid"
+                class="PlaygroundGrid"
                 id="playground-grid"
                 data-view="grid"
                 aria-label="playground gallery"
@@ -351,16 +351,16 @@
           properties: ["font-size"],
           enterFrom: {
             opacity: (el) =>
-              el.classList.contains("playground-card") ? "1" : "0",
+              el.classList.contains("PlaygroundCard") ? "1" : "0",
             transform: (el) =>
-              el.classList.contains("playground-card")
+              el.classList.contains("PlaygroundCard")
                 ? "translateY(60%) scale(.85)"
                 : "none",
           },
           leaveTo: {
             opacity: 0,
             transform: (el) => {
-              if (!el.classList.contains("playground-card")) return "none";
+              if (!el.classList.contains("PlaygroundCard")) return "none";
               const i = [...el.parentElement.children].indexOf(el);
               const d = i % 2 ? -1 : 1;
               return `translate(${30 * d}%, 30%) rotate(${10 * d}deg) scale(.85)`;

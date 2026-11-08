@@ -57,7 +57,7 @@
                   <span class="DisplayEmphasis-corner DisplayEmphasis-corner--br"></span>
                 </span>
               </span>
-              <span class="DisplayEmphasis-cursor slide-right">
+              <span class="DisplayEmphasis-cursor u-slideRight">
                 <img src="../assets/img/Vector.svg" alt="" width="28" height="28" />
               </span>
             </span>
@@ -69,13 +69,13 @@
         <section class="Section">
           <section class="gallery" aria-labelledby="gallery-heading">
             <!-- Controls: filters + view toggle -->
-            <div class="gallery__controls">
+            <div class="Gallery-controls">
               <!-- Two-tier tab filter -->
-              <div class="gallery-tabs" id="gallery-tabs">
+              <div class="GalleryTabs" id="gallery-tabs">
                 <!-- Tier 1 — Category tabs -->
-                <div class="gallery-tabs__tier1" id="gallery-tier1" role="tablist" aria-label="Filter by category">
-                  <button class="gtab" role="tab" aria-selected="true" tabindex="0" data-category="all" id="gtab-all">
-                    <span class="gtab__chip" aria-hidden="true">
+                <div class="GalleryTabs-tier1" id="gallery-tier1" role="tablist" aria-label="Filter by category">
+                  <button class="GalleryTab" role="tab" aria-selected="true" tabindex="0" data-category="all" id="gtab-all">
+                    <span class="GalleryTab-chip" aria-hidden="true">
                       <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="5" height="5" rx="0.5" />
                         <rect x="8" y="1" width="5" height="5" rx="0.5" />
@@ -86,9 +86,9 @@
                     All
                   </button>
 
-                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="redesign"
+                  <button class="GalleryTab" role="tab" aria-selected="false" tabindex="-1" data-category="redesign"
                     id="gtab-redesign">
-                    <span class="gtab__chip" aria-hidden="true">
+                    <span class="GalleryTab-chip" aria-hidden="true">
                       <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2 11 L7 2 L12 11 Z" />
                       </svg>
@@ -96,9 +96,9 @@
                     Redesign
                   </button>
 
-                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="netnew"
+                  <button class="GalleryTab" role="tab" aria-selected="false" tabindex="-1" data-category="netnew"
                     id="gtab-netnew">
-                    <span class="gtab__chip" aria-hidden="true">
+                    <span class="GalleryTab-chip" aria-hidden="true">
                       <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7" cy="7" r="4.5" />
                       </svg>
@@ -106,9 +106,9 @@
                     Net New
                   </button>
 
-                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="research"
+                  <button class="GalleryTab" role="tab" aria-selected="false" tabindex="-1" data-category="research"
                     id="gtab-research">
-                    <span class="gtab__chip" aria-hidden="true">
+                    <span class="GalleryTab-chip" aria-hidden="true">
                       <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="7" cy="7" r="4.5" />
                       </svg>
@@ -117,9 +117,9 @@
                   </button>
 
                   <!-- Design System Buttom 
-                  <button class="gtab" role="tab" aria-selected="false" tabindex="-1" data-category="designsystem"
+                  <button class="GalleryTab" role="tab" aria-selected="false" tabindex="-1" data-category="designsystem"
                     id="gtab-designsystem">
-                    <span class="gtab__chip" aria-hidden="true">
+                    <span class="GalleryTab-chip" aria-hidden="true">
                       <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1.5" width="12" height="2.5" rx="0.5" />
                         <rect x="1" y="6" width="8" height="2.5" rx="0.5" />
@@ -132,15 +132,15 @@
                 
 
                 <!-- Tier 2 — Subtab row (JS-populated, hidden until a category with subtabs is active) -->
-                <div class="gallery-tabs__tier2" id="gallery-tier2" role="tablist" aria-label="Filter by subcategory">
+                <div class="GalleryTabs-tier2" id="gallery-tier2" role="tablist" aria-label="Filter by subcategory">
                   <!-- Injected by JS -->
                 </div>
               </div>
               <!-- /gallery-tabs -->
 
               <!-- View toggle pill -->
-              <div class="view-toggle" role="group" aria-label="Change gallery view">
-                <button class="view-toggle__btn" id="btn-grid" aria-pressed="true" aria-label="Grid view"
+              <div class="ViewToggle" role="group" aria-label="Change gallery view">
+                <button class="ViewToggle-btn" id="btn-grid" aria-pressed="true" aria-label="Grid view"
                   data-view="grid">
                   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
                     <rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" />
@@ -150,7 +150,7 @@
                   </svg>
                   grid
                 </button>
-                <button class="view-toggle__btn" id="btn-list" aria-pressed="false" aria-label="List view"
+                <button class="ViewToggle-btn" id="btn-list" aria-pressed="false" aria-label="List view"
                   data-view="list">
                   <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
                     <rect x="1" y="2" width="14" height="3" rx="1" fill="currentColor" />
@@ -164,31 +164,31 @@
             <!-- /gallery__controls -->
 
             <!-- Card list -->
-            <ul class="project-grid" id="project-grid" data-view="grid" aria-label="Project gallery" aria-live="polite"
+            <ul class="ProjectGrid" id="project-grid" data-view="grid" aria-label="Project gallery" aria-live="polite"
               aria-atomic="false">
               <!-- Card 1 -->
 
-              <li class="project-card" data-category="redesign" data-subcategory="production">
+              <li class="ProjectCard" data-category="redesign" data-subcategory="production">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/guidedhealthcare/New Hero.png"
                         alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Redesign</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Redesign</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         Guided Healthcare Experience
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         Improved a critical healthcare experience by reducing
                         user confusion and promoting accessible, actionable
                         support pathways.
                       </p>
-                      <a href="guidedhealthcare/" class="project-card__cta"
+                      <a href="guidedhealthcare/" class="ProjectCard-cta"
                         aria-label="Guided Healthcare Experience — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -202,25 +202,25 @@
               </li>
 
               <!-- Card -->
-              <li class="project-card" data-category="netnew" data-subcategory="test">
+              <li class="ProjectCard" data-category="netnew" data-subcategory="test">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/NQ installments/Installment_Hero.png"
                         alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Net New</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Net New</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         Non-Qualified Installment Payment Experience
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         A net-new installment payments experienced designed to clarify progress, timing, and structure across complex non-qualifed plans.
                       </p>
-                      <a href="installments/" class="project-card__cta"
+                      <a href="installments/" class="ProjectCard-cta"
                         aria-label="Guided Healthcare Experience — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -234,25 +234,25 @@
               </li>
 
               <!-- Card —-->
-              <li class="project-card" data-category="redesign" data-subcategory="launched">
+              <li class="ProjectCard" data-category="redesign" data-subcategory="launched">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/investments/New Hero.png"
                         alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Redesign</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Redesign</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         Financial Analytics Dashboard
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         Redesigned a high-stakes Investments experience to improve data clarity, comparison, and performance.
                       </p>
-                      <a href="investments/" class="project-card__cta"
+                      <a href="investments/" class="ProjectCard-cta"
                         aria-label="Guided Healthcare Experience — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -266,25 +266,25 @@
               </li>
 
               <!-- Card —-->
-              <li class="project-card" data-category="redesign" data-subcategory="launched">
+              <li class="ProjectCard" data-category="redesign" data-subcategory="launched">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/BGDE/New Hero.png"
                         alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Redesign</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Redesign</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         Black Girls Do Engineer Website Redesign
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         End-to-end website redesign for a STEM nonprofit — research through delivery, two prototype designs, six usability sessions.
                       </p>
-                      <a href="BGDE/" class="project-card__cta"
+                      <a href="BGDE/" class="ProjectCard-cta"
                         aria-label="Guided Healthcare Experience — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -298,27 +298,27 @@
               </li>
 
                <!-- Card —-->
-              <li class="project-card" data-category="netnew" data-subcategory="production">
+              <li class="ProjectCard" data-category="netnew" data-subcategory="production">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/moneyjar/New Hero.png"
                         alt="Screenshot of the Guided Healthcare Experience navigation redesign" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Net New</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Net New</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         MoneyJar: Financial Management App
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         Application design to assist users with their financial goals by leveraging
 human factors knowledge about finances and money, incorporating emerging technologies and specific e-learning resources geared towards financial literacy. 
 
                       </p>
-                      <a href="moneyjar/" class="project-card__cta"
+                      <a href="moneyjar/" class="ProjectCard-cta"
                         aria-label="MoneyJar: Financial Management App — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -332,25 +332,25 @@ human factors knowledge about finances and money, incorporating emerging technol
               </li>
 
               <!-- Card —-->
-              <li class="project-card" data-category="research" data-subcategory="generative">
+              <li class="ProjectCard" data-category="research" data-subcategory="generative">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/dogadopt/New Hero.png"
                         alt="Screenshot of the Dog Adoption research" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Research</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Research</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         Dog Adoption Motivations Research
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         Conducted user research to understand the motivations and decision-making processes of potential dog adopters.
                       </p>
-                      <a href="dogadoption/" class="project-card__cta"
+                      <a href="dogadoption/" class="ProjectCard-cta"
                         aria-label="Guided Healthcare Experience — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -363,25 +363,25 @@ human factors knowledge about finances and money, incorporating emerging technol
                 </div>
               </li>
 
-              <li class="project-card" data-category="research" data-subcategory="eval">
+              <li class="ProjectCard" data-category="research" data-subcategory="eval">
                 <div data-card-hover>
-                  <span class="project-card__container" aria-hidden="true">
-                    <div class="project-card__image">
+                  <span class="ProjectCard-container" aria-hidden="true">
+                    <div class="ProjectCard-image">
                       <img src="../assets/img/projects/airbnb/New Hero.png"
                         alt="Screenshot of the Airbnb Web Accessibility Evaluation" width="800"
                         height="500" loading="lazy" decoding="async" />
                     </div>
-                    <div class="project-card__body">
-                      <div class="project-card__tags" aria-label="Project type">
-                        <span class="project-card__tag">Research</span>
+                    <div class="ProjectCard-body">
+                      <div class="ProjectCard-tags" aria-label="Project type">
+                        <span class="ProjectCard-tag">Research</span>
                       </div>
-                      <h3 class="project-card__title">
+                      <h3 class="ProjectCard-title">
                         Airbnb Web Accessibility Evaluation
                       </h3>
-                      <p class="project-card__summary">
+                      <p class="ProjectCard-summary">
                         Evaluated Airbnb's homepage and help center against WCAG 2.0 standards, uncovering accessibility gaps across all four POUR principles through manual, automated, and screen reader testing.
                       </p>
-                      <a href="airbnb/" class="project-card__cta"
+                      <a href="airbnb/" class="ProjectCard-cta"
                         aria-label="Airbnb Web Accessibility Evaluation — Read details">
                         Read details
                         <svg viewBox="0 0 14 14" fill="none">
@@ -395,29 +395,29 @@ human factors knowledge about finances and money, incorporating emerging technol
               </li>
 
               <!-- Extra cards
-              <li class="project-card" data-category="netnew" data-subcategory="">
-                <a class="project-card__container" href="/projects/member-onboarding-flow"
+              <li class="ProjectCard" data-category="netnew" data-subcategory="">
+                <a class="ProjectCard-container" href="/projects/member-onboarding-flow"
                   aria-label="Member Onboarding Flow — Read details">
-                  <div class="project-card__image">
+                  <div class="ProjectCard-image">
                     <img src="https://placehold.co/800x500/1A1825/6B4EFF?text=Project+Image"
                       alt="Screenshot of the member onboarding flow prototype" width="800" height="500" loading="lazy"
                       decoding="async" />
                   </div>
-                  <div class="project-card__body">
-                    <div class="project-card__tags" aria-label="Project type">
-                      <span class="project-card__tag">Net New</span>
-                      <span class="project-card__tag-divider" aria-hidden="true">/</span>
-                      <span class="project-card__tag">Concept</span>
+                  <div class="ProjectCard-body">
+                    <div class="ProjectCard-tags" aria-label="Project type">
+                      <span class="ProjectCard-tag">Net New</span>
+                      <span class="ProjectCard-tagDivider" aria-hidden="true">/</span>
+                      <span class="ProjectCard-tag">Concept</span>
                     </div>
-                    <h3 class="project-card__title">
+                    <h3 class="ProjectCard-title">
                       Member Onboarding Flow
                     </h3>
-                    <p class="project-card__summary">
+                    <p class="ProjectCard-summary">
                       Designed a zero-to-enrolled onboarding experience that
                       reduced time-to-activation and increased member
                       confidence at key decision points.
                     </p>
-                    <span class="project-card__cta" aria-hidden="true">
+                    <span class="ProjectCard-cta" aria-hidden="true">
                       Read details
                       <svg viewBox="0 0 14 14" fill="none">
                         <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -428,29 +428,29 @@ human factors knowledge about finances and money, incorporating emerging technol
                 </a>
               </li>
 
-              <li class="project-card" data-category="designsystem" data-subcategory="component">
-                <a class="project-card__container" href="/projects/provider-search-experience"
+              <li class="ProjectCard" data-category="designsystem" data-subcategory="component">
+                <a class="ProjectCard-container" href="/projects/provider-search-experience"
                   aria-label="Provider Search Experience — Read details">
-                  <div class="project-card__image">
+                  <div class="ProjectCard-image">
                     <img src="https://placehold.co/800x500/1A1825/6B4EFF?text=Project+Image"
                       alt="Screenshot of the provider search and filtering experience" width="800" height="500"
                       loading="lazy" decoding="async" />
                   </div>
-                  <div class="project-card__body">
-                    <div class="project-card__tags" aria-label="Project type">
-                      <span class="project-card__tag">Design System</span>
-                      <span class="project-card__tag-divider" aria-hidden="true">/</span>
-                      <span class="project-card__tag">Component</span>
+                  <div class="ProjectCard-body">
+                    <div class="ProjectCard-tags" aria-label="Project type">
+                      <span class="ProjectCard-tag">Design System</span>
+                      <span class="ProjectCard-tagDivider" aria-hidden="true">/</span>
+                      <span class="ProjectCard-tag">Component</span>
                     </div>
-                    <h3 class="project-card__title">
+                    <h3 class="ProjectCard-title">
                       Provider Search Experience
                     </h3>
-                    <p class="project-card__summary">
+                    <p class="ProjectCard-summary">
                       Built a filterable provider discovery surface that made
                       finding in-network care faster and less cognitively
                       taxing.
                     </p>
-                    <span class="project-card__cta" aria-hidden="true">
+                    <span class="ProjectCard-cta" aria-hidden="true">
                       Read details
                       <svg viewBox="0 0 14 14" fill="none">
                         <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -462,29 +462,29 @@ human factors knowledge about finances and money, incorporating emerging technol
               </li>
 
               
-              <li class="project-card" data-category="designsystem" data-subcategory="tokens">
-                <a class="project-card__container" href="/projects/wealth-guidance-dashboard"
+              <li class="ProjectCard" data-category="designsystem" data-subcategory="tokens">
+                <a class="ProjectCard-container" href="/projects/wealth-guidance-dashboard"
                   aria-label="Wealth Guidance Dashboard — Read details">
-                  <div class="project-card__image">
+                  <div class="ProjectCard-image">
                     <img src="https://placehold.co/800x500/1A1825/6B4EFF?text=Project+Image"
                       alt="Screenshot of the Wealth Guidance dashboard redesign" width="800" height="500" loading="lazy"
                       decoding="async" />
                   </div>
-                  <div class="project-card__body">
-                    <div class="project-card__tags" aria-label="Project type">
-                      <span class="project-card__tag">Design System</span>
-                      <span class="project-card__tag-divider" aria-hidden="true">/</span>
-                      <span class="project-card__tag">Tokens</span>
+                  <div class="ProjectCard-body">
+                    <div class="ProjectCard-tags" aria-label="Project type">
+                      <span class="ProjectCard-tag">Design System</span>
+                      <span class="ProjectCard-tagDivider" aria-hidden="true">/</span>
+                      <span class="ProjectCard-tag">Tokens</span>
                     </div>
-                    <h3 class="project-card__title">
+                    <h3 class="ProjectCard-title">
                       Wealth Guidance Dashboard
                     </h3>
-                    <p class="project-card__summary">
+                    <p class="ProjectCard-summary">
                       Redesigned a financial wellness dashboard to surface
                       actionable guidance without overwhelming members
                       mid-decision.
                     </p>
-                    <span class="project-card__cta" aria-hidden="true">
+                    <span class="ProjectCard-cta" aria-hidden="true">
                       Read details
                       <svg viewBox="0 0 14 14" fill="none">
                         <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
@@ -533,16 +533,16 @@ human factors knowledge about finances and money, incorporating emerging technol
         properties: ["font-size"],
         enterFrom: {
           opacity: (el) =>
-            el.classList.contains("project-card") ? "1" : "0",
+            el.classList.contains("ProjectCard") ? "1" : "0",
           transform: (el) =>
-            el.classList.contains("project-card")
+            el.classList.contains("ProjectCard")
               ? "translateY(60%) scale(.85)"
               : "none",
         },
         leaveTo: {
           opacity: 0,
           transform: (el) => {
-            if (!el.classList.contains("project-card")) return "none";
+            if (!el.classList.contains("ProjectCard")) return "none";
             const i = [...el.parentElement.children].indexOf(el);
             const d = i % 2 ? -1 : 1;
             return `translate(${30 * d}%, 30%) rotate(${10 * d}deg) scale(.85)`;

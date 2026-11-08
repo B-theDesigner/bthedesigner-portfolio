@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!$grid || !tier1 || !tier2) return; // not on a gallery page
 
-  const tier1Tabs = [...tier1.querySelectorAll('.gtab')];
-  const viewBtns  = [...document.querySelectorAll('.view-toggle__btn')];
+  const tier1Tabs = [...tier1.querySelectorAll('.GalleryTab')];
+  const viewBtns  = [...document.querySelectorAll('.ViewToggle-btn')];
 
   // ── View toggle ────────────────────────────────────────────────────────
   // cardsLayout is set by the module script block in the HTML once
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const { cardsLayout, utils, stagger } = window._galleryLayout;
       cardsLayout.update(() => {
         $grid.setAttribute('data-view', view);
-        utils.set(utils.$('#project-grid .project-card'), { transform: 'none' });
+        utils.set(utils.$('#project-grid .ProjectCard'), { transform: 'none' });
         viewBtns.forEach(btn => btn.setAttribute('aria-pressed', btn.dataset.view === view ? 'true' : 'false'));
       }, { duration: 450, ease: 'inOut(3)', delay: stagger([0, 300]) });
     } else {
@@ -103,10 +103,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const viewToggleGroup = document.querySelector('.view-toggle');
+  const viewToggleGroup = document.querySelector('.ViewToggle');
   if (viewToggleGroup) {
     viewToggleGroup.addEventListener('keydown', e => {
-      const btns = [...viewToggleGroup.querySelectorAll('.view-toggle__btn')];
+      const btns = [...viewToggleGroup.querySelectorAll('.ViewToggle-btn')];
       const idx  = btns.indexOf(document.activeElement);
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); btns[(idx + 1) % btns.length].focus(); }
       if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')   { e.preventDefault(); btns[(idx - 1 + btns.length) % btns.length].focus(); }
@@ -115,14 +115,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Selbox ─────────────────────────────────────────────────────────────
   const selBox = document.createElement('div');
-  selBox.className = 'gallery-selbox';
+  selBox.className = 'GallerySelbox';
   selBox.setAttribute('aria-hidden', 'true');
   selBox.innerHTML = `
-    <span class="gallery-selbox__corner gallery-selbox__corner--tl"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--tr"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--bl"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--br"></span>
-    <span class="gallery-selbox__cursor">
+    <span class="GallerySelbox-corner GallerySelbox-corner--tl"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--tr"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--bl"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--br"></span>
+    <span class="GallerySelbox-cursor">
       <!-- ─── Cursor Image ──────────────────────────────────
       <img src="./assets/img/Vector.svg" alt="" width="28" height="28" aria-hidden="true"> -->
     </span>
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', () => {
     cancelAnimationFrame(resizeRaf);
     resizeRaf = requestAnimationFrame(() => {
-      const active = tier1.querySelector('.gtab[aria-selected="true"]');
+      const active = tier1.querySelector('.GalleryTab[aria-selected="true"]');
       if (active) moveSelbox(active);
     });
   });
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
     tier2.innerHTML = '';
     subtabs.forEach((item, i) => {
       const btn = document.createElement('button');
-      btn.className = 'gsubtab';
+      btn.className = 'GallerySubtab';
       btn.setAttribute('role', 'tab');
       btn.setAttribute('data-subcategory', item.subcategory);
       btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tier2.classList.add('is-visible');
 
-    const subtabBtns = [...tier2.querySelectorAll('.gsubtab')];
+    const subtabBtns = [...tier2.querySelectorAll('.GallerySubtab')];
     subtabBtns.forEach(btn => {
       btn.addEventListener('click', () => activateTier2(btn, subtabBtns));
       btn.addEventListener('keydown', e => {
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── Filter gallery ──────────────────────────────────────────────────────
   function filterGallery() {
-    $grid.querySelectorAll('.project-card').forEach(card => {
+    $grid.querySelectorAll('.ProjectCard').forEach(card => {
       let show = false;
       if      (currentCategory === 'all')        show = true;
       else if (currentSubcategory === 'all')      show = card.dataset.category === currentCategory;
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ── Init ────────────────────────────────────────────────────────────────
-  const initialTab = tier1.querySelector('.gtab[aria-selected="true"]') || tier1Tabs[0];
+  const initialTab = tier1.querySelector('.GalleryTab[aria-selected="true"]') || tier1Tabs[0];
   if (initialTab) activateTier1(initialTab, false);
 
 }); // end DOMContentLoaded

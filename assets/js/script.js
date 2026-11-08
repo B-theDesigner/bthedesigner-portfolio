@@ -119,7 +119,7 @@ class NavMenuDropdown {
     // "is the current page inside this section," not "is this panel expanded."
     // toggle() never touches this class, so collapsing the dropdown won't
     // erase the signal that the user is still on one of its subpages.
-    this.el.classList.toggle("has-active-child", hasActiveChild);
+    this.el.classList.toggle("is-activeParent", hasActiveChild);
 
     // Auto-open on initial page load only, as a helpful default —
     // the user is still free to manually collapse it afterward.
@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", init);
   function buildNavigation() {
     linksContainer.innerHTML = "";
 
-    const existingSquares = svgGroup.querySelectorAll(".anchor-square");
+    const existingSquares = svgGroup.querySelectorAll(".AnchorList-square");
     existingSquares.forEach((square) => square.remove());
 
     const svgHeight = calculateSVGHeight(sections.length);
@@ -494,7 +494,7 @@ document.addEventListener("DOMContentLoaded", init);
       }
 
       const button = document.createElement("button");
-      button.className = "anchor-link";
+      button.className = "AnchorList-link";
       button.textContent = label;
       button.dataset.index = index;
       button.dataset.target = sectionId;
@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", init);
         "http://www.w3.org/2000/svg",
         "rect",
       );
-      rect.setAttribute("class", "anchor-square");
+      rect.setAttribute("class", "AnchorList-square");
       rect.setAttribute("x", "0.5");
       rect.setAttribute("y", SQUARE_TOP_START + index * SQUARE_SPACING);
       rect.setAttribute("width", "4");
@@ -529,12 +529,12 @@ document.addEventListener("DOMContentLoaded", init);
     if (index < 0 || index >= sections.length) return;
     currentActiveIndex = index;
 
-    const links = linksContainer.querySelectorAll(".anchor-link");
-    links.forEach((link, i) => link.classList.toggle("active", i === index));
+    const links = linksContainer.querySelectorAll(".AnchorList-link");
+    links.forEach((link, i) => link.classList.toggle("is-active", i === index));
 
-    const squares = svgGroup.querySelectorAll(".anchor-square");
+    const squares = svgGroup.querySelectorAll(".AnchorList-square");
     squares.forEach((square, i) =>
-      square.classList.toggle("active", i === index),
+      square.classList.toggle("is-active", i === index),
     );
   }
 
@@ -577,7 +577,7 @@ document.addEventListener("DOMContentLoaded", init);
     const scrollContainer = document.querySelector(".ContentWrapper");
     if (!scrollContainer) return;
 
-    const highlights = document.querySelectorAll(".c-text-highlight");
+    const highlights = document.querySelectorAll(".TextHighlight");
     if (!highlights.length) return;
 
     highlights.forEach((el) => {
@@ -714,7 +714,7 @@ document.addEventListener("DOMContentLoaded", init);
     .tab-selbox__corner--bl { bottom: -2.5px; left: -2.5px;  }
     .tab-selbox__corner--br { bottom: -2.5px; right: -2.5px; }
     .tab-selbox__cursor { position: absolute; bottom: -14px; right: -10px; pointer-events: none; }
-    .tab-btn__corners, .tab-btn__cursor { display: none !important; }
+    .TabButton-corners, .TabButton-cursor { display: none !important; }
   `;
   document.head.appendChild(style);
 
@@ -835,13 +835,13 @@ document.addEventListener("DOMContentLoaded", init);
 
   // ── Find and init all tab groups on the page ───────────────────────────────
   function initAllTabGroups() {
-    document.querySelectorAll(".tabs-nav").forEach((tabList) => {
+    document.querySelectorAll(".Tabs-nav").forEach((tabList) => {
       // Each .tabs-nav is paired with the next sibling .tabs-panel-wrapper
       const panelWrapper = tabList.nextElementSibling?.classList.contains(
-        "tabs-panel-wrapper",
+        "Tabs-panels",
       )
         ? tabList.nextElementSibling
-        : tabList.closest("section, div")?.querySelector(".tabs-panel-wrapper");
+        : tabList.closest("section, div")?.querySelector(".Tabs-panels");
 
       initTabGroup(tabList, panelWrapper);
     });
@@ -858,7 +858,7 @@ document.addEventListener("DOMContentLoaded", init);
 
 (function () {
   function initTabAccordion() {
-    const accTriggers = document.querySelectorAll(".accordion-trigger");
+    const accTriggers = document.querySelectorAll(".AccordionGroup-trigger");
     if (!accTriggers.length) return;
 
     accTriggers.forEach((trigger) => {
@@ -867,9 +867,9 @@ document.addEventListener("DOMContentLoaded", init);
 
         // Collapse only siblings within the same .accordion group —
         // prevents a cert accordion click from closing a Background accordion item
-        const group = trigger.closest(".accordion");
+        const group = trigger.closest(".AccordionGroup");
         const groupTriggers = group
-          ? group.querySelectorAll(".accordion-trigger")
+          ? group.querySelectorAll(".AccordionGroup-trigger")
           : accTriggers;
 
         groupTriggers.forEach((t) => {
@@ -1054,10 +1054,10 @@ class DisplayEmphasis {
 
 // ─── Summary Slideshow ────────────────────────────────────────────────────────
 
-var sliderControl = document.querySelector(".slider-control");
+var sliderControl = document.querySelector(".SummarySlider-controls");
 
 if (sliderControl) {
-  var slides = document.querySelectorAll(".summaryslide");
+  var slides = document.querySelectorAll(".SummarySlider-slide");
   var slidesLength = slides.length;
   var slidesArr = [].slice.call(slides).reverse();
   var slideCurrent = 0;
@@ -1071,13 +1071,13 @@ if (sliderControl) {
       var nextSlide = slidesArr[slideCurrent + 1];
       var slide = slidesArr[slideCurrent];
 
-      slide.classList.add("slide-on");
-      slide.classList.remove("text-on");
-      nextSlide.classList.add("text-on");
+      slide.classList.add("is-slideOn");
+      slide.classList.remove("is-textOn");
+      nextSlide.classList.add("is-textOn");
       slideCurrent += 1;
 
-      if (slideCurrent > 0) prev.classList.remove("disabled");
-      if (slideCurrent === slidesLength - 1) next.classList.add("disabled");
+      if (slideCurrent > 0) prev.classList.remove("is-disabled");
+      if (slideCurrent === slidesLength - 1) next.classList.add("is-disabled");
     }
 
     if (target.classList.contains("prev")) {
@@ -1088,12 +1088,12 @@ if (sliderControl) {
       var prevSlide = slidesArr[slideCurrent + 1];
       var slide = slidesArr[slideCurrent];
 
-      prevSlide.classList.remove("text-on");
-      slide.classList.remove("slide-on");
-      slide.classList.add("text-on");
+      prevSlide.classList.remove("is-textOn");
+      slide.classList.remove("is-slideOn");
+      slide.classList.add("is-textOn");
 
-      if (slideCurrent === slidesLength - 2) next.classList.remove("disabled");
-      if (slideCurrent === 0) prev.classList.add("disabled");
+      if (slideCurrent === slidesLength - 2) next.classList.remove("is-disabled");
+      if (slideCurrent === 0) prev.classList.add("is-disabled");
     }
   });
 }
@@ -1105,7 +1105,7 @@ if (sliderControl) {
     .querySelectorAll("[data-annotation-toggle]")
     .forEach(function (toggleBtn) {
       var wrapper = toggleBtn.closest(
-        ".MediaDisplay-ProjectDetails--annotatable",
+        ".ProjectMedia--annotatable",
       );
       var frame = wrapper.querySelector("[data-annotation-frame]");
       var labelShow = wrapper.querySelector('[data-label="show"]');
@@ -1157,7 +1157,7 @@ if (typeof gsap !== "undefined" && typeof Lenis !== "undefined") {
       .filter((st) => st.vars._textReveal)
       .forEach((st) => st.kill());
 
-    document.querySelectorAll(".text-reveal").forEach((text) => {
+    document.querySelectorAll(".TextReveal").forEach((text) => {
       if (text._splitInstance) text._splitInstance.revert();
 
       const splitText = new SplitType(text, { types: "words" });
@@ -1446,12 +1446,12 @@ class FindingsSlideshow {
   ];
 
   // ── DOM refs ───────────────────────────────────────────────────────────────
-  const irlcards = document.querySelectorAll(".irlcard");
-  const dots = document.querySelectorAll(".dot");
-  const irlNameEl = document.querySelector(".irl-name");
-  const irlDescEl = document.querySelector(".irl-description");
-  const upArrows = document.querySelectorAll(".irlnav-arrow.up");
-  const downArrows = document.querySelectorAll(".irlnav-arrow.down");
+  const irlcards = document.querySelectorAll(".IrlCarousel-card");
+  const dots = document.querySelectorAll(".IrlCarousel-dot");
+  const irlNameEl = document.querySelector(".IrlCarousel-name");
+  const irlDescEl = document.querySelector(".IrlCarousel-description");
+  const upArrows = document.querySelectorAll(".IrlCarousel-arrow.up");
+  const downArrows = document.querySelectorAll(".IrlCarousel-arrow.down");
 
   // Guard — only runs on pages with a carousel
   if (!irlcards.length || !irlNameEl || !irlDescEl) return;
@@ -1470,24 +1470,24 @@ class FindingsSlideshow {
     irlcards.forEach((card, i) => {
       const offset = (i - currentIndex + irlcards.length) % irlcards.length;
       card.classList.remove(
-        "center",
-        "up-1",
-        "up-2",
-        "down-1",
-        "down-2",
-        "hidden",
+        "is-center",
+        "is-up1",
+        "is-up2",
+        "is-down1",
+        "is-down2",
+        "is-hidden",
       );
 
-      if (offset === 0) card.classList.add("center");
-      else if (offset === 1) card.classList.add("down-1");
-      else if (offset === 2) card.classList.add("down-2");
-      else if (offset === irlcards.length - 1) card.classList.add("up-1");
-      else if (offset === irlcards.length - 2) card.classList.add("up-2");
-      else card.classList.add("hidden");
+      if (offset === 0) card.classList.add("is-center");
+      else if (offset === 1) card.classList.add("is-down1");
+      else if (offset === 2) card.classList.add("is-down2");
+      else if (offset === irlcards.length - 1) card.classList.add("is-up1");
+      else if (offset === irlcards.length - 2) card.classList.add("is-up2");
+      else card.classList.add("is-hidden");
     });
 
     dots.forEach((dot, i) =>
-      dot.classList.toggle("active", i === currentIndex),
+      dot.classList.toggle("is-active", i === currentIndex),
     );
 
     irlNameEl.style.opacity = "0";

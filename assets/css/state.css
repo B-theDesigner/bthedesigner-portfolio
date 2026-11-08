@@ -67,21 +67,21 @@
    class is never touched by toggle() — it only changes on page load via
    setActiveFromUrl(), so closing the panel doesn't erase the signal. ── */
 
-.NavMenu-dropdown.has-active-child {
+.NavMenu-dropdown.is-activeParent {
   background-color: var(--color-primary-dim);
   color: var(--color-text);
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-md);
 }
 
-.NavMenu-dropdown.has-active-child.is-open .NavMenu-dropdownTrigger {
+.NavMenu-dropdown.is-activeParent.is-open .NavMenu-dropdownTrigger {
   background-color: var(--color-primary-dim);
   color: var(--color-text);
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
-.NavMenu-dropdown.has-active-child .NavMenu-dropdownTrigger .NavMenu-itemIcon {
+.NavMenu-dropdown.is-activeParent .NavMenu-dropdownTrigger .NavMenu-itemIcon {
   color: var(--color-primary);
 }
 
@@ -129,17 +129,17 @@
 
 /* ── Anchor Link States ──────────────────────────────────────────────── */
 
-.anchor-link:hover {
+.AnchorList-link:hover {
   opacity: 0.8;
 }
 
-.anchor-link.active {
+.AnchorList-link.is-active {
   color: var(--color-primary-400);
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.5px;
 }
 
-.anchor-square.active {
+.AnchorList-square.is-active {
   fill: var(--color-primary);
 }
 
@@ -273,7 +273,7 @@
 
 /* ── Different type of Labels ──────────────────────────────────────────────── */
 
-.label--increase {
+.Label--increase {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xs);
@@ -282,13 +282,13 @@
   font-weight: var(--font-weight-light);
 }
 
-.label--increase::before {
+.Label--increase::before {
   color: var(--color-text);
   content: "↑";
   transition: transform 0.3s ease;
 }
 
-.label--launched {
+.Label--launched {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xs);
@@ -297,13 +297,13 @@
   font-weight: var(--font-weight-light);
 }
 
-.label--launched::before {
+.Label--launched::before {
   color: var(--color-text);
   content: "⚡︎";
   transition: transform 0.3s ease;
 }
 
-.label--testing {
+.Label--testing {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xs);
@@ -312,13 +312,13 @@
   font-weight: var(--font-weight-light);
 }
 
-.label--testing::before {
+.Label--testing::before {
   color: var(--color-text);
   content: "🗪";
   transition: transform 0.3s ease;
 }
 
-.label--responsive {
+.Label--responsive {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xs);
@@ -327,13 +327,13 @@
   font-weight: var(--font-weight-light);
 }
 
-.label--responsive::before {
+.Label--responsive::before {
   color: var(--color-text);
   content: "모";
   transition: transform 0.3s ease;
 }
 
-.label--redesign {
+.Label--redesign {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xs);
@@ -342,7 +342,7 @@
   font-weight: var(--font-weight-light);
 }
 
-.label--redesign::before {
+.Label--redesign::before {
   color: var(--color-text);
   content: "모";
   transition: transform 0.3s ease;
@@ -353,7 +353,7 @@
    Module: component
    Pattern: c-text-highlight*/
 
-.c-text-highlight {
+.TextHighlight {
   all: unset;
   background-repeat: no-repeat;
   margin: 0 4px;
@@ -417,14 +417,14 @@
   }
 }
 
-.text-reveal {
+.TextReveal {
   font-kerning: none;
 
-  .line-wrapper {
+  .TextReveal-lineWrapper {
     overflow: hidden;
   }
 
-  .line {
+  .TextReveal-line {
     transform: translate3d(0, 100%, 0);
   }
 }

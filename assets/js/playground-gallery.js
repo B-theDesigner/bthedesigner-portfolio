@@ -17,28 +17,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     PLAYGROUND_ENTRIES.forEach((entry) => {
       const li = document.createElement("li");
-      li.className = "playground-card";
+      li.className = "PlaygroundCard";
       li.dataset.category = entry.category;
       li.dataset.subcategory = entry.subcategory || "";
 
       li.innerHTML = `
         <div data-card-hover>
-          <span class="playground-card__content"
+          <span class="PlaygroundCard-content"
                 href="${entry.href}"
                 aria-label="${entry.title} — View details">
-            <div class="playground-card__image">
+            <div class="PlaygroundCard-image">
               <img src="${entry.image}"
                    alt="${entry.imageAlt}"
                    width="800" height="500"
                    loading="lazy" decoding="async">
             </div>
-            <div class="playground-card__body">
-              <div class="playground-card__tags" aria-label="playground type">
-                <span class="playground-card__tag">${entry.tag}</span>
-                <span class="playground-card__date">${entry.date} | ${entry.readTime}</span>
+            <div class="PlaygroundCard-body">
+              <div class="PlaygroundCard-tags" aria-label="playground type">
+                <span class="PlaygroundCard-tag">${entry.tag}</span>
+                <span class="PlaygroundCard-date">${entry.date} | ${entry.readTime}</span>
               </div>
-              <h3 class="playground-card__title">${entry.title}</h3>
-              <a class="playground-card__cta" href="${entry.href}">View details <svg viewBox="0 0 14 14" fill="none">
+              <h3 class="PlaygroundCard-title">${entry.title}</h3>
+              <a class="PlaygroundCard-cta" href="${entry.href}">View details <svg viewBox="0 0 14 14" fill="none">
                           <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" /></a>
               
@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!$grid || !tier1 || !tier2) return; // not on a gallery page
 
-  const tier1Tabs = [...tier1.querySelectorAll(".gtab")];
-  const viewBtns = [...document.querySelectorAll(".view-toggle__btn")];
+  const tier1Tabs = [...tier1.querySelectorAll(".GalleryTab")];
+  const viewBtns = [...document.querySelectorAll(".ViewToggle-btn")];
 
   // ── View toggle ────────────────────────────────────────────────────────
   // cardsLayout is set by the module script block in the HTML once
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cardsLayout.update(
         () => {
           $grid.setAttribute("data-view", view);
-          utils.set(utils.$("#playground-grid .playground-card"), {
+          utils.set(utils.$("#playground-grid .PlaygroundCard"), {
             transform: "none",
           });
           viewBtns.forEach((btn) =>
@@ -152,10 +152,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const viewToggleGroup = document.querySelector(".view-toggle");
+  const viewToggleGroup = document.querySelector(".ViewToggle");
   if (viewToggleGroup) {
     viewToggleGroup.addEventListener("keydown", (e) => {
-      const btns = [...viewToggleGroup.querySelectorAll(".view-toggle__btn")];
+      const btns = [...viewToggleGroup.querySelectorAll(".ViewToggle-btn")];
       const idx = btns.indexOf(document.activeElement);
       if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         e.preventDefault();
@@ -170,14 +170,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ── Selbox ─────────────────────────────────────────────────────────────
   const selBox = document.createElement("div");
-  selBox.className = "gallery-selbox";
+  selBox.className = "GallerySelbox";
   selBox.setAttribute("aria-hidden", "true");
   selBox.innerHTML = `
-    <span class="gallery-selbox__corner gallery-selbox__corner--tl"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--tr"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--bl"></span>
-    <span class="gallery-selbox__corner gallery-selbox__corner--br"></span>
-    <span class="gallery-selbox__cursor">
+    <span class="GallerySelbox-corner GallerySelbox-corner--tl"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--tr"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--bl"></span>
+    <span class="GallerySelbox-corner GallerySelbox-corner--br"></span>
+    <span class="GallerySelbox-cursor">
     <!-- ─── Cursor Image ──────────────────────────────────
       <img src="./assets/img/Vector.svg" alt="" width="28" height="28" aria-hidden="true"> -->
     </span>
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", () => {
     cancelAnimationFrame(resizeRaf);
     resizeRaf = requestAnimationFrame(() => {
-      const active = tier1.querySelector('.gtab[aria-selected="true"]');
+      const active = tier1.querySelector('.GalleryTab[aria-selected="true"]');
       if (active) moveSelbox(active);
     });
   });
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
     tier2.innerHTML = "";
     subtabs.forEach((item, i) => {
       const btn = document.createElement("button");
-      btn.className = "gsubtab";
+      btn.className = "GallerySubtab";
       btn.setAttribute("role", "tab");
       btn.setAttribute("data-subcategory", item.subcategory);
       btn.setAttribute("aria-selected", i === 0 ? "true" : "false");
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tier2.classList.add("is-visible");
 
-    const subtabBtns = [...tier2.querySelectorAll(".gsubtab")];
+    const subtabBtns = [...tier2.querySelectorAll(".GallerySubtab")];
     subtabBtns.forEach((btn) => {
       btn.addEventListener("click", () => activateTier2(btn, subtabBtns));
       btn.addEventListener("keydown", (e) => {
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ── Filter gallery ──────────────────────────────────────────────────────
   function filterGallery() {
-    $grid.querySelectorAll(".playground-card").forEach((card) => {
+    $grid.querySelectorAll(".PlaygroundCard").forEach((card) => {
       let show = false;
       if (currentCategory === "all") show = true;
       else if (currentSubcategory === "all")
@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // ── Init ────────────────────────────────────────────────────────────────
   const initialTab =
-    tier1.querySelector('.gtab[aria-selected="true"]') || tier1Tabs[0];
+    tier1.querySelector('.GalleryTab[aria-selected="true"]') || tier1Tabs[0];
   if (initialTab) activateTier1(initialTab, false);
 
   // ── Recent Entries: render top 3 from PLAYGROUND_ENTRIES ───────────────────
@@ -354,26 +354,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     PLAYGROUND_ENTRIES.slice(0, 3).forEach((entry) => {
       const li = document.createElement("li");
-      li.className = "playground-card";
+      li.className = "PlaygroundCard";
 
       li.innerHTML = `
         <div data-card-hover>
-          <span class="playground-card__content"
+          <span class="PlaygroundCard-content"
                 href="${entry.href}"
                 aria-label="${entry.title} — View details">
-            <div class="playground-card__image">
+            <div class="PlaygroundCard-image">
               <img src="${entry.image}"
                    alt="${entry.imageAlt}"
                    width="800" height="500"
                    loading="lazy" decoding="async">
             </div>
-            <div class="playground-card__body">
-              <div class="playground-card__tags" aria-label="playground type">
-                <span class="playground-card__tag">${entry.tag}</span>
-                <span class="playground-card__date">${entry.date} | ${entry.readTime}</span>
+            <div class="PlaygroundCard-body">
+              <div class="PlaygroundCard-tags" aria-label="playground type">
+                <span class="PlaygroundCard-tag">${entry.tag}</span>
+                <span class="PlaygroundCard-date">${entry.date} | ${entry.readTime}</span>
               </div>
-              <h3 class="playground-card__title">${entry.title}</h3>
-              <a class="playground-card__cta" href="${entry.href}"
+              <h3 class="PlaygroundCard-title">${entry.title}</h3>
+              <a class="PlaygroundCard-cta" href="${entry.href}"
                  aria-label="${entry.title} — View details">
                 View details
                 <svg viewBox="0 0 14 14" fill="none">
