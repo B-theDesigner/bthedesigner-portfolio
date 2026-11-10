@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Select — usage examples</title>
+
+    <!-- STANDALONE ONLY: your site already loads these fonts and sets color-scheme in theme.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,600&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        margin: 0;
+        padding: 48px 16px;
+        font-family: "DM Sans", system-ui, sans-serif;
+        color: light-dark(#1a1625, #f3f1f7);
+        background: light-dark(#ffffff, #0d0b12);
+      }
+      .demo-wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+      .demo-wrap h2 {
+        margin: 0 0 16px;
+        font-family: "DM Mono", monospace;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: light-dark(#5e5770, #a9a3b9);
+      }
+      .demo-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .demo-btn {
+        height: 44px;
+        padding: 0 20px;
+        font:
+          600 1rem "DM Sans",
+          sans-serif;
+        color: #ffffff;
+        background: #6d3fe0;
+        border: 0;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .demo-output {
+        margin: 0;
+        font:
+          0.8125rem "DM Mono",
+          monospace;
+        color: light-dark(#5e5770, #a9a3b9);
+      }
+    </style>
+    <!-- /STANDALONE ONLY -->
+
+    <link rel="stylesheet" href="select.css" />
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <!-- ============ EXAMPLE 1 · Markup only ============
+       data-select starts it automatically.
+       Options live in the HTML: data-value is what gets stored,
+       the text is what people see. -->
+      <section>
+        <h2>1 · Markup only</h2>
+        <div class="Select" data-select data-placeholder="Select a frequency">
+          <label class="Select-label">Reporting frequency</label>
+          <div class="Select-control">
+            <button type="button" class="Select-trigger">
+              <span class="Select-value"></span>
+              <svg
+                class="Select-chevron"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+              <svg
+                class="Select-spinner"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M21 12a9 9 0 1 1-6.2-8.56" />
+              </svg>
+            </button>
+            <ul class="Select-listbox">
+              <li class="Select-option" data-value="monthly">Monthly</li>
+              <li class="Select-option" data-value="quarterly">Quarterly</li>
+              <li class="Select-option" data-value="annually">Annually</li>
+              <li class="Select-option" data-value="custom">Custom range</li>
+            </ul>
+          </div>
+          <p class="Select-message">
+            <svg
+              class="Select-messageIcon"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.25"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 8v5M12 16.5v.01" />
+            </svg>
+            <span class="Select-messageText"
+              >Applies to all exported statements.</span
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ EXAMPLE 2 · In a form, with validation ============
+       data-name adds a hidden input so the value submits with the form.
+       data-value sets a starting value; add data-disabled to lock it. -->
+      <section>
+        <h2>2 · In a form</h2>
+        <form class="demo-form" id="demo-form" novalidate>
+          <div
+            class="Select Select--lg"
+            data-select
+            data-name="role"
+            data-placeholder="Choose a role"
+            id="role-select"
+          >
+            <label class="Select-label">Your role</label>
+            <div class="Select-control">
+              <button type="button" class="Select-trigger">
+                <span class="Select-value"></span>
+                <svg
+                  class="Select-chevron"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+                <svg
+                  class="Select-spinner"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.25"
+                  stroke-linecap="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 12a9 9 0 1 1-6.2-8.56" />
+                </svg>
+              </button>
+              <ul class="Select-listbox">
+                <li class="Select-option" data-value="hiring">
+                  Hiring manager
+                </li>
+                <li class="Select-option" data-value="recruiter">Recruiter</li>
+                <li class="Select-option" data-value="client">
+                  Prospective client
+                </li>
+                <li class="Select-option" data-value="other">Something else</li>
+              </ul>
+            </div>
+            <p class="Select-message">
+              <svg
+                class="Select-messageIcon"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.25"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 8v5M12 16.5v.01" />
+              </svg>
+              <span class="Select-messageText"
+                >Helps me tailor what I send you.</span
+              >
+            </p>
+          </div>
+          <button type="submit" class="demo-btn">Submit</button>
+          <p class="demo-output" id="demo-output" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <script src="select.js"></script>
+    <script>
+      // EXAMPLE 2 wiring: shows the public API. Not needed for Example 1.
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("demo-form");
+        const output = document.getElementById("demo-output");
+        const role = Select.from(document.getElementById("role-select"));
+
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (!role.value) {
+            role.setError("Choose a role so I know how to follow up.");
+            role.trigger.focus();
+            return;
+          }
+          output.textContent =
+            "Submitted: " + new URLSearchParams(new FormData(form)).toString();
+        });
+
+        // Picking an option clears the error automatically; you can also listen for changes
+        role.el.addEventListener("select:change", (e) => {
+          output.textContent =
+            "Changed to: " + e.detail.label + " (" + e.detail.value + ")";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -287,4 +287,22 @@
   --f-duration-base: 800ms;
   --f-duration-slow: 1000ms;
   --f-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Playground chrome (the harness around the component) */
+  /* Playground chrome (the harness around the component) */
+  --Playground-surface: var(--color-surface-card, light-dark(#ffffff, #15121d));
+  --Playground-input: var(--color-surface-sunken, light-dark(#f7f6fa, #0d0b12));
+  --Playground-border: var(
+    --color-border-default,
+    light-dark(#e2dfe9, #2a2538)
+  );
+  --Playground-text: var(--color-text-primary, light-dark(#1a1625, #f3f1f7));
+  --Playground-muted: var(--color-text-muted, light-dark(#5e5770, #a9a3b9));
+  --Playground-accent: var(--color-accent, light-dark(#6d3fe0, #a78bfa));
+  --Playground-selected: var(
+    --color-surface-selected,
+    light-dark(#e7e1f5, #2a2538)
+  );
+  --Playground-stage: light-dark(#f7f6fa, #100e16);
+  --Playground-stage-border: light-dark(#e7e4ee, #24202f);
 }

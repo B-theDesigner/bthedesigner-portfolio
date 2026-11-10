@@ -205,7 +205,7 @@
 /* Underline on active pip — matches Figma design */
 
 .FindingsSlideshow-pip.is-active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 2px;
   left: 4px;
@@ -305,7 +305,6 @@
 }
 
 @media (max-width: 575.98px) {
-
   .IrlCarousel-card.is-up1 {
     transform: translate(-50%, calc(-50% - 145px)) scale(0.82);
   }
@@ -452,7 +451,6 @@
 }
 
 @media (max-width: 575.98px) {
-
   .PatternCard.is-open .PatternCard-thumbnail {
     width: 100%;
     height: 0;
@@ -466,7 +464,6 @@
 }
 
 @media (max-width: 575.98px) {
-
   /* Hide the summary-level toggle when the card is open */
   .PatternCard.is-open .PatternCard-summary .PatternCard-toggle {
     display: none;
@@ -493,13 +490,13 @@
 
 .Toolbar-btn[data-delta="up"].is-active {
   color: var(--color-up);
-  border-color: rgba(126,184,164,0.25);
+  border-color: rgba(126, 184, 164, 0.25);
   background: var(--color-up-bg);
 }
 
 .Toolbar-btn[data-delta="down"].is-active {
   color: var(--color-down);
-  border-color: rgba(201,122,122,0.25);
+  border-color: rgba(201, 122, 122, 0.25);
   background: var(--color-down-bg);
 }
 
@@ -510,26 +507,32 @@
 .DataCard-delta.is-up {
   color: var(--color-up);
   background: var(--color-up-bg);
-  border: 1px solid rgba(126,184,164,0.2);
+  border: 1px solid rgba(126, 184, 164, 0.2);
 }
 
 .DataCard-delta.is-down {
   color: var(--color-down);
   background: var(--color-down-bg);
-  border: 1px solid rgba(201,122,122,0.2);
+  border: 1px solid rgba(201, 122, 122, 0.2);
 }
 
 .DataCard-delta.is-neutral {
   color: var(--color-text-dim);
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--color-border-subtle);
 }
 
-.DataCard-cta:hover { color: var(--color-accent); }
+.DataCard-cta:hover {
+  color: var(--color-accent);
+}
 
-.DataCard-cta:hover svg { transform: translateX(3px); }
+.DataCard-cta:hover svg {
+  transform: translateX(3px);
+}
 
-.is-slotAnimating { animation: slotIn 0.22s var(--ease-expo) both; }
+.is-slotAnimating {
+  animation: slotIn 0.22s var(--ease-expo) both;
+}
 
 .Accordion:hover {
   background-color: var(--color-white-5);
@@ -581,30 +584,30 @@
 }
 
 .SummarySlider-controls .SummarySlider-control.is-disabled {
-      pointer-events: none;
-      background: var(--color-text-muted);
+  pointer-events: none;
+  background: var(--color-text-muted);
 
-      .SummarySlider-icon {
-        opacity: 0.5;
-      }
-    }
+  .SummarySlider-icon {
+    opacity: 0.5;
+  }
+}
 
 .SummarySlider-slide.is-slideOn {
-    -webkit-clip-path: inset(0 100% 0 0);
-    clip-path: inset(0 100% 0 0);
-  }
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+}
 
 .SummarySlider-slide.is-textOn .SummarySlider-title {
-    transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
-    -webkit-clip-path: inset(0 0 0 0);
-    clip-path: inset(0 0 0 0);
-  }
+  transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.45s;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+}
 
 .SummarySlider-slide.is-textOn .SummarySlider-author {
-    transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.6s;
-    -webkit-clip-path: inset(0 0 0 0);
-    clip-path: inset(0 0 0 0);
-  }
+  transition: 0.3s all cubic-bezier(0.65, 0.05, 0.36, 1) 0.6s;
+  -webkit-clip-path: inset(0 0 0 0);
+  clip-path: inset(0 0 0 0);
+}
 
 .NavMenu-dropdown.is-open .NavMenu-dropdownTrigger {
   background-color: var(--color-primary-dim);
@@ -889,11 +892,11 @@
 /* State: triggered by scroll */
 
 .TextHighlight.is-active {
-    color: var(--a-color-highlight-text);
-    font-weight: var(--font-weight-semibold);
-    text-shadow: 1px 01px 0 var(--color-highlight-outline);
-    background-size: 100% 100%;
-  }
+  color: var(--a-color-highlight-text);
+  font-weight: var(--font-weight-semibold);
+  text-shadow: 1px 01px 0 var(--color-highlight-outline);
+  background-size: 100% 100%;
+}
 
 /* -- Text Reveal ------ */
 
@@ -986,13 +989,25 @@
    ============================================================ */
 
 @keyframes cardIn {
-  from { opacity: 0; transform: translateY(6px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes slotIn {
-  from { opacity: 0; transform: translateY(3px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*  ── Gallery states (moved from project-gallery.css) ──────────────────────────────  */
@@ -1024,6 +1039,9 @@
   transform: translateX(3px);
 }
 
+.ProjectCard:hover .ProjectCard-cta:disabled {
+}
+
 /*  ── Gallery states (moved from journal-gallery.css) ──────────────────────────────  */
 
 .JournalCard.is-hidden {
@@ -1053,9 +1071,18 @@
   transform: translateX(3px);
 }
 
-#recent-entries-grid:where(.JournalGrid) .JournalCard:first-child:hover .JournalCard-image img,
-#recent-entries-grid:where(.JournalGrid) .JournalCard:nth-child(2):hover .JournalCard-image img,
-#recent-entries-grid:where(.JournalGrid) .JournalCard:nth-child(3):hover .JournalCard-image img {
+#recent-entries-grid:where(.JournalGrid)
+  .JournalCard:first-child:hover
+  .JournalCard-image
+  img,
+#recent-entries-grid:where(.JournalGrid)
+  .JournalCard:nth-child(2):hover
+  .JournalCard-image
+  img,
+#recent-entries-grid:where(.JournalGrid)
+  .JournalCard:nth-child(3):hover
+  .JournalCard-image
+  img {
   transform: scale(1.04);
 }
 
@@ -1121,4 +1148,31 @@
     transform: translateY(-4px);
     filter: blur(2px);
   }
+}
+
+/* --------------------------------------------------------------------------
+   → PLAYGROUND STATES
+   -------------------------------------------------------------------------- */
+
+/* The harness hides empty parts with the hidden attribute */
+.Playground [hidden] {
+  display: none !important;
+}
+
+/* visibility (not display) keeps inactive panels in the layout so they
+   still count toward the height. It also hides them from screen readers. */
+.Playground-specPanel:not(.is-active) {
+  visibility: hidden;
+}
+
+.Playground-segmentedBtn[aria-pressed="true"] {
+  color: var(--Playground-text);
+  background: var(--Playground-selected);
+}
+
+.Playground-picker:focus-visible,
+.Playground-stepBtn:focus-visible,
+.Playground-segmentedBtn:focus-visible {
+  outline: 2px solid var(--Playground-accent);
+  outline-offset: 2px;
 }

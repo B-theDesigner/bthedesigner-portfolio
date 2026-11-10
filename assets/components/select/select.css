@@ -1,0 +1,326 @@
+/*
+==========================================================================
+   SELECT  ·  single-select dropdown
+   One file for easy copying. Each section is labeled with the SMACSS file
+   it belongs in: theme.css, module.css, state.css.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   → theme.css
+   Component tokens point at your semantic tokens. The second value in each
+   var() is a fallback so this works standalone. Once you rename the first
+   value to match your real semantic token names, the fallbacks never run.
+   SUIT convention: component variables live on :root as --ComponentName-prop.
+   -------------------------------------------------------------------------- */
+
+:root {
+  /* Select: color */
+  --Select-surface: var(--color-surface-raised, light-dark(#ffffff, #1b1726));
+  --Select-surface-disabled: var(
+    --color-surface-disabled,
+    light-dark(#f3f2f6, #16131d)
+  );
+  --Select-border: var(--color-border-default, light-dark(#cfc9db, #3a3450));
+  --Select-border-hover: var(
+    --color-border-strong,
+    light-dark(#8a80a0, #6e6688)
+  );
+  --Select-border-disabled: var(
+    --color-border-subtle,
+    light-dark(#e2dfe9, #2a2536)
+  );
+  --Select-border-focus: var(--color-focus, light-dark(#6d3fe0, #a98bff));
+  --Select-ring: var(
+    --color-focus-ring,
+    light-dark(rgb(109 63 224 / 0.28), rgb(169 139 255 / 0.35))
+  );
+  --Select-text: var(--color-text-primary, light-dark(#1a1625, #f4f2f8));
+  --Select-text-muted: var(--color-text-muted, light-dark(#5e5770, #a7a1b8));
+  --Select-text-disabled: var(
+    --color-text-disabled,
+    light-dark(#8f899d, #6f6982)
+  );
+  --Select-label: var(--color-text-secondary, light-dark(#2a2536, #e6e2ee));
+  --Select-option-hover: var(
+    --color-surface-hover,
+    light-dark(#f4f1fa, #262037)
+  );
+  --Select-option-selected: var(
+    --color-accent-subtle,
+    light-dark(#efe8fe, #2c2245)
+  );
+  --Select-option-selected-text: var(
+    --color-accent-text,
+    light-dark(#4b23b8, #d6c7ff)
+  );
+  --Select-danger: var(--color-text-danger, light-dark(#c2283a, #ff8a94));
+  --Select-shadow: var(--shadow-md, 0 12px 28px rgb(13 11 18 / 0.18));
+
+  /* Select: shape + size (size modifiers override these) */
+  --Select-radius: 8px;
+  --Select-height: 44px;
+  --Select-padding-x: 14px;
+  --Select-font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   → module.css  ·  Select
+   -------------------------------------------------------------------------- */
+
+.Select {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 340px;
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+.Select--sm {
+  --Select-height: 36px;
+  --Select-padding-x: 12px;
+  --Select-font-size: 0.875rem;
+}
+.Select--lg {
+  --Select-height: 52px;
+  --Select-padding-x: 16px;
+  --Select-font-size: 1.125rem;
+}
+
+.Select-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--Select-label);
+}
+
+.Select-control {
+  position: relative;
+}
+
+.Select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  height: var(--Select-height);
+  padding: 0 var(--Select-padding-x);
+  font: inherit;
+  font-size: var(--Select-font-size);
+  text-align: left;
+  color: var(--Select-text);
+  background: var(--Select-surface);
+  border: 1px solid var(--Select-border);
+  border-radius: var(--Select-radius);
+  outline: 2px solid transparent; /* keeps focus visible in forced-colors mode */
+  cursor: pointer;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.Select-icon {
+  flex: none;
+  display: inline-flex;
+  color: var(--Select-text-muted);
+}
+
+.Select-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Select-chevron {
+  flex: none;
+  transition: transform 0.15s;
+}
+
+.Select-spinner {
+  display: none;
+  flex: none;
+}
+
+.Select-listbox {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 264px;
+  margin: 0;
+  padding: 6px;
+  overflow-y: auto;
+  list-style: none;
+  background: var(--Select-surface);
+  border: 1px solid var(--Select-border);
+  border-radius: 10px;
+  box-shadow: var(--Select-shadow);
+}
+
+.Select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding: 0 12px;
+  border-radius: 6px;
+  line-height: 1.35;
+  font-size: var(--Select-font-size);
+  color: var(--Select-text);
+  cursor: pointer;
+}
+
+.Select-optionBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 10px 0;
+}
+
+/* Options wrap so long labels are never hidden; only the trigger truncates */
+.Select-optionText {
+  overflow-wrap: anywhere;
+}
+
+.Select-optionDesc {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--Select-text-muted);
+}
+
+.Select-empty {
+  padding: 12px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--Select-text-muted);
+  cursor: default;
+}
+
+.Select-check {
+  flex: none;
+  visibility: hidden;
+}
+
+.Select-message {
+  display: flex;
+  gap: 6px;
+  min-height: 1.4em;
+  margin: 0;
+  align-items: flex-start;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--Select-text-muted);
+}
+
+.Select-messageIcon {
+  display: none;
+  flex: none;
+  margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   → state.css
+   is-hover and is-focus exist because JavaScript can't force :hover or
+   :focus-visible. Each rule pairs the real pseudo-class with a class the
+   playground can toggle, so one rule serves both real use and the demo.
+   Order matters: later rules win when specificity ties.
+   -------------------------------------------------------------------------- */
+
+.Select-trigger:hover,
+.Select.is-hover .Select-trigger {
+  border-color: var(--Select-border-hover);
+}
+
+.Select-trigger:focus-visible,
+.Select.is-focus .Select-trigger,
+.Select.is-open .Select-trigger {
+  border-color: var(--Select-border-focus);
+  box-shadow: 0 0 0 3px var(--Select-ring);
+}
+
+.Select-icon[hidden] {
+  display: none;
+}
+
+.Select.is-open .Select-chevron {
+  transform: rotate(180deg);
+}
+
+.Select-value.is-placeholder {
+  color: var(--Select-text-muted);
+}
+
+.Select-option.is-active {
+  background: var(--Select-option-hover);
+}
+
+.Select-option[aria-selected="true"] {
+  font-weight: 600;
+  color: var(--Select-option-selected-text);
+  background: var(--Select-option-selected);
+}
+
+.Select-option[aria-selected="true"] .Select-check {
+  visibility: visible;
+}
+.Select-option[aria-selected="true"] .Select-optionDesc {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.Select.is-invalid .Select-trigger {
+  border-color: var(--Select-danger);
+}
+.Select.is-invalid .Select-message {
+  color: var(--Select-danger);
+}
+.Select.is-invalid .Select-messageIcon {
+  display: block;
+}
+
+.Select.is-disabled .Select-label,
+.Select.is-disabled .Select-message,
+.Select.is-disabled .Select-icon {
+  color: var(--Select-text-disabled);
+}
+
+.Select.is-disabled .Select-trigger {
+  color: var(--Select-text-disabled);
+  background: var(--Select-surface-disabled);
+  border-color: var(--Select-border-disabled);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.Select.is-loading .Select-trigger {
+  cursor: progress;
+}
+.Select.is-loading .Select-chevron {
+  display: none;
+}
+.Select.is-loading .Select-spinner {
+  display: block;
+  animation: Select-spin 0.9s linear infinite;
+}
+
+@keyframes Select-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Select-spinner {
+    animation: none;
+  }
+  .Select-trigger,
+  .Select-chevron {
+    transition: none;
+  }
+}
