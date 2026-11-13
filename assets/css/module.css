@@ -99,7 +99,7 @@
 
 /* ─── Tier-1 mobile select ───────────────────────────────────────────────── */
 /* Built by gallery-tab-select.js from the Tier-1 tabs, using the design-system
-   Select. Hidden above 640px; swaps in for the tabs at 640px and below.
+   Select. Hidden above 1253px; swaps in for the tabs at 1253px and below.
    Scoped under .GalleryTabs (0,2,0) so it beats .Select from select.css
    regardless of stylesheet order. */
 
@@ -114,13 +114,20 @@
   display: none;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1253px) {
   .GalleryTabs .GalleryTabs-select {
     display: flex;
   }
 
   .GalleryTabs-tier1 {
     display: none;
+  }
+
+  /* Center the grid/list toggle on the dropdown trigger, not its label.
+     Offset = label (17px) + label gap (8px) + half the height difference
+     between the trigger (--Select-height, 44px) and the toggle (42px). */
+  .Gallery-controls .ViewToggle {
+    margin-top: calc(17px + 8px + (var(--Select-height, 44px) - 42px) / 2);
   }
 }
 
@@ -3412,7 +3419,9 @@ h3 .TopFindings-header {
   line-height: 1.7;
 }
 
-/* ─── Responsive — tabs → accordion at mobile ────────────── */
+/* ─── Responsive — tabs → accordion at 1311px and below ──── */
+/* Tabs run out of room on one row below ~1312px. Keep in sync with the
+   cert swap (.Tabs-nav--cert / .AccordionGroup--cert) further down. */
 @media (max-width: 1311px) {
   .Tabs-nav,
   .Tabs-panels {
@@ -4142,19 +4151,19 @@ h3 .TopFindings-header {
   }
 }
 
-/* ── Cert accordion: show/hide swap at 1022px ─────────────────────────────── */
+/* ── Cert accordion: show/hide swap at 1311px ─────────────────────────────── */
 /* The existing .AccordionGroup base styles (display:none) are in module.css.
    These rules override just the cert accordion at the cert-specific breakpoint,
    without touching the Background section's 640px swap. */
 
-/* Above 1022px: show tabs, hide cert accordion */
+/* Above 1311px: show tabs, hide cert accordion */
 
 .AccordionGroup--cert {
   display: none;
   /* hidden by default */
 }
 
-/* At 1022px and below: hide tabs, show cert accordion */
+/* At 1311px and below: hide tabs, show cert accordion */
 @media (max-width: 1311px) {
   .Tabs-nav--cert,
   .Tabs-panels--cert {
