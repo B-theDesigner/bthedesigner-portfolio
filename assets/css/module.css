@@ -97,6 +97,33 @@
   padding-bottom: var(--spacing-base);
 }
 
+/* ─── Tier-1 mobile select ───────────────────────────────────────────────── */
+/* Built by gallery-tab-select.js from the Tier-1 tabs, using the design-system
+   Select. Hidden above 640px; swaps in for the tabs at 640px and below.
+   Scoped under .GalleryTabs (0,2,0) so it beats .Select from select.css
+   regardless of stylesheet order. */
+
+.GalleryTabs .GalleryTabs-select {
+  display: none;
+  max-width: none;
+  margin-bottom: var(--spacing-base);
+}
+
+/* No helper copy here, so drop the reserved message row */
+.GalleryTabs .GalleryTabs-select .Select-message {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .GalleryTabs .GalleryTabs-select {
+    display: flex;
+  }
+
+  .GalleryTabs-tier1 {
+    display: none;
+  }
+}
+
 /* ─── Category tab button ────────────────────────────────────────────────── */
 
 .GalleryTab {
@@ -207,12 +234,17 @@
   align-items: center;
   gap: 0;
   border-top: 1px solid var(--color-border);
-  max-height: 0;
+  /* Collapses to 0 and opens to its content height (height: auto in
+     state.css), so wrapped subtab rows are never clipped.
+     interpolate-size lets height animate to auto where supported;
+     elsewhere it opens instantly and the opacity fade still plays. */
+  height: 0;
+  interpolate-size: allow-keywords;
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
   transition:
-    max-height 300ms cubic-bezier(0.4, 0, 0.2, 1),
+    height 300ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 220ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -6394,6 +6426,14 @@ blockquote::after {
     display: none;
   }
 
+  /* Gallery grids are <ul>s, so they inherit base.css's 24px list indent.
+     Zero it so cards run the full width of the gallery controls. */
+  .ProjectGrid,
+  .JournalGrid,
+  .PlaygroundGrid {
+    margin-left: 0;
+  }
+
   .ProjectGrid {
     grid-template-columns: 1fr !important;
   }
@@ -7323,6 +7363,14 @@ blockquote::after {
   border-radius: 3px;
   white-space: nowrap;
   letter-spacing: 0.02em;
+}
+
+/* Small + medium viewports: no selection box. On touch it sticks after a tap
+   and drifts out of alignment, so it's a desktop-pointer flourish only. */
+@media (max-width: 1023px) {
+  .FigmaSelect {
+    display: none;
+  }
 }
 
 /*  ── Tab selection box (moved from script.js) ──────────────────────────────

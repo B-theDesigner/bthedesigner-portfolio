@@ -15,42 +15,42 @@
 
 :root {
   /* Select: color */
-  --Select-surface: var(--color-surface-raised, light-dark(#ffffff, #1b1726));
+  --Select-surface: var(--color-surface-alt, light-dark(#ffffff, #1b1726));
   --Select-surface-disabled: var(
-    --color-surface-disabled,
+    --color-surface,
     light-dark(#f3f2f6, #16131d)
   );
-  --Select-border: var(--color-border-default, light-dark(#cfc9db, #3a3450));
+  --Select-border: var(--color-border, light-dark(#cfc9db, #3a3450));
   --Select-border-hover: var(
-    --color-border-strong,
+    --color-white-20,
     light-dark(#8a80a0, #6e6688)
   );
   --Select-border-disabled: var(
-    --color-border-subtle,
+    --color-white-10,
     light-dark(#e2dfe9, #2a2536)
   );
-  --Select-border-focus: var(--color-focus, light-dark(#6d3fe0, #a98bff));
+  --Select-border-focus: var(--color-primary, light-dark(#6d3fe0, #a98bff));
   --Select-ring: var(
-    --color-focus-ring,
+    --color-primary-glow,
     light-dark(rgb(109 63 224 / 0.28), rgb(169 139 255 / 0.35))
   );
-  --Select-text: var(--color-text-primary, light-dark(#1a1625, #f4f2f8));
+  --Select-text: var(--color-text, light-dark(#1a1625, #f4f2f8));
   --Select-text-muted: var(--color-text-muted, light-dark(#5e5770, #a7a1b8));
   --Select-text-disabled: var(
     --color-text-disabled,
     light-dark(#8f899d, #6f6982)
   );
-  --Select-label: var(--color-text-secondary, light-dark(#2a2536, #e6e2ee));
+  --Select-label: var(--color-text-muted, light-dark(#2a2536, #e6e2ee));
   --Select-option-hover: var(
-    --color-surface-hover,
+    --color-white-5,
     light-dark(#f4f1fa, #262037)
   );
   --Select-option-selected: var(
-    --color-accent-subtle,
+    --color-primary-dim,
     light-dark(#efe8fe, #2c2245)
   );
   --Select-option-selected-text: var(
-    --color-accent-text,
+    --color-primary-200,
     light-dark(#4b23b8, #d6c7ff)
   );
   --Select-danger: var(--color-text-danger, light-dark(#c2283a, #ff8a94));
