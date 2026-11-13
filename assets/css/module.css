@@ -3413,7 +3413,7 @@ h3 .TopFindings-header {
 }
 
 /* ─── Responsive — tabs → accordion at mobile ────────────── */
-@media (max-width: 1022px) {
+@media (max-width: 1311px) {
   .Tabs-nav,
   .Tabs-panels {
     display: none;
@@ -4155,7 +4155,7 @@ h3 .TopFindings-header {
 }
 
 /* At 1022px and below: hide tabs, show cert accordion */
-@media (max-width: 1022px) {
+@media (max-width: 1311px) {
   .Tabs-nav--cert,
   .Tabs-panels--cert {
     display: none;

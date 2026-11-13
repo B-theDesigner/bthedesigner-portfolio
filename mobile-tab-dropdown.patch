@@ -1,0 +1,333 @@
+diff --git a/assets/components/select/select.css b/assets/components/select/select.css
+index 816cc51..ca9c3f7 100644
+--- a/assets/components/select/select.css
++++ b/assets/components/select/select.css
+@@ -15,42 +15,42 @@
+ 
+ :root {
+   /* Select: color */
+-  --Select-surface: var(--color-surface-raised, light-dark(#ffffff, #1b1726));
++  --Select-surface: var(--color-surface-alt, light-dark(#ffffff, #1b1726));
+   --Select-surface-disabled: var(
+-    --color-surface-disabled,
++    --color-surface,
+     light-dark(#f3f2f6, #16131d)
+   );
+-  --Select-border: var(--color-border-default, light-dark(#cfc9db, #3a3450));
++  --Select-border: var(--color-border, light-dark(#cfc9db, #3a3450));
+   --Select-border-hover: var(
+-    --color-border-strong,
++    --color-white-20,
+     light-dark(#8a80a0, #6e6688)
+   );
+   --Select-border-disabled: var(
+-    --color-border-subtle,
++    --color-white-10,
+     light-dark(#e2dfe9, #2a2536)
+   );
+-  --Select-border-focus: var(--color-focus, light-dark(#6d3fe0, #a98bff));
++  --Select-border-focus: var(--color-primary, light-dark(#6d3fe0, #a98bff));
+   --Select-ring: var(
+-    --color-focus-ring,
++    --color-primary-glow,
+     light-dark(rgb(109 63 224 / 0.28), rgb(169 139 255 / 0.35))
+   );
+-  --Select-text: var(--color-text-primary, light-dark(#1a1625, #f4f2f8));
++  --Select-text: var(--color-text, light-dark(#1a1625, #f4f2f8));
+   --Select-text-muted: var(--color-text-muted, light-dark(#5e5770, #a7a1b8));
+   --Select-text-disabled: var(
+     --color-text-disabled,
+     light-dark(#8f899d, #6f6982)
+   );
+-  --Select-label: var(--color-text-secondary, light-dark(#2a2536, #e6e2ee));
++  --Select-label: var(--color-text-muted, light-dark(#2a2536, #e6e2ee));
+   --Select-option-hover: var(
+-    --color-surface-hover,
++    --color-white-5,
+     light-dark(#f4f1fa, #262037)
+   );
+   --Select-option-selected: var(
+-    --color-accent-subtle,
++    --color-primary-dim,
+     light-dark(#efe8fe, #2c2245)
+   );
+   --Select-option-selected-text: var(
+-    --color-accent-text,
++    --color-primary-200,
+     light-dark(#4b23b8, #d6c7ff)
+   );
+   --Select-danger: var(--color-text-danger, light-dark(#c2283a, #ff8a94));
+diff --git a/assets/css/module.css b/assets/css/module.css
+index 144b908..0f3d52c 100644
+--- a/assets/css/module.css
++++ b/assets/css/module.css
+@@ -97,6 +97,40 @@
+   padding-bottom: var(--spacing-base);
+ }
+ 
++/* ─── Tier-1 mobile select ───────────────────────────────────────────────── */
++/* Built by gallery-tab-select.js from the Tier-1 tabs, using the design-system
++   Select. Hidden above 1253px; swaps in for the tabs at 1253px and below.
++   Scoped under .GalleryTabs (0,2,0) so it beats .Select from select.css
++   regardless of stylesheet order. */
++
++.GalleryTabs .GalleryTabs-select {
++  display: none;
++  max-width: none;
++  margin-bottom: var(--spacing-base);
++}
++
++/* No helper copy here, so drop the reserved message row */
++.GalleryTabs .GalleryTabs-select .Select-message {
++  display: none;
++}
++
++@media (max-width: 1253px) {
++  .GalleryTabs .GalleryTabs-select {
++    display: flex;
++  }
++
++  .GalleryTabs-tier1 {
++    display: none;
++  }
++
++  /* Center the grid/list toggle on the dropdown trigger, not its label.
++     Offset = label (17px) + label gap (8px) + half the height difference
++     between the trigger (--Select-height, 44px) and the toggle (42px). */
++  .Gallery-controls .ViewToggle {
++    margin-top: calc(17px + 8px + (var(--Select-height, 44px) - 42px) / 2);
++  }
++}
++
+ /* ─── Category tab button ────────────────────────────────────────────────── */
+ 
+ .GalleryTab {
+@@ -207,12 +241,17 @@
+   align-items: center;
+   gap: 0;
+   border-top: 1px solid var(--color-border);
+-  max-height: 0;
++  /* Collapses to 0 and opens to its content height (height: auto in
++     state.css), so wrapped subtab rows are never clipped.
++     interpolate-size lets height animate to auto where supported;
++     elsewhere it opens instantly and the opacity fade still plays. */
++  height: 0;
++  interpolate-size: allow-keywords;
+   overflow: hidden;
+   opacity: 0;
+   pointer-events: none;
+   transition:
+-    max-height 300ms cubic-bezier(0.4, 0, 0.2, 1),
++    height 300ms cubic-bezier(0.4, 0, 0.2, 1),
+     opacity 220ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ 
+@@ -3380,8 +3419,10 @@ h3 .TopFindings-header {
+   line-height: 1.7;
+ }
+ 
+-/* ─── Responsive — tabs → accordion at mobile ────────────── */
+-@media (max-width: 1022px) {
++/* ─── Responsive — tabs → accordion at 1311px and below ──── */
++/* Tabs run out of room on one row below ~1312px. Keep in sync with the
++   cert swap (.Tabs-nav--cert / .AccordionGroup--cert) further down. */
++@media (max-width: 1311px) {
+   .Tabs-nav,
+   .Tabs-panels {
+     display: none;
+@@ -4110,20 +4151,20 @@ h3 .TopFindings-header {
+   }
+ }
+ 
+-/* ── Cert accordion: show/hide swap at 1022px ─────────────────────────────── */
++/* ── Cert accordion: show/hide swap at 1311px ─────────────────────────────── */
+ /* The existing .AccordionGroup base styles (display:none) are in module.css.
+    These rules override just the cert accordion at the cert-specific breakpoint,
+    without touching the Background section's 640px swap. */
+ 
+-/* Above 1022px: show tabs, hide cert accordion */
++/* Above 1311px: show tabs, hide cert accordion */
+ 
+ .AccordionGroup--cert {
+   display: none;
+   /* hidden by default */
+ }
+ 
+-/* At 1022px and below: hide tabs, show cert accordion */
+-@media (max-width: 1022px) {
++/* At 1311px and below: hide tabs, show cert accordion */
++@media (max-width: 1311px) {
+   .Tabs-nav--cert,
+   .Tabs-panels--cert {
+     display: none;
+@@ -6394,6 +6435,14 @@ blockquote::after {
+     display: none;
+   }
+ 
++  /* Gallery grids are <ul>s, so they inherit base.css's 24px list indent.
++     Zero it so cards run the full width of the gallery controls. */
++  .ProjectGrid,
++  .JournalGrid,
++  .PlaygroundGrid {
++    margin-left: 0;
++  }
++
+   .ProjectGrid {
+     grid-template-columns: 1fr !important;
+   }
+@@ -7325,6 +7374,14 @@ blockquote::after {
+   letter-spacing: 0.02em;
+ }
+ 
++/* Small + medium viewports: no selection box. On touch it sticks after a tap
++   and drifts out of alignment, so it's a desktop-pointer flourish only. */
++@media (max-width: 1023px) {
++  .FigmaSelect {
++    display: none;
++  }
++}
++
+ /*  ── Tab selection box (moved from script.js) ──────────────────────────────
+     One per .Tabs-nav; slides to the selected TabButton. Positioned by JS.     */
+ 
+diff --git a/assets/css/state.css b/assets/css/state.css
+index 31d5668..37489c1 100644
+--- a/assets/css/state.css
++++ b/assets/css/state.css
+@@ -56,7 +56,7 @@
+ }
+ 
+ .GalleryTabs-tier2.is-visible {
+-  max-height: 60px;
++  height: auto;
+   opacity: 1;
+   pointer-events: auto;
+ }
+diff --git a/assets/js/gallery-tab-select.js b/assets/js/gallery-tab-select.js
+new file mode 100644
+index 0000000..e020015
+--- /dev/null
++++ b/assets/js/gallery-tab-select.js
+@@ -0,0 +1,59 @@
++// =============================================================================
++// GALLERY-TAB-SELECT.JS
++// Mobile dropdown for the Tier-1 gallery tabs (Work, Journal, Playground).
++// Reuses the design-system Select (assets/components/select/select.js).
++//
++// The tabs stay the source of truth:
++//   - Choosing an option clicks the matching .GalleryTab, so each page's
++//     gallery script (filtering, Tier-2 subtabs, selbox) runs unchanged.
++//   - Any tab change (click, keyboard, init) updates the Select.
++//
++// Load after the page's gallery script and select.js.
++// Visibility swap (tabs ↔ select) lives in module.css at max-width: 640px.
++// =============================================================================
++
++document.addEventListener("DOMContentLoaded", function () {
++  const tier1 = document.getElementById("gallery-tier1");
++  if (!tier1 || !window.Select) return; // not a gallery page, or Select missing
++
++  const tabs = [...tier1.querySelectorAll(".GalleryTab")];
++  if (!tabs.length) return;
++
++  // ── Build the Select from the tabs ─────────────────────────────────────
++  const el = Select.createElement();
++  el.classList.add("GalleryTabs-select");
++  tier1.before(el); // inside .GalleryTabs, above Tier-1, so Tier-2 still follows
++
++  const select = new Select(el, {
++    copy: {
++      label: tier1.getAttribute("aria-label") || "Filter by category",
++      helper: "",
++    },
++    options: tabs.map((tab) => ({
++      value: tab.dataset.category,
++      label: tab.textContent.trim(),
++    })),
++  });
++
++  // ── Tabs → Select ──────────────────────────────────────────────────────
++  function syncFromTabs() {
++    const active = tier1.querySelector('.GalleryTab[aria-selected="true"]');
++    if (active && select.value !== active.dataset.category) {
++      select.setValue(active.dataset.category);
++    }
++  }
++
++  syncFromTabs();
++
++  new MutationObserver(syncFromTabs).observe(tier1, {
++    subtree: true,
++    attributes: true,
++    attributeFilter: ["aria-selected"],
++  });
++
++  // ── Select → Tabs ──────────────────────────────────────────────────────
++  el.addEventListener("select:change", (e) => {
++    const tab = tabs.find((t) => t.dataset.category === e.detail.value);
++    if (tab && tab.getAttribute("aria-selected") !== "true") tab.click();
++  });
++});
+diff --git a/journal/index.html b/journal/index.html
+index c4bb643..5f753ea 100644
+--- a/journal/index.html
++++ b/journal/index.html
+@@ -21,6 +21,7 @@
+     <link rel="stylesheet" href="../assets/css/theme.css" />
+     <link rel="stylesheet" href="../assets/css/base.css" />
+     <link rel="stylesheet" href="../assets/css/layout.css" />
++    <link rel="stylesheet" href="../assets/components/select/select.css" />
+     <link rel="stylesheet" href="../assets/css/module.css" />
+     <link rel="stylesheet" href="../assets/css/state.css" />
+   </head>
+@@ -317,6 +318,8 @@
+     <script src="../assets/js/journal-data.js"></script>
+     <script src="../assets/js/nav-loader.js"></script>
+     <script src="../assets/js/journal-gallery.js"></script>
++    <script src="../assets/components/select/select.js"></script>
++    <script src="../assets/js/gallery-tab-select.js"></script>
+ 
+     <!-- Loads anime.js and wires the FLIP layout engine.
+        Must be type="module" for the import to work.
+diff --git a/playground/index.html b/playground/index.html
+index a3e1ef7..d6d5477 100644
+--- a/playground/index.html
++++ b/playground/index.html
+@@ -30,6 +30,7 @@
+     <link rel="stylesheet" href="../assets/css/theme.css" />
+     <link rel="stylesheet" href="../assets/css/base.css" />
+     <link rel="stylesheet" href="../assets/css/layout.css" />
++    <link rel="stylesheet" href="../assets/components/select/select.css" />
+     <link rel="stylesheet" href="../assets/css/module.css" />
+     <link rel="stylesheet" href="../assets/css/state.css" />
+   </head>
+@@ -333,6 +334,8 @@
+     <script src="../assets/js/playground-data.js"></script>
+     <script src="../assets/js/nav-loader.js"></script>
+     <script src="../assets/js/playground-gallery.js"></script>
++    <script src="../assets/components/select/select.js"></script>
++    <script src="../assets/js/gallery-tab-select.js"></script>
+ 
+     <!-- Loads anime.js and wires the FLIP layout engine.
+        Must be type="module" for the import to work.
+diff --git a/work/index.html b/work/index.html
+index 54e4b87..1eb4dd0 100644
+--- a/work/index.html
++++ b/work/index.html
+@@ -30,6 +30,7 @@
+     <link rel="stylesheet" href="../assets/css/theme.css" />
+     <link rel="stylesheet" href="../assets/css/base.css" />
+     <link rel="stylesheet" href="../assets/css/layout.css" />
++    <link rel="stylesheet" href="../assets/components/select/select.css" />
+     <link rel="stylesheet" href="../assets/css/module.css" />
+     <link rel="stylesheet" href="../assets/css/state.css" />
+   </head>
+@@ -820,6 +821,8 @@
+     <script src="../assets/js/script.js"></script>
+     <script src="../assets/js/nav-loader.js"></script>
+     <script src="../assets/js/project-gallery.js"></script>
++    <script src="../assets/components/select/select.js"></script>
++    <script src="../assets/js/gallery-tab-select.js"></script>
+ 
+     <!-- Loads anime.js and wires the FLIP layout engine.
+        Must be type="module" for the import to work.
