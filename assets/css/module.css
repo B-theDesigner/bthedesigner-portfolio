@@ -6407,6 +6407,7 @@ blockquote::after {
   font-size: var(--font-size-xs); /* 0.75rem / 12px */
   line-height: 1.5; /* relative instead of fixed 24px */
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
